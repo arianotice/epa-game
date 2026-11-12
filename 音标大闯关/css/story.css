@@ -1,0 +1,382 @@
+/* ============================================================
+   声音探险队 · 滚动叙事层（Scrollytelling）
+   依赖：assets/vendor/gsap.min.js + ScrollTrigger.min.js + lenis.min.js
+   ============================================================ */
+
+/* ---------- 固定背景：每章一层，随滚动交叉淡入，形成连续色彩过渡 ---------- */
+.story-bg { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.story-bg .bg-layer { position: absolute; inset: 0; opacity: 0; will-change: opacity; }
+.story-bg .bg-layer:first-child { opacity: 1; }
+
+/* 进入故事模式时淡出原羊皮纸底纹，让章节配色主导画面 */
+body.story-mode .paper-bg { opacity: 0; transition: opacity .45s ease; }
+
+/* 故事模式：沉浸排版 —— 取消容器留白，隐藏底部导航（改由右下悬浮按钮承担） */
+body.story-mode .topbar-main { padding: 0; max-width: none; }
+body.story-mode .bottomnav { display: none; }
+
+/* 电影感暗角 */
+.story-vignette {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 52%, rgba(40, 24, 8, .16) 100%);
+}
+
+/* ---------- 顶部滚动进度 ---------- */
+.story-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 4px; z-index: 60;
+  background: rgba(90, 62, 30, .13);
+}
+.story-progress i {
+  display: block; height: 100%; width: 100%;
+  transform: scaleX(0); transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--gold), var(--red));
+}
+
+/* ---------- 章节容器 ---------- */
+.story-wrap { position: relative; z-index: 2; }
+
+.chapter {
+  position: relative;
+  /* 吸顶顶栏会覆盖视口顶部，故按“视口高度 - 顶栏高度”排版，保证一屏一景不被裁切 */
+  min-height: calc(100vh - var(--topbar-h, 64px));
+  min-height: calc(100svh - var(--topbar-h, 64px));
+  display: flex; align-items: center;
+  padding: 56px 6vw 74px;
+  overflow: hidden;
+}
+
+.ch-inner {
+  width: 100%; max-width: 1180px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.02fr .98fr;
+  gap: 4.5vw; align-items: center;
+}
+.chapter--flip .ch-art { order: -1; }
+
+/* ---------- 文字 ---------- */
+.ch-num {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.4vw, 44px);
+  line-height: 1; letter-spacing: .06em;
+  color: var(--accent);
+  -webkit-text-stroke: 2px var(--accent);
+  opacity: .18;
+  margin-bottom: 0;
+}
+.ch-kicker {
+  font-family: var(--font-display);
+  font-size: clamp(12.5px, 1.4vw, 16px);
+  letter-spacing: .16em;
+  color: var(--accent);
+  margin-bottom: 3px;
+}
+.ch-title {
+  font-family: var(--font-display);
+  font-size: clamp(25px, 3.7vw, 44px);
+  line-height: 1.18;
+  color: var(--ink);
+  margin-bottom: 11px;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, .35);
+}
+.ch-rule {
+  width: 104px; height: 4px; border-radius: 3px;
+  background: var(--accent);
+  margin-bottom: 12px;
+}
+.ch-lead {
+  font-size: clamp(15.5px, 1.6vw, 19px);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 7px;
+}
+.ch-p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 5px;
+  max-width: 46ch;
+}
+.ch-quote {
+  margin: 9px 0 0;
+  padding: 8px 13px;
+  border-left: 5px solid var(--accent);
+  border-radius: 0 14px 14px 0;
+  background: rgba(255, 255, 255, .55);
+  font-family: var(--font-display);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.chapter--dark .ch-quote { background: rgba(255, 255, 255, .08); }
+.ch-quote-tag {
+  display: inline-block; margin-bottom: 5px;
+  font-size: 12px; letter-spacing: .12em;
+  color: var(--accent);
+}
+
+/* ---------- 配图 ---------- */
+.ch-art { position: relative; }
+.art-frame {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 6px solid rgba(255, 255, 255, .72);
+  box-shadow: 0 16px 40px rgba(70, 45, 15, .26);
+  background: var(--paper-deep);
+  will-change: transform, opacity;
+}
+.chapter--dark .art-frame { border-color: rgba(255, 255, 255, .22); }
+.art-img { display: block; width: 100%; height: auto; will-change: transform; }
+.art-cap {
+  margin-top: 10px; text-align: center;
+  font-size: 13px; color: var(--ink-soft);
+}
+
+/* ---------- 音标精灵小签 ---------- */
+.ch-chips {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 14px;
+}
+.sp-chip {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  padding: 5px 12px;
+  border-radius: 12px;
+  border: 1.5px solid var(--line);
+  background: rgba(255, 255, 255, .6);
+  cursor: pointer;
+  font-family: var(--font-ipa);
+  font-weight: 700; font-size: 16px;
+  color: var(--ink);
+  transition: transform .12s, background .12s;
+}
+.chapter--dark .sp-chip { background: rgba(255, 255, 255, .1); }
+.sp-chip:hover { transform: translateY(-2px); background: #ffefc4; }
+.chapter--dark .sp-chip:hover { background: rgba(255, 255, 255, .18); }
+.sp-chip-name {
+  font-family: var(--font-body); font-weight: 400; font-size: 12.5px;
+  color: var(--ink-soft);
+}
+.sp-chip-play { font-family: var(--font-body); font-size: 11px; opacity: .55; }
+.sp-chip:hover .sp-chip-play { opacity: 1; }
+
+/* ---------- 本幕关卡 ---------- */
+.ch-levels { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.lv-pill {
+  font-family: var(--font-body); font-size: 13px;
+  padding: 4px 12px; border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: rgba(255, 255, 255, .55);
+  color: var(--ink-soft); cursor: pointer;
+  transition: transform .12s, background .12s;
+}
+.chapter--dark .lv-pill { background: rgba(255, 255, 255, .08); }
+.lv-pill:hover { transform: translateY(-1px); background: #ffefc4; color: var(--ink); }
+.lv-pill.done { background: rgba(30, 122, 79, .14); color: var(--green); border-color: rgba(30, 122, 79, .4); }
+.lv-pill.locked { opacity: .62; cursor: not-allowed; }
+
+/* ---------- 播放器卡片 ---------- */
+.story-player { margin-top: 11px; max-width: 420px; }
+.story-player-label { margin-top: 6px; font-size: 12.5px; color: var(--ink-soft); }
+
+/* 深色章节：提高音标符号对比度（原红/蓝在深色底上过暗） */
+.chapter--dark .ph-sym,
+.chapter--dark .sp-chip-sym,
+.chapter--dark .sp-card-sym { text-shadow: 0 1px 3px rgba(0, 0, 0, .45); }
+.chapter--dark .c-long, .chapter--dark .c-dip, .chapter--dark .c-semi { color: #8fd3ff; }
+.chapter--dark .c-short, .chapter--dark .c-clear { color: #ffb3a7; }
+.chapter--dark .c-voi, .chapter--dark .c-nas, .chapter--dark .c-lat { color: #a8e6a1; }
+
+/* ---------- 第六幕：旅程全景（钉住 + 路线绘制） ---------- */
+.chapter--journey { padding: 0; }
+.journey-inner {
+  width: 100%;
+  height: calc(100vh - var(--topbar-h, 64px));
+  height: calc(100svh - var(--topbar-h, 64px));
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 12px; padding: 62px 5vw 24px;
+}
+.journey-stage {
+  position: relative; width: 100%;
+  /* 让地图在可视区（已扣掉顶栏）内完整可见：按 1.6 宽高比反推最大宽度 */
+  max-width: min(1080px, calc((100vh - var(--topbar-h, 64px) - 190px) * 1.6));
+  max-width: min(1080px, calc((100svh - var(--topbar-h, 64px) - 190px) * 1.6));
+  border-radius: 20px; overflow: hidden;
+  border: 5px solid rgba(255, 255, 255, .3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
+}
+.journey-map { display: block; width: 100%; height: auto; }
+.journey-route { position: absolute; inset: 0; width: 100%; height: 100%; }
+.route-line {
+  /* 藏宝行进路线：羊皮纸上的手写探险小径（赭红墨线），非现代金色发光 */
+  fill: none; stroke: #7d2b1e; stroke-width: 3;
+  stroke-linecap: round; stroke-linejoin: round;
+  opacity: .9;
+  filter: drop-shadow(0 1px 1px rgba(60, 30, 10, .35));
+}
+.journey-nodes { position: absolute; inset: 0; }
+.jnode {
+  position: absolute; width: 34px; height: 34px; margin: -17px 0 0 -17px;
+  opacity: 1; overflow: visible;
+}
+.jnode svg { width: 100%; height: 100%; display: block; overflow: visible; }
+/* 未点亮：藏宝图经典「X 标记」（赭红墨，低调） */
+.jnode .xmark { opacity: .55; transition: opacity .25s; }
+/* 点亮：切面钻石宝石（按区域上色），弹出 + 微光闪烁 */
+.jnode .gem { opacity: 0; transform-origin: center; }
+.jnode.lit .gem {
+  opacity: 1;
+  animation: gemPop .45s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+.jnode.lit .xmark { opacity: 0; }
+/* 宝石微光：点亮后持续轻微闪烁 */
+.jnode .gem-sparkle {
+  opacity: 0;
+  transform-origin: center;
+  animation: gemTwinkle 1.8s ease-in-out infinite;
+}
+.jnode.lit .gem-sparkle { opacity: 1; }
+@keyframes gemPop {
+  0%   { transform: scale(.2); }
+  60%  { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+@keyframes gemTwinkle {
+  0%, 100% { opacity: .15; transform: scale(.6) rotate(0deg); }
+  50%      { opacity: .95; transform: scale(1.15) rotate(45deg); }
+}
+.journey-caption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 34px 8% 26px;
+  background: linear-gradient(180deg, transparent, rgba(10, 14, 28, .82));
+  text-align: center;
+  color: #fdf3e0;
+}
+.jcap {
+  position: absolute; left: 0; right: 0; bottom: 22px;
+  padding: 0 8%; opacity: 0;
+}
+.jcap-t { font-family: var(--font-display); font-size: clamp(22px, 3.4vw, 38px); }
+.jcap-s { font-size: 14.5px; color: #cdbd9b; margin-top: 4px; }
+.journey-actions { text-align: center; margin-top: 20px; }
+.journey-play { font-size: 18px; padding: 13px 30px; background: linear-gradient(135deg,#ffd766,#e9b949); color: #5a3b00; border: none; }
+.journey-play:hover { transform: translateY(-2px); }
+.journey-play:disabled { opacity: .65; cursor: default; transform: none; }
+
+/* ---------- 第七幕：48 精灵横向长廊 ---------- */
+.chapter--gallery { padding: 0; background: transparent; }
+.gal-pin {
+  height: calc(100vh - var(--topbar-h, 64px));
+  height: calc(100svh - var(--topbar-h, 64px));
+  display: flex; flex-direction: column; justify-content: center; gap: 16px; padding: 60px 0 30px;
+}
+.gal-head { text-align: center; padding: 0 6vw; }
+.gal-title { font-family: var(--font-display); font-size: clamp(26px, 4vw, 46px); }
+.gal-sub { font-size: 15px; color: var(--ink-soft); margin-top: 6px; }
+.gal-viewport { overflow: hidden; }
+.gal-track {
+  display: grid; grid-auto-flow: column; grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 14px; padding: 0 6vw; width: max-content;
+}
+.sp-card {
+  width: 196px; text-align: left; cursor: pointer;
+  background: rgba(255, 255, 255, .1);
+  border: 2px solid var(--line); border-radius: 16px;
+  padding: 12px 14px; color: inherit;
+  transition: transform .14s, background .14s, border-color .14s;
+  font-family: var(--font-body);
+}
+.sp-card:hover { transform: translateY(-4px); background: rgba(255, 255, 255, .18); border-color: var(--accent); }
+.sp-card-sym { font-family: var(--font-ipa); font-size: 34px; font-weight: 700; line-height: 1; color: var(--accent); }
+.sp-card-name { font-family: var(--font-display); font-size: 16px; margin-top: 5px; }
+.sp-card-type {
+  display: inline-block; margin-top: 6px; padding: 1px 9px;
+  font-size: 11.5px; border-radius: 999px;
+  background: rgba(255, 255, 255, .16); color: var(--ink-soft);
+}
+.sp-card-w { margin-top: 7px; font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
+.gal-hint { text-align: center; font-size: 13px; color: var(--ink-soft); }
+
+/* ---------- 右侧章节导航 ---------- */
+.chapter-dots {
+  position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
+  z-index: 40; display: flex; flex-direction: column; gap: 12px;
+}
+.cdot {
+  display: flex; align-items: center; justify-content: flex-end; gap: 8px;
+  background: none; border: none; cursor: pointer; padding: 0;
+}
+.cdot-dot {
+  width: 11px; height: 11px; border-radius: 50%;
+  border: 2px solid rgba(120, 90, 50, .6);
+  background: rgba(255, 255, 255, .5);
+  transition: all .25s ease;
+  flex: none;
+}
+.cdot-label {
+  font-family: var(--font-display); font-size: 12px;
+  color: var(--ink-soft);
+  background: rgba(255, 250, 238, .92);
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 2px 8px;
+  opacity: 0; transform: translateX(6px);
+  transition: all .25s ease;
+  white-space: nowrap;
+}
+.cdot:hover .cdot-label { opacity: 1; transform: translateX(0); }
+.cdot.active .cdot-dot {
+  background: var(--gold); border-color: var(--gold-deep);
+  transform: scale(1.42);
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, .22);
+}
+/* 标签仅在悬停时浮出，避免常驻遮挡章节内容 */
+
+/* ---------- 悬浮 CTA ---------- */
+.story-cta {
+  position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%);
+  z-index: 45;
+  font-family: var(--font-display); font-size: 15px;
+  color: var(--ink); text-decoration: none;
+  background: rgba(255, 250, 238, .95);
+  border: 2px solid var(--line); border-radius: 999px;
+  padding: 9px 22px;
+  box-shadow: 0 8px 22px rgba(70, 45, 15, .22);
+  transition: transform .14s, background .14s;
+}
+.story-cta:hover { transform: translateX(-50%) translateY(-2px); background: #ffefc4; }
+
+/* ---------- 序章滚动提示 ---------- */
+.scroll-hint {
+  position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+  text-align: center; font-size: 13.5px; color: var(--ink-soft);
+  font-family: var(--font-display);
+}
+.scroll-hint span { display: block; font-size: 20px; margin-top: 2px; animation: hintBounce 1.6s ease-in-out infinite; }
+@keyframes hintBounce {
+  0%, 100% { transform: translateY(0); opacity: .55; }
+  50%      { transform: translateY(7px); opacity: 1; }
+}
+
+/* ---------- 降级：无动画 / 减弱动效 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .js-anim { opacity: 1 !important; }
+  .art-img { transform: none !important; }
+  .scroll-hint span { animation: none; }
+  .chapter-dots { display: none; }
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 980px) {
+  .ch-inner { grid-template-columns: 1fr; gap: 26px; }
+  .chapter--flip .ch-art { order: 0; }
+  .chapter { padding: 86px 7vw 64px; }
+  .ch-p { max-width: none; }
+  .cdot-label { display: none; }
+  .chapter-dots { right: 12px; gap: 10px; }
+}
+@media (max-width: 680px) {
+  .chapter { padding: 76px 6vw 56px; min-height: auto; }
+  .ch-title { font-size: clamp(28px, 8.6vw, 42px); }
+  .ch-num { font-size: clamp(38px, 12vw, 58px); }
+  .art-frame { border-width: 4px; border-radius: 16px; }
+  .story-cta { font-size: 13.5px; padding: 8px 16px; bottom: 14px; }
+  .sp-card { width: 158px; }
+  .journey-inner { padding: 66px 4vw 24px; }
+}

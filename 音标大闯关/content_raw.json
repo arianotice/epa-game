@@ -1,0 +1,1790 @@
+{
+ "phonemes": [
+  {
+   "sym": "iː",
+   "name": "微笑小姐",
+   "type": "vowel-long",
+   "ep": "EP02",
+   "unit": "U01",
+   "words": [
+    "sheep",
+    "tree",
+    "green"
+   ],
+   "key_point": "第四步，声带：手摸着喉咙，声带要振动，嗡嗡地响，所以她是个浊音。听好——",
+   "mnemonic": "嘴角微笑拉耳边，拖长音。绵羊 sheep，大树 tree，绿色 green 笑嘻嘻。",
+   "title": "微笑小姐的长衣音"
+  },
+  {
+   "sym": "ɪ",
+   "name": "放松精灵",
+   "type": "vowel-short",
+   "ep": "EP02",
+   "unit": "U02",
+   "words": [
+    "ship",
+    "fish",
+    "big"
+   ],
+   "key_point": "四句话记牢：嘴巴微张不用力，舌头放松往后靠，声带振动是浊音，声音短促咔就停。",
+   "mnemonic": "嘴巴微张松又轻，短促咦。小船 ship，小鱼 fish，大的 big 松又轻。",
+   "title": "放松精灵的短衣音"
+  },
+  {
+   "sym": "e",
+   "name": "小口精灵",
+   "type": "vowel-short",
+   "ep": "EP03",
+   "unit": "U03",
+   "words": [
+    "egg",
+    "bed",
+    "pen"
+   ],
+   "key_point": "四句话记牢：嘴巴只开一小口，舌头卡在正中间，声带振动是浊音，声音短促又紧张。",
+   "mnemonic": "一小口，短促诶。鸡蛋 egg，小床 bed，钢笔 pen 写写写。",
+   "title": "小口精灵的小口音"
+  },
+  {
+   "sym": "æ",
+   "name": "大口精灵",
+   "type": "vowel-short",
+   "ep": "EP03",
+   "unit": "U04",
+   "words": [
+    "apple",
+    "hand",
+    "cat"
+   ],
+   "key_point": "四句话记牢：嘴巴张大下巴掉，舌头放平躺着睡，声带振动是浊音，声音扁扁又开阔。",
+   "mnemonic": "打哈欠，下巴掉。苹果 apple，小手 hand，猫咪 cat 喵喵叫。",
+   "title": "大口精灵的大口音"
+  },
+  {
+   "sym": "ɑː",
+   "name": "医生精灵",
+   "type": "vowel-long",
+   "ep": "EP04",
+   "unit": "U05",
+   "words": [
+    "car",
+    "park",
+    "star"
+   ],
+   "key_point": "四句话记牢：嘴巴张开喉咙敞，舌头放平往后缩，声带振动是浊音，声音又长又开阔。",
+   "mnemonic": "医生查喉咙，啊——又长又开。汽车 car，公园 park，星星 star 挂天外。",
+   "title": "医生精灵的医生音"
+  },
+  {
+   "sym": "ʌ",
+   "name": "戳肚子精灵",
+   "type": "vowel-short",
+   "ep": "EP04",
+   "unit": "U06",
+   "words": [
+    "bus",
+    "cup",
+    "duck"
+   ],
+   "key_point": "四句话记牢：嘴巴中等全放松，舌头平平放中间，声带振动是浊音，声音又短又轻松。",
+   "mnemonic": "戳一下肚子，啊，短又松。公交 bus，杯子 cup，鸭子 duck 嘎嘎嘎。",
+   "title": "戳肚子精灵的戳肚子音"
+  },
+  {
+   "sym": "ɒ",
+   "name": "吹泡泡精灵",
+   "type": "vowel-short",
+   "ep": "EP05",
+   "unit": "U07",
+   "words": [
+    "hot",
+    "dog",
+    "box"
+   ],
+   "key_point": "四句话记牢：嘴巴圆圆下巴掉，舌头后缩压得低，声带振动是浊音，声音又短又快跑。",
+   "mnemonic": "吹泡泡，哦，短又快。热热 hot，小狗 dog，盒子 box 装起来。",
+   "title": "吹泡泡精灵的吹泡泡音"
+  },
+  {
+   "sym": "ɔː",
+   "name": "吸果冻精灵",
+   "type": "vowel-long",
+   "ep": "EP05",
+   "unit": "U08",
+   "words": [
+    "ball",
+    "horse",
+    "door"
+   ],
+   "key_point": "四句话记牢：嘴唇嘟圆下巴掉，舌头后缩抬得高，声带振动是浊音，声音又长又圆绕。",
+   "mnemonic": "吸果冻，哦——长又圆。皮球 ball，大马 horse，门儿 door 关关好。",
+   "title": "吸果冻精灵的吸果冻音"
+  },
+  {
+   "sym": "ʊ",
+   "name": "轻轻推精灵",
+   "type": "vowel-short",
+   "ep": "EP06",
+   "unit": "U09",
+   "words": [
+    "book",
+    "foot",
+    "good"
+   ],
+   "key_point": "对，只嘟一点点就够。接着舌头慢慢往后缩，舌头的后半截抬起来一点点，不用抬太高。嗓子一用力，送一口短气出来——",
+   "mnemonic": "轻轻推，唔，短又松。",
+   "title": "轻轻推精灵"
+  },
+  {
+   "sym": "uː",
+   "name": "吹蜡烛精灵",
+   "type": "vowel-long",
+   "ep": "EP06",
+   "unit": "U10",
+   "words": [
+    "food",
+    "moon",
+    "blue"
+   ],
+   "key_point": "听出来了吗？这个音又长又紧。紧，就是嘴唇一直绷着不松开；长，就是可以一直吹下去。再听我拉长一遍——",
+   "mnemonic": "吹蜡烛，呜——长又紧。",
+   "title": "吹蜡烛精灵"
+  },
+  {
+   "sym": "ɜː",
+   "name": "卷舌弹簧精灵",
+   "type": "vowel-long",
+   "ep": "EP07",
+   "unit": "U11",
+   "words": [
+    "bird",
+    "girl",
+    "nurse"
+   ],
+   "key_point": "接着是关键动作：舌尖慢慢往上翘，再往后卷，卷成一个小小的弹簧。注意，舌尖不能碰到上面的牙床，要悬在半空中。",
+   "mnemonic": "舌头卷成小弹簧，呃——停在中间。",
+   "title": "卷舌弹簧精灵"
+  },
+  {
+   "sym": "ə",
+   "name": "偷懒叹气精灵",
+   "type": "vowel-short",
+   "ep": "EP07",
+   "unit": "U12",
+   "words": [
+    "banana",
+    "panda",
+    "teacher"
+   ],
+   "key_point": "就是这个道理。跟卷舌弹簧精灵比一比：那一个要把舌头卷起来、把声音拉长；这一个呢，舌头不动，一闪就没。一个卷，一个懒。",
+   "mnemonic": "嘴巴懒洋洋叹口气，呃，最短最放松。",
+   "title": "偷懒叹气精灵"
+  },
+  {
+   "sym": "eɪ",
+   "name": "滑梯精灵A",
+   "type": "diphthong",
+   "ep": "EP08",
+   "unit": "U13",
+   "words": [
+    "cake",
+    "name",
+    "rain"
+   ],
+   "key_point": "先找起点：嘴角往两边咧开，像微笑小姐那样，嘴巴张开一点点，发——诶。再找终点：舌面慢慢往上升，升到轻轻的——衣。",
+   "mnemonic": "从诶滑到衣，这就是字母 A 的名字。",
+   "title": "滑梯精灵A"
+  },
+  {
+   "sym": "aɪ",
+   "name": "滑梯精灵I",
+   "type": "diphthong",
+   "ep": "EP08",
+   "unit": "U14",
+   "words": [
+    "bike",
+    "kite",
+    "five"
+   ],
+   "key_point": "然后一口气往上升：下巴慢慢抬回去，嘴巴越收越小，舌面往上升，一直滑到轻轻的——衣。从最大的啊，滑到最小的衣。",
+   "mnemonic": "看到风筝吓一跳，啊—衣，是字母 I。",
+   "title": "滑梯精灵I"
+  },
+  {
+   "sym": "ɔɪ",
+   "name": "欢呼精灵",
+   "type": "diphthong",
+   "ep": "EP09",
+   "unit": "U15",
+   "words": [
+    "toy",
+    "boy",
+    "noise"
+   ],
+   "key_point": "先找起点：嘴唇收圆，往前突出，像突然想起一件大事，发——哦。再找终点：嘴唇慢慢变扁，舌面往上升，滑到——衣。",
+   "mnemonic": "看到玩具哦—衣，欢呼起来。",
+   "title": "欢呼精灵"
+  },
+  {
+   "sym": "əʊ",
+   "name": "含糖精灵",
+   "type": "diphthong",
+   "ep": "EP09",
+   "unit": "U16",
+   "words": [
+    "nose",
+    "home",
+    "boat"
+   ],
+   "key_point": "你试试就知道了：嘴里含一颗糖，嘴巴不敢张大，只能微微张开，然后慢慢把嘴唇收圆、收小——就是这个样子。",
+   "mnemonic": "欧，像含着一颗糖，是字母 O 的名字。",
+   "title": "含糖精灵"
+  },
+  {
+   "sym": "aʊ",
+   "name": "惊叹精灵",
+   "type": "diphthong",
+   "ep": "EP10",
+   "unit": "U17",
+   "words": [
+    "house",
+    "mouth",
+    "cow"
+   ],
+   "key_point": "再记牢三件事。舌位：从嘴巴最低、最靠后的地方出发，一路往上往前滑到中间。气流：一路畅通，嘴巴不挡它。声带：全程都在振动，因为它是元音。",
+   "mnemonic": "看到大房子，啊——呜，惊叹一声。",
+   "title": "惊叹精灵"
+  },
+  {
+   "sym": "ɪə",
+   "name": "悄悄话精灵",
+   "type": "diphthong",
+   "ep": "EP10",
+   "unit": "U18",
+   "words": [
+    "ear",
+    "near",
+    "deer"
+   ],
+   "key_point": "三件事记牢。舌位：从前面偏高的地方，往后往下滑到嘴巴正中央。气流：一路畅通，嘴巴不挡它。声带：全程都在振动，因为它是元音。",
+   "mnemonic": "一——呃，是指着耳朵说悄悄话。",
+   "title": "悄悄话精灵"
+  },
+  {
+   "sym": "eə",
+   "name": "风吹精灵",
+   "type": "diphthong",
+   "ep": "EP11",
+   "unit": "U19",
+   "words": [
+    "hair",
+    "chair",
+    "bear"
+   ],
+   "key_point": "三件事记牢。舌位：从前面偏低的地方，往后往下滑到嘴巴正中央。气流：一路畅通，嘴巴不挡它。声带：全程都在振动，因为它是元音。",
+   "mnemonic": "诶——呃，头发被风吹起来了。",
+   "title": "风吹精灵"
+  },
+  {
+   "sym": "ʊə",
+   "name": "旅行精灵",
+   "type": "diphthong",
+   "ep": "EP11",
+   "unit": "U20",
+   "words": [
+    "tour",
+    "sure"
+   ],
+   "key_point": "没错，它是最少见的一位。它专门管背上行李出发的那一下。跟我做前半段：嘴唇撮成一个小圆圈，舌头后面抬起来，短促地——乌",
+   "mnemonic": "乌——呃，收拾行李去旅行。",
+   "title": "旅行精灵"
+  },
+  {
+   "sym": "p",
+   "name": "纸飞机精灵",
+   "type": "cons-clear",
+   "ep": "EP12",
+   "unit": "U21",
+   "words": [
+    "pig",
+    "paper",
+    "apple"
+   ],
+   "key_point": "三个要点：双唇紧闭先关门；突然打开，气流噗地冲出去；声带不振动，喉咙安安静静。只有风，没有鼓声，像纸飞机飞出去。",
+   "mnemonic": "双唇紧闭噗地爆破，声带不振动，像纸飞机飞出去。",
+   "title": "纸飞机精灵"
+  },
+  {
+   "sym": "b",
+   "name": "打鼓精灵",
+   "type": "cons-voiced",
+   "ep": "EP12",
+   "unit": "U22",
+   "words": [
+    "ball",
+    "bus",
+    "baby"
+   ],
+   "key_point": "这就是打鼓精灵。气流一样先被堵住，再一样突然放开，唯一的差别是：声带这次要振动，所以它是浊辅音。",
+   "mnemonic": "噗的振动版，手贴喉咙能感到麻，像打鼓。",
+   "title": "打鼓精灵"
+  },
+  {
+   "sym": "t",
+   "name": "小锤精灵",
+   "type": "cons-clear",
+   "ep": "EP13",
+   "unit": "U23",
+   "words": [
+    "tiger",
+    "table",
+    "cat"
+   ],
+   "key_point": "敲嘴巴里的天花板。今天换个地方堵气流——不用嘴唇了，用舌头。先用舌尖摸一摸上门牙后面那道鼓鼓的小肉坎。",
+   "mnemonic": "舌尖当小锤子敲上齿龈，轻轻一下，不振动。",
+   "title": "小锤精灵"
+  },
+  {
+   "sym": "d",
+   "name": "响锤精灵",
+   "type": "cons-voiced",
+   "ep": "EP13",
+   "unit": "U24",
+   "words": [
+    "dog",
+    "hand",
+    "red"
+   ],
+   "key_point": "三个要点：舌尖顶住上齿龈；突然弹开，气流冲出去；声带振动，手贴喉咙能感到麻。同样的锤子，敲出了响声。",
+   "mnemonic": "特的振动版，同样的锤子，敲出响声。",
+   "title": "响锤精灵"
+  },
+  {
+   "sym": "k",
+   "name": "咳嗽精灵",
+   "type": "cons-clear",
+   "ep": "EP14",
+   "unit": "U25",
+   "words": [
+    "kite",
+    "cat",
+    "key"
+   ],
+   "key_point": "第三步，摸喉咙：安安静静，一点都不麻。所以他是清音，声带不振动。先听一遍这三个词里的他——",
+   "mnemonic": "舌根轻轻顶天花板，像咳嗽一样咔，声带不振动。",
+   "title": "咳嗽精灵"
+  },
+  {
+   "sym": "g",
+   "name": "打嗝精灵",
+   "type": "cons-voiced",
+   "ep": "EP14",
+   "unit": "U26",
+   "words": [
+    "girl",
+    "egg",
+    "green"
+   ],
+   "key_point": "记牢：舌根抬起顶天花板；堵住气再放开；声带振动，手贴喉咙能感到麻。同样的位置，敲出了响声。",
+   "mnemonic": "咔的振动版，像打嗝咕，手贴喉咙能感到麻。",
+   "title": "打嗝精灵"
+  },
+  {
+   "sym": "f",
+   "name": "咬唇清风精灵",
+   "type": "cons-clear",
+   "ep": "EP15",
+   "unit": "U27",
+   "words": [
+    "fish",
+    "flower",
+    "phone"
+   ],
+   "key_point": "第三步，摸喉咙：安安静静，一点都不麻。所以他是清音，声带不振动。先听一遍这三个词里的他——",
+   "mnemonic": "上牙轻咬下唇往外吹气，夫，声带不振动。",
+   "title": "咬唇清风精灵"
+  },
+  {
+   "sym": "v",
+   "name": "咬唇振动精灵",
+   "type": "cons-voiced",
+   "ep": "EP15",
+   "unit": "U28",
+   "words": [
+    "van",
+    "vegetable",
+    "five"
+   ],
+   "key_point": "哒哒哒——！单元时间到！咬的地方不变，还是上牙和下嘴唇。但今天这位要让喉咙嗡嗡响，他叫——咬唇振动精灵！",
+   "mnemonic": "夫的振动版，牙齿咬住下嘴唇，嗡——喉咙麻。",
+   "title": "咬唇振动精灵"
+  },
+  {
+   "sym": "θ",
+   "name": "咬舌清音精灵",
+   "type": "cons-clear",
+   "ep": "EP16",
+   "unit": "U29",
+   "words": [
+    "three",
+    "thank",
+    "birthday"
+   ],
+   "key_point": "第三步，摸喉咙：安安静静，一点都不麻，所以他是清音，声带不振动。先听一遍——",
+   "mnemonic": "舌尖轻轻探出齿缝往外送气，听起来像轻轻的斯，声带不振动。",
+   "title": "咬舌清音精灵"
+  },
+  {
+   "sym": "ð",
+   "name": "咬舌浊音精灵",
+   "type": "cons-voiced",
+   "ep": "EP16",
+   "unit": "U30",
+   "words": [
+    "this",
+    "mother",
+    "brother"
+   ],
+   "key_point": "记牢：舌尖探到齿缝，碰到就缩回来，别伸太长；气从缝里送出去；喉咙振动，手贴喉咙能感到麻。",
+   "mnemonic": "斯的振动版，舌尖别伸太长，碰到就缩回来。",
+   "title": "咬舌浊音精灵"
+  },
+  {
+   "sym": "s",
+   "name": "小蛇精灵",
+   "type": "cons-clear",
+   "ep": "EP17",
+   "unit": "U31",
+   "words": [
+    "sun",
+    "snake",
+    "bus"
+   ],
+   "key_point": "记牢：嘴巴微开牙对齐，舌尖留细缝，气从细缝挤出去，声带不振动。",
+   "mnemonic": "小蛇嘶嘶叫，气流从舌尖和齿龈中间的细缝里挤出去，声带不振动。",
+   "title": "小蛇精灵"
+  },
+  {
+   "sym": "z",
+   "name": "蜜蜂精灵",
+   "type": "cons-voiced",
+   "ep": "EP17",
+   "unit": "U32",
+   "words": [
+    "zoo",
+    "nose",
+    "lazy"
+   ],
+   "key_point": "手摸喉咙，声带嗡嗡振动，摸上去麻麻的。所以他是浊音。听这三个词——",
+   "mnemonic": "蜜蜂滋滋叫，嘴型和小蛇一模一样，只是声带要振动——同一张嘴型，只换声带开关。",
+   "title": "蜜蜂精灵"
+  },
+  {
+   "sym": "ʃ",
+   "name": "图书馆精灵",
+   "type": "cons-clear",
+   "ep": "EP18",
+   "unit": "U33",
+   "words": [
+    "ship",
+    "fish",
+    "sheep"
+   ],
+   "key_point": "想抓住它，先摆好嘴型。第一步，嘴唇：两片嘴唇往前撮，撮成一个小喇叭口，像小鱼的嘴那样嘟出去。",
+   "mnemonic": "像图书馆里的嘘——，嘴唇撮圆往前伸，声带不振动。",
+   "title": "图书馆精灵"
+  },
+  {
+   "sym": "ʒ",
+   "name": "呼噜精灵",
+   "type": "cons-voiced",
+   "ep": "EP18",
+   "unit": "U34",
+   "words": [
+    "television",
+    "usually",
+    "treasure"
+   ],
+   "key_point": "位置相同，只差一件事——差在喉咙。它的声带要一直振动，嗡嗡地响，像在打呼噜。",
+   "mnemonic": "嘘的打呼噜版，汉语里没有这个音，只能靠手贴喉咙认振动。",
+   "title": "呼噜精灵"
+  },
+  {
+   "sym": "h",
+   "name": "哈气精灵",
+   "type": "cons-clear",
+   "ep": "EP19",
+   "unit": "U35",
+   "words": [
+    "hat",
+    "hand",
+    "happy"
+   ],
+   "key_point": "对，声带完全不振动，它是个清音。三个字记牢：嘴巴跟、气自由、喉咙不动。听我哈三下——",
+   "mnemonic": "冬天对着玻璃哈气，气流自由冲出来，声带完全不振动。",
+   "title": "哈气精灵"
+  },
+  {
+   "sym": "r",
+   "name": "小钩子精灵",
+   "type": "cons-voiced",
+   "ep": "EP19",
+   "unit": "U36",
+   "words": [
+    "rabbit",
+    "rice",
+    "run"
+   ],
+   "key_point": "对，声带在振动，它是个浊音。三句记牢：嘴唇收小圆，舌尖往里钩，钩好悬半空。听我读三遍——",
+   "mnemonic": "舌尖像小钩子往里钩，悬在半空什么都不碰，千万别卷成中国的日和热。",
+   "title": "小钩子精灵"
+  },
+  {
+   "sym": "tʃ",
+   "name": "火车精灵",
+   "type": "cons-clear",
+   "ep": "EP20",
+   "unit": "U37",
+   "words": [
+    "chair",
+    "teacher",
+    "lunch"
+   ],
+   "key_point": "第三步，舌尖猛地松开，气冲出来，从扁扁的缝里摩擦着往外走。先爆破，后摩擦，两步合成一个音。",
+   "mnemonic": "火车精灵哧——吃——，先爆破后摩擦，两步合成一个音，声带不振动。",
+   "title": "火车精灵"
+  },
+  {
+   "sym": "dʒ",
+   "name": "果酱精灵",
+   "type": "cons-voiced",
+   "ep": "EP20",
+   "unit": "U38",
+   "words": [
+    "juice",
+    "jam",
+    "jump"
+   ],
+   "key_point": "猜对了。它的声带要一直嗡嗡地振动，从堵住那一下，到摩擦出去，全程都在响。先听清音版，手贴喉咙——",
+   "mnemonic": "火车音的振动版，声带一边振动一边滑过去，像吃果酱。",
+   "title": "果酱精灵"
+  },
+  {
+   "sym": "m",
+   "name": "哼歌精灵",
+   "type": "nasal",
+   "ep": "EP21",
+   "unit": "U39",
+   "words": [
+    "moon",
+    "mom",
+    "milk"
+   ],
+   "key_point": "四句话记牢：嘴唇闭紧像封条，舌头躺平不干活，气流转弯走鼻子，喉咙嗡嗡要振动。",
+   "mnemonic": "闭着眼睛哼歌的那个「嗯」，两片嘴唇要闭着，气流全从鼻子走。",
+   "title": "哼歌精灵"
+  },
+  {
+   "sym": "n",
+   "name": "啄米精灵",
+   "type": "nasal",
+   "ep": "EP21",
+   "unit": "U40",
+   "words": [
+    "nose",
+    "pen",
+    "dinner"
+   ],
+   "key_point": "记牢：嘴张开别闭上，舌尖顶住上齿龈，气流转弯走鼻子，喉咙嗡嗡要振动。",
+   "mnemonic": "像小鸡啄米点头的那个「嗯」，舌尖顶住上齿龈，气流全从鼻子走。",
+   "title": "啄米精灵"
+  },
+  {
+   "sym": "ŋ",
+   "name": "打鼾国王精灵",
+   "type": "nasal",
+   "ep": "EP22",
+   "unit": "U41",
+   "words": [
+    "king",
+    "song",
+    "morning",
+    "strong"
+   ],
+   "key_point": "不是爱睡觉，声音本来就闷在喉咙里。第一步：舌尖躺平贴住下牙后面，不许翘。",
+   "mnemonic": "舌根堵住喉咙打鼾的嗯，是舌根在干活；舌尖鼻音是舌尖干活。",
+   "title": "打鼾国王精灵"
+  },
+  {
+   "sym": "l",
+   "name": "快乐钩子精灵",
+   "type": "lateral",
+   "ep": "EP23",
+   "unit": "U42",
+   "words": [
+    "light",
+    "lemon",
+    "lion",
+    "apple",
+    "blue"
+   ],
+   "key_point": "舌尖翘成小钩子，钩住上门牙后面的肉坎。气流从舌头两边漏下去，声带要振动。",
+   "mnemonic": "快乐的 lll，舌尖像小钩子钩住上齿龈。",
+   "title": "快乐钩子精灵"
+  },
+  {
+   "sym": "w",
+   "name": "吻唇精灵",
+   "type": "semivowel",
+   "ep": "EP24",
+   "unit": "U43",
+   "words": [
+    "water",
+    "window"
+   ],
+   "key_point": "第四步，声带：手贴喉咙，声带要振动，嗡嗡响，所以是浊音。听——",
+   "mnemonic": "先吻一下嘴唇撮圆，再快速滑开，像呜——衣。",
+   "title": "吻唇精灵"
+  },
+  {
+   "sym": "j",
+   "name": "短耶精灵",
+   "type": "semivowel",
+   "ep": "EP24",
+   "unit": "U44",
+   "words": [
+    "yes",
+    "yellow",
+    "year",
+    "yogurt"
+   ],
+   "key_point": "哒哒哒——！单元时间到！今天这位性子最急，一冒头就往后面的音上扑——短耶精灵！",
+   "mnemonic": "像「耶」但要更短更快，一开口就马上接到后面的元音上。",
+   "title": "短耶精灵"
+  },
+  {
+   "sym": "tr",
+   "name": "戳精灵",
+   "type": "cons-clear",
+   "ep": "EP25",
+   "unit": "U45",
+   "words": [
+    "tree",
+    "train"
+   ],
+   "key_point": "第四步，声带：手贴喉咙，不许振动，喉咙安安静静，所以他是清音。听——",
+   "mnemonic": "火车头兄弟里的清音，读「戳」，声带不振动。",
+   "title": "戳精灵"
+  },
+  {
+   "sym": "dr",
+   "name": "啄精灵",
+   "type": "cons-voiced",
+   "ep": "EP25",
+   "unit": "U46",
+   "words": [
+    "dress",
+    "drink"
+   ],
+   "key_point": "哒哒哒——！单元时间到！上一位的弟弟来啦，长得一模一样，可喉咙会发麻——啄精灵！",
+   "mnemonic": "火车头兄弟里的浊音，读「啄」，手贴喉咙能感到振动。",
+   "title": "啄精灵"
+  },
+  {
+   "sym": "ts",
+   "name": "呲精灵",
+   "type": "cons-clear",
+   "ep": "EP25",
+   "unit": "U47",
+   "words": [
+    "cats",
+    "students"
+   ],
+   "key_point": "第四步，声带：手贴喉咙，不许振动，喉咙安安静静，所以他是清音。听——",
+   "mnemonic": "尾巴音兄弟里的清音，读「呲」，声带不振动。名词复数尾巴上，常常藏着他。",
+   "title": "呲精灵"
+  },
+  {
+   "sym": "dz",
+   "name": "兹精灵",
+   "type": "cons-voiced",
+   "ep": "EP25",
+   "unit": "U48",
+   "words": [
+    "beds",
+    "friends"
+   ],
+   "key_point": "哒哒哒——！单元时间到！上一位的弟弟来啦，长得一样，可喉咙会发麻——兹精灵！",
+   "mnemonic": "尾巴音兄弟里的浊音，读「兹」，声带要振动。名词复数尾巴上，同样藏着他。",
+   "title": "兹精灵"
+  }
+ ],
+ "levels": [
+  {
+   "ep": "EP00",
+   "title": "欢迎加入声音探险队",
+   "region": "camp",
+   "scene": "出发营地",
+   "phonemes": [],
+   "tip": "国际音标就是英语的拼音：48 个音标是 48 块乐高积木，所有英语单词都由它们拼成。学会音标，陌生单词也敢开口读，背单词快一倍。",
+   "words": [
+    [
+     "cat",
+     "猫"
+    ],
+    [
+     "banana",
+     "香蕉"
+    ],
+    [
+     "dog",
+     "狗"
+    ]
+   ],
+   "mnemonic": "国际音标是英语的拼音，48 个音标就是 48 块乐高积木——任何一个英语单词，都能用它们拼出来！",
+   "pairs": []
+  },
+  {
+   "ep": "EP01",
+   "title": "嘴巴里的乐队",
+   "region": "camp",
+   "scene": "出发营地",
+   "phonemes": [],
+   "tip": "嘴巴里有支乐队：嘴唇是大门、牙齿是栏杆、舌头是舞者、声带是小鼓、气流是风。元音是乐音，辅音是打击乐。",
+   "words": [
+    [
+     "lips",
+     "嘴唇"
+    ],
+    [
+     "teeth",
+     "牙齿"
+    ],
+    [
+     "tongue",
+     "舌头"
+    ],
+    [
+     "vocal cords",
+     "声带"
+    ],
+    [
+     "air",
+     "气流"
+    ]
+   ],
+   "mnemonic": "嘴唇大门牙齿栏，舌头舞者声带鼓，气流带来一阵风——元音唱歌辅音打鼓！",
+   "pairs": []
+  },
+  {
+   "ep": "EP02",
+   "title": "阳光农场的绵羊与小船",
+   "region": "vowel",
+   "scene": "阳光农场",
+   "phonemes": [
+    "iː",
+    "ɪ"
+   ],
+   "tip": "微笑音 vs 放松音：嘴角拉到耳边拖长「衣——」是 sheep；嘴巴微张短促「咦」是 ship。",
+   "words": [
+    "sheep",
+    "tree",
+    "green",
+    "ship",
+    "fish",
+    "big"
+   ],
+   "mnemonic": "嘴角微笑拉耳边，拖长音，是 sheep；嘴巴微张松又轻，短促咦，是 ship；一只 sheep 游啊游，游成了小船 ship！",
+   "pairs": [
+    [
+     "sheep",
+     "ship"
+    ],
+    [
+     "seat",
+     "sit"
+    ],
+    [
+     "sleep",
+     "slip"
+    ]
+   ]
+  },
+  {
+   "ep": "EP03",
+   "title": "早餐桌上的两档嘴型",
+   "region": "vowel",
+   "scene": "营养早餐",
+   "phonemes": [
+    "e",
+    "æ"
+   ],
+   "tip": "两档嘴型：/e/ 像咬一口苹果，短促「诶」；/æ/ 像打哈欠，下巴掉下来「哎」。手指横放嘴里量嘴型。",
+   "words": [
+    "egg",
+    "bed",
+    "red",
+    "pen",
+    "apple",
+    "hand"
+   ],
+   "mnemonic": "一小口，短促诶，鸡蛋 egg 床上睡；打哈欠，下巴掉，苹果 apple 手中抱。手指一量就知道，小口大口差一档！",
+   "pairs": [
+    [
+     "bed",
+     "bad"
+    ],
+    [
+     "pen",
+     "pan"
+    ],
+    [
+     "head",
+     "had"
+    ]
+   ]
+  },
+  {
+   "ep": "EP04",
+   "title": "上学路上的医生与鸭子",
+   "region": "vowel",
+   "scene": "上学路上",
+   "phonemes": [
+    "ɑː",
+    "ʌ"
+   ],
+   "tip": "医生音 vs 戳肚子音：/ɑː/ 像医生检查喉咙「啊——」又长又开；/ʌ/ 像被轻轻戳一下肚子「啊」，短又松。",
+   "words": [
+    "car",
+    "park",
+    "star",
+    "bus",
+    "cup",
+    "duck"
+   ],
+   "mnemonic": "医生查喉咙，啊——又长又开，小汽车 car 开进 park；戳一下肚子，啊，短又松，鸭子 duck 跳上 bus。长的是医生，短的是戳肚，一长一短分清楚！",
+   "pairs": [
+    [
+     "cart",
+     "cut"
+    ],
+    [
+     "heart",
+     "hut"
+    ],
+    [
+     "park",
+     "pup"
+    ]
+   ]
+  },
+  {
+   "ep": "EP05",
+   "title": "运动会的吹泡泡与吸果冻",
+   "region": "vowel",
+   "scene": "运动会",
+   "phonemes": [
+    "ɒ",
+    "ɔː"
+   ],
+   "tip": "吹泡泡 vs 吸果冻：都撮唇「哦」，短「哦」是 hop 跳，拖长「哦——」是 ball。",
+   "words": [
+    "hot",
+    "dog",
+    "box",
+    "ball",
+    "horse",
+    "door"
+   ],
+   "mnemonic": "嘴巴撮圆像小鱼，吹泡泡，哦，短又快，小狗 dog 守着 box；吸果冻，哦——长又圆，小马 horse 顶着 ball。快的吹泡，慢的吸冻，一快一慢记心间！",
+   "pairs": [
+    [
+     "cot",
+     "caught"
+    ],
+    [
+     "not",
+     "nought"
+    ],
+    [
+     "spot",
+     "sport"
+    ]
+   ]
+  },
+  {
+   "ep": "EP06",
+   "title": "睡前故事的推与吹",
+   "region": "vowel",
+   "scene": "睡前故事",
+   "phonemes": [
+    "ʊ",
+    "uː"
+   ],
+   "tip": "推东西 vs 吹蜡烛：都撮唇「乌」，/ʊ/ 像轻轻推东西「唔」短而松；/uː/ 像吹蜡烛「呜——」长而紧。",
+   "words": [
+    "book",
+    "foot",
+    "good",
+    "food",
+    "moon",
+    "blue"
+   ],
+   "mnemonic": "嘴巴圆成小圆圈，轻轻推，唔，短又松，故事 book 放在 foot 边；吹蜡烛，呜——长又紧，月亮 moon 照着 blue。松的是推，紧的是吹，一松一紧要分明！",
+   "pairs": [
+    [
+     "full",
+     "fool"
+    ],
+    [
+     "pull",
+     "pool"
+    ],
+    [
+     "look",
+     "Luke"
+    ]
+   ]
+  },
+  {
+   "ep": "EP07",
+   "title": "动物园里的弹簧与叹气",
+   "region": "vowel",
+   "scene": "动物园与回家路",
+   "phonemes": [
+    "ɜː",
+    "ə"
+   ],
+   "tip": "卷舌弹簧 vs 偷懒叹气：/ɜː/ 舌头卷成小弹簧停在口腔中部「呃——」；/ə/ 嘴巴懒洋洋叹口气「呃」，最短最放松。",
+   "words": [
+    "bird",
+    "girl",
+    "nurse",
+    "banana",
+    "panda",
+    "teacher"
+   ],
+   "mnemonic": "舌头卷成小弹簧，呃——停在正中央，小鸟 bird，女孩 girl，护士 nurse 忙又忙；嘴巴偷懒叹口气，呃，短得几乎听不见，香蕉 banana，熊猫 panda，老师 teacher 站一边。卷的是弹簧，懒的是叹气，一勤一懒要分清！",
+   "pairs": [
+    [
+     "bird",
+     "bed"
+    ],
+    [
+     "work",
+     "walk"
+    ],
+    [
+     "her",
+     "hat"
+    ]
+   ]
+  },
+  {
+   "ep": "EP08",
+   "title": "生日派对上的滑滑梯",
+   "region": "vowel",
+   "scene": "生日派对",
+   "phonemes": [
+    "eɪ",
+    "aɪ"
+   ],
+   "tip": "滑滑梯音：双元音要从一个音滑到另一个音。从「诶」滑到「衣」是字母 A；看到风筝吓一跳「啊—衣」是字母 I。",
+   "words": [
+    "cake",
+    "name",
+    "rain",
+    "bike",
+    "kite",
+    "five"
+   ],
+   "mnemonic": "滑滑梯，溜两段，诶滑到衣，是字母 A，蛋糕 cake、名字 name、窗外 rain；啊滑到衣，是字母 I，自行车 bike、风筝 kite、蜡烛 five。起点不同路线变，一高一低记心间！",
+   "pairs": [
+    [
+     "cake",
+     "kite"
+    ],
+    [
+     "lake",
+     "like"
+    ],
+    [
+     "name",
+     "nine"
+    ]
+   ]
+  },
+  {
+   "ep": "EP09",
+   "title": "玩具箱里的欢呼与含糖",
+   "region": "vowel",
+   "scene": "玩具箱与感冒",
+   "phonemes": [
+    "ɔɪ",
+    "əʊ"
+   ],
+   "tip": "欢呼音 vs 含糖音：看到玩具「哦—衣」欢呼；「欧」像含着一颗糖，是字母 O 的名字音。",
+   "words": [
+    "toy",
+    "boy",
+    "noise",
+    "nose",
+    "home",
+    "boat"
+   ],
+   "mnemonic": "打开箱子，哦—衣，toy 和 boy 吵闹 noise；含颗糖，欧——，nose 通，回 home 的路上划着 boat。欢呼滑两格，含糖圆一颗！",
+   "pairs": [
+    [
+     "boy",
+     "bow"
+    ],
+    [
+     "noise",
+     "nose"
+    ],
+    [
+     "toy",
+     "toe"
+    ]
+   ]
+  },
+  {
+   "ep": "EP10",
+   "title": "我家门口的惊叹与悄悄话",
+   "region": "vowel",
+   "scene": "我的家",
+   "phonemes": [
+    "aʊ",
+    "ɪə"
+   ],
+   "tip": "惊叹 vs 悄悄话：看到大房子「啊—呜」惊叹；「一—呃」是指着耳朵说悄悄话。",
+   "words": [
+    "house",
+    "mouth",
+    "cow",
+    "ear",
+    "near",
+    "deer"
+   ],
+   "mnemonic": "大房子，啊——呜，house 大，mouth 张，奶牛 cow 站在草地上；贴耳朵，一——呃，ear 朵，在 near 处，小 deer 轻轻走过来。一个往外张，一个往里收！",
+   "pairs": [
+    [
+     "now",
+     "near"
+    ],
+    [
+     "town",
+     "tear"
+    ],
+    [
+     "house",
+     "hear"
+    ]
+   ]
+  },
+  {
+   "ep": "EP11",
+   "title": "风吹头发与旅行行李箱",
+   "region": "vowel",
+   "scene": "理发店与旅行",
+   "phonemes": [
+    "eə",
+    "ʊə"
+   ],
+   "tip": "最文静的两个音：头发被风吹「诶—呃」；收拾行李「乌—呃」。单词最少，认识就行。",
+   "words": [
+    "hair",
+    "chair",
+    "bear",
+    "pear",
+    "tour",
+    "sure"
+   ],
+   "mnemonic": "风吹头发诶到呃，扁嘴轻滑不拖拉；收拾行李乌到呃，圆唇放松去旅行。两个声音最文静，单词虽少认得清！",
+   "pairs": [
+    [
+     "hair",
+     "tour"
+    ],
+    [
+     "bear",
+     "sure"
+    ],
+    [
+     "chair",
+     "tour"
+    ]
+   ]
+  },
+  {
+   "ep": "EP12",
+   "title": "纸飞机王国的第一声鼓点",
+   "region": "cons",
+   "scene": "纸飞机大赛",
+   "phonemes": [
+    "p",
+    "b"
+   ],
+   "tip": "双唇紧闭「噗」地爆破：/p/ 是纸飞机不振动；/b/ 是打鼓要振动（手贴喉咙感受）。",
+   "words": [
+    "pig",
+    "paper",
+    "apple",
+    "ball",
+    "bus",
+    "baby"
+   ],
+   "mnemonic": "双唇紧闭先关门，突然打开气流喷；纸飞机音不振动，打鼓声音喉咙震。嘴型相同开关换，手贴喉咙马上辨！",
+   "pairs": [
+    [
+     "pack",
+     "back"
+    ],
+    [
+     "pig",
+     "big"
+    ],
+    [
+     "cap",
+     "cab"
+    ]
+   ]
+  },
+  {
+   "ep": "EP13",
+   "title": "动物园里的舌尖小锤子",
+   "region": "cons",
+   "scene": "动物园：老虎与小狗",
+   "phonemes": [
+    "t",
+    "d"
+   ],
+   "tip": "舌尖当小锤子敲上齿龈：「特」不振动、「德」振动。",
+   "words": [
+    "tiger",
+    "table",
+    "cat",
+    "dog",
+    "hand",
+    "red"
+   ],
+   "mnemonic": "舌尖抬起贴齿龈，突然弹开气流喷；轻锤一声「特」不麻，响锤一声「德」嗡嗡。同一把小锤子，声带开关定清浊！",
+   "pairs": [
+    [
+     "tip",
+     "dip"
+    ],
+    [
+     "town",
+     "down"
+    ],
+    [
+     "coat",
+     "code"
+    ]
+   ]
+  },
+  {
+   "ep": "EP14",
+   "title": "风筝与舌根天花板",
+   "region": "cons",
+   "scene": "公园放风筝",
+   "phonemes": [
+    "k",
+    "g"
+   ],
+   "tip": "舌根轻轻顶天花板：/k/ 像咳嗽「咔」，/g/ 像打嗝「咕」。",
+   "words": [
+    "kite",
+    "cat",
+    "key",
+    "girl",
+    "egg",
+    "green"
+   ],
+   "mnemonic": "舌根抬起顶软腭，突然松开气流冲；咳嗽一声「咔」不麻，打嗝一声「咕」嗡嗡。同一块舌根肉，声带开关定清浊！",
+   "pairs": [
+    [
+     "cap",
+     "gap"
+    ],
+    [
+     "class",
+     "glass"
+    ],
+    [
+     "pick",
+     "pig"
+    ]
+   ]
+  },
+  {
+   "ep": "EP15",
+   "title": "花店里的咬唇双胞胎",
+   "region": "cons",
+   "scene": "花店与早餐",
+   "phonemes": [
+    "f",
+    "v"
+   ],
+   "tip": "上牙轻咬下唇吹气「夫」；/v/ 是「夫」的振动版。记住：牙齿必须碰嘴唇才是 v，否则就变成了 w。",
+   "words": [
+    "fish",
+    "flower",
+    "phone",
+    "van",
+    "vegetable",
+    "five"
+   ],
+   "mnemonic": "上牙轻轻搭下唇，气流挤出小缝走；哥哥吹气不振动，弟弟振动嗡嗡抖。牙齿不碰就变味，背心一晃变西方！",
+   "pairs": [
+    [
+     "fine",
+     "vine"
+    ],
+    [
+     "vest",
+     "west"
+    ],
+    [
+     "safe",
+     "save"
+    ]
+   ]
+  },
+  {
+   "ep": "EP16",
+   "title": "生日蜡烛旁的咬舌双胞胎",
+   "region": "cons",
+   "scene": "生日蜡烛与家人",
+   "phonemes": [
+    "θ",
+    "ð"
+   ],
+   "tip": "咬舌双胞胎：舌尖轻轻探出齿缝，送气「斯」是 /θ/，振动「兹」是 /ð/。舌尖别伸太长，碰到就缩回。",
+   "words": [
+    "three",
+    "thank",
+    "birthday",
+    "this",
+    "mother",
+    "brother"
+   ],
+   "mnemonic": "舌尖探出小门缝，轻轻送气别伸太长；哥哥安静吐气斯，弟弟嗡嗡振动兹。碰到牙齿往回缩，汉语里可没这一双！",
+   "pairs": [
+    [
+     "thin",
+     "then"
+    ],
+    [
+     "three",
+     "tree"
+    ],
+    [
+     "think",
+     "sink"
+    ]
+   ]
+  },
+  {
+   "ep": "EP17",
+   "title": "动物园里的小蛇与蜂场里的蜜蜂",
+   "region": "cons",
+   "scene": "动物园与蜂场",
+   "phonemes": [
+    "s",
+    "z"
+   ],
+   "tip": "小蛇「嘶嘶」不振动，蜜蜂「滋滋」要振动：同一张嘴型，声带开关决定清浊。",
+   "words": [
+    "sun",
+    "snake",
+    "bus",
+    "zoo",
+    "nose",
+    "lazy"
+   ],
+   "mnemonic": "牙齿合上留条缝，气流挤过嘶嘶响；喉咙不动是小蛇，声带一开蜜蜂忙。同一嘴型换开关，手贴喉咙马上辨！",
+   "pairs": [
+    [
+     "sip",
+     "zip"
+    ],
+    [
+     "bus",
+     "buzz"
+    ],
+    [
+     "rice",
+     "rise"
+    ]
+   ]
+  },
+  {
+   "ep": "EP18",
+   "title": "海边的嘘声与电视里的呼噜",
+   "region": "cons",
+   "scene": "海边与客厅电视",
+   "phonemes": [
+    "ʃ",
+    "ʒ"
+   ],
+   "tip": "图书馆「嘘——」嘴唇撮圆是 /ʃ/；/ʒ/ 是「嘘」的打呼噜版，汉语里没有，靠手贴喉咙认振动。",
+   "words": [
+    "ship",
+    "fish",
+    "sheep",
+    "television",
+    "usually",
+    "treasure"
+   ],
+   "mnemonic": "嘴唇撮圆轻轻嘘，图书馆里清又静；同一嘴型声带开，嘘声打起小呼噜。汉语里面没有它，手贴喉咙捉住它！",
+   "pairs": [
+    [
+     "fish",
+     "measure"
+    ],
+    [
+     "sheep",
+     "treasure"
+    ],
+    [
+     "ship",
+     "usually"
+    ]
+   ]
+  },
+  {
+   "ep": "EP19",
+   "title": "冬天里的一口哈气与农场的小钩子",
+   "region": "cons",
+   "scene": "冬天暖手与农场",
+   "phonemes": [
+    "h",
+    "r"
+   ],
+   "tip": "「哈」是气流自由冲出、声带不振动；/r/ 是舌尖钩起悬空「rrr」，千万别卷成汉语的「日/热」。",
+   "words": [
+    "hat",
+    "rabbit",
+    "hand",
+    "happy",
+    "rice",
+    "run"
+   ],
+   "mnemonic": "冬天冷，哈——，气流冲出声带静；舌尖钩，悬半空，别念日也别念热；兔子跑，米饭香，钩子精灵记心上！",
+   "pairs": [
+    [
+     "hat",
+     "rabbit"
+    ],
+    [
+     "happy",
+     "run"
+    ],
+    [
+     "hand",
+     "rice"
+    ]
+   ]
+  },
+  {
+   "ep": "EP20",
+   "title": "教室里的火车与早餐桌的果酱",
+   "region": "cons",
+   "scene": "教室与早餐桌",
+   "phonemes": [
+    "tʃ",
+    "dʒ"
+   ],
+   "tip": "火车「哧—吃」：先爆破后摩擦，嘴巴先抵后圆；/dʒ/ 是声带边振动边滑动，像吃果酱「饥吃」。",
+   "words": [
+    "chair",
+    "juice",
+    "teacher",
+    "lunch",
+    "jam",
+    "jump"
+   ],
+   "mnemonic": "小火车，哧——吃——，先堵住，再摩擦；挖果酱，黏又稠，喉咙嗡嗡跟着走；嘴巴先抵后撮圆，破擦两音记心间！",
+   "pairs": [
+    [
+     "chair",
+     "juice"
+    ],
+    [
+     "cheese",
+     "jeans"
+    ],
+    [
+     "teacher",
+     "jam"
+    ]
+   ]
+  },
+  {
+   "ep": "EP21",
+   "title": "床头与餐桌上的两个鼻音",
+   "region": "cons",
+   "scene": "睡前与餐桌",
+   "phonemes": [
+    "m",
+    "n"
+   ],
+   "tip": "闭眼哼歌「嗯」是 /m/，小鸡啄米点头「嗯」是 /n/。捏住鼻子两个音都发不出来——鼻音验证法。",
+   "words": [
+    "moon",
+    "mom",
+    "milk",
+    "nose",
+    "pen",
+    "dinner"
+   ],
+   "mnemonic": "闭嘴哼歌嗯嗯嗯，月亮妈妈和牛奶；舌尖点头嗯嗯嗯，鼻子钢笔吃晚餐。捏住鼻子全哑掉，一松手呀全回来！",
+   "pairs": [
+    [
+     "moon",
+     "nose"
+    ],
+    [
+     "milk",
+     "pen"
+    ],
+    [
+     "mom",
+     "dinner"
+    ]
+   ]
+  },
+  {
+   "ep": "EP22",
+   "title": "王座与音乐课上的打鼾鼻音",
+   "region": "cons",
+   "scene": "王国与音乐课",
+   "phonemes": [
+    "ŋ"
+   ],
+   "tip": "舌根堵住喉咙打鼾「嗯」：/n/ 是舌尖干活，/ŋ/ 是舌根干活。sing 读「腥」不读「星」。",
+   "words": [
+    "king",
+    "song",
+    "sing",
+    "morning",
+    "strong",
+    "thank"
+   ],
+   "mnemonic": "舌尖点头嗯嗯嗯，舌根打鼾嗯嗯嗯；一个在前一个后，唱歌 sing 别唱错。嘴唇舌尖加舌根，三个鼻音全到齐！",
+   "pairs": [
+    [
+     "sin",
+     "sing"
+    ],
+    [
+     "win",
+     "wing"
+    ],
+    [
+     "ran",
+     "rang"
+    ]
+   ]
+  },
+  {
+   "ep": "EP23",
+   "title": "开灯与水果店的钩子精灵",
+   "region": "cons",
+   "scene": "开灯与水果店",
+   "phonemes": [
+    "l"
+   ],
+   "tip": "快乐「lll」：舌尖像小钩子钩住上齿龈。词首清晰「了」，词尾模糊「欧」——apple 读「艾泡」不读「艾普」。",
+   "words": [
+    "light",
+    "lemon",
+    "lion",
+    "look",
+    "apple",
+    "blue"
+   ],
+   "mnemonic": "舌尖小钩钩住埂，两边漏气快乐了；跑到词尾别松口，闷出一个小欧欧。苹果要读艾泡泡，吞掉尾巴就漏了！",
+   "pairs": [
+    [
+     "night",
+     "light"
+    ],
+    [
+     "right",
+     "light"
+    ],
+    [
+     "apple",
+     "blue"
+    ]
+   ]
+  },
+  {
+   "ep": "EP24",
+   "title": "喝水与画画的滑滑梯精灵",
+   "region": "cons",
+   "scene": "喝水与画画",
+   "phonemes": [
+    "w",
+    "j"
+   ],
+   "tip": "/w/ 是吻一下嘴唇再滑开；/j/ 像「耶」但更短，马上接到元音。we 读「呜—衣」快速滑动，不是「威」。",
+   "words": [
+    "water",
+    "window",
+    "yes",
+    "yellow",
+    "year",
+    "yogurt"
+   ],
+   "mnemonic": "嘴唇撮圆亲一下，呜地滑走不停留；we 要读呜加衣，千万别读一个威。耶要短得像闪电，耶完立刻接元音！",
+   "pairs": [
+    [
+     "water",
+     "yogurt"
+    ],
+    [
+     "west",
+     "vest"
+    ],
+    [
+     "window",
+     "yellow"
+    ]
+   ]
+  },
+  {
+   "ep": "EP25",
+   "title": "火车站与操场的特色辅音四兄弟",
+   "region": "cons",
+   "scene": "火车站与操场",
+   "phonemes": [
+    "tr",
+    "dr",
+    "ts",
+    "dz"
+   ],
+   "tip": "火车头兄弟：tr「戳」、dr「啄」；尾巴音兄弟：ts「呲」、dz「兹」。名词复数尾巴常是 ts/dz。",
+   "words": [
+    "tree",
+    "dress",
+    "cats",
+    "beds",
+    "train",
+    "drink",
+    "students",
+    "friends"
+   ],
+   "mnemonic": "火车头，戳和啄，戳不动来啄要抖；戳是树 tree，啄是裙 dress。尾巴音，呲和兹，呲像漏气兹像蜜蜂；呲是猫 cats，兹是床 beds。名词复数加尾巴，先看前面抖不抖！",
+   "pairs": [
+    [
+     "tree",
+     "dress"
+    ],
+    [
+     "cats",
+     "beds"
+    ],
+    [
+     "students",
+     "friends"
+    ]
+   ]
+  },
+  {
+   "ep": "EP26",
+   "title": "音节切蛋糕",
+   "region": "peak",
+   "scene": "音节切蛋糕",
+   "phonemes": [],
+   "tip": "长单词切蛋糕：ba-na-na 拍手数音节；每一块里必须有一颗元音；开音节开门长、闭音节关门短。",
+   "words": [
+    [
+     "happy",
+     "开心的"
+    ],
+    [
+     "table",
+     "桌子"
+    ],
+    [
+     "banana",
+     "香蕉"
+    ],
+    [
+     "elephant",
+     "大象"
+    ]
+   ],
+   "mnemonic": "长单词切蛋糕，拍手数块数；每块必有元音草莓，开门长、关门短！",
+   "pairs": [],
+   "special": {
+    "type": "count",
+    "items": [
+     [
+      "window",
+      2
+     ],
+     [
+      "elephant",
+      3
+     ],
+     [
+      "computer",
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "ep": "EP27",
+   "title": "重音的秘密",
+   "region": "peak",
+   "scene": "重音的秘密",
+   "phonemes": [],
+   "tip": "PRESent 礼物 vs preSENT 赠送：双音节词重音位置不同，意思完全不同；实词重读、虚词轻读。",
+   "words": [
+    [
+     "PRESent",
+     "礼物"
+    ],
+    [
+     "preSENT",
+     "赠送"
+    ],
+    [
+     "REcord",
+     "唱片"
+    ],
+    [
+     "reCORD",
+     "录制"
+    ]
+   ],
+   "mnemonic": "单词里有盏灯，照到哪块哪块明。名词形容词灯在前，动词常常灯在后。句子里实词重，虚词轻轻往前送！",
+   "pairs": [],
+   "special": {
+    "type": "stress",
+    "items": [
+     [
+      "table",
+      1
+     ],
+     [
+      "begin",
+      2
+     ],
+     [
+      "window",
+      1
+     ]
+    ]
+   }
+  },
+  {
+   "ep": "EP28",
+   "title": "连读与失去爆破",
+   "region": "peak",
+   "scene": "连读与失去爆破",
+   "phonemes": [],
+   "tip": "not at all 读成 no-ta-tall；good boy 的尾音憋住不炸。说得像 native 的两个秘诀。",
+   "words": [
+    [
+     "Not at all",
+     "一点也不"
+    ],
+    [
+     "An apple",
+     "一个苹果"
+    ],
+    [
+     "Good boy",
+     "好孩子"
+    ]
+   ],
+   "mnemonic": "词尾碰头就连读，爆破音尾憋住不炸——英语从积木变成滑梯！",
+   "pairs": [],
+   "special": {
+    "type": "phrase",
+    "items": [
+     [
+      "Not at all",
+      "3 个词：not / at / all"
+     ],
+     [
+      "An apple",
+      "2 个词：an / apple，粘得太紧"
+     ],
+     [
+      "Good boy",
+      "憋住了：good 的尾音没炸开，是颗哑弹"
+     ]
+    ]
+   }
+  },
+  {
+   "ep": "EP29",
+   "title": "毕业大作战",
+   "region": "peak",
+   "scene": "毕业大作战",
+   "phonemes": [],
+   "tip": "六对易混音标终极对决：/iː/-/ɪ/、/æ/-/e/、/θ/-/s/、/v/-/w/、/n/-/ŋ/、/l/-/r/。全图点亮 + 毕业朗读挑战。",
+   "words": [
+    [
+     "sheep / ship",
+     "绵羊 / 小船"
+    ],
+    [
+     "bed / bad",
+     "床 / 坏的"
+    ],
+    [
+     "think / sink",
+     "想 / 下沉"
+    ],
+    [
+     "very / wary",
+     "非常 / 小心的"
+    ],
+    [
+     "sin / sing",
+     "过错 / 唱歌"
+    ],
+    [
+     "light / right",
+     "灯 / 右边"
+    ]
+   ],
+   "mnemonic": "拖长的是绵羊，一冒就收是小船；塞半根手指是 bed，塞一整根是 bad；敢探出去的是 think，躲起来的是 sink；牙齿碰唇是 very，撮圆前亲是 wary；舌尖关门是 sin，舌根关门是 sing；贴上去的是 light，悬空的是 right。",
+   "pairs": [
+    [
+     "sheep",
+     "ship"
+    ],
+    [
+     "bed",
+     "bad"
+    ],
+    [
+     "think",
+     "sink"
+    ],
+    [
+     "very",
+     "wary"
+    ],
+    [
+     "sin",
+     "sing"
+    ],
+    [
+     "light",
+     "right"
+    ]
+   ]
+  }
+ ]
+}

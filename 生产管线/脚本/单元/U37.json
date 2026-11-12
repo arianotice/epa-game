@@ -1,0 +1,50 @@
+{
+  "ep": "U37",
+  "title": "火车精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07en": 0.4, "B08": 0.5, "B15": 0.6, "B17": 0.5, "B19": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哧——吃！声音探险队，单元时间到！今天这位精灵会开火车，它叫火车精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "火车精灵？火车是怎么叫的呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "火车进站，先哧——放一阵气，再吃——停住。今天这个音，就是把这两个动作一口气做完。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "两个动作？那不是变成两个音了吗？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "合成一个音，是它最大的本事。第一步：舌尖抬起来，顶到上门牙后面那道小坎后边，把气堵住。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "堵住了！气出不去了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，嘴唇：堵气的同时，两片嘴唇往前撮圆，撮成小喇叭，等着后面的摩擦。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，舌尖猛地松开，气冲出来，从扁扁的缝里摩擦着往外走。先爆破，后摩擦，两步合成一个音。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "先破一下再摩擦，中间不许断开！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，一步都不许停。第四步，手贴喉咙，振动吗？"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不麻！喉咙安安静静的！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，声带在休息，它是个清音。记牢：舌尖堵、嘴唇圆、松开摩擦、喉咙不振动。听我读三遍——"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ch. ch. ch."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "提醒：别拿中国话的吃直接代替它，一定要堵住气再冲出去，不许念成两个字。宝藏时间到！"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "两步合成一个音，不许念成两个字！"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：有四条腿、有靠背，上课坐着的那个。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "chair."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "chair 就是椅子。开头先堵住气，再摩擦出去。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "chair."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "chair."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：站在讲台上，给我们上课、改作业的那个人。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "teacher."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "teacher 就是老师。中间别念成两个字。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "teacher."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "teacher."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：中午十二点，肚子咕咕叫时要吃的那顿饭。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "lunch."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "lunch 就是午餐。尾巴上的爆破加摩擦一起做完。听常速一遍——"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "lunch."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "lunch."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "火车精灵哧——吃——，先爆破后摩擦，两步合成一个音，声带不振动。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "火车精灵哧——吃——，先爆破后摩擦，两步合成一个音，声带不振动。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：火车精灵是先爆破，还是先摩擦？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "先堵住气爆破，再摩擦出去！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！第二题：中间能分开成两个字来念吗？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不能！两步要合成一个音，一步也不许停！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。记住：先爆破，后摩擦，合成一个音。声音探险队，下个单元见！"}
+  ]
+}

@@ -1,0 +1,36 @@
+# ===========================================================================
+# epa-game · GitHub 仓库纳入边界（2026-11-12）
+# 口径：项目自身成果「全量纳入」；以下为明确排除项，均非交付物。
+# 说明见 README.md「仓库边界 / 外部依赖」两节。
+# ===========================================================================
+
+# 1) 播客 WAV 母带与中间音频 ≈ 2.0 GB
+#    网站运行只用 音标大闯关/assets/audio/ 内已转码的 78 个 Opus，
+#    该目录随 音标大闯关/ 一并纳入，不在此排除范围。
+音频/
+
+# 2) 依赖与构建产物（可由 package.json / 构建脚本重建）
+node_modules/
+dist/
+.p0-build/
+__pycache__/
+*.py[cod]
+*.log
+gate-logs/
+
+# 3) 第三方开源仓库 clone（自带 .git，直接纳入会变成 gitlink 导致内容丢失）
+#    agent-sprite-forge   · 参数化精灵生成器参考实现
+#    agnes-ai-generation-skill · 免费生图 skill
+#    _phrepo / _ph_combined_tmp · 音素词库素材与临时合并产物
+agent-sprite-forge/
+agnes-ai-generation-skill/
+_phrepo/
+_ph_combined_tmp/
+
+# 4) WorkBuddy 本地状态、快照备份与内部产物（非交付物）
+.workbuddy/
+*.genie
+
+# 5) 图片处理时的临时裁图 / 截图（正式成稿在 图片/ 与 assets/ 内）
+音标大闯关/tmp_crops/
+音标大闯关/tmp_shots/

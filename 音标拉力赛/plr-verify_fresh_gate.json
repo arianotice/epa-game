@@ -1,0 +1,187 @@
+{
+  "mode": "PLR_REPLAY",
+  "exclude_dirs": [
+    ".git",
+    ".p0-build",
+    ".vite",
+    ".workbuddy",
+    "__pycache__",
+    "coverage",
+    "dist",
+    "node_modules",
+    "src"
+  ],
+  "scripts": {
+    "verify_fresh_gate.py": {
+      "ok": true,
+      "error": null,
+      "count": 21,
+      "results": [
+        {
+          "name": "F1 §5.2-2 可见文案英式符号残留 0（sym/alias 稳定键白名单）",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "F1b data.js 中 ː 仅出现在 10 行 sym 稳定键",
+          "ok": true,
+          "detail": 10
+        },
+        {
+          "name": "F2 §5.2-3 长短音/央化旧措辞残留 0",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "F3 §5.2-1 可见文案 /e/ 六行已改 /ɛ/ 且 eɪ 未被误伤",
+          "ok": true,
+          "detail": {
+            "/e/ 命中": 0,
+            "eɪ 当前": 5,
+            "eɪ 基线": 5
+          }
+        },
+        {
+          "name": "F4 §5.2-7 25 组 episodes/phonemes 镜像逐字一致",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "F5 §5.2-6/§5.3 逻辑枚举键锁定 + D01–D05 美式显示文案在场",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "F6a §5.2-9 与持久化已验收基线逐字一致（不回退）",
+          "ok": true,
+          "detail": {
+            "基线行数": 7684,
+            "当前行数": 7684,
+            "diff 行数": 0,
+            "逻辑键改动": [],
+            "sha256 全等": true,
+            "sha256_16": "25784ee12bd0f637"
+          }
+        },
+        {
+          "name": "F6b 图片/音频字段名与 eɪ 出现次数未被改动",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "F6c §5.2-8 上游构建管线未重跑（content_raw / data.js.bak mtime 均早于 data.js）",
+          "ok": true,
+          "detail": {
+            "content_raw": "10-30 11:05",
+            "data.js.bak": "11-03 07:45",
+            "data.js": "11-07 08:42"
+          }
+        },
+        {
+          "name": "F8a 全仓 ?v= tag 唯一（46 处字面量，C 段补齐全部图片 URL）",
+          "ok": true,
+          "detail": {
+            "hud-20261108": 46
+          }
+        },
+        {
+          "name": "F7 §5.2-4 11 个重点 unit 教学文案走查无残留",
+          "ok": true,
+          "detail": {
+            "U01": "OK",
+            "U02": "OK",
+            "U05": "OK",
+            "U06": "OK",
+            "U09": "OK",
+            "U10": "OK",
+            "U11": "OK",
+            "U12": "OK",
+            "U18": "OK",
+            "U19": "OK",
+            "U20": "OK"
+          }
+        },
+        {
+          "name": "F8b 大闯关实际请求资源全部带新 tag",
+          "ok": true,
+          "detail": {
+            "资源总数": 20,
+            "带 tag": 19
+          }
+        },
+        {
+          "name": "F9a G5 纯净页图鉴 48 卡大字全为美式、无英式符号",
+          "ok": true,
+          "detail": {
+            "大字个数": 48,
+            "残留": []
+          }
+        },
+        {
+          "name": "F9b G5 卡面图/总图 URL 全部带当前 tag 且权威表 U11=ɜr",
+          "ok": true,
+          "detail": {
+            "卡面图 URL": 2,
+            "U11": "ɜr"
+          }
+        },
+        {
+          "name": "F9c G5 49 张发布卡面与美式源逐字节全等（图文同源）",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "F11a G4 老存档迁移逐字节回滚点 / collected=[] / legacyCollected / v2",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "F11b 跨站 last-write-wins 不覆盖（B 的 rally 全保住 + A 自己写入成功）",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "F11c 拉力赛实际请求全带新 tag + 跨目录显示表按字节送达",
+          "ok": true,
+          "detail": {
+            "资源数": 15,
+            "带 tag": 14
+          }
+        },
+        {
+          "name": "F10a G5 强缓存场景：js/css 无漏网的不带 tag 资源（0 次脏内容注入）",
+          "ok": false,
+          "detail": {
+            "stale_hits": 0,
+            "pageerror": 0,
+            "console_error": 2
+          }
+        },
+        {
+          "name": "F10b G5 强缓存场景：页面仍完整渲染美式图鉴",
+          "ok": true,
+          "detail": {
+            "大字": 48,
+            "立绘": 48
+          }
+        },
+        {
+          "name": "F11d 两站页面异常/控制台/HTTP/真实网络失败全 0",
+          "ok": true,
+          "detail": [
+            {
+              "pageerror": 0,
+              "console_error": 0,
+              "requestfailed": 0,
+              "bad_status": 0
+            },
+            {},
+            []
+          ]
+        }
+      ],
+      "path": "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标大闯关\\verify_fresh_gate.py",
+      "log": "C:\\Users\\86135\\AppData\\Local\\Temp\\p1-plr-t99c7onv\\verify_fresh_gate.py.log"
+    }
+  }
+}

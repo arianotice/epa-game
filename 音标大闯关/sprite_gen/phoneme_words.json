@@ -1,0 +1,290 @@
+[
+  {
+    "unit": "U01",
+    "sym": "iː",
+    "name": "微笑小姐",
+    "word": "sheep"
+  },
+  {
+    "unit": "U02",
+    "sym": "ɪ",
+    "name": "放松精灵",
+    "word": "ship"
+  },
+  {
+    "unit": "U03",
+    "sym": "e",
+    "name": "小口精灵",
+    "word": "egg"
+  },
+  {
+    "unit": "U04",
+    "sym": "æ",
+    "name": "大口精灵",
+    "word": "apple"
+  },
+  {
+    "unit": "U05",
+    "sym": "ɑː",
+    "name": "医生精灵",
+    "word": "car"
+  },
+  {
+    "unit": "U06",
+    "sym": "ʌ",
+    "name": "戳肚子精灵",
+    "word": "bus"
+  },
+  {
+    "unit": "U07",
+    "sym": "ɒ",
+    "name": "吹泡泡精灵",
+    "word": "hot"
+  },
+  {
+    "unit": "U08",
+    "sym": "ɔː",
+    "name": "吸果冻精灵",
+    "word": "ball"
+  },
+  {
+    "unit": "U09",
+    "sym": "ʊ",
+    "name": "轻轻推精灵",
+    "word": "book"
+  },
+  {
+    "unit": "U10",
+    "sym": "uː",
+    "name": "吹蜡烛精灵",
+    "word": "food"
+  },
+  {
+    "unit": "U11",
+    "sym": "ɜː",
+    "name": "卷舌弹簧精灵",
+    "word": "bird"
+  },
+  {
+    "unit": "U12",
+    "sym": "ə",
+    "name": "偷懒叹气精灵",
+    "word": "banana"
+  },
+  {
+    "unit": "U13",
+    "sym": "eɪ",
+    "name": "滑梯精灵A",
+    "word": "cake"
+  },
+  {
+    "unit": "U14",
+    "sym": "aɪ",
+    "name": "滑梯精灵I",
+    "word": "bike"
+  },
+  {
+    "unit": "U15",
+    "sym": "ɔɪ",
+    "name": "欢呼精灵",
+    "word": "toy"
+  },
+  {
+    "unit": "U16",
+    "sym": "əʊ",
+    "name": "含糖精灵",
+    "word": "nose"
+  },
+  {
+    "unit": "U17",
+    "sym": "aʊ",
+    "name": "惊叹精灵",
+    "word": "house"
+  },
+  {
+    "unit": "U18",
+    "sym": "ɪə",
+    "name": "悄悄话精灵",
+    "word": "ear"
+  },
+  {
+    "unit": "U19",
+    "sym": "eə",
+    "name": "风吹精灵",
+    "word": "hair"
+  },
+  {
+    "unit": "U20",
+    "sym": "ʊə",
+    "name": "旅行精灵",
+    "word": "tour"
+  },
+  {
+    "unit": "U21",
+    "sym": "p",
+    "name": "纸飞机精灵",
+    "word": "pig"
+  },
+  {
+    "unit": "U22",
+    "sym": "b",
+    "name": "打鼓精灵",
+    "word": "ball"
+  },
+  {
+    "unit": "U23",
+    "sym": "t",
+    "name": "小锤精灵",
+    "word": "tiger"
+  },
+  {
+    "unit": "U24",
+    "sym": "d",
+    "name": "响锤精灵",
+    "word": "dog"
+  },
+  {
+    "unit": "U25",
+    "sym": "k",
+    "name": "咳嗽精灵",
+    "word": "kite"
+  },
+  {
+    "unit": "U26",
+    "sym": "g",
+    "name": "打嗝精灵",
+    "word": "girl"
+  },
+  {
+    "unit": "U27",
+    "sym": "f",
+    "name": "咬唇清风精灵",
+    "word": "fish"
+  },
+  {
+    "unit": "U28",
+    "sym": "v",
+    "name": "咬唇振动精灵",
+    "word": "van"
+  },
+  {
+    "unit": "U29",
+    "sym": "θ",
+    "name": "咬舌清音精灵",
+    "word": "three"
+  },
+  {
+    "unit": "U30",
+    "sym": "ð",
+    "name": "咬舌浊音精灵",
+    "word": "this"
+  },
+  {
+    "unit": "U31",
+    "sym": "s",
+    "name": "小蛇精灵",
+    "word": "sun"
+  },
+  {
+    "unit": "U32",
+    "sym": "z",
+    "name": "蜜蜂精灵",
+    "word": "zoo"
+  },
+  {
+    "unit": "U33",
+    "sym": "ʃ",
+    "name": "图书馆精灵",
+    "word": "ship"
+  },
+  {
+    "unit": "U34",
+    "sym": "ʒ",
+    "name": "呼噜精灵",
+    "word": "television"
+  },
+  {
+    "unit": "U35",
+    "sym": "h",
+    "name": "哈气精灵",
+    "word": "hat"
+  },
+  {
+    "unit": "U36",
+    "sym": "r",
+    "name": "小钩子精灵",
+    "word": "rabbit"
+  },
+  {
+    "unit": "U37",
+    "sym": "tʃ",
+    "name": "火车精灵",
+    "word": "chair"
+  },
+  {
+    "unit": "U38",
+    "sym": "dʒ",
+    "name": "果酱精灵",
+    "word": "juice"
+  },
+  {
+    "unit": "U39",
+    "sym": "m",
+    "name": "哼歌精灵",
+    "word": "moon"
+  },
+  {
+    "unit": "U40",
+    "sym": "n",
+    "name": "啄米精灵",
+    "word": "nose"
+  },
+  {
+    "unit": "U41",
+    "sym": "ŋ",
+    "name": "打鼾国王精灵",
+    "word": "king"
+  },
+  {
+    "unit": "U42",
+    "sym": "l",
+    "name": "快乐钩子精灵",
+    "word": "light"
+  },
+  {
+    "unit": "U43",
+    "sym": "w",
+    "name": "吻唇精灵",
+    "word": "water"
+  },
+  {
+    "unit": "U44",
+    "sym": "j",
+    "name": "短耶精灵",
+    "word": "yes"
+  },
+  {
+    "unit": "U45",
+    "sym": "tr",
+    "name": "戳精灵",
+    "word": "tree"
+  },
+  {
+    "unit": "U46",
+    "sym": "dr",
+    "name": "啄精灵",
+    "word": "dress"
+  },
+  {
+    "unit": "U47",
+    "sym": "ts",
+    "name": "呲精灵",
+    "word": "cats"
+  },
+  {
+    "unit": "U48",
+    "sym": "dz",
+    "name": "兹精灵",
+    "word": "beds"
+  }
+]

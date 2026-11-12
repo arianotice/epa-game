@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "route": "rest",
+  "apiBase": "https://api.openai.com/v1",
+  "endpoint": "https://api.openai.com/v1/images/generations",
+  "requestedModel": "gpt-image-2.5-sunburst",
+  "options": {
+    "model": "gpt-image-2.5-sunburst",
+    "n": 1,
+    "output_format": "png",
+    "size": "1024x1024",
+    "background": "transparent"
+  },
+  "promptSha256": "7efa18e73dd17ed92372416f27c86572c672ceaddfbaff8cc7cea57ea8b27673",
+  "references": [],
+  "lastFrame": null,
+  "keyEnv": "OPENAI_API_KEY",
+  "paidRequests": 1,
+  "automaticPostRetries": 0,
+  "outDir": "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标大闯关\\sprite_gen\\raw\\test_u01",
+  "execution": "execute",
+  "capability": {
+    "verifiedAt": "2026-10-06",
+    "docs": [
+      "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst"
+    ],
+    "async": false
+  },
+  "pricing": {
+    "unit": "output_image",
+    "quantity": 1,
+    "qualifiers": {
+      "quality": null,
+      "size": "1024x1024"
+    },
+    "inputs": null,
+    "note": "input image and text tokens are not included"
+  },
+  "fingerprint": "090a2597328761f946eb894fb0c4e821eeaf6c3ea5f4da4c0aa94808e5e1274a",
+  "estimate": {
+    "usd": null,
+    "currency": "USD",
+    "basis": "unpriced: no verified price row for openai/gpt-image-2.5-sunburst output_image(size=1024x1024); known rows: output_image(quality=high,size=1024x1024) 0.0527; output_image(quality=low,size=1024x1024) 0.0059; output_image(quality=max,size=1024x1024) 0.2107; output_image(quality=medium,size=1024x1024) 0.0132; output_image(quality=xhigh,size=1024x1024) 0.0937",
+    "pricesVersion": "2026-10-06",
+    "items": []
+  },
+  "consent": {
+    "provider": "openai",
+    "model": "gpt-image-2.5-sunburst",
+    "calls": 1,
+    "estimateUsd": null,
+    "apiHost": "api.openai.com"
+  },
+  "status": "not_sent",
+  "clientRequestId": "65146c63ab6b4d0f8a5f643b95f472d8",
+  "receipt": {
+    "startedAt": "2026-11-03T02:40:44.794Z",
+    "submittedAt": "2026-11-03T02:40:44.815Z",
+    "completedAt": "2026-11-03T02:40:55.150Z",
+    "wallMs": 10356,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "route_media image",
+    "toolVersion": "generate_media/0.4.0",
+    "outcomeCode": "not_sent"
+  },
+  "ledger": {
+    "projectDir": "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标大闯关",
+    "reservationId": "1f54d7f915474457af8df455919945b4",
+    "status": "not_sent"
+  },
+  "errorType": "MediaError"
+}

@@ -1,0 +1,47 @@
+{
+  "ep": "U43",
+  "title": "吻唇精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B10": 0.6, "B14": 0.6, "B16": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这位最爱亲亲，一张嘴先噘起嘴唇亲一下——吻唇精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "吻唇精灵？亲谁呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步，嘴唇：双唇向前噘起来，收成小圆圈，中间只留一个小孔。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "噘起来啦，像小鱼嘴！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，舌位：舌头后半截往软腭那儿抬，舌尖放平，别碰牙齿。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌头后面抬起来啦！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气从小孔里挤出去，很轻很短，绝对不许拖长。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手贴喉咙，声带要振动，嗡嗡响，所以是浊音。听——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "we."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "好短！一下子就滑走了！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第五步最关键：他站不住，一开口马上就滑到后面的元音上。"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "所以他的名字里带着半个元音：自己不是元音，却总挨着元音滑。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "半个元音！"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "再跟长呜精灵比一比：那个音能一直拖下去，今天这个一滑就走，短得多。"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一个能拖，一个滑走！"},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "重点提醒：we 不能读成「威」。要先噘嘴亲一下再滑开，嘴是圆的，不是扁的。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不是「威」，是先亲一下！"},
+
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一件：渴了要喝的，透明的，从水龙头里流出来。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "water."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "water，就是水。开头先亲一下，再滑到后面的音上。听常速——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "water."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "water."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件：墙上那个方方的，透过它能看见外面的风景。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "window."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "window，就是窗户。一样先噘嘴亲一下，再快速滑开。听常速——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "window."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "window."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两件宝贝到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "先吻一下嘴唇撮圆，再快速滑开，像呜——衣。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "先吻一下嘴唇撮圆，再快速滑开，像呜——衣。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：吻唇精灵的嘴是圆的还是扁的？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "圆的！要噘起来亲一下！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二题：we 能不能读成「威」？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不能！要先亲一下再滑开！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好！下一站去认识一位性子特别急的精灵。下一站见！"}
+  ]
+}

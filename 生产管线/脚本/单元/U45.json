@@ -1,0 +1,48 @@
+{
+  "ep": "U45",
+  "title": "戳精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B10": 0.6, "B14": 0.6, "B16": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这对兄弟开火车，先来的是哥哥，性子清清脆脆——戳精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "戳精灵？是戳一下的意思吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，听上去就是「戳」。他是个组合音：前面的特和后面的日，紧紧粘成一下。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "两个音粘成一下？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步，舌位：舌尖往上卷，顶在上门牙后面那道肉坎再往上一点的地方。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌尖卷上去啦！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，嘴唇：双唇微微向前撅一点点，像火车头前面的小烟囱。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "撅起来啦，像小火车！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气先被舌尖堵在嘴里，再猛地放开，一下子冲出来。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "堵住，放开，噗！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手贴喉咙，不许振动，喉咙安安静静，所以他是清音。听——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "tree."},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "手摸着喉咙，一点都不麻！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记住：他是火车头两兄弟里的清音哥哥，读「戳」，声带不振动。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "还有个坑要绕开：别把它拆成两截慢慢读，要一口气粘住。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一口气粘住，不拆开！"},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "先记牢这位安静的哥哥，下个单元他的弟弟要来，那个会让喉咙发麻。"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 1.0, "text": "好，我等着！"},
+
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一件：长在院子里，小鸟最爱在它头上做窝。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "tree."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "tree，就是树。开头是清脆的「戳」，喉咙不许麻。听常速——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "tree."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "tree."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件：在铁轨上跑的，呜呜地叫，一节一节拉着人和货。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "train."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "train，就是火车。开头同样是清音的「戳」，一口气粘住。听常速——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "train."},
+    {"id": "X10", "role": "xq", "lang": "en", "speed": 0.85, "text": "train."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两件宝贝到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "火车头兄弟里的清音，读「戳」，声带不振动。"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 0.9, "text": "火车头兄弟里的清音，读「戳」，声带不振动。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：戳精灵是清音还是浊音？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "清音！喉咙不振动！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二题：念 tree 和 train 的时候，喉咙该不该麻？"},
+    {"id": "X13", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不该麻！要安安静静的！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好！下一站他弟弟要来了，那个会让你喉咙发麻。下一站见！"}
+  ]
+}

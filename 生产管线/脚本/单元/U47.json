@@ -1,0 +1,52 @@
+{
+  "ep": "U47",
+  "title": "呲精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.5, "B11": 0.6, "B15": 0.6, "B17": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这位精灵专挑最后面待着，从不站开头。他叫——呲精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "最后面？那他躲在单词的小尾巴上吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "猜对了！他是个组合音：前面的特和后面的丝，粘成一下，听上去就是「呲」。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "又是两个音粘成一下？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步，舌位：舌尖抬起来，顶在上门牙后面那道肉坎，把气堵住。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌尖顶上去啦，气堵住了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，口型：嘴巴微微张开，不用撅嘴，牙齿合上留条细缝。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：堵着的气从缝里挤出来，又短又脆，像车胎漏气。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "噗——一下就没了，好短！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手贴喉咙，不许振动，喉咙安安静静，所以他是清音。听——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "cats."},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "手摸着喉咙，一点都不麻！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记住：他是尾巴音兄弟里的清音哥哥，读「呲」，声带不振动。"},
+
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "说个大事：你天天遇见他，却没注意过。名词复数加个 s，尾巴上常常就是这个音。"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啊？我天天都在读他？"},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "一只猫是 cat，加个 s 变好多只，尾巴就蹦出一下「呲」。听——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "cat. cats."},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 1.0, "text": "cat 短，cats 后面多出一个「呲」！"},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "还有一处：他、她、它做主语，动词加 s，尾巴同样蹦出这个音。听——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "like. likes."},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 1.0, "text": "原来写作业的时候我一直在念他！"},
+
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一件：喵喵叫、会抓老鼠、爱晒太阳的，不止一只。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "cats."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "cats，就是猫，好几只。尾巴上啪地补一下「呲」，喉咙不许麻。听——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "cats."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "cats."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件：每天背书包上学，坐在教室里听课的那些人。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "students."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "students，就是学生们。加个 s 变一群，尾巴上是清脆的「呲」。听——"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "students."},
+    {"id": "X10", "role": "xq", "lang": "en", "speed": 0.85, "text": "students."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两件宝贝到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "尾巴音兄弟里的清音，读「呲」，声带不振动。名词复数尾巴上，常常藏着他。"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 0.9, "text": "尾巴音兄弟里的清音，读「呲」，声带不振动。名词复数尾巴上，常常藏着他。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：呲精灵是清音还是浊音？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "清音！喉咙一点都不麻！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二题：cats 和 students 里的「呲」，藏在单词的哪一头？"},
+    {"id": "X13", "role": "xq", "lang": "zh", "speed": 1.0, "text": "最后面！他专挑单词的小尾巴！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好！下个单元他弟弟来，那个会让你喉咙发麻。下一站见！"}
+  ]
+}

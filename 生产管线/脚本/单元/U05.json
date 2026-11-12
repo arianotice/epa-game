@@ -1,0 +1,47 @@
+{
+  "ep": "U05",
+  "title": "医生精灵的医生音",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B09": 0.6, "B15": 0.6, "B17": 0.5, "B19": 0.6},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天这位精灵穿着白大褂，最爱让你张大嘴巴说啊。他叫——医生精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "医生精灵？那要不要打针呀？我怕疼！"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "不打针，但要你把嘴巴张到最大。来，第一步，先看嘴型——"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴巴张得又大又开，下巴往下掉，喉咙整个敞开，就像医生拿小木片压住舌头看你的喉咙。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啊——！我上次看喉咙就是这样！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，舌头：舌头平平地躺在嘴底，往后缩一点，后半截稍微抬起来一丁点。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气从敞开的喉咙里顺畅地出来，一点阻碍都没有，一路通到底。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手摸着喉咙，声带振动，他也是个浊音。听好，这个音要拖长——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ah"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啊——！好长呀，嘴巴一直合不上！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "合不上就对了！又长又开是他的特点。大口精灵嘴巴也大，可是他短；医生精灵不但开，还要拖得长长的。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四句话记牢：嘴巴张开喉咙敞，舌头放平往后缩，声带振动是浊音，声音又长又开阔。"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "好，单词宝藏开门！第一个宝贝：四个轮子，会嘀嘀叫，爸爸开着去上班的那个。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "car."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "car，就是汽车。中间的医生精灵，啊——，又长又开。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "car."},
+    {"id": "X04", "role": "xq", "lang": "en", "speed": 0.85, "text": "car."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：有草地有大树，周末你去那里放风筝的地方。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "park."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "park，就是公园。park 里的医生精灵一样要拖长，别急着把嘴合上。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "park."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "park."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：晚上挂在天上，一闪一闪亮晶晶的那个。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "star."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "star，就是星星。念 star 的时候嘴巴大开，啊——，拖得长长的。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "star."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "star."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个宝贝全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "医生查喉咙，啊——又长又开。汽车 car，公园 park，星星 star 挂天外。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 0.9, "text": "医生查喉咙，啊——又长又开。汽车 car，公园 park，星星 star 挂天外。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是小挑战。第一题：医生精灵的音，是长的还是短的？"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 1.0, "text": "长的！啊——，嘴巴一直合不上！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：他和大口精灵，谁拖得更长？"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "医生精灵！大口精灵短，他要拖得长！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "完全正确，两颗星收好。记住今天的口诀，下一站我们去找一位被戳了肚子的精灵。声音探险队，下一站见！"}
+  ]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- 显式声明空 data URI icon，避免浏览器隐式请求 /favicon.ico 触发 404（四项错误计数硬约束）。
+     刻意不用图片 URL：既不给源码层新增 ?v= 字面量（S17 必须恰好 46），
+     也不产生无 tag 的裸图片 URL（S18 零裸引用口径），且不新增任何资产。 -->
+<link rel="icon" href="data:,">
+<title>P0 · 3D 探针（opt-in）</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #efe6d3;
+    font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  #probe-root { position: fixed; inset: 0; }
+  #probe-ui { position: fixed; left: 12px; top: calc(12px + env(safe-area-inset-top));
+    z-index: 10; display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    max-width: calc(100vw - 24px); }
+  #probe-ui button, #probe-ui a { font: 600 13px/1.2 inherit; padding: 9px 13px;
+    border-radius: 10px; border: 1px solid #b9a888; background: #fffaf0e8; color: #4a3b28;
+    text-decoration: none; cursor: pointer; }
+  #probe-ui button:active, #probe-ui a:active { background: #eee0c4; }
+  #probe-status { position: fixed; left: 12px; bottom: calc(12px + env(safe-area-inset-bottom));
+    z-index: 10; font: 12px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+    color: #4a3b28; background: #fffaf0d8; padding: 6px 10px; border-radius: 8px;
+    max-width: calc(100vw - 24px); word-break: break-all; }
+  @media (max-width: 400px) { #probe-ui button, #probe-ui a { padding: 8px 10px; font-size: 12px; } }
+</style>
+</head>
+<body>
+<div id="probe-root"></div>
+<div id="probe-ui">
+  <button id="probe-toggle" type="button" aria-pressed="true">关闭 3D 探针</button>
+  <a href="./index.html" id="probe-back">关回 2D 主站</a>
+</div>
+<div id="probe-status" role="status" aria-live="polite">初始化…</div>
+<!-- 独立入口：主站 index.html 完全不加载本页，2D 是默认且唯一的 L0 主形态。
+     本页不引用 js/main.js、不读 race.state、不进 requestAnimationFrame 主循环。
+     全文不含源码层缓存 tag 字面量，避免污染 S17 的 46 处计数。 -->
+<script type="module" src="./js/probe.jsx"></script>
+</body>
+</html>

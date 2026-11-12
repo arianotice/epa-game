@@ -1,0 +1,50 @@
+{
+  "ep": "U17",
+  "title": "惊叹精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.5, "B14": 0.6, "X10": 0.5, "B15": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天要认识的这位，叫惊叹精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "惊叹精灵？它是管什么的呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "它专门管你「哇——」的那一声。看到特别大的东西，嘴巴先张到最大，再慢慢收成小圆圈。跟我做前半段——嘴巴张到最大，下巴往下掉——啊——"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啊——！我的嘴巴张得好大！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "别停，接着做后半段：嘴型往前收，收成一个小圆圈，就像在吹蜡烛——呜——"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "呜——！嘴巴变圆了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "现在把两半接起来，中间不许停，一口气从前面滑到后面。仔细听——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ow"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啊呜！我真的惊叹出来了！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这就是双元音：一个音不够用，得两个音手拉手，从第一个滑到第二个，中间绝不能断开。前面那个啊又响又长，后面那个呜又轻又短，收得特别快。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "再记牢三件事。舌位：从嘴巴最低、最靠后的地方出发，一路往上往前滑到中间。气流：一路畅通，嘴巴不挡它。声带：全程都在振动，因为它是元音。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘴巴一路都在动，像坐了一次滑滑梯！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这个比喻好！从啊的高处，一路滑到呜的低处。听我读三遍，找找哪一半重——"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ow. ow. ow."},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "前面重！后面收得特别快！"},
+
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：你每天放学要回去的那个地方，有门有窗，一家人住在里面。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "house."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "房子。嘴巴先大开再收圆，别读成又短又扁的。听常速一遍——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "house."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "house."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：脸上这个器官，吃饭用它，说话也用它。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "mouth."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴巴。惊叹精灵就藏在这个词的正中间。听常速一遍——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "mouth."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "mouth."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：农场里黑白花的动物，会哞哞叫，还能挤出牛奶。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "cow."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "奶牛。这个词最短，一口气滑完，最清楚。听常速一遍——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "cow."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "cow."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "看到大房子，啊——呜，惊叹一声。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "看到大房子，啊——呜，惊叹一声。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战来了！听两个词，告诉我哪一个里有惊叹精灵——"},
+    {"id": "B16en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "house. horse."},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第一个！house 里嘴巴滑了一下，horse 的嘴巴一动不动！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！以后再碰到惊叹精灵，就想想那座大房子：嘴巴从啊滑到呜，惊叹一声！下个单元见！"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "看到大房子，啊——呜！下个单元见！"}
+  ]
+}

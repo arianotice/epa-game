@@ -1,0 +1,50 @@
+{
+  "ep": "U32",
+  "title": "蜜蜂精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.6, "B09": 0.6, "B15": 0.6, "B17": 0.5, "X11": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！还记得那条小蛇吗？这位是他双胞胎，声音不同——蜜蜂精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "双胞胎？那他也躲在草丛里吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步，嘴型：嘴巴微微张开，上下牙轻轻对齐，跟小蛇一样。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘴巴张开了，牙齿对齐……跟上一站一模一样！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，舌头：舌尖抬起来，靠近上门牙后面那块硬硬的小肉垫，留一条细缝。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌尖也抬起来了！那我是不是已经会了？"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "还差最关键一步！第三步，气流：气从细缝里挤出去，又细又急。第四步——"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "手摸喉咙，声带嗡嗡振动，摸上去麻麻的。所以他是浊音。听这三个词——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "zoo. nose. lazy."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "滋——！喉咙真的在发麻！像蜜蜂在里头飞！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！再来一次：嘶安静，滋发麻。嘴巴舌头没动，动的只有喉咙开关。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘶——滋——！同一张嘴型，只换声带开关！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记牢：嘴型舌位跟小蛇一样，声带嗡嗡振动，嘴巴不动，只动喉咙。"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "记住啦！嘴巴一点不动，喉咙嗡嗡响，滋——！"},
+
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一个宝贝：有狮子大象，周末最爱去的地方。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "zoo."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "动物园。开头滋一下就走，喉咙马上嗡嗡响。听常速——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "zoo."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "zoo."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：长在脸中间，能闻香味，感冒会堵住的那个。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "nose."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "鼻子。滋在最后面，鼻音别丢，喉咙一路嗡到最后。听常速——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "nose."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "nose."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：周末赖在床上，闹钟响了还不想起来的那个。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "lazy."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "懒的、懒洋洋。开头滋一下，喉咙嗡嗡响。听常速——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "lazy."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "lazy."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "蜜蜂滋滋叫，嘴型和小蛇一模一样，只是声带要振动——同一张嘴型，只换声带开关。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "蜜蜂滋滋叫，嘴型和小蛇一模一样，只是声带要振动——同一张嘴型，只换声带开关。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：蜜蜂精灵是清音还是浊音？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "浊音！喉咙嗡嗡响，手摸上去麻麻的！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：蜜蜂精灵和小蛇，嘴型一样吗？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一样！嘴巴舌头都不动，只有喉咙的开关不一样！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。下一站去图书馆——有位把手竖在嘴边的精灵等我们。下一站见！"},
+    {"id": "X13", "role": "xq", "lang": "zh", "speed": 1.0, "text": "滋——！下一站见！"}
+  ]
+}

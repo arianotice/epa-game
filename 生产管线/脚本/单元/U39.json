@@ -1,0 +1,49 @@
+{
+  "ep": "U39",
+  "title": "哼歌精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B05": 0.5, "B06": 0.4, "B09": 0.6, "B11": 0.5, "B13": 0.5, "B15": 0.6, "B17": 0.5, "B19": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这位精灵最爱闭着眼睛哼小曲儿，一边哼一边晃脑袋。他叫——哼歌精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哼歌精灵？那他躲在哪儿呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "躲在嘴唇后面。第一步，嘴唇：上下两片平平合上、闭紧，像信封粘了封条。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "闭紧啦！使劲一吹，气都跑不出来！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "跑不出来就对了！第二步，舌头：整条舌头躺平休息，一点活都不用干。"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：嘴巴封死了，气只好掉头往上，从鼻子里钻出去。手指放到鼻子下面试试——"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "呼——！鼻子下面真的有风，痒痒的！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "关键小实验：两根手指捏住鼻子，嘴巴还闭着，再试着哼一下。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嗯……哎呀！哼不出来了！一捏鼻子就断！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这就对了！这是验证鼻音的法宝：嘴巴封死，气全走鼻子，鼻子一堵，声音就哑。听——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "mmm. mmm."},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：摸着喉咙，嗡嗡地在抖，所以他是浊音，声音又闷又暖。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嗡——麻酥酥的，像喉咙里住着小蜜蜂！"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四句话记牢：嘴唇闭紧像封条，舌头躺平不干活，气流转弯走鼻子，喉咙嗡嗡要振动。"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一件宝贝：晚上挂在天上，有时候圆有时候弯，会发光的那个。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "moon."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "moon，就是月亮。先闭嘴哼一下，再打开嘴接后面的音。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "moon."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "moon."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝贝：每天早上把你叫起床、给你做早饭的那个人。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "mom."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "mom，就是妈妈。嘴唇闭一下就得松开，别含着不放。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "mom."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "mom."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝贝：白白的，从奶牛那儿来，装在杯子里早上喝的那个。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "milk."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "milk，就是牛奶。开头闭嘴哼一下就收住，尾巴上别多出一个呃。听常速一遍——"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "milk."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "milk."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "闭着眼睛哼歌的那个「嗯」，两片嘴唇要闭着，气流全从鼻子走。"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 0.9, "text": "闭着眼睛哼歌的那个「嗯」，两片嘴唇要闭着，气流全从鼻子走。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是小挑战。第一题：哼歌精灵是清音还是浊音？"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 1.0, "text": "浊音！手摸喉咙，嗡嗡地发麻！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：捏住鼻子还能哼出来吗？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不能！一捏就断，气全从鼻子走！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。下一站来的是啄米精灵，他也是鼻音，可得用舌尖顶住上牙床。下一站见！"}
+  ]
+}

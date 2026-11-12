@@ -1,0 +1,47 @@
+{
+  "ep": "U16",
+  "title": "含糖精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B04en": 0.4, "B05en": 0.4, "B06": 0.6, "B13": 0.6, "B14": 0.4},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，单元时间到！今天要认识的新朋友，是滑梯家族里最温柔的一个——含糖精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "含糖精灵？它嘴里真的含着糖吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "你试试就知道了：嘴里含一颗糖，嘴巴不敢张大，只能微微张开，然后慢慢把嘴唇收圆、收小——就是这个样子。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "真的！含着糖说话就是这个味道！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "它也是滑梯：起点是放松的呃，嘴唇平平的；终点滑到呜，嘴唇收成一个小圆圈。从扁滑到圆，一口气滑完。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "从扁滑到圆！跟前面几个都不一样！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "是不一样。先听错误版：把呃和呜硬拼在一起，中间断开——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "uh. oo."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "又是两个字！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，那就是错的。含糖精灵要一口气从呃滑到呜，中间不许停。听我慢慢滑一遍——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.5, "text": "O."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "O."},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哇，像轻轻吹了一口气！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记住三个词：扁、圆、滑。起点是扁的，终点是圆的，中间一直在滑。它还是字母 O 自己的名字呢。单词宝藏时间，走！"},
+
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一颗宝石——鼻子。"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "nose."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "nose 是鼻子，长在脸中间、用来闻味道的那一个。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "nose."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "nose."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二颗宝石——家。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "home."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "home 是家，每天放学回去、有爸爸妈妈等着你的那个地方。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "home."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "home."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三颗宝石——小船。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "boat."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "boat 是小船，在水面上摇啊摇、慢慢划走的那一条。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "boat."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "boat."},
+
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "口诀记忆屋！拍起手，跟我念一遍——"},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "欧，像含着一颗糖，是字母 O 的名字。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "欧，像含着一颗糖，是字母 O 的名字。"},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是今天的听辨小挑战！我说中文，你大声说出英文：鼻子、家、小船。"},
+    {"id": "X11", "role": "xq", "lang": "en", "speed": 0.85, "text": "nose. home. boat."},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！三颗宝石收好，今天你又多了一个精灵朋友，它叫含糖精灵。声音探险队，下一个单元见！"}
+  ]
+}

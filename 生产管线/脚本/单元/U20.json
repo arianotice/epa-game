@@ -1,0 +1,47 @@
+{
+  "ep": "U20",
+  "title": "旅行精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.5, "B13": 0.6, "X09": 0.5, "B14": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天要认识的这位，叫旅行精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "旅行精灵？它是不是很难遇到？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "没错，它是最少见的一位。它专门管背上行李出发的那一下。跟我做前半段：嘴唇撮成一个小圆圈，舌头后面抬起来，短促地——乌"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "乌！嘴唇撮圆了！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "别停，接着做后半段：嘴巴整个放松下来，舌头回到嘴巴正中间，轻轻一个——呃"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "呃……嘴巴松下来了。"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "把两半接起来，中间不许停，从圆圆的慢慢滑到松松的。仔细听——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "tour"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "乌呃！真的像在收拾行李箱！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这也是一个双元音：一个音不够用，两个音手拉手，中间绝不能断开。前面那个乌，嘴唇是圆的；后面那个呃，嘴巴是松的，收得又轻又快。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件事记牢。舌位：从后面偏高的地方，往前下滑到嘴巴正中央。嘴唇：从撮圆慢慢放开。声带：全程都在振动，因为它是元音。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘴巴是从圆到松，像把行李箱打开又合上！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对。因为我们见它太少，这只要求你认出它，不要求你读得多漂亮。听我读三遍，找找哪一半重——"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "tour. tour. tour."},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "前面重！后面松松地收掉！"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "再提醒一句：好些外国人偷懒，只说后面那半个音，前面的圆嘴直接省掉了。你听到短的也别奇怪。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 1.0, "text": "原来它是可以偷懒的精灵！"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：放假的时候，跟着导游去看很多地方的那件事。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "tour."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "旅行。旅行精灵的名字，就是从它身上来的。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "tour."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "tour."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：别人问你一个问题，你答得特别肯定，意思就是「当然」。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "sure."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "确定。出发前妈妈问你行李收好了吗，你就说这个。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "sure."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "sure."},
+
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "乌——呃，收拾行李去旅行。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "乌——呃，收拾行李去旅行。"},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战来了！听两个词，告诉我哪一个里有旅行精灵——"},
+    {"id": "B15en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "tour. too."},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第一个！tour 里嘴唇从圆滑到松，too 的嘴巴一直是圆的！"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！四个双元音精灵全部集齐了。以后再碰到旅行精灵，就想想那只行李箱：乌——呃，出发！下个单元见！"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "乌——呃，收拾行李去旅行！下个单元见！"}
+  ]
+}

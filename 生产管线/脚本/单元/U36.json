@@ -1,0 +1,50 @@
+{
+  "ep": "U36",
+  "title": "小钩子精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07en": 0.4, "B08": 0.5, "B15": 0.6, "B17": 0.5, "B19": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "今天这位精灵身上带着一只小钩子！声音探险队，单元时间到！它的名字叫小钩子精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "小钩子精灵？钩子长在哪儿呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "长在你的舌尖上。把舌头伸出来，再把舌尖慢慢往上、往里钩，钩成一个小小的钩子。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "钩起来了！像个小鱼钩！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步，嘴唇：两片嘴唇稍稍往前收，收成一个小圆形，不许张大。"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，舌头：舌尖往嘴巴里面、往天花板后面钩过去，钩好就别动了。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "钩过去了！那它钩在天花板上吗？"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "不许碰到！这是今天最要紧的一条：舌尖悬在半空，上不碰天花板，前不碰牙床，什么都不碰。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "悬在半空，什么都不碰！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，手贴喉咙，振动吗？"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "在麻！嗡嗡地响！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，声带在振动，它是个浊音。三句记牢：嘴唇收小圆，舌尖往里钩，钩好悬半空。听我读三遍——"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "run. run. run."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是最要紧的提醒：千万、千万别把它卷成中国话的日和热。日和热是舌尖卷起来贴到上颚后面的，还带着摩擦；小钩子精灵是钩起来悬在半空的，什么都不碰。"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "卷起来贴住就错了，要钩着悬空！"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：长耳朵、短尾巴，最爱啃胡萝卜的小动物。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "rabbit."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "rabbit 就是兔子。开头舌尖先钩好，再念后面。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "rabbit."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "rabbit."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：白白的一粒一粒，盛在碗里的主食。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "rice."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "rice 就是米饭。钩子要悬在半空，别去碰天花板。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "rice."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "rice."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：运动会上的项目，两条腿飞快地往前冲。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "run."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "run 就是跑。记住，舌尖钩着悬空，别卷成中国的日和热。听常速一遍——"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "run."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "run."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "舌尖像小钩子往里钩，悬在半空什么都不碰，千万别卷成中国的日和热。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "舌尖像小钩子往里钩，悬在半空什么都不碰，千万别卷成中国的日和热。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：小钩子精灵的舌尖，能碰到上颚吗？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不许碰！钩起来，悬在半空！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！第二题：中国话的日和热，能拿来代替它吗？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不能！那是卷起来贴住上颚，是最多人念错的地方！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。记住：钩起来，悬半空，别卷成日和热。声音探险队，下个单元见！"}
+  ]
+}

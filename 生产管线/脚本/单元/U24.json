@@ -1,0 +1,50 @@
+{
+  "ep": "U24",
+  "title": "响锤精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B08": 0.5, "B15": 0.6, "X10": 0.5, "B16": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天这位叫响锤精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "响锤精灵？它和小锤精灵是一对吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "一点没错！小锤精灵是舌尖顶住上齿龈，敲一下就跑。今天这位跟它一模一样，只换了一个开关。先把手指贴回喉咙上。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "贴好了！又是声带开关吧？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！先做一模一样的动作：舌尖顶住上门牙后面那道小肉坎，把气流堵在嘴巴里。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "顶紧了！气又出不去了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "关键一步：舌尖猛地弹开的同时，让喉咙里的小鼓振起来——"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "得！喉咙在麻！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这就是响锤精灵。气流一样先被堵住，再一样突然放开，唯一的差别是：声带这次要振动，所以它是浊辅音。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个要点：舌尖顶住上齿龈；突然弹开，气流冲出去；声带振动，手贴喉咙能感到麻。同样的锤子，敲出了响声。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一个敲得没声，一个敲得响！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！小锤不麻，响锤麻，位置和动作完全一样，只有手贴喉咙才分得出来。这就是我们反复练这个办法的原因。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "来做个对比：先安静的小锤，再响亮的响锤。手别离开喉咙——"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "tiger. dog. tiger. dog."},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "tiger 不麻，dog 麻！手一摸就分出来了！"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：会汪汪叫，摇尾巴，人类最好的朋友。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "dog."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "狗。开头的舌尖顶住再弹开，喉咙记得振。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "dog."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "dog."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：长在胳膊最前面，有五根手指，握手要用它。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "hand."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "手。锤子敲在最后面，也要敲出响声。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "hand."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "hand."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：一种颜色，红绿灯里表示停下，也是五星红旗的颜色。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "red."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "红色。敲完锤子别拖长，收得干净。听常速一遍——"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "red."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "red."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "特的振动版，同样的锤子，敲出响声。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "特的振动版，同样的锤子，敲出响声。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！手贴喉咙，听两个词，告诉我哪一个会麻——"},
+    {"id": "B17en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "coat. code."},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第二个！code 喉咙在麻，coat 安安静静！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！四个爆破精灵全部集齐：不麻的是纸飞机和小锤，麻的是打鼓和响锤。以后分不清，就手贴喉咙！下个单元见！"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "同样的锤子，敲出响声！下个单元见！"}
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "ep": "U02",
+  "title": "放松精灵的短衣音",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B09": 0.6, "B15": 0.6, "B17": 0.5, "B19": 0.6},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！这位精灵跟微笑小姐长得有点像，脾气却完全相反，全身松松垮垮，一点力气都不肯出。她叫——放松精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "长得像？那她跟微笑小姐哪里不一样呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "问得好！差别可大了。来，第一步，看嘴型——"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴巴只微微张开一点点，不用往两边拉，也不用咧开，就那么松松地张着。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "就这么松？我一点都不用使劲？"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，越松越对！第二步，舌头：舌头也要放松，前半截抬起来一点点，比微笑小姐低一些，位置再往后靠一靠。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气一下子就出去了，不挤也不拖，像轻轻叹了一小口气。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手摸着喉咙，声带照样振动，她也是个浊音。听好，就这一下——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "it"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "咦？这么短！我还没准备好，它就没了！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "哈哈，短就对了！微笑小姐能拖很长，放松精灵正好反过来，短促，咔一下就停，绝不拖泥带水。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四句话记牢：嘴巴微张不用力，舌头放松往后靠，声带振动是浊音，声音短促咔就停。"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "好，单词宝藏开门！第一个宝贝：在大海上开的那个，比大船小一号。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ship."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "ship，就是小船。中间那个音短短的，千万别拖，一拖长就变成微笑小姐了。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "ship."},
+    {"id": "X04", "role": "xq", "lang": "en", "speed": 0.85, "text": "ship."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：住在水里，会游泳，还会吐泡泡的那个。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "fish."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "fish，就是鱼。fish 里的放松精灵也是短短一下，咦，马上收住。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "fish."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "fish."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：大象是它，篮球运动员也是它，它的反义词是 small 小。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "big."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "big，就是大的。念 big 的时候嘴巴松松的，声音短促，别拉长脸。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "big."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "big."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个宝贝全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "嘴巴微张松又轻，短促咦。小船 ship，小鱼 fish，大的 big 松又轻。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 0.9, "text": "嘴巴微张松又轻，短促咦。小船 ship，小鱼 fish，大的 big 松又轻。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是小挑战。第一题：放松精灵的音，是长的还是短的？"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 1.0, "text": "短的！咔一下就没了！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题，难一点：要是把她拖长了，她会变成谁？"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嗯……会变成爱笑的微笑小姐！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "答对了，两颗星收好。记住今天的口诀，下一站我们去找一位只肯张一小口的小口精灵。声音探险队，下一站见！"}
+  ]
+}

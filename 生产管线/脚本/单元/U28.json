@@ -1,0 +1,48 @@
+{
+  "ep": "U28",
+  "title": "咬唇振动精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.6, "B14": 0.6, "B16": 0.5, "X10": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！咬的地方不变，还是上牙和下嘴唇。但今天这位要让喉咙嗡嗡响，他叫——咬唇振动精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "那他和昨天的咬唇清风精灵是双胞胎吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "没错，又是一对双胞胎！位置一样，气流一样，只换声带开关。手指贴回喉咙上。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "贴好了！这回喉咙要麻，对不对？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步：上牙轻轻咬住下嘴唇。注意两个字——咬住！牙齿一定要碰到嘴唇，碰到才算。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "碰到啦！上牙实实在在压在下嘴唇上！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，气流还是从小缝里挤出去。第三步，换开关：让喉咙里的小鼓振起来——嗡——"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嗡——！喉咙在麻，手心都在抖！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "现在说今天最重要的一句话：牙齿一定要碰到嘴唇，碰到才是他。先听一遍——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "van. vegetable. five."},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "再说一遍：牙齿一离开嘴唇，他就变成旅行精灵，呜。中国小朋友最容易犯的就是这个错。"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记牢：上牙咬住下唇，牙齿一定要碰到；气从小缝挤出去；喉咙振动，手贴喉咙能感到麻。"},
+
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一个宝贝：比小汽车大，方头方脑，专门拉货的那辆车。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "van."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "厢式货车。牙齿先碰嘴唇，再嗡地振起来。听常速一遍——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "van."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "van."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：绿绿的，长在地里，吃饭要多吃它才健康。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "vegetable."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "蔬菜。他就在最前面，牙齿碰住嘴唇，别偷懒。听常速一遍——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "vegetable."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "vegetable."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：一个数字，一只手的手指头正好这么多。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "five."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "五。开头碰住嘴唇，最后再振一下收尾。听常速一遍——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "five."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "five."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "夫的振动版，牙齿咬住下嘴唇，嗡——喉咙麻。"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 0.9, "text": "夫的振动版，牙齿咬住下嘴唇，嗡——喉咙麻。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！听两个词，哪一个牙齿碰到了嘴唇？"},
+    {"id": "B16en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "vine. wine."},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第一个！vine 咬住了嘴唇，wine 是旅行精灵！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：他和咬唇清风精灵比，嘴巴动作变了吗？"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 1.0, "text": "没变！都咬下嘴唇，只是一个麻，一个不麻！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。咬唇双胞胎集齐了：不麻的是清风，麻的是振动。牙齿一定要碰到嘴唇！下一站舌头尖要伸出嘴巴。下一站见！"}
+  ]
+}

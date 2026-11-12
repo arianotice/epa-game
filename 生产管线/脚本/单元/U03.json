@@ -1,0 +1,47 @@
+{
+  "ep": "U03",
+  "title": "小口精灵的小口音",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B09": 0.6, "B15": 0.6, "B17": 0.5, "B19": 0.6},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天这位精灵最节省，嘴巴只肯张开一小口，多一点点都不肯。她叫——小口精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一小口？到底有多小呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "就这么小！来，第一步，先看嘴型——"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴巴张开一小口，上下牙之间大概能塞进半根手指，就那么点缝。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "才半根？我都不知道怎么放进去！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，舌头：舌头前半截抬起来，比微笑小姐低一点，比放松精灵高一点，正好卡在中间。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气从嘴里直接出去，不堵也不绕，短促地诶一下就收住。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手摸着喉咙，声带照样振动，她也是个浊音。听好——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "edge"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "诶！好短，好紧！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，又短又紧！记住，小口精灵只开一小口，绝不多开。开大了，她就变成另一位精灵了。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四句话记牢：嘴巴只开一小口，舌头卡在正中间，声带振动是浊音，声音短促又紧张。"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "好，单词宝藏开门！第一个宝贝：早餐桌上白白的、椭圆的那个。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "egg."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "egg，就是鸡蛋。开头那位小口精灵，诶，短促地来一下。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "egg."},
+    {"id": "X04", "role": "xq", "lang": "en", "speed": 0.85, "text": "egg."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：每天晚上你要爬上去睡觉的那个。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "bed."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "bed，就是床。bed 里的小口精灵也是小小的诶，别张成一大口。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "bed."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "bed."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：写作业要用的，尖尖的、肚子里有水的那个。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "pen."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "pen，就是钢笔。pen 念起来嘴巴只开一小口，短短的诶。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "pen."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "pen."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个宝贝全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "一小口，短促诶。鸡蛋 egg，小床 bed，钢笔 pen 写写写。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 0.9, "text": "一小口，短促诶。鸡蛋 egg，小床 bed，钢笔 pen 写写写。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是小挑战。第一题：小口精灵的嘴巴，要开多大？"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 1.0, "text": "只开一小口，塞半根手指！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：念这个音的时候，嘴巴能不能张大？"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不能！张大了就变成别人了！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "完全正确，两颗星收好。记住今天的口诀，下一站我们去找一位下巴会掉下来的大口精灵。声音探险队，下一站见！"}
+  ]
+}

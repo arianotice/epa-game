@@ -1,0 +1,8 @@
+# 保持字节原样，禁止任何换行符转换。
+#
+# 门控 B3 对 音标拉力赛/js/race.js、track.js、config.js、main.js、render.js
+# 等做 sha256 双锚定（基线见 .workbuddy/backups/p1-pre-20261110/manifest.txt）。
+# 若 Windows 上 core.autocrlf 在 clone 时把 LF 转成 CRLF，字节会整体漂移，
+# 「判定核心逐字不改」的证明即失效。图片 / WebP / mp3 / Opus / WAV 等二进制
+# 同样必须原样，禁止被当作文本做规范化。
+* -text

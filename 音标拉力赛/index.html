@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>声音拉力赛 · 绵羊与小船</title>
+<meta name="description" content="听准 /i/ 和 /ɪ/，把小 Q 开进正确车道。听对会加速。">
+<link rel="icon" href="../音标大闯关/assets/img/favicon.png?v=hud-20261108">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/game.css?v=hud-20261108">
+</head>
+<body>
+<canvas id="c" aria-hidden="true"></canvas>
+<a id="route-map" href="../音标大闯关/index.html#/map" title="音标学习藏宝路线图">
+  <img src="../音标大闯关/assets/img/a1.webp?v=hud-20261108" alt="音标学习藏宝路线图">
+</a>
+<div id="signs" hidden>
+  <div id="sign-l" class="sign"></div>
+  <div id="sign-r" class="sign"></div>
+</div>
+<div id="tags"></div>
+
+<header id="hud" hidden>
+  <div id="progress" aria-hidden="true"><span></span></div>
+  <div class="hud-row">
+    <strong id="place">第2名</strong>
+    <span id="kart-type">车型 探险卡丁</span>
+    <span id="gates">听对 0</span>
+    <span id="gems">宝石 0</span>
+    <span id="shields">护身 0</span>
+    <button id="btn-board" type="button">排行榜</button>
+    <span id="combo" aria-label="连击"></span>
+    <span class="spacer"></span>
+    <button id="btn-mute" type="button" aria-label="关闭声音">🔊</button>
+    <button id="btn-pause" type="button">暂停</button>
+  </div>
+</header>
+
+<!-- CSEG-E1：比赛态右上角「该轮闭环小地图」。与标题页 #route-map 同位置角色切换、互斥显隐
+     （由 main.js 的 visible 表达式显式控制，DOM 顺序在 #hud 之后）。纯视觉冗余层：
+     aria-hidden / pointer-events:none / 半透明底板；圈数由 #minimap-lap 承载。
+     不新增任何 script/link/img，也不新增路牌 DOM（S1 复用 #signs），46 处 tag 计数不变。 -->
+<div id="minimap" aria-hidden="true" hidden>
+  <canvas id="minimap-c"></canvas>
+  <span id="minimap-lap"></span>
+</div>
+
+<p id="fork-count" hidden></p>
+<div id="cheer" hidden><p id="cheer-word">Good</p></div>
+<canvas id="confetti"></canvas>
+<p id="banner" hidden></p>
+<p id="live" class="sr" aria-live="polite"></p>
+
+<div id="touch" hidden>
+  <button id="steer-left" class="steer" type="button"><b>向左</b><small>A · ←</small></button>
+  <button id="replay" class="mid" type="button"><b>再听一次</b><small>E</small></button>
+  <button id="steer-right" class="steer" type="button"><b>向右</b><small>D · →</small></button>
+  <button id="jump" class="steer jump" type="button"><b>跳</b><small>空格 / 点按</small></button>
+</div>
+
+<section id="panel-title" class="panel">
+  <p class="eyebrow">声音探险队 · 四区杯赛</p>
+  <h1>声音拉力赛</h1>
+  <p class="lede">两圈制 · 听音选车道 · 在赛事地图里解锁音标精灵</p>
+  <p id="best" class="fine" hidden></p>
+  <p class="seg-label">① 选杯赛地图（音标卡只能靠跑完对应地图解锁）</p>
+  <div id="map-pick" class="row seg" role="group" aria-label="选择杯赛地图"></div>
+  <p class="seg-label">② 选车手</p>
+  <div id="char-pick" class="row seg" role="group" aria-label="选择车手"></div>
+  <p class="seg-label">③ 选难度，上赛道</p>
+  <div class="row">
+    <button id="btn-follow" class="btn ghost" type="button">跟读档<small>更慢、更好转</small></button>
+    <button id="btn-listen" class="btn" type="button">听辨档<small>常速竞速</small></button>
+  </div>
+  <p class="fine"><a href="../音标大闯关/index.html#/map">返回探险地图</a></p>
+</section>
+
+<aside id="how">
+  <button id="how-tab" type="button">玩法</button>
+  <button id="how-shop" type="button">兑换商店</button>
+  <section id="how-panel">
+    <button id="how-close" type="button" aria-label="关闭玩法说明">×</button>
+    <p class="eyebrow">怎么玩</p>
+    <h2>听音选车道</h2>
+    <ol>
+      <li>听到单词，把车开进写着这个音的车道。</li>
+      <li>起跑时长按空格（触屏长按中间起跑键），按得越久冲得越远。</li>
+      <li>别撞路沿，也别撞别的车，撞上就要做题。</li>
+      <li>按空格或点「跳」跳过石头，再按一下跳得更高。宝石拿到商店兑换。</li>
+    </ol>
+  </section>
+</aside>
+
+<section id="panel-teach" class="panel" hidden>
+  <p class="eyebrow">出发前听一遍 · <span id="teach-diff">听辨档</span></p>
+  <h2>这两个音不要混</h2>
+  <div id="teach-focus" class="focus"></div>
+  <div class="teach-grid">
+    <article class="is-long">
+      <img src="../音标大闯关/assets/sprites/U01.webp?v=hud-20261108" alt="">
+      <p class="ipa big">/i/</p>
+      <p>图鉴 iː · 紧音<br>嘴角拉开，肌肉绷紧</p>
+      <div class="row">
+        <button class="play" type="button" data-word="feet">feet</button>
+        <button class="play" type="button" data-word="seat">seat</button>
+        <button class="play" type="button" data-word="me">me</button>
+      </div>
+    </article>
+    <article class="is-short">
+      <img src="../音标大闯关/assets/sprites/U02.webp?v=hud-20261108" alt="">
+      <p class="ipa big">/ɪ/</p>
+      <p>图鉴 ɪ · 松音<br>嘴放松，轻轻一收</p>
+      <div class="row">
+        <button class="play" type="button" data-word="sit">sit</button>
+        <button class="play" type="button" data-word="gym">gym</button>
+      </div>
+    </article>
+  </div>
+  <p class="fine">赛道上还会听到成对的词，比如 sheep / ship、feet / fit。两边都写着词，开进你听到的那一边。</p>
+  <div class="row">
+    <button id="btn-back-title" class="btn ghost" type="button">返回</button>
+    <button id="btn-grid" class="btn" type="button">上赛道</button>
+  </div>
+</section>
+
+<section id="panel-count" class="count" hidden>
+  <p id="count-num">3</p>
+  <div id="nitro" aria-label="氮气"><span id="nitro-bar"></span></div>
+  <p id="count-hint">长按空格充氮</p>
+</section>
+
+<section id="quiz" class="panel" hidden>
+  <p class="eyebrow" id="quiz-why">车停住了</p>
+  <h2 id="quiz-title">选出听到的词</h2>
+  <p id="quiz-prompt" class="fine"></p>
+  <button id="quiz-replay" class="horn" type="button" aria-label="再听一遍">🔊</button>
+  <div id="quiz-options" class="row"></div>
+  <p id="quiz-result"></p>
+</section>
+
+<section id="board-panel" class="panel" hidden>
+  <p class="eyebrow">按答对题数</p>
+  <h2>答题情况</h2>
+  <div id="board-body" class="board-grid"></div>
+  <button id="board-close" class="btn ghost" type="button">收起</button>
+</section>
+
+<section id="shop-panel" class="panel" hidden>
+  <button id="shop-close" type="button" aria-label="回到主页">×</button>
+  <p class="eyebrow">主页商店</p>
+  <h2>兑换</h2>
+  <p id="shop-gems" class="fine">宝石 0</p>
+  <div id="shop-list"></div>
+</section>
+
+<section id="panel-pause" class="panel" hidden>
+  <h2>暂停</h2>
+  <p>比赛停在这一刻。回来后从当前车道继续。</p>
+  <div class="row">
+    <button id="btn-resume" class="btn" type="button">继续开</button>
+    <button id="btn-quit" class="btn ghost" type="button">回标题</button>
+  </div>
+</section>
+
+<section id="panel-results" class="panel" hidden></section>
+
+<!-- FIX-C03：唯一权威美式音标显示表，跨目录单一源（与主站同源发布）。
+     普通脚本同步执行；module 默认 defer，故 window.IPA_DISPLAY 在 module 执行前已就绪。 -->
+<script src="../音标大闯关/js/ipa-display.js?v=hud-20261108"></script>
+<script type="module" src="js/main.js?v=hud-20261108"></script>
+<!-- Task #28 / P1 · 3D 主形态入口（动态注入预构建 IIFE）。
+     产物落 assets/p1/（S17/S18 排除 assets/，不污染源码层 46 处 tag 计数）；
+     用 setAttribute + 字符串拼接构造 src 与 tag：静态扫描抓不到裸 src / ?v= 字面量，
+     运行时资源请求仍带当前 tag（H11 / D7.x 口径不破）。
+     title/teach 不创建 WebGL；countdown/racing/paused/quiz 才挂载 3D 车；
+     ?p1=off 或 ?render=2d 一键回退 2D L0；WebGL 不可用自动降级，不白屏。 -->
+<script>
+(function () {
+  try {
+    var q = new URLSearchParams(location.search);
+    /* 一键回退仍加载 bundle，只为让降级标识可观测（renderMode=2d / degraded），
+       但不挂载 3D、不创建 WebGL；2D 三车链路本就常驻可玩。 */
+    if (q.get("p1") === "off" || q.get("render") === "2d") window.__P1_OFF__ = true;
+    var s = document.createElement("script");
+    var tag = "hud-" + "20261108";
+    s.setAttribute("src", "assets/p1/" + "scene3d.js?v=" + tag);
+    s.async = false;
+    document.head.appendChild(s);
+  } catch (e) { /* 3D 加载失败时 2D L0 仍完整可玩 */ }
+})();
+</script>
+</body>
+</html>

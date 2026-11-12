@@ -1,0 +1,50 @@
+{
+  "ep": "U22",
+  "title": "打鼓精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B08": 0.5, "B15": 0.6, "X10": 0.5, "B16": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天这位叫打鼓精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "打鼓精灵？它和纸飞机精灵有关系吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "关系可大了！它是纸飞机精灵的双胞胎兄弟：嘴巴做的动作一模一样，只有一处不同。先把手指贴回喉咙上。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "贴好了！哪里不同呀？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "先做一模一样的动作：上下两片嘴唇紧紧闭住，把气流堵在嘴巴里。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "闭紧了！气又憋住了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "关键一步来了：嘴唇突然打开的同时，让喉咙里的小鼓振起来——"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "噗！喉咙在麻！咚咚的！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这就是打鼓精灵。气流一样先被堵住，再一样突然放开，唯一的差别是：声带这次要振动，所以它是浊辅音。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个要点：双唇紧闭先关门；突然打开，气流冲出去；声带振动，手贴喉咙能感到麻。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘴巴做的事一样，喉咙的开关不一样！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！这就是清浊兄弟：位置一样，动作一样，只切换声带开关。眼睛看不出来，所以要靠手贴喉咙，一摸就知道。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "来做个对比：先不振动的纸飞机，再振动的打鼓。手别离开喉咙——"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "pig. ball. pig. ball."},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "pig 不麻，ball 麻！清清楚楚！"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：圆圆的，一拍就跳起来，操场上大家都抢着踢它。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ball."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "球。嘴唇闭紧，喉咙记得振起来。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "ball."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "ball."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：马路上又长又大的车，很多窗户很多座位。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "bus."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "公共汽车。发动机一响，开头的小鼓也跟着振。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "bus."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "bus."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：刚出生的小人儿，还不会走路，只会咿咿呀呀地哭。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "baby."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "婴儿。开头和中间都有会振动的鼓点。听常速一遍——"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "baby."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "baby."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "噗的振动版，手贴喉咙能感到麻，像打鼓。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "噗的振动版，手贴喉咙能感到麻，像打鼓。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！手贴喉咙，听两个词，告诉我哪一个会麻——"},
+    {"id": "B17en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "back. pack."},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第一个！back 喉咙在麻，pack 安安静静！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！下回分不清这对兄弟，别用眼睛看，用手摸喉咙：麻的是打鼓精灵。下个单元见！"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "手贴喉咙，一摸就知道！下个单元见！"}
+  ]
+}

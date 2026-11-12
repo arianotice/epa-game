@@ -1,0 +1,720 @@
+{
+  "U01": {
+    "sym": "iː",
+    "displayIpa": "i",
+    "alias": "图鉴 iː",
+    "name": "微笑小姐",
+    "rarity": "P",
+    "type": "长元音",
+    "audio": "u01.opus",
+    "words": [
+      "sheep",
+      "tree",
+      "green"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a smiling little smile-lady spirit with a big toothy grin and rosy cheeks. Around the creature is a soft cool silver-blue light aura, plain and simple, no stars. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U02": {
+    "sym": "ɪ",
+    "displayIpa": "ɪ",
+    "alias": "图鉴 ɪ",
+    "name": "放松精灵",
+    "rarity": "P",
+    "type": "短元音",
+    "audio": "u02.opus",
+    "words": [
+      "ship",
+      "fish",
+      "big"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a very relaxed, slouched spirit with half-closed lazy eyes and a small relaxed mouth. Around the creature is a soft cool silver-blue light aura, plain and simple, no stars. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U03": {
+    "sym": "e",
+    "displayIpa": "ɛ",
+    "alias": "图鉴 e",
+    "name": "小口精灵",
+    "rarity": "P",
+    "type": "短元音",
+    "audio": "u03.opus",
+    "words": [
+      "egg",
+      "bed",
+      "pen"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit making a small pouty eh mouth with its lips barely open. Around the creature is a soft cool silver-blue light aura, plain and simple, no stars. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U04": {
+    "sym": "æ",
+    "displayIpa": "æ",
+    "alias": "图鉴 æ",
+    "name": "大口精灵",
+    "rarity": "P",
+    "type": "短元音",
+    "audio": "u04.opus",
+    "words": [
+      "apple",
+      "hand",
+      "cat"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with a wide open aah mouth and a big joyful grin. Around the creature is a soft cool silver-blue light aura, plain and simple, no stars. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U05": {
+    "sym": "ɑː",
+    "displayIpa": "ɑ",
+    "alias": "图鉴 ɑː",
+    "name": "医生精灵",
+    "rarity": "SR",
+    "type": "长元音",
+    "audio": "u05.opus",
+    "words": [
+      "car",
+      "park",
+      "star"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a cheerful little doctor spirit wearing a tiny stethoscope, mouth open, kind face. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U06": {
+    "sym": "ʌ",
+    "displayIpa": "ʌ",
+    "alias": "图鉴 ʌ",
+    "name": "戳肚子精灵",
+    "rarity": "SR",
+    "type": "短元音",
+    "audio": "u06.opus",
+    "words": [
+      "bus",
+      "cup",
+      "duck"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a round-bellied spirit poking its own tummy with one finger, making a soft uhh sound. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U07": {
+    "sym": "ɒ",
+    "displayIpa": "ɑ",
+    "alias": "图鉴 ɒ",
+    "name": "吹泡泡精灵",
+    "rarity": "SR",
+    "type": "短元音",
+    "audio": "u07.opus",
+    "words": [
+      "hot",
+      "dog",
+      "box"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit blowing one big round soap bubble, cheeks puffed. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U08": {
+    "sym": "ɔː",
+    "displayIpa": "ɔ",
+    "alias": "图鉴 ɔː",
+    "name": "吸果冻精灵",
+    "rarity": "UR",
+    "type": "长元音",
+    "audio": "u08.opus",
+    "words": [
+      "ball",
+      "horse",
+      "door"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit sucking on a wiggly jelly cup with round pouty lips. Around the creature is an intense prismatic rainbow radiant aura with a radiant crown and five small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U09": {
+    "sym": "ʊ",
+    "displayIpa": "ʊ",
+    "alias": "图鉴 ʊ",
+    "name": "轻轻推精灵",
+    "rarity": "SR",
+    "type": "短元音",
+    "audio": "u09.opus",
+    "words": [
+      "book",
+      "foot",
+      "good"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit gently nudging a small ball with a soft friendly gesture. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U10": {
+    "sym": "uː",
+    "displayIpa": "u",
+    "alias": "图鉴 uː",
+    "name": "吹蜡烛精灵",
+    "rarity": "SR",
+    "type": "长元音",
+    "audio": "u10.opus",
+    "words": [
+      "food",
+      "moon",
+      "blue"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with round pursed lips blowing out a birthday candle flame. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U11": {
+    "sym": "ɜː",
+    "displayIpa": "ɜr",
+    "alias": "图鉴 ɜː",
+    "name": "卷舌弹簧精灵",
+    "rarity": "SAR",
+    "type": "长元音",
+    "audio": "u11.opus",
+    "words": [
+      "bird",
+      "girl",
+      "nurse"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a bouncy springy spirit with a coiled spring motif and a curling tongue. Around the creature is a golden amber glowing aura with two small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U12": {
+    "sym": "ə",
+    "displayIpa": "ə",
+    "alias": "图鉴 ə",
+    "name": "偷懒叹气精灵",
+    "rarity": "P",
+    "type": "短元音",
+    "audio": "u12.opus",
+    "words": [
+      "banana",
+      "panda",
+      "teacher"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a drowsy sighing spirit leaning back, half asleep, letting out a tired sigh. Around the creature is a soft cool silver-blue light aura, plain and simple, no stars. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U13": {
+    "sym": "eɪ",
+    "displayIpa": "eɪ",
+    "alias": "图鉴 eɪ",
+    "name": "滑梯精灵A",
+    "rarity": "SAR",
+    "type": "双元音",
+    "audio": "u13.opus",
+    "words": [
+      "cake",
+      "name",
+      "rain"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit sliding down a tiny playground slide with both arms raised. Around the creature is a golden amber glowing aura with two small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U14": {
+    "sym": "aɪ",
+    "displayIpa": "aɪ",
+    "alias": "图鉴 aɪ",
+    "name": "滑梯精灵I",
+    "rarity": "SAR",
+    "type": "双元音",
+    "audio": "u14.opus",
+    "words": [
+      "bike",
+      "kite",
+      "five"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit riding a little toy airplane that glides down, both wings up. Around the creature is a golden amber glowing aura with two small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U15": {
+    "sym": "ɔɪ",
+    "displayIpa": "ɔɪ",
+    "alias": "图鉴 ɔɪ",
+    "name": "欢呼精灵",
+    "rarity": "SAR",
+    "type": "双元音",
+    "audio": "u15.opus",
+    "words": [
+      "toy",
+      "boy",
+      "noise"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a cheering spirit with both arms raised in the air, mouth open in a cheer. Around the creature is a golden amber glowing aura with two small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U16": {
+    "sym": "əʊ",
+    "displayIpa": "oʊ",
+    "alias": "图鉴 əʊ",
+    "name": "含糖精灵",
+    "rarity": "SAR",
+    "type": "双元音",
+    "audio": "u16.opus",
+    "words": [
+      "nose",
+      "home",
+      "boat"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a sweet little spirit holding up a small sugar cube, happy face. Around the creature is a golden amber glowing aura with two small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U17": {
+    "sym": "aʊ",
+    "displayIpa": "aʊ",
+    "alias": "图鉴 aʊ",
+    "name": "惊叹精灵",
+    "rarity": "HR",
+    "type": "双元音",
+    "audio": "u17.opus",
+    "words": [
+      "house",
+      "mouth",
+      "cow"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a wide-eyed surprised spirit with a big open ooh-whoa mouth. Around the creature is a bold ruby-red radiant aura with three small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U18": {
+    "sym": "ɪə",
+    "displayIpa": "ɪr",
+    "alias": "图鉴 ɪə",
+    "name": "悄悄话精灵",
+    "rarity": "HR",
+    "type": "双元音",
+    "audio": "u18.opus",
+    "words": [
+      "ear",
+      "near",
+      "deer"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit leaning close and whispering, cupping one hand to its mouth. Around the creature is a bold ruby-red radiant aura with three small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U19": {
+    "sym": "eə",
+    "displayIpa": "ɛr",
+    "alias": "图鉴 eə",
+    "name": "风吹精灵",
+    "rarity": "HR",
+    "type": "双元音",
+    "audio": "u19.opus",
+    "words": [
+      "hair",
+      "chair",
+      "bear"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a wind-blown spirit with flowing ribbons and hair, a soft breeze around it. Around the creature is a bold ruby-red radiant aura with three small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U20": {
+    "sym": "ʊə",
+    "displayIpa": "ʊr",
+    "alias": "图鉴 ʊə",
+    "name": "旅行精灵",
+    "rarity": "HR",
+    "type": "双元音",
+    "audio": "u20.opus",
+    "words": [
+      "tour",
+      "sure"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a little traveler spirit carrying a tiny backpack, ready for a journey. Around the creature is a bold ruby-red radiant aura with three small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U21": {
+    "sym": "p",
+    "displayIpa": "p",
+    "alias": "图鉴 p",
+    "name": "纸飞机精灵",
+    "rarity": "SR",
+    "type": "清辅音",
+    "audio": "u21.opus",
+    "words": [
+      "pig",
+      "paper",
+      "apple"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a small paper-plane spirit puffing out a clean little burst of air. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U22": {
+    "sym": "b",
+    "displayIpa": "b",
+    "alias": "图鉴 b",
+    "name": "打鼓精灵",
+    "rarity": "SR",
+    "type": "浊辅音",
+    "audio": "u22.opus",
+    "words": [
+      "ball",
+      "bus",
+      "baby"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit drumming on a tiny drum with drumsticks. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U23": {
+    "sym": "t",
+    "displayIpa": "t",
+    "alias": "图鉴 t",
+    "name": "小锤精灵",
+    "rarity": "SR",
+    "type": "清辅音",
+    "audio": "u23.opus",
+    "words": [
+      "tiger",
+      "table",
+      "cat"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit holding a small hammer, tapping it gently. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U24": {
+    "sym": "d",
+    "displayIpa": "d",
+    "alias": "图鉴 d",
+    "name": "响锤精灵",
+    "rarity": "SR",
+    "type": "浊辅音",
+    "audio": "u24.opus",
+    "words": [
+      "dog",
+      "hand",
+      "red"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit striking a small golden bell, a ring of sound. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U25": {
+    "sym": "k",
+    "displayIpa": "k",
+    "alias": "图鉴 k",
+    "name": "咳嗽精灵",
+    "rarity": "SR",
+    "type": "清辅音",
+    "audio": "u25.opus",
+    "words": [
+      "kite",
+      "cat",
+      "key"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with a hand on its mouth giving a soft kh cough. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U26": {
+    "sym": "g",
+    "displayIpa": "g",
+    "alias": "图鉴 g",
+    "name": "打嗝精灵",
+    "rarity": "SR",
+    "type": "浊辅音",
+    "audio": "u26.opus",
+    "words": [
+      "girl",
+      "egg",
+      "green"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a surprised spirit mid-hiccup, one eye winking. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U27": {
+    "sym": "f",
+    "displayIpa": "f",
+    "alias": "图鉴 f",
+    "name": "咬唇清风精灵",
+    "rarity": "SR",
+    "type": "清辅音",
+    "audio": "u27.opus",
+    "words": [
+      "fish",
+      "flower",
+      "phone"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with its top teeth gently on its lip, blowing a cool fff breeze. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U28": {
+    "sym": "v",
+    "displayIpa": "v",
+    "alias": "图鉴 v",
+    "name": "咬唇振动精灵",
+    "rarity": "SR",
+    "type": "浊辅音",
+    "audio": "u28.opus",
+    "words": [
+      "van",
+      "vegetable",
+      "five"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with buzzing lips and a tiny telephone receiver motif. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U29": {
+    "sym": "θ",
+    "displayIpa": "θ",
+    "alias": "图鉴 θ",
+    "name": "咬舌清音精灵",
+    "rarity": "UR",
+    "type": "清辅音",
+    "audio": "u29.opus",
+    "words": [
+      "three",
+      "thank",
+      "birthday"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with its tongue tip poking between its teeth, a clean thorn emblem, gentle and clear. Around the creature is an intense prismatic rainbow radiant aura with a radiant crown and five small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U30": {
+    "sym": "ð",
+    "displayIpa": "ð",
+    "alias": "图鉴 ð",
+    "name": "咬舌浊音精灵",
+    "rarity": "UR",
+    "type": "浊辅音",
+    "audio": "u30.opus",
+    "words": [
+      "this",
+      "mother",
+      "brother"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with its tongue between its teeth, a low soft buzz, a small thorn emblem. Around the creature is an intense prismatic rainbow radiant aura with a radiant crown and five small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U31": {
+    "sym": "s",
+    "displayIpa": "s",
+    "alias": "图鉴 s",
+    "name": "小蛇精灵",
+    "rarity": "SR",
+    "type": "清辅音",
+    "audio": "u31.opus",
+    "words": [
+      "sun",
+      "snake",
+      "bus"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a playful little snake spirit making a soft sss hissing shape. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U32": {
+    "sym": "z",
+    "displayIpa": "z",
+    "alias": "图鉴 z",
+    "name": "蜜蜂精灵",
+    "rarity": "SAR",
+    "type": "浊辅音",
+    "audio": "u32.opus",
+    "words": [
+      "zoo",
+      "nose",
+      "lazy"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a happy buzzing bee spirit with stripes and small wings. Around the creature is a golden amber glowing aura with two small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U33": {
+    "sym": "ʃ",
+    "displayIpa": "ʃ",
+    "alias": "图鉴 ʃ",
+    "name": "图书馆精灵",
+    "rarity": "SSR",
+    "type": "清辅音",
+    "audio": "u33.opus",
+    "words": [
+      "ship",
+      "fish",
+      "sheep"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a hushing librarian spirit pressing one finger to its lips, a tiny book motif, quiet shh. Around the creature is a royal purple magical aura with a small crown halo and four small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U34": {
+    "sym": "ʒ",
+    "displayIpa": "ʒ",
+    "alias": "图鉴 ʒ",
+    "name": "呼噜精灵",
+    "rarity": "SSR",
+    "type": "浊辅音",
+    "audio": "u34.opus",
+    "words": [
+      "television",
+      "usually",
+      "treasure"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with a coiled hissing shape and a small treasure chest motif. Around the creature is a royal purple magical aura with a small crown halo and four small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U35": {
+    "sym": "h",
+    "displayIpa": "h",
+    "alias": "图鉴 h",
+    "name": "哈气精灵",
+    "rarity": "SAR",
+    "type": "清辅音",
+    "audio": "u35.opus",
+    "words": [
+      "hat",
+      "hand",
+      "happy"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit puffing out a warm round hff breath, cheeks puffed. Around the creature is a golden amber glowing aura with two small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U36": {
+    "sym": "r",
+    "displayIpa": "r",
+    "alias": "图鉴 r",
+    "name": "小钩子精灵",
+    "rarity": "SAR",
+    "type": "浊辅音",
+    "audio": "u36.opus",
+    "words": [
+      "rabbit",
+      "rice",
+      "run"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with a curling tongue and a small hook motif, a playful rrr. Around the creature is a golden amber glowing aura with two small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U37": {
+    "sym": "tʃ",
+    "displayIpa": "tʃ",
+    "alias": "图鉴 tʃ",
+    "name": "火车精灵",
+    "rarity": "SSR",
+    "type": "清辅音",
+    "audio": "u37.opus",
+    "words": [
+      "chair",
+      "teacher",
+      "lunch"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit in a little steam-train costume with a tiny puff of smoke, chchch. Around the creature is a royal purple magical aura with a small crown halo and four small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U38": {
+    "sym": "dʒ",
+    "displayIpa": "dʒ",
+    "alias": "图鉴 dʒ",
+    "name": "果酱精灵",
+    "rarity": "SSR",
+    "type": "浊辅音",
+    "audio": "u38.opus",
+    "words": [
+      "juice",
+      "jam",
+      "jump"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit holding a small jam jar with a spoon, jaja, cozy. Around the creature is a royal purple magical aura with a small crown halo and four small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U39": {
+    "sym": "m",
+    "displayIpa": "m",
+    "alias": "图鉴 m",
+    "name": "哼歌精灵",
+    "rarity": "SR",
+    "type": "鼻音",
+    "audio": "u39.opus",
+    "words": [
+      "moon",
+      "mom",
+      "milk"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a humming spirit with its nose closed and a floating music note, mmm. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U40": {
+    "sym": "n",
+    "displayIpa": "n",
+    "alias": "图鉴 n",
+    "name": "啄米精灵",
+    "rarity": "SR",
+    "type": "鼻音",
+    "audio": "u40.opus",
+    "words": [
+      "nose",
+      "pen",
+      "dinner"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a bird-like spirit pecking at tiny grains of rice, nnn. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U41": {
+    "sym": "ŋ",
+    "displayIpa": "ŋ",
+    "alias": "图鉴 ŋ",
+    "name": "打鼾国王精灵",
+    "rarity": "UR",
+    "type": "鼻音",
+    "audio": "u41.opus",
+    "words": [
+      "king",
+      "song",
+      "morning",
+      "strong"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a snoring little king spirit wearing a small crown, eyes closed, zzz snore. Around the creature is an intense prismatic rainbow radiant aura with a radiant crown and five small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U42": {
+    "sym": "l",
+    "displayIpa": "l",
+    "alias": "图鉴 l",
+    "name": "快乐钩子精灵",
+    "rarity": "SAR",
+    "type": "舌侧音",
+    "audio": "u42.opus",
+    "words": [
+      "light",
+      "lemon",
+      "lion",
+      "apple",
+      "blue"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a cheerful spirit making a happy tongue curl with a small hook motif. Around the creature is a golden amber glowing aura with two small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U43": {
+    "sym": "w",
+    "displayIpa": "w",
+    "alias": "图鉴 w",
+    "name": "吻唇精灵",
+    "rarity": "SR",
+    "type": "半元音",
+    "audio": "u43.opus",
+    "words": [
+      "water",
+      "window"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with very round ooh-wah pouty lips and a little heart. Around the creature is an emerald green glowing aura with one small star sparkle. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U44": {
+    "sym": "j",
+    "displayIpa": "j",
+    "alias": "图鉴 j",
+    "name": "短耶精灵",
+    "rarity": "SAR",
+    "type": "半元音",
+    "audio": "u44.opus",
+    "words": [
+      "yes",
+      "yellow",
+      "year",
+      "yogurt"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a quick-gesture spirit with a small yee hand wave, lively. Around the creature is a golden amber glowing aura with two small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U45": {
+    "sym": "tr",
+    "displayIpa": "tr",
+    "alias": "图鉴 tr",
+    "name": "戳精灵",
+    "rarity": "HR",
+    "type": "清辅音",
+    "audio": "u45.opus",
+    "words": [
+      "tree",
+      "train"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit giving a tr-tr tap with a small train whistle motif. Around the creature is a bold ruby-red radiant aura with three small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U46": {
+    "sym": "dr",
+    "displayIpa": "dr",
+    "alias": "图鉴 dr",
+    "name": "啄精灵",
+    "rarity": "HR",
+    "type": "浊辅音",
+    "audio": "u46.opus",
+    "words": [
+      "dress",
+      "drink"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with a dr-dr pecking beak-like gesture. Around the creature is a bold ruby-red radiant aura with three small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U47": {
+    "sym": "ts",
+    "displayIpa": "ts",
+    "alias": "图鉴 ts",
+    "name": "呲精灵",
+    "rarity": "HR",
+    "type": "清辅音",
+    "audio": "u47.opus",
+    "words": [
+      "cats",
+      "students"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit hissing ts like a kettle, a tiny spark. Around the creature is a bold ruby-red radiant aura with three small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  },
+  "U48": {
+    "sym": "dz",
+    "displayIpa": "dz",
+    "alias": "图鉴 dz",
+    "name": "兹精灵",
+    "rarity": "HR",
+    "type": "浊辅音",
+    "audio": "u48.opus",
+    "words": [
+      "beds",
+      "friends"
+    ],
+    "prompt": "A single cute chibi mascot sound-spirit creature, warm parchment-and-adventure cartoon sticker style, soft 2.5D rendering, clean gentle shading, thick soft rounded outlines, cozy warm color palette, with tiny floating sound-wave rings and a few small sparkles around it. Playful, whimsical and friendly, NOT babyish or toddler-like. Full upper body, centered, perfectly symmetric front-facing view. Subject: a spirit with a dz-buzz shape and a small gear motif. Around the creature is a bold ruby-red radiant aura with three small star sparkles. The creature stands centered on a completely flat pure solid white background, single clean white color only, with no floor, no drop shadow, no gradient, no pattern, no text, no letters, no numbers, no symbols, no watermark, no border. The white background must be perfectly even and uniform."
+  }
+}

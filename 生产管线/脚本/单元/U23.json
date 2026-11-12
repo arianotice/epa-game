@@ -1,0 +1,52 @@
+{
+  "ep": "U23",
+  "title": "小锤精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B09": 0.5, "B16": 0.6, "X11": 0.5, "B17": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天这位叫小锤精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "小锤精灵？它要敲什么呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "敲嘴巴里的天花板。今天换个地方堵气流——不用嘴唇了，用舌头。先用舌尖摸一摸上门牙后面那道鼓鼓的小肉坎。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "摸到了！硬硬的！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "那道小坎叫上齿龈。把舌尖顶上去，贴紧，把气流堵在嘴巴里。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "顶紧了！气出不去！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "气越攒越多。现在，舌尖当小锤子，猛地往下一弹——"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "特！舌头弹下来了！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这也是爆破音：气流先被堵住，再突然放开。舌尖敲一下就跑，敲得又轻又脆。关键问题来了：手贴喉咙，麻不麻？"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不麻！安安静静的！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，声带在休息，不振动，这是清辅音。手掌放到嘴巴前，也能感觉到一小股风。"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个要点：舌尖顶住上齿龈；突然弹开，气流冲出去；声带不振动，喉咙不麻。像小锤子轻轻敲一下，敲完就跑。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "再提醒一句：堵气流的地方换到嘴巴里面去了，可测振动的办法还是老一套——手贴喉咙，一摸就灵。"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "换个地方堵，办法不变！"},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "听我读三遍，手别离开喉咙——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "tiger. tiger. tiger."},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一点鼓点都没有！"},
+
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：动物园里橙黑条纹的大猫，一吼起来谁都怕。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "tiger."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "老虎。开头的舌尖要顶住再弹开。听常速一遍——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "tiger."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "tiger."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：四条腿、一个平平的面，吃饭、写作业都在它上面。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "table."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "桌子。开头和结尾都有小锤子，都别振动。听常速一遍——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "table."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "table."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：家里养的小动物，会喵喵叫，最爱抓老鼠。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "cat."},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "猫。小锤子敲在最后面，要敲得又短又干净。听常速一遍——"},
+    {"id": "B15en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "cat."},
+    {"id": "X10", "role": "xq", "lang": "en", "speed": 0.85, "text": "cat."},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "舌尖当小锤子敲上齿龈，轻轻一下，不振动。"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 0.9, "text": "舌尖当小锤子敲上齿龈，轻轻一下，不振动。"},
+
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！手贴喉咙，听两个词，告诉我哪一个会麻——"},
+    {"id": "B18en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "tie. die."},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第二个！die 喉咙在麻，tie 安安静静！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！那个会麻的，就是下个单元的客人。记住：舌尖轻轻敲一下，喉咙别动！下个单元见！"},
+    {"id": "X13", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌尖当小锤子，轻轻一下，喉咙不动！下个单元见！"}
+  ]
+}

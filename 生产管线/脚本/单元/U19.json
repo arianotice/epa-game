@@ -1,0 +1,50 @@
+{
+  "ep": "U19",
+  "title": "风吹精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.5, "B14": 0.6, "X10": 0.5, "B15": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天要认识的这位，叫风吹精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "风吹精灵？它是管刮风的吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "它专门管风吹过来的那一声。跟我做前半段：嘴巴张开差不多一指宽，嘴角往两边拉，舌尖轻轻抵着下牙——诶"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "诶！嘴巴张开了！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "别停，接着做后半段：嘴巴整个放松下来，舌头回到嘴巴正中间，轻轻一个——呃"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "呃……嘴巴松下来了。"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "把两半接起来，中间不许停，从开着的慢慢滑到松开的。仔细听——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "hair"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "诶呃！头发被吹起来了！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这也是一个双元音：一个音不够用，两个音手拉手，中间绝不能断开。前面那个诶，嘴巴是开着的；后面那个呃，嘴巴是松的，收得又轻又快。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件事记牢。舌位：从前面偏低的地方，往后往下滑到嘴巴正中央。气流：一路畅通，嘴巴不挡它。声带：全程都在振动，因为它是元音。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘴巴是从开到松，像一阵风吹过来又吹走了！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这个比喻好。再提醒一句：它的前半段嘴巴，比悄悄话精灵开得多，别弄混。听我读三遍，找找哪一半重——"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "hair. hair. hair."},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "前面重！后面松松地收掉！"},
+
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：长在脑袋最上面，风一吹就会飘起来的东西。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "hair."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "头发。这个精灵就是从它身上取的名字。听常速一遍——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "hair."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "hair."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：教室里有靠背、有四条腿，上课要端端正正坐在上面的东西。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "chair."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "椅子。坐在椅子上，窗外的风就能吹到你。听常速一遍——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "chair."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "chair."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：树林里毛茸茸的大动物，会冬眠，最爱吃蜂蜜。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "bear."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "熊。大熊身上的毛，也是被风吹乱的。听常速一遍——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "bear."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "bear."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "诶——呃，头发被风吹起来了。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "诶——呃，头发被风吹起来了。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战来了！听两个词，告诉我哪一个里有风吹精灵——"},
+    {"id": "B16en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "hair. here."},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第一个！hair 嘴巴是开着的；here 嘴巴前面是紧的，那是悄悄话精灵！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！以后再碰到风吹精灵，就想想那头被吹乱的头发：诶——呃！下个单元见！"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "诶——呃，头发被风吹起来了！下个单元见！"}
+  ]
+}

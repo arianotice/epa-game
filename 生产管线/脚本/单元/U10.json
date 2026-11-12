@@ -1,0 +1,48 @@
+{
+  "ep": "U10",
+  "title": "吹蜡烛精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B03en": 0.4, "B04en": 0.4, "B12": 0.6, "B13": 0.4, "B15": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，单元时间到！今天要认识的新朋友，是轻轻推精灵的哥哥——吹蜡烛精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哥哥？那它们俩长得像吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "长得很像，可脾气完全相反。来，把嘴唇用力收紧，收成一个小小的圆孔，往前突出，像在吹生日蜡烛。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "呼——！蜡烛灭啦！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "气别停，一直吹！舌头后半截抬得高高的，比弟弟高得多，声音也要拉得长长的——"},
+    {"id": "B03en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "cool."},
+    {"id": "X03", "role": "xq", "lang": "en", "speed": 0.85, "text": "cool."},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "听出来了吗？这个音又长又紧。紧，就是嘴唇一直绷着不松开；长，就是可以一直吹下去。再听我拉长一遍——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.5, "text": "cool."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哇，好长！我的嘴巴都绷酸了！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，就是要绷酸。弟弟是短又松，哥哥是长又紧，一松一紧、一短一长，千万别搞混。单词宝藏时间，走！"},
+
+    {"id": "B05sp", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "再送你一条拼写小贴士：food 和 moon 里都有两个字母 o 挨在一起，blue 里是字母 u 加上一个 e。写法虽然不一样，嘴巴的动作一模一样，发出来的声音也一模一样。"},
+
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一颗宝石——食物。"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "food."},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "food 是食物。肚子咕咕叫的时候，你需要的就是 food。"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "food."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "food."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二颗宝石——月亮。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "moon."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "moon 是月亮，晚上挂在天上、圆圆的那个大月亮。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "moon."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "moon."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三颗宝石——蓝色。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "blue."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "blue 是蓝色，晴天天空的颜色，也是大海的颜色。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "blue."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "blue."},
+
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "口诀记忆屋！拍起手，跟我念一遍——"},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "吹蜡烛，呜——长又紧。"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 0.9, "text": "吹蜡烛，呜——长又紧。"},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是今天的听辨小挑战！我读两个词，你告诉我，哪个是长长的吹蜡烛精灵？"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "foot. food."},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第二个！food 是长长的！第一个 foot 是短短的！"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！耳朵真灵。三颗宝石收好，今天你又多了一个精灵朋友，它叫吹蜡烛精灵。"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，下一个单元见！"}
+  ]
+}

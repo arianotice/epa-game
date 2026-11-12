@@ -1,0 +1,50 @@
+{
+  "ep": "U34",
+  "title": "呼噜精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B05en": 0.4, "B06en": 0.4, "B15": 0.6, "B17": 0.5, "B19": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "呼噜——！声音探险队，单元时间到！今天这位精灵一开口喉咙就嗡嗡响，它叫呼噜精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "呼噜精灵？它是边睡觉边说话吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "差不多！先考考你：上个单元的图书馆精灵，嘴和舌头是怎么摆的？"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "我记得！嘴唇撮圆往前伸，舌头平平地悬着！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分。呼噜精灵的嘴和舌头，跟它一模一样，一点都不用改。"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "位置相同，只差一件事——差在喉咙。它的声带要一直振动，嗡嗡地响，像在打呼噜。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "位置一样，喉咙不一样！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "来做对比。第一遍，声带休息的清音版，手贴喉咙——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "sh."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不麻，安安静静的。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二遍，舌头位置不许动，只在喉咙里加上嗡嗡的振动——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "zh."},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嗡！手指头底下在抖！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "抖就对了，这就是呼噜精灵。它还有个麻烦：汉语里根本没有这个音，找不到中国话来对付，只能手贴喉咙，摸到振动才算数。"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "汉语里没有，只好靠手摸！"},
+
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：客厅里那个方方的盒子，能看动画片，也能看新闻。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "television."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "television 就是电视。快到尾巴的地方藏着呼噜精灵，喉咙要嗡嗡响。听常速一遍——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "television."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "television."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：意思是平时、一般情况下，都是这样。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "usually."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "usually 就是通常。中间的呼噜精灵别漏掉，喉咙一直嗡嗡着。听常速一遍——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "usually."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "usually."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：海盗埋在小岛上、装在箱子里的那些金子珠宝。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "treasure."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "treasure 就是宝藏。中间的呼噜精灵，喉咙千万别忘了振动。听常速一遍——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "treasure."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "treasure."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "嘘的打呼噜版，汉语里没有这个音，只能靠手贴喉咙认振动。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "嘘的打呼噜版，汉语里没有这个音，只能靠手贴喉咙认振动。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：呼噜精灵和图书馆精灵，嘴和舌头一样吗？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一模一样！只差喉咙在不在振动。"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！第二题：这个音能拿中国话来对付吗？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不能！汉语里没有，只能靠手贴喉咙摸振动！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。记住：位置一样，加振动就是呼噜精灵。声音探险队，下个单元见！"}
+  ]
+}

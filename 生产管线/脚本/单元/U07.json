@@ -1,0 +1,47 @@
+{
+  "ep": "U07",
+  "title": "吹泡泡精灵的吹泡泡音",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B09": 0.6, "B15": 0.6, "B17": 0.5, "B19": 0.6},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天这位精灵最爱玩泡泡水，嘟起嘴巴一吹，一串泡泡就飞出来了。他叫——吹泡泡精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "吹泡泡？我最喜欢吹泡泡啦！"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "那太好了，这个音就是吹泡泡吹出来的。来，第一步，先看嘴型——"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴巴张得圆圆的、开开的，下巴往下掉，嘴唇微微往前嘟，像含着吸管准备吹泡泡。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哦！我的嘴巴变成一个圆圈了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，圆圆的！第二步，舌头：舌头往后缩，舌根抬起来一点，舌面压得低低的。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气从圆嘴巴里猛地吹出去，很短，很快，噗一下泡泡就破了。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手摸着喉咙，声带振动，他也是个浊音。听好，就这一下——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "odd"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哦！好短好快，泡泡一下就破了！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！短又快，是他最大的特点。他跟下一位精灵都用圆嘴巴，可是他短，下一位要拖得长又圆。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四句话记牢：嘴巴圆圆下巴掉，舌头后缩压得低，声带振动是浊音，声音又短又快跑。"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "好，单词宝藏开门！第一个宝贝：夏天出汗是它，发烧是它，汤太烫也是它。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "hot."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "hot，就是热的。中间那位吹泡泡精灵，哦，短又快。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "hot."},
+    {"id": "X04", "role": "xq", "lang": "en", "speed": 0.85, "text": "hot."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：会汪汪叫，会摇尾巴，最爱啃骨头的那个。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "dog."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "dog，就是狗。dog 里的吹泡泡精灵也一样，圆嘴巴，短短一下。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "dog."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "dog."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：方方正正，能装东西，拆快递的时候最先看到的那个。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "box."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "box，就是盒子。念 box 的时候嘴巴圆圆的，哦，短促地收住。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "box."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "box."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个宝贝全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "吹泡泡，哦，短又快。热热 hot，小狗 dog，盒子 box 装起来。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 0.9, "text": "吹泡泡，哦，短又快。热热 hot，小狗 dog，盒子 box 装起来。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是小挑战。第一题：吹泡泡精灵的音，是长的还是短的？"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 1.0, "text": "短的！哦一下泡泡就破了！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：念这个音的时候，嘴巴要变成什么形状？"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "圆圆的！像含着一根吸管！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "完全正确，两颗星收好。记住今天的口诀，下一站我们去找一位爱吸果冻的精灵。声音探险队，下一站见！"}
+  ]
+}

@@ -1,0 +1,558 @@
+{
+  "ep": "EP26",
+  "title": "音节切蛋糕",
+  "default_gap": 0.12,
+  "gaps": {
+    "B01": 0.45,
+    "B05": 0.5,
+    "B09": 0.5,
+    "B12": 0.5,
+    "B13": 0.5,
+    "B14en": 0.5,
+    "B16en": 0.5,
+    "B18en": 0.5,
+    "B20": 0.5,
+    "B21en": 0.5,
+    "B22en": 0.5,
+    "B23en": 0.6,
+    "B25": 0.5,
+    "B26en": 0.5,
+    "B29en": 0.5,
+    "B32en": 0.5,
+    "B33": 0.5,
+    "B35": 0.5,
+    "B36en": 0.6,
+    "B37en": 0.7,
+    "B39en": 0.6,
+    "B41": 0.4,
+    "B43": 0.4,
+    "X10": 0.5
+  },
+  "segments": [
+    {
+      "id": "B01",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.9,
+      "text": "哒哒哒——！声音探险队，出发！"
+    },
+    {
+      "id": "B02",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "小Q，快看地图！元音城堡二十个精灵，辅音王国二十八个精灵，四十八个，全都亮了。"
+    },
+    {
+      "id": "X01",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "全亮了！那……我们是不是毕业了呀？"
+    },
+    {
+      "id": "B03",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "音标毕业了，探险还没完。今天我们离开辅音王国，往上爬，登上进阶峰！"
+    },
+    {
+      "id": "B04",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "峰顶有三样东西等着我们：音节、重音，还有连读和语调。从今天起，我们不抓新精灵了。"
+    },
+    {
+      "id": "X02",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "不抓精灵了？那我们学什么呀？"
+    },
+    {
+      "id": "B05",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "学节奏。音标是一个一个的音符，节奏是把音符分成一组一组。今天第一课的名字，叫——音节切蛋糕。"
+    },
+    {
+      "id": "X03",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "切蛋糕？真的有蛋糕吗？"
+    },
+    {
+      "id": "B06",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "有。进阶峰脚下就开着一家单词蛋糕店。走，进去看看！"
+    },
+    {
+      "id": "B07",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "你看柜台后面那块招牌，上面写了一长串字母。小Q，念给大家听听。"
+    },
+    {
+      "id": "X04",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 0.95,
+      "text": "这……这么长！我不念，我不会，我放弃！"
+    },
+    {
+      "id": "B08",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "别慌。你不是不会念，你是被它一整块吓住了。波波队长今天带了刀。"
+    },
+    {
+      "id": "X05",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "刀！你要对招牌干什么！"
+    },
+    {
+      "id": "B09",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "切它。长单词就像一整块大蛋糕，一口吞当然吞不下。切成小块，一块一块吃，谁都吃得完。切下来的每一块，有个名字，叫音节。"
+    },
+    {
+      "id": "B10",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "音节是什么？你念一个词的时候，嘴巴鼓一下、送出一口气，那一鼓，就是一块蛋糕。要数有几块，把手轻轻托住下巴，下巴往下掉几次，就是几块。"
+    },
+    {
+      "id": "X06",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "我试试！cat！掉了一次！一块！"
+    },
+    {
+      "id": "B11",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "对，cat 只有一块，这种词叫单音节词。听我念——"
+    },
+    {
+      "id": "B11en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "cat."
+    },
+    {
+      "id": "B12",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "还有一条最重要的规矩：每一块蛋糕里，都必须住着一个元音。元音就是蛋糕上面那颗草莓，没有草莓的，只能算面包，不算蛋糕。"
+    },
+    {
+      "id": "B13",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "好，现在全体起立！拍手数音节！规则只有一条：我念一个词，你跟着念，嘴巴鼓几下，手就拍几下。"
+    },
+    {
+      "id": "B14",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "第一个词，香蕉，一共三块。先听我一块一块切开念——"
+    },
+    {
+      "id": "B14en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "ba. na. na."
+    },
+    {
+      "id": "X07",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 0.95,
+      "text": "ba！na！na！三下！"
+    },
+    {
+      "id": "B15en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "banana."
+    },
+    {
+      "id": "B16",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "第二个词，开心，只有两块。先切——"
+    },
+    {
+      "id": "B16en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "hap. py."
+    },
+    {
+      "id": "X08",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 0.95,
+      "text": "hap！py！两下！"
+    },
+    {
+      "id": "B17en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "happy."
+    },
+    {
+      "id": "B18",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "第三个词，加大难度。电脑，computer，字母一大串，其实也是三块。先切——"
+    },
+    {
+      "id": "B18en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "com. pu. ter."
+    },
+    {
+      "id": "X09",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 0.95,
+      "text": "com！pu！ter！三下！"
+    },
+    {
+      "id": "B19en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "computer."
+    },
+    {
+      "id": "X10",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "computer！这么长的词也只有三块！我不怕它了！"
+    },
+    {
+      "id": "B20",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "蛋糕会切了，再教你认两种蛋糕的长相。注意，只认长相，不背规则。"
+    },
+    {
+      "id": "B21",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "第一种叫闭音节。它的最后站着一个辅音，像一扇关上的门，把元音关在里面。元音跑不出去，只能读得又短又急。听——"
+    },
+    {
+      "id": "B21en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.7,
+      "text": "cat. bed. pig."
+    },
+    {
+      "id": "B22",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "第二种叫开音节。它的结尾由元音自己收尾，门是开着的，元音可以痛痛快快喊出自己的名字。听——"
+    },
+    {
+      "id": "B22en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.7,
+      "text": "no. he. hi."
+    },
+    {
+      "id": "B23",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "同一个字母，一关一开，声音完全不一样。再听这一对——"
+    },
+    {
+      "id": "B23en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.7,
+      "text": "not. no."
+    },
+    {
+      "id": "X12",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "哇！都是字母 o，关起来是一个音，开门又是一个音！"
+    },
+    {
+      "id": "B24",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "点到为止。今天就记一句话：结尾关着门，元音读短的；结尾开着门，元音喊自己的名字。今天不考，以后慢慢认。"
+    },
+    {
+      "id": "B25",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "现在进入单词宝藏！四个词，每个我都先切块慢念，再连起来常速念，你一边听一边在心里数蛋糕。第一组，两块蛋糕：开心和桌子。"
+    },
+    {
+      "id": "B26en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "hap. py. ta. ble."
+    },
+    {
+      "id": "B27en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "happy. table."
+    },
+    {
+      "id": "B28",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "第二组，三块蛋糕。先来一个大块头——大象，还有老朋友香蕉。"
+    },
+    {
+      "id": "B28en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "el. e. phant. ba. na. na."
+    },
+    {
+      "id": "X13",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 0.95,
+      "text": "el！e！phant！ba！na！na！"
+    },
+    {
+      "id": "B29en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "elephant. banana."
+    },
+    {
+      "id": "B30",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "大象、香蕉，都是三块。所以长单词不可怕，可怕的是你想一口吞。"
+    },
+    {
+      "id": "B31",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "最后送你一整句话，切开来念，试试看——"
+    },
+    {
+      "id": "B31en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.7,
+      "text": "I. like. the. el. e. phant."
+    },
+    {
+      "id": "B32en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "I like the elephant."
+    },
+    {
+      "id": "B33",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "宝藏收好，进入口诀记忆屋，一边拍手一边跟我念——"
+    },
+    {
+      "id": "B34",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.8,
+      "text": "长单词，别害怕，切成蛋糕一块块。有元音，才算块，拍手数数几块来。关门短，开门长，开着门就喊名字！"
+    },
+    {
+      "id": "X15",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 0.9,
+      "text": "长单词，别害怕，切成蛋糕一块块。有元音，才算块，拍手数数几块来。关门短，开门长，开着门就喊名字！"
+    },
+    {
+      "id": "B35",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "口诀背熟，听辨大挑战！三道题，我念一个词，你拍手告诉我它有几块蛋糕。"
+    },
+    {
+      "id": "B36en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.7,
+      "text": "window."
+    },
+    {
+      "id": "X16",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "两下！win、dow，两块！"
+    },
+    {
+      "id": "B37",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "正确，第一颗星。第二题，长一点的——"
+    },
+    {
+      "id": "B37en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.7,
+      "text": "elephant."
+    },
+    {
+      "id": "X17",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 0.95,
+      "text": "嗯……三块？不对，四块？我数晕了！"
+    },
+    {
+      "id": "B38",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "揭晓：三块。el、e、phant。你多拍的那一下，是手自己滑了一下。"
+    },
+    {
+      "id": "B39",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "错一题才记得牢。第三题，最后一题——"
+    },
+    {
+      "id": "B39en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.7,
+      "text": "computer."
+    },
+    {
+      "id": "X19",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "com！pu！ter！三块！我摸到三个鼓包！"
+    },
+    {
+      "id": "B40",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "完全正确！今天两颗半星，收好。"
+    },
+    {
+      "id": "B41",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "今天登上进阶峰第一站，我们带走三样东西：长单词要切蛋糕；每一块里必须有一颗元音草莓；拍手数数能帮你找到节奏。开音节和闭音节是附赠的小零食，记住最好，记不住也没关系，以后还会再见到它们。"
+    },
+    {
+      "id": "X20",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "我记住啦！关门短，开门长！"
+    },
+    {
+      "id": "B43",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "今天的探险就到这里。下一站，我们要去找一样看不见的东西。"
+    },
+    {
+      "id": "X21",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "看不见？是藏起来的宝藏吗？"
+    },
+    {
+      "id": "B44",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "是声音里的力气。一个词切开以后，总有一块特别亮、特别用力。力气放在前面还是放在后面，意思完全不一样——这就是重音的秘密。"
+    },
+    {
+      "id": "X22",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "力气放的地方不一样，词的意思就变了？好神奇！"
+    },
+    {
+      "id": "B45",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.9,
+      "text": "声音探险队，下一站见！"
+    },
+    {
+      "id": "X23",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "声音探险队，下一站见！"
+    }
+  ]
+}

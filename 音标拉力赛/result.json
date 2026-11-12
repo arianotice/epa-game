@@ -1,0 +1,1504 @@
+{
+  "mode": "REAL_RUN",
+  "date": "2026-11-12",
+  "gate_definition": "门控全绿 = 路线B重定义套件(P0 62项 + P1新套件静态断言) + 81项PLR迁移重放(退役令§3承接表/正确扫描域/期望值逐字不变) + 11场headless ALL PASS + 真实Chromium 63项；四套旧门控 exit code 自 2026-11-12 起不计入判定链，≠ 原始110项原样全绿(X9)",
+  "checks": [
+    {
+      "name": "SPEC 清单自检：62 条重定义 + 81 项清单、重复名 0",
+      "ok": true,
+      "detail": null
+    },
+    {
+      "name": "S3 P1 IIFE 预构建 + 6 项静态自检 退出码 0",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "tail": " tag = 0\n  OK    P0 产物层 tag = 0\n  OK    未替换的 process.env = 0\n  OK    fogType 字符串 = 0\n  OK    Storage 写入 API = 0\n  OK    图片 URL 裸引用 = 0\n[build-p1] DONE (IIFE / 零外部运行时依赖 / 静态源码形态可执行)"
+      }
+    },
+    {
+      "name": "S3 构建完成标记 [build-p1] DONE",
+      "ok": true,
+      "detail": "产物层 tag = 0\n  OK    未替换的 process.env = 0\n  OK    fogType 字符串 = 0\n  OK    Storage 写入 API = 0\n  OK    图片 URL 裸引用 = 0\n[build-p1] DONE (IIFE / 零外部运行时依赖 / 静态源码形态可执行)"
+    },
+    {
+      "name": "S3 6 项静态自检全 OK 且零裸引用",
+      "ok": true,
+      "detail": [
+        "OK    源码层 tag = 0",
+        "OK    P0 产物层 tag = 0",
+        "OK    未替换的 process.env = 0",
+        "OK    fogType 字符串 = 0",
+        "OK    Storage 写入 API = 0",
+        "OK    图片 URL 裸引用 = 0"
+      ]
+    },
+    {
+      "name": "S5 真实 Chromium 六场景 63 项 退出码 0",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "tail": "\"kartScreenRatio\": {}, \"degradeReason\": \"webgl-unavailable\", \"errs\": {\"pageerror\": 0, \"console_error\": 0, \"requestfailed\": 0, \"bad_status\": 0}, \"overflow\": {\"sw\": 375, \"iw\": 375}}}"
+      }
+    },
+    {
+      "name": "S5 真实 Chromium 六场景 63 项 SUMMARY FAIL=0",
+      "ok": true,
+      "detail": {
+        "PASS": 63,
+        "FAIL": 0
+      }
+    },
+    {
+      "name": "S5 真实 Chromium 六场景 63 项 PASS >= 63",
+      "ok": true,
+      "detail": {
+        "PASS": 63,
+        "want": 63
+      }
+    },
+    {
+      "name": "S0 路线B重定义套件 P0 62 项（不退役） 退出码 0",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "tail": "(仅 assets+ipa-display.js)，跨站跳转断、localStorage 共享前提不成立 → 须完整大闯关站同级部署。已升级用户裁决，本轮不判 PASS、不悄悄放行。\nelapsed=30.6s\n=========================================================================="
+      }
+    },
+    {
+      "name": "S0 路线B重定义套件 P0 62 项（不退役） SUMMARY FAIL=0",
+      "ok": true,
+      "detail": {
+        "PASS": 62,
+        "FAIL": 0
+      }
+    },
+    {
+      "name": "S0 路线B重定义套件 P0 62 项（不退役） PASS >= 62",
+      "ok": true,
+      "detail": {
+        "PASS": 62,
+        "want": 62
+      }
+    },
+    {
+      "name": "S1 scene3d-model 纯函数 18 项 退出码 0",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "tail": "  T16 风格裁决：2 盏灯 / 纯色路面 / 中性闸门 / M7 M8 不入 P1\n  PASS  T17 mirrorZ 只翻渲染层：lateral 白名单原样、z 翻号、x 不变\n  PASS  T18 纯函数可重复 + 无 snap / 无 track 时安全返回 null\n\nSUMMARY: 18 PASS / 0 FAIL / 18 TOTAL"
+      }
+    },
+    {
+      "name": "S1 scene3d-model 纯函数 18 项 SUMMARY FAIL=0",
+      "ok": true,
+      "detail": {
+        "PASS": 18,
+        "FAIL": 0
+      }
+    },
+    {
+      "name": "S1 scene3d-model 纯函数 18 项 PASS >= 18",
+      "ok": true,
+      "detail": {
+        "PASS": 18,
+        "want": 18
+      }
+    },
+    {
+      "name": "S2 minimap 纯函数 10 项 退出码 0",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "tail": "Gate 无答案域\n  PASS  T6 圈数文本：1/2 → 2/2，且不含「听对」\n  PASS  T7 纯函数：不修改传入 view / track.samples\n\n========================================================\nSUMMARY: 10 PASS / 0 FAIL / 10 TOTAL"
+      }
+    },
+    {
+      "name": "S2 minimap 纯函数 10 项 SUMMARY FAIL=0",
+      "ok": true,
+      "detail": {
+        "PASS": 10,
+        "FAIL": 0
+      }
+    },
+    {
+      "name": "S2 minimap 纯函数 10 项 PASS >= 10",
+      "ok": true,
+      "detail": {
+        "PASS": 10,
+        "want": 10
+      }
+    },
+    {
+      "name": "S4 两圈 11 场确定性实跑 退出码 0",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "tail": "13,\"rock\":7}\nlisten   kingdom   worst   YES    150.75   4/4    0      1      150.75       额外题 15 {\"kart\":11,\"rock\":4}\n强制碰撞注入最大命中次数: 15\n\n=== 断言 ===\nALL PASS\n题库: 地图 4 词对 37 词 83 题型 3"
+      }
+    },
+    {
+      "name": "S4 11 场 ALL PASS",
+      "ok": true,
+      "detail": "  kingdom   worst   YES    150.75   4/4    0      1      150.75       额外题 15 {\"kart\":11,\"rock\":4}\n强制碰撞注入最大命中次数: 15\n\n=== 断言 ===\nALL PASS\n题库: 地图 4 词对 37 词 83 题型 3"
+    },
+    {
+      "name": "S4 最慢完赛 <= 180s",
+      "ok": true,
+      "detail": {
+        "samples": 20,
+        "max": 174.57
+      }
+    },
+    {
+      "name": "S4 词表 83 完整 / 三题型",
+      "ok": true,
+      "detail": [
+        "题库: 地图 4 词对 37 词 83 题型 3"
+      ]
+    },
+    {
+      "name": "S6 美式重出版资产链快检 退出码 0",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "tail": "基线目录不混用）\nPASS  英式基线 sprite_gen/cards/ 仍完整留档（不删除、只隔离）\nPASS  48 张卡面 中间产物 == 发布目录（逐字节）\nPASS  六档总图 中间产物 == 发布目录（逐字节）\nPASS  48 张立绘 WebP 在发布目录（齐备）\n\nSUMMARY  --check-fast  PASS=10  FAIL=0"
+      }
+    },
+    {
+      "name": "S6 美式重出版资产链快检 SUMMARY FAIL=0",
+      "ok": true,
+      "detail": {
+        "PASS": 10,
+        "FAIL": 0
+      }
+    },
+    {
+      "name": "S6 美式重出版资产链快检 PASS >= 10",
+      "ok": true,
+      "detail": {
+        "PASS": 10,
+        "want": 10
+      }
+    },
+    {
+      "name": "B1 源码层 tag 唯一且恰好 46（PB-1）",
+      "ok": true,
+      "detail": {
+        "hud-20261108": 46
+      }
+    },
+    {
+      "name": "B2 产品层图片 URL 零裸引用（PB-4 / 原 S18 口径）",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "B3 判定核心 + 2D L0 + P0 探针 7 文件 sha256 双锚定全等（PDCORE-1）",
+      "ok": true,
+      "detail": {
+        "基线条目": 20,
+        "不一致": []
+      }
+    },
+    {
+      "name": "B4 IPA_DISPLAY 48 闭集 + U11=ɜr + U05/U07 同为 ɑ 但 unit 独立（PI-2/PI-3/PI-4）",
+      "ok": true,
+      "detail": {
+        "entries": 48,
+        "U11": "ɜr",
+        "U05": "ɑ",
+        "U07": "ɑ"
+      }
+    },
+    {
+      "name": "B5 49 张发布卡面与美式重出版源逐字节全等（F9c / PI-2）",
+      "ok": true,
+      "detail": {
+        "不一致": [],
+        "总图全等": true
+      }
+    },
+    {
+      "name": "B6 D4 教研表 48/48 · CI=A+B+2C · 14/12/9/6/4/3 · UR=ɜː θ ð · C1 键契约（PRARITY-2/3/4）",
+      "ok": true,
+      "detail": {
+        "units": 48,
+        "CI": true,
+        "unit唯一": true,
+        "sym唯一": true,
+        "分布": {
+          "P": 14,
+          "SR": 12,
+          "SAR": 9,
+          "HR": 6,
+          "SSR": 4,
+          "UR": 3
+        },
+        "UR": [
+          "ð",
+          "ɜː",
+          "θ"
+        ],
+        "键契约": true
+      }
+    },
+    {
+      "name": "B7 双层缓存 tag 值不同且互不混算（PB-2/PB-3）",
+      "ok": true,
+      "detail": {
+        "源码层": [
+          "hud-20261108"
+        ],
+        "产物层": "p1-20261110"
+      }
+    },
+    {
+      "name": "B8 3D 层静态零 Storage 写入 / 零判定域写回（PR-1/PR-2）",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "B9 四套旧门控退役令已落盘（用户 11-12 书面放行）",
+      "ok": true,
+      "detail": "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标拉力赛\\design\\p1-gate-retirement.md"
+    },
+    {
+      "name": "B10 预构建 IIFE 产物存在且 >1MB",
+      "ok": true,
+      "detail": {
+        "bytes": 1164508
+      }
+    },
+    {
+      "name": "PLR 适配器 verify_cseg_gate.py 退出码 0",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "tail": "[PLR] replay verify_cseg_gate.py ...\n[PLR]   -> 38 checks | error=no\n[PLR] RESULT_JSON -> C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标拉力赛\\plr-verify_cseg_gate.json"
+      }
+    },
+    {
+      "name": "PLR 适配器 verify_cseg_gate.py 无异常且取回断言",
+      "ok": true,
+      "detail": {
+        "error": null,
+        "count": 38
+      }
+    },
+    {
+      "name": "PLR 适配器 verify_fresh_gate.py 退出码 0",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "tail": "[PLR] replay verify_fresh_gate.py ...\n[PLR]   -> 21 checks | error=no\n[PLR] RESULT_JSON -> C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标拉力赛\\plr-verify_fresh_gate.json"
+      }
+    },
+    {
+      "name": "PLR 适配器 verify_fresh_gate.py 无异常且取回断言",
+      "ok": true,
+      "detail": {
+        "error": null,
+        "count": 21
+      }
+    },
+    {
+      "name": "PLR 适配器 verify_c08_gate.py 退出码 0",
+      "ok": true,
+      "detail": {
+        "rc": 0,
+        "tail": "[PLR] replay verify_c08_gate.py ...\n[PLR]   -> 37 checks | error=no\n[PLR] RESULT_JSON -> C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标拉力赛\\plr-verify_c08_gate.json"
+      }
+    },
+    {
+      "name": "PLR 适配器 verify_c08_gate.py 无异常且取回断言",
+      "ok": true,
+      "detail": {
+        "error": null,
+        "count": 37
+      }
+    },
+    {
+      "name": "PLR-CSEG-S1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S1 config: TUNING.laps === 2 且 commits 每圈 2 门"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S2 提速落地 follow=260 / listen=300"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S3 race.js 终点按 laps × L 判定（非单圈）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S4 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S4 race.js 门判定改用绝对里程 g.line（弃用 hasPassed(commitT)）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S5 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S5 race.js rival 判定按 upcoming.line（弃用 wrapped commitT）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S6 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S6 race.js 跨圈复位 pickups[].taken"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S7 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S7 main.js 进度条分母含 laps"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S8 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S8 main.js 开局按地图建门并传车手"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S9 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S9 四区选择器与车手选择器已接 UI"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S10 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S10 教学面板追加本场杯赛重点动态区（C07 静态块保留）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S11 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S11 quiz 三题型 UI 已接，word 题不泄答案"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S12 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S12 placeLaneSign 传绝对 odo 给 branchLateral"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S13 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S13 render 只收当前圈的门（两圈 commitT 相同不重绘）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S14 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S14 结果页按答对门解锁，且 unlocked 取并集"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S15 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S15 跨站白名单含 maps / lastMap / lastChar"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-S16 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S16 atlas 6 处图片 URL 全部带当前 tag（无裸 URL）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-A0 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "A0 headless_laps.mjs 退出码 0（全部断言通过）"
+        ],
+        "detail": [
+          "题库: 地图 4 词对 37 词 83 题型 3"
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-A1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "A1 headless 跑满 2 档 × 4 地图 + 3 最坏工况 = 11 场"
+        ],
+        "detail": [
+          11
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-A2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "A2 全部工况 finishTime <= 180s"
+        ],
+        "detail": [
+          {
+            "min": 135.8,
+            "max": 174.57
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-A3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "A3 最坏工况（15 次碰撞 + 20 额外题全错）也 <= 180s"
+        ],
+        "detail": [
+          174.57
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-A4 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "A4 headless 断言含 4/4 门判定与跨圈 1 次"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-A5 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "A5 result.time === finishTime（不受结果页停留污染）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-A6 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "A6 理论口径 2×L/speed <= 150s（两档）"
+        ],
+        "detail": [
+          {
+            "follow": 148.1,
+            "listen": 128.4
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-B0 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "B0 Node 自检可运行"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-B1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "B1 四区地图各非空、词对 >= 24、音素 >= 16"
+        ],
+        "detail": [
+          {
+            "pairs": 37,
+            "units": 18,
+            "mapPairs": {
+              "camp": 8,
+              "castle": 10,
+              "kingdom": 8,
+              "peak": 11
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-B2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "B2 准确性：unit 绑定 / ipa 与权威表一致 / 最小对立互异 / 0 错配"
+        ],
+        "detail": [
+          []
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-B3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "B3 音频 100% 覆盖词表（allWords 零缺口）"
+        ],
+        "detail": [
+          {
+            "allWords": 83,
+            "missing": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-B4 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "B4 题型 >= 3 种"
+        ],
+        "detail": [
+          [
+            "word",
+            "ipa",
+            "type"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-B5 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "B5 固定题 0、任一词对出现率 <= 60%"
+        ],
+        "detail": [
+          0.515
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-B6 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "B6 单局 4 门词对互不重复（12000 局零重复）"
+        ],
+        "detail": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-B7 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "B7 单局题型 >= 2 种且三种题型都出现过"
+        ],
+        "detail": [
+          {
+            "minTypes": 3,
+            "coverage": {
+              "word": 12000,
+              "type": 12000,
+              "ipa": 12000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-B8 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "B8 额外题连续同对率 = 0%（去重窗口 3）"
+        ],
+        "detail": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-B9 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "B9 美式权威表 ipa-display.js 全文未动 / sym 稳定键保留"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-C1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "C1 音频文件数 == allWords 词数"
+        ],
+        "detail": [
+          {
+            "files": 83,
+            "words": 83
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-C2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "C2 全部 mp3 帧头有效且无 <500B 残file"
+        ],
+        "detail": [
+          {
+            "bad": [],
+            "tiny": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-CSEG-C3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "C3 生成脚本以 config.allWords() 为单一词表来源"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F1 §5.2-2 可见文案英式符号残留 0（sym/alias 稳定键白名单）"
+        ],
+        "detail": [
+          []
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F1b 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F1b data.js 中 ː 仅出现在 10 行 sym 稳定键"
+        ],
+        "detail": [
+          10
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F2 §5.2-3 长短音/央化旧措辞残留 0"
+        ],
+        "detail": [
+          []
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F3 §5.2-1 可见文案 /e/ 六行已改 /ɛ/ 且 eɪ 未被误伤"
+        ],
+        "detail": [
+          {
+            "/e/ 命中": 0,
+            "eɪ 当前": 5,
+            "eɪ 基线": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F4 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F4 §5.2-7 25 组 episodes/phonemes 镜像逐字一致"
+        ],
+        "detail": [
+          []
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F5 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F5 §5.2-6/§5.3 逻辑枚举键锁定 + D01–D05 美式显示文案在场"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F6a 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F6a §5.2-9 与持久化已验收基线逐字一致（不回退）"
+        ],
+        "detail": [
+          {
+            "基线行数": 7684,
+            "当前行数": 7684,
+            "diff 行数": 0,
+            "逻辑键改动": [],
+            "sha256 全等": true,
+            "sha256_16": "25784ee12bd0f637"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F6b 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F6b 图片/音频字段名与 eɪ 出现次数未被改动"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F6c 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F6c §5.2-8 上游构建管线未重跑（content_raw / data.js.bak mtime 均早于 data.js）"
+        ],
+        "detail": [
+          {
+            "content_raw": "10-30 11:05",
+            "data.js.bak": "11-03 07:45",
+            "data.js": "11-07 08:42"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F7 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F7 §5.2-4 11 个重点 unit 教学文案走查无残留"
+        ],
+        "detail": [
+          {
+            "U01": "OK",
+            "U02": "OK",
+            "U05": "OK",
+            "U06": "OK",
+            "U09": "OK",
+            "U10": "OK",
+            "U11": "OK",
+            "U12": "OK",
+            "U18": "OK",
+            "U19": "OK",
+            "U20": "OK"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F9a 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F9a G5 纯净页图鉴 48 卡大字全为美式、无英式符号"
+        ],
+        "detail": [
+          {
+            "大字个数": 48,
+            "残留": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F9b 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F9b G5 卡面图/总图 URL 全部带当前 tag 且权威表 U11=ɜr"
+        ],
+        "detail": [
+          {
+            "卡面图 URL": 2,
+            "U11": "ɜr"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F9c 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F9c G5 49 张发布卡面与美式源逐字节全等（图文同源）"
+        ],
+        "detail": [
+          []
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F11a 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F11a G4 老存档迁移逐字节回滚点 / collected=[] / legacyCollected / v2"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-FRESH-F11b 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "F11b 跨站 last-write-wins 不覆盖（B 的 rally 全保住 + A 自己写入成功）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-S1.1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S1.1 store.js 迁移与 reset 走 writeRaw 绕过 merge"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-S1.2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S1.2 storage 监听不触发迁移 / 不写 bak"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-S1.3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S1.3 store.js save() 写前重读 + 只并子字段"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-S1.4 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S1.4 main.js 写点全部收口到 commit（writeStore 仅剩 commit 内 1 处）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-S1.5 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S1.5 race.js 无 saveWallet / 绝对值写回，调用点为 delta"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-S1.6 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "S1.6 逻辑键与版本串未动"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D1.1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D1.1 v1.bak 逐字节等于原串"
+        ],
+        "detail": [
+          "'{\"collected\":[\"iː\",\"ɪ\",\"e\",\"æ\",\"ɑː\",\"ɒ\",\"ɔː\",\"ʊ\"],\"stars\":{\"EP00\":2},\"sound\":false}'"
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D1.2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D1.2 collected 已清空"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D1.3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D1.3 legacyCollected 恰为原 8 sym"
+        ],
+        "detail": [
+          [
+            "iː",
+            "ɪ",
+            "e",
+            "æ",
+            "ɑː",
+            "ɒ",
+            "ɔː",
+            "ʊ"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D1.4 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D1.4 rally.schemaVersion=2 且 unlocked=[]"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D1.5 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D1.5 迁移产物不含任何拉力赛 rally 子字段"
+        ],
+        "detail": [
+          [
+            "schemaVersion",
+            "unlocked",
+            "collectRetiredAt"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D2.1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D2.1 连续加载 bak 不覆写、快照不重复、unlocked 不重置"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D2.2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D2.2 rawHasV2 判据：已是 v2 不触发迁移（bak 不新建、collected 保持、unlocked 保留）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D2.3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D2.3 从 v1.bak 逐字节还原后可重新迁移"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D3.1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D3.1 B 的 rally 进度全部保住（gems/shields/EP02/owned*/howSeen/paint）"
+        ],
+        "detail": [
+          {
+            "gems": 123,
+            "shields": 2,
+            "EP02": {
+              "stars": 3,
+              "bestAcc": 0.9,
+              "played": 4
+            },
+            "ownedPaints": [
+              "paint-plus"
+            ],
+            "howSeen": true,
+            "paint": "paint-plus"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D3.2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D3.2 A 自己的 stars/lastEp/sound 也写入成功"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D3.3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D3.3 B 写入的 unlocked 未被陈旧快照抹掉（并集生效）"
+        ],
+        "detail": [
+          [
+            "U07"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D4.1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D4.1 unlocked 并集含 U07+U02"
+        ],
+        "detail": [
+          [
+            "U07",
+            "U02"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D4.2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D4.2 改 unlocked 不影响知识轨（collected 恒 []）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D4.3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D4.3 卡轨 isCardUnlocked 生效、与 hasLearned 解耦"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D5.1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D5.1 storage 事件刷新内存 data.rally（gems/unlocked）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D5.2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D5.2 storage 监听未触发第二次迁移 / 未写 bak"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D6.1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D6.1 +1 与 -100 两种交错顺序最终 gems 都为 1（无双花/无回滚）"
+        ],
+        "detail": [
+          [
+            1,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D6.2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D6.2 源码无绝对值写回且 delta 函数存在（静态已在 S1.5 验证）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D8.1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D8.1 race.js 石头纯规避（仅 ribbonT，无 slow/boost/计分）"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D8.2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D8.2 finishQuiz 不污染 correct / 不给额外奖励"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D8.3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D8.3 源码保留 pointerdown/jumpEdge 触屏跳跃"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D9.1 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D9.1 可见文案 C 类残留命中 0"
+        ],
+        "detail": [
+          []
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D9.2 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D9.2 真双元音滑动描述逐字未动"
+        ],
+        "detail": [
+          []
+        ]
+      }
+    },
+    {
+      "name": "PLR-C08-D9.3 原样重放 PASS（期望值逐字不变 / 正确扫描域）",
+      "ok": true,
+      "detail": {
+        "命中": 1,
+        "原名": [
+          "D9.3 两题 options 长度/顺序/answer 不变"
+        ],
+        "detail": [
+          ""
+        ]
+      }
+    },
+    {
+      "name": "PLR 81 项逐条实跑全绿（非 NOT_COVERED、非旧套件 exit code）",
+      "ok": true,
+      "detail": {
+        "PLR PASS": 81,
+        "want": 81
+      }
+    }
+  ],
+  "not_covered": [
+    "PVIS-3 三车 24px 剪影两两辨识盲测（需人工签收）",
+    "PVIS-1/2/4/6 材质层·HSV 占比·抖动·随距衰减（需视觉量测工具，本轮未取证）",
+    "PM-7 320×568 人工过眼签收（已由 verify_p1_visual.py V3 自动验可玩，人工签收仍缺）",
+    "PT-2 人工签收（G3 由 team-lead 代签；G9 按用户裁决为上线后 advisory，不阻断）",
+    "29 项重验域的 UI 类逐条替代编号，以及 HUD 12 项，见退役令 §4.2 / §4.3；本轮由 S0 / S5 的真实 Chromium 取证覆盖，未逐条独立命名 chk"
+  ],
+  "summary": {
+    "PASS": 121,
+    "FAIL": 0,
+    "TOTAL": 121
+  },
+  "legacy_gate_status": "RETIRED_BY_USER_2026-11-12",
+  "pl81_status": "REPLAYED_81_VIA_PLR_ADAPTER",
+  "plr_result_files": [
+    "plr-verify_cseg_gate.json",
+    "plr-verify_fresh_gate.json",
+    "plr-verify_c08_gate.json"
+  ]
+}

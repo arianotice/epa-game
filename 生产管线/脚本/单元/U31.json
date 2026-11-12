@@ -1,0 +1,50 @@
+{
+  "ep": "U31",
+  "title": "小蛇精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.6, "B08": 0.6, "B14": 0.6, "B16": 0.5, "X11": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这位最爱学蛇，一开口就嘶个不停。他叫——小蛇精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "小蛇精灵？那他是不是躲在草丛里呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "他就住在你嘴巴里。想抓他，先记住他长什么样。第一步，看嘴型——"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴巴微微张开，上下牙轻轻对齐，嘴唇往两边收一点，像在偷偷笑。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "微微张开，牙齿对齐……我像不像一条小蛇？"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，舌头：舌尖抬起来，靠近上门牙后面那块硬硬的小肉垫，也就是齿龈，留一条细缝。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌尖抬起来了！那块小肉垫我摸到了！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气从那条细缝里挤出去，又细又急，像自行车胎漏气——嘶——"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手摸着喉咙，安安静静，一点都不麻。所以他是清音。先听这三个词里的他——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "sun. snake. bus."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘶——！真的像漏气！我的手背都吹凉了！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！这个音能拖长：嘶——，一直吹到没气为止。记住，后面不许偷偷加一个呃。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记牢：嘴巴微开牙对齐，舌尖留细缝，气从细缝挤出去，声带不振动。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "记住啦！舌尖靠近小肉垫，往外吹气，嘶——！"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一个宝贝：早上从东边升起，白天挂在天上的那个。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "sun."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "太阳。开头嘶一下就走，牙齿轻轻对齐。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "sun."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "sun."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：身子长长的，在草丛里爬来爬去的那个。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "snake."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "蛇。先嘶再接鼻音，中间不许断开。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "snake."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "snake."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：又长又大，马路上跑的那个。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "bus."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "公交车。嘶在最后面，收尾要干脆。听常速一遍——"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "bus."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "bus."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "小蛇嘶嘶叫，气流从舌尖和齿龈中间的细缝里挤出去，声带不振动。"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 0.9, "text": "小蛇嘶嘶叫，气流从舌尖和齿龈中间的细缝里挤出去，声带不振动。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：小蛇精灵是清音还是浊音？"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 1.0, "text": "清音！喉咙安安静静，一点都不麻！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：气是从哪儿挤出去的？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "从舌尖和齿龈中间那条细缝里挤出去！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。下一站来的是他的双胞胎，声音完全不同——他叫蜜蜂精灵。下一站见！"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘶——！下一站见！"}
+  ]
+}

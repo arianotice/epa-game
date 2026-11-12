@@ -1,0 +1,48 @@
+{
+  "ep": "U30",
+  "title": "咬舌浊音精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B13": 0.6, "B15": 0.5, "X11": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天我们还在那条牙缝里。但今天这位，是汉语里完全没有的客人，他叫——咬舌浊音精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "汉语里完全没有？那我们该怎么念呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "照抄昨天的动作，再打开喉咙就行。手指贴回喉咙上，我们开始。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "贴好了！又是声带开关吧？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步：舌尖轻轻探到上下牙齿中间，碰到牙齿就缩回来，千万别伸太长。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "碰一下就缩回来！不敢伸太长！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，气流还是从那条缝里送出去。第三步，换开关：让喉咙里的小鼓振起来——嗡——"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嗡——！喉咙在麻！可是舌头好忙呀！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，他比昨天那位忙一点。重点再讲一遍：汉语里根本没有这个音，中国小朋友最容易把他念成汉语的兹或者得，那就不对了。先听一遍——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "this. mother. brother."},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "汉语里没有……那我得好好练！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记牢：舌尖探到齿缝，碰到就缩回来，别伸太长；气从缝里送出去；喉咙振动，手贴喉咙能感到麻。"},
+
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一个宝贝：你指着近处一样东西，开口要说的那个词。"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "this."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这个。舌尖碰一下牙齿就缩回来，喉咙记得振。听常速一遍——"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "this."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "this."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：家里最温柔的那个人，生你养你的她。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "mother."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "妈妈。他藏在词的中间，两边都是元音，要连得顺。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "mother."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "mother."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：家里跟你一起长大，一起调皮的那个男孩子。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "brother."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "兄弟。前面还跟着卷舌弹簧精灵，两个音要贴紧。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "brother."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "brother."},
+
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "斯的振动版，舌尖别伸太长，碰到就缩回来。"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 0.9, "text": "斯的振动版，舌尖别伸太长，碰到就缩回来。"},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！手贴喉咙，听两个词，哪一个会麻——"},
+    {"id": "B15en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "thin. this."},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第二个！this 喉咙在麻，thin 安安静静！"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：舌尖要伸很长吗？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不能！碰一下牙齿就缩回来！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。咬舌双胞胎集齐了：不麻的是清音，麻的是浊音。记住，汉语里没有他们，练的时候一定要把舌尖探出来！下一站见！"}
+  ]
+}

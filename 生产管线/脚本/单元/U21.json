@@ -1,0 +1,50 @@
+{
+  "ep": "U21",
+  "title": "纸飞机精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B08": 0.5, "B16": 0.6, "X10": 0.5, "B17": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天这位叫纸飞机精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "纸飞机精灵？它会飞吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "会，飞得又快又安静。另外说件大事：从今天起我们换一类精灵，它们叫辅音。辅音不像元音一路畅通，气流得被挡一下。"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "挡气流之前，先复习我们在第一集学过的老办法：手指轻轻贴住喉咙。喉咙麻就是浊音，一点不麻就是清音。今天这位，是不麻的那一个。"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "先做动作：上下两片嘴唇紧紧闭住，把气流关在嘴巴里。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "闭紧了！气全憋在里面！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "气越攒越多，压力越来越大。好，突然把嘴唇打开——噗！"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "噗！气一下子冲出来了！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这就是爆破音：气流先被堵住，再突然放开，像放了个小炮。最关键的问题——刚才喉咙麻不麻？"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不麻！一点感觉都没有！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！声带在休息，不振动，所以这是清辅音。手掌放到嘴巴前面，还能感觉到一小股风。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个要点：双唇紧闭先关门；突然打开，气流噗地冲出去；声带不振动，喉咙安安静静。只有风，没有鼓声，像纸飞机飞出去。"},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "听我读三遍，手别离开喉咙——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "pig. pig. pig."},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "安安静静！一点鼓点都没有！"},
+
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：农场里粉红色的动物，胖胖的，尾巴卷卷的。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "pig."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "猪。开头的嘴唇要闭紧再弹开。听常速一遍——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "pig."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "pig."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：白白的、一张一张的，写字画画、折纸飞机都要用。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "paper."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "纸。纸飞机精灵最爱玩它。听常速一遍——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "paper."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "paper."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：红红的、圆圆的水果，咬一口又脆又甜。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "apple."},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "苹果。爆破音藏在中间，闭唇要闭干净。听常速一遍——"},
+    {"id": "B15en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "apple."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "apple."},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "双唇紧闭噗地爆破，声带不振动，像纸飞机飞出去。"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 0.9, "text": "双唇紧闭噗地爆破，声带不振动，像纸飞机飞出去。"},
+
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！手贴喉咙，听两个词，告诉我哪一个会麻——"},
+    {"id": "B18en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "pig. big."},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第二个！big 喉咙在麻，pig 安安静静！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！那个会麻的，是下个单元的客人。记住：噗地一下，喉咙别动！下个单元见！"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "双唇紧闭噗地爆破，喉咙不动！下个单元见！"}
+  ]
+}

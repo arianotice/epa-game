@@ -1,0 +1,47 @@
+{
+  "ep": "U09",
+  "title": "轻轻推精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B03en": 0.4, "B07": 0.6, "B14": 0.6, "B15": 0.4, "B17": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，单元时间到！今天我们要认识的新朋友，名字叫——轻轻推精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "轻轻推精灵？它推什么呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "它推的是空气。来，先把嘴巴微微张开一点点，嘴唇往前收圆，就像你要轻轻推开一扇门——只推一下，千万别用力。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘟起来了！像小鱼吐泡泡！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，只嘟一点点就够。接着舌头慢慢往后缩，舌头的后半截抬起来一点点，不用抬太高。嗓子一用力，送一口短气出来——"},
+    {"id": "B03en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "put."},
+    {"id": "X03", "role": "xq", "lang": "en", "speed": 0.85, "text": "put."},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "听出来了吗？这个音又短又松。短，就是一下就停；松，就是嘴巴和舌头全程都不使劲。记住两个词：短，松。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "是很短！我还没反应过来，它就没了！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "它的邻居叫吹蜡烛精灵，脾气正好相反，是长又紧。我们下个单元就去见它。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "再教你一个检验的小办法：把手心放在嘴巴前面，发音的时候，手心只被轻轻推了一下，一下就没了。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "真的！手心痒了一下，就那么一下！"},
+
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏时间到啦！三颗宝石，我先慢速读一遍，再常速读一遍，你跟着念。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一颗宝石——书。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "book."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "book 就是书，你每天背去学校、翻开来看的那本书。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "book."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "book."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二颗宝石——脚。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "foot."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "foot 是脚，走路、跑步、踢球，全靠这两只 foot。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "foot."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "foot."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三颗宝石——好的。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "good."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "good 就是好的。老师夸你一句 good job，夸的就是这个 good。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "good."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "good."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "口诀记忆屋！拍起手，跟我念一遍——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "轻轻推，唔，短又松。"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 0.9, "text": "轻轻推，唔，短又松。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是今天的听辨小挑战！我说中文，你大声说出英文：书、脚、好的。"},
+    {"id": "X10", "role": "xq", "lang": "en", "speed": 0.85, "text": "book. foot. good."},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！三颗宝石收好，今天你又多了一个精灵朋友，它叫轻轻推精灵。"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，下一个单元见！"}
+  ]
+}

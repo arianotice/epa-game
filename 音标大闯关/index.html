@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>声音探险队 · 音标大闯关</title>
+<meta name="description" content="小学英语音标启蒙闯关游戏：48 个音标精灵、四幕探险地图、听辨大挑战。">
+<link rel="icon" type="image/png" href="assets/img/favicon.png?v=hud-20261108">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=hud-20261108">
+<link rel="stylesheet" href="css/story.css?v=hud-20261108">
+
+<!-- 动画库（本地化，不依赖 CDN，保证离线与上线后可用） -->
+<script src="assets/vendor/gsap.min.js?v=hud-20261108"></script>
+<script src="assets/vendor/ScrollTrigger.min.js?v=hud-20261108"></script>
+<script src="assets/vendor/lenis.min.js?v=hud-20261108"></script>
+<script>
+  /* 仅当动画库加载成功且用户未要求减少动效时，才启用“入场前隐藏”的初始态；
+     否则内容保持默认可见，确保任何情况下都不会白屏。 */
+  (function () {
+    var rm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (window.gsap && window.ScrollTrigger && !rm) {
+      document.documentElement.classList.add("gsap-ready");
+    }
+  })();
+</script>
+</head>
+<body>
+  <div class="paper-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#/story">
+      <img src="assets/img/favicon.png?v=hud-20261108" alt="声音探险队徽章" class="brand-badge">
+      <span class="brand-text">声音探险队<span class="brand-sub">音标大闯关</span></span>
+    </a>
+    <div class="hud" id="hud">
+      <div class="hud-item" title="已获得的星星">
+        <span class="hud-icon">⭐</span>
+        <span><b id="hud-stars">0</b>/90</span>
+      </div>
+      <div class="hud-item" title="已收集的音标精灵">
+        <span class="hud-icon">💎</span>
+        <span><b id="hud-spirits">0</b>/48</span>
+      </div>
+      <button class="icon-btn" id="btn-sound" title="开关声音">🔊</button>
+      <button class="icon-btn" id="btn-atlas" title="音标图鉴">📖</button>
+    </div>
+  </header>
+
+  <main class="topbar-main" id="view" aria-live="polite"></main>
+
+  <nav class="bottomnav">
+    <a href="#/story" class="nav-btn" data-nav="story">📜 探险故事</a>
+    <a href="#/map" class="nav-btn" data-nav="map">🗺️ 探险地图</a>
+    <a href="#/atlas" class="nav-btn" data-nav="atlas">💎 音标图鉴</a>
+  </nav>
+
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal-layer" id="modal-layer" hidden></div>
+
+  <script src="js/data.js?v=hud-20261108"></script>
+  <!-- FIX-C03：唯一权威美式音标显示表（按 unit id 索引）。普通脚本顺序执行，须早于所有视图脚本。 -->
+  <script src="js/ipa-display.js?v=hud-20261108"></script>
+  <script src="js/store.js?v=hud-20261108"></script>
+  <script src="js/audio.js?v=hud-20261108"></script>
+  <script src="js/app.js?v=hud-20261108"></script>
+  <script src="js/map.js?v=hud-20261108"></script>
+  <script src="js/level.js?v=hud-20261108"></script>
+  <script src="js/atlas.js?v=hud-20261108"></script>
+  <script src="js/story.js?v=hud-20261108"></script>
+  <script src="js/projcard.js?v=hud-20261108"></script>
+</body>
+</html>

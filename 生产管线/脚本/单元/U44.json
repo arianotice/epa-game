@@ -1,0 +1,52 @@
+{
+  "ep": "U44",
+  "title": "短耶精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.6, "B11": 0.5, "B15": 0.6, "B17": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这位性子最急，一冒头就往后面的音上扑——短耶精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "短耶精灵？就是那个「耶」吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步，舌位：舌面抬起来，靠近上颚中间那块，舌尖放平靠在下牙后面。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌面抬起来啦！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，嘴唇：嘴微微张开，嘴唇放平，千万别噘起来，跟吻唇精灵正好相反。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一个噘嘴，一个放平！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流很轻，声带要振动，手贴喉咙能感到嗡嗡的。听——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "yes."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "好短！一闪就没了！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，他是半元音，自己站不住，一开口就马上接到后面的元音上。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四点最要紧：他比汉语的「耶」还要更短更快，绝对不许拖长。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "短一点，快一点！"},
+
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一件：别人问你问题，你点点头答应的那个词。"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "yes."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "yes，就是「是的」。开头要又短又快，别拖成「耶——」。听常速——"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "yes."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "yes."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件：香蕉的颜色，小鸭子的颜色，也是向日葵的颜色。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "yellow."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "yellow，就是黄色。开头短耶，马上滑到后面的音上。听常速——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "yellow."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "yellow."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件：三百六十五天加起来，过一次就长大一岁。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "year."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "year，就是年。开头那一下要轻，滑得飞快。听常速——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "year."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "year."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四件：白白稠稠的，酸酸甜甜，用勺子挖着吃的那个。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "yogurt."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "yogurt，就是酸奶。开头的短耶又短又急，别拖。听常速——"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "yogurt."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "yogurt."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四件宝贝到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "像「耶」但要更短更快，一开口就马上接到后面的元音上。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "像「耶」但要更短更快，一开口就马上接到后面的元音上。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：短耶精灵的嘴唇要噘起来还是放平？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "放平！噘嘴的是吻唇精灵！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二题：这个音要拖得长长的吗？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不拖！要比「耶」更短更快！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好！下一站我们去车站看两兄弟开火车。下一站见！"}
+  ]
+}

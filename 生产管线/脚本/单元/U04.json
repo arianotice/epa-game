@@ -1,0 +1,47 @@
+{
+  "ep": "U04",
+  "title": "大口精灵的大口音",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B09": 0.6, "B15": 0.6, "B17": 0.5, "B19": 0.6},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！这位精灵跟小口精灵正好相反，嘴巴要张到最大，下巴都快掉下来。他叫——大口精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "张到最大？我的下巴会不会掉到地上？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "掉不了，但一定要有掉下去的感觉。来，第一步，先看嘴型——"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴巴使劲张大，上下牙之间能塞进一整根手指，下巴往下掉，像打了个大大的哈欠。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啊——！我的下巴真的掉下来了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "就是要这样！第二步，舌头：舌头平平地躺在嘴巴底下，不要抬起来，整个放平放松。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气从大张的嘴巴里直接冲出去，不堵也不绕，干脆利落。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手摸着喉咙，声带振动，他也是个浊音。听好——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "at"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哎！这个音扁扁的，好开阔！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "扁，说得好！大口精灵的声音又扁又开。记住，下巴一定要掉下来，掉不下来就还是小口精灵。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四句话记牢：嘴巴张大下巴掉，舌头放平躺着睡，声带振动是浊音，声音扁扁又开阔。"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "好，单词宝藏开门！第一个宝贝：红红的、圆圆的，咬一口又脆又甜。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "apple."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "apple，就是苹果。开头那位大口精灵，下巴要掉下来。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "apple."},
+    {"id": "X04", "role": "xq", "lang": "en", "speed": 0.85, "text": "apple."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：长在胳膊最前面，能写字也能拍球的那个。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "hand."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "hand，就是手。hand 里的大口精灵一样要张大，不许偷懒合上。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "hand."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "hand."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：会喵喵叫，最爱抓老鼠的那个。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "cat."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "cat，就是猫。念 cat 的时候下巴掉下来，嘴巴张到最大。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "cat."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "cat."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个宝贝全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "打哈欠，下巴掉。苹果 apple，小手 hand，猫咪 cat 喵喵叫。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 0.9, "text": "打哈欠，下巴掉。苹果 apple，小手 hand，猫咪 cat 喵喵叫。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是小挑战。第一题：大口精灵的嘴巴，能塞进几根手指？"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一整根！下巴还要掉下来！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：大口精灵和小口精灵，谁的下巴掉得更低？"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "大口精灵！他的嘴巴张得最大！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "完全正确，两颗星收好。记住今天的口诀，下一站我们去找一位要你张大嘴看喉咙的医生精灵。声音探险队，下一站见！"}
+  ]
+}

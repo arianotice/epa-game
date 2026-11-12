@@ -1,0 +1,48 @@
+{
+  "ep": "U46",
+  "title": "啄精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B10": 0.6, "B14": 0.6, "B16": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！上一位的弟弟来啦，长得一模一样，可喉咙会发麻——啄精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啄精灵？是小鸡啄米吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "听起来就是「啄」。他和哥哥戳精灵是双胞胎，动作一模一样，只换了一个开关。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "又是声带开关吧？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "动作一模一样：舌尖往上卷，顶在上门牙后面那道肉坎再往上一点。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌尖卷上去啦！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴唇同样微微向前撅一点点，像火车头前面的小烟囱。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "撅起来啦！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "气流也一样：先被舌尖堵在嘴里，再猛地放开冲出来。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "关键一步：舌尖弹开的同时，让喉咙里的小鼓振起来。手贴喉咙——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "dress."},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "麻！喉咙在发麻！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这就是啄精灵。位置和动作全跟哥哥一样，唯一差别：声带要振动，所以他是浊音。"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一个不麻，一个麻！"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "以后分不清就手贴喉咙：麻的是啄精灵，安安静静的是戳精灵。"},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "再来一次对比，先安静的哥哥，再发麻的弟弟。听——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "tree. dress."},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 1.0, "text": "tree 不麻，dress 麻！"},
+
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一件：夏天女孩子穿的，有裙摆，转起来像小花伞。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "dress."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "dress，就是连衣裙。开头是振动的「啄」，手贴喉咙要麻。听常速——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "dress."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "dress."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件：渴了要做的那个动作，端起杯子把水咽下去。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "drink."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "drink，就是喝。开头同样要振动，喉咙不许偷懒。听常速——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "drink."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "drink."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两件宝贝到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "火车头兄弟里的浊音，读「啄」，手贴喉咙能感到振动。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "火车头兄弟里的浊音，读「啄」，手贴喉咙能感到振动。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！手贴喉咙，听两个词，告诉我哪一个会麻——"},
+    {"id": "B16en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "tree. dress."},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第二个！dress 喉咙在麻！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！火车头两兄弟集齐啦：不麻的是戳，麻的是啄。下一站见！"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "手贴喉咙，一摸就分出来！"}
+  ]
+}

@@ -1,0 +1,550 @@
+{
+  "ep": "EP19",
+  "title": "冬天里的一口哈气与农场的小钩子",
+  "default_gap": 0.3,
+  "gaps": {
+    "B01": 0.6,
+    "B05en": 0.5,
+    "B06en": 0.5,
+    "B17": 0.5,
+    "B18": 0.5,
+    "B21": 1.0,
+    "B24": 1.0,
+    "B27": 1.0,
+    "B30": 1.0,
+    "B33": 1.0,
+    "B36": 1.0,
+    "B40": 0.6,
+    "B41": 0.5,
+    "B42": 0.7,
+    "B44": 0.7,
+    "B48": 0.6
+  },
+  "segments": [
+    {
+      "id": "B01",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.9,
+      "text": "哒哒哒——！声音探险队，出发！"
+    },
+    {
+      "id": "B02",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "小Q，看地图！海边和电视那两盏灯已经亮了。今天点亮摩擦音家族的第五格。"
+    },
+    {
+      "id": "X01",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "第五格里住着谁呀？"
+    },
+    {
+      "id": "B03",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "一个冬天里最爱暖手的精灵，一个住在农场、舌尖像小钩子吊在半空的精灵。走！"
+    },
+    {
+      "id": "B04",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "把手伸出来。呼——好冷！手都冻僵了。这时候你最想做什么？"
+    },
+    {
+      "id": "X02",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "哈气！对着双手哈——哈——，马上就暖了！"
+    },
+    {
+      "id": "B05",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "就是这个！听，它躲在单词的最前面——"
+    },
+    {
+      "id": "B05en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "hat."
+    },
+    {
+      "id": "B06",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "hat，帽子。冬天这一格到手。走，去农场——草堆后面跳出一只长耳朵的小东西！"
+    },
+    {
+      "id": "B06en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "rabbit."
+    },
+    {
+      "id": "X03",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "rabbit！兔子！它的耳朵比我的手掌还长！"
+    },
+    {
+      "id": "B07",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "抓重点：它的开头不是哈气，是个要钩舌头的音。中午了，兔子抱着碗——"
+    },
+    {
+      "id": "B07en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "rice."
+    },
+    {
+      "id": "B08",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "吃撑了，撒腿就跑。两只精灵全露面：冬天暖手的哈气精灵，和农场的钩子精灵。进入发音实验室。"
+    },
+    {
+      "id": "B09",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "先抓哈气精灵。它简单得让人开心：嘴巴张开，舌头放松躺着，哪儿都不使劲；一口气从喉咙里自由冲出来——哈——，不碰上颚，不咬嘴唇。"
+    },
+    {
+      "id": "X04",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "哈——！我的手背真的热乎乎的！"
+    },
+    {
+      "id": "B10",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "手贴喉咙试试：安安静静，一点都不振动。所以它是清音——气流自由冲出，声带不振动。跟我来——"
+    },
+    {
+      "id": "B10en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "huh."
+    },
+    {
+      "id": "B11",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "记住：哈气是气，不是嗓音。接下来这只才是硬骨头——钩子精灵。坐直了：这是整个辅音王国里，中国学生最容易念错的一个音。"
+    },
+    {
+      "id": "B12",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "先说做法：舌尖往上、往后钩起来，像个小钩子吊在嘴巴正中间。然后是最关键的一句——舌尖悬在半空，哪儿都不许碰。"
+    },
+    {
+      "id": "X05",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "哪儿都不碰？那它不会掉下来吗？"
+    },
+    {
+      "id": "B13",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "不会，有气流托着它。气流从舌头两边溜出去，声带同时嗡嗡地震动——这是浊音，喉咙要响。"
+    },
+    {
+      "id": "X06",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "我的喉咙在响！像装了一台小马达！"
+    },
+    {
+      "id": "B14",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "现在说坑。很多同学一听这个音，就念成汉语的日，或者热——错了，而且特别顽固。汉语的日和热，舌尖往上卷、紧紧贴上颚；英语这个音，舌尖只是钩起来悬着，中间必须留一条缝，气流要从缝里走。"
+    },
+    {
+      "id": "X07",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "我示范一个错的：热——。是这个味儿吧？"
+    },
+    {
+      "id": "B15",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "就是这个味儿，赶紧改。听对的——舌尖钩起来，悬在半空，别贴上去。"
+    },
+    {
+      "id": "B15en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "run."
+    },
+    {
+      "id": "X08",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "run！我的舌尖吊在半空，痒痒的！"
+    },
+    {
+      "id": "B16",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "记住三件事：舌尖钩起、悬空不碰、声带振动。漏掉第二条，它就变成日和热了。"
+    },
+    {
+      "id": "B17",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "来，两只精灵放在一起，对比三连。先哈气，再钩舌，手别离开喉咙。"
+    },
+    {
+      "id": "B17en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.75,
+      "text": "hat. rabbit. hat. rabbit. hat. rabbit."
+    },
+    {
+      "id": "X09",
+      "role": "xq",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "hat. rabbit. hat. rabbit. hat. rabbit."
+    },
+    {
+      "id": "B18",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "进入单词宝藏时间！六个单词，先慢速，再中文意思，最后跟着常速读。张嘴的机会留给你。"
+    },
+    {
+      "id": "B19",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "hat."
+    },
+    {
+      "id": "B20",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "帽子。开头是哈气，喉咙不振动。准备，跟读。"
+    },
+    {
+      "id": "B21",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "hat."
+    },
+    {
+      "id": "B22",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "rabbit."
+    },
+    {
+      "id": "B23",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "兔子。开头是钩子精灵，舌尖悬空，别念成热。准备，跟读。"
+    },
+    {
+      "id": "B24",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "rabbit."
+    },
+    {
+      "id": "B25",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "hand."
+    },
+    {
+      "id": "B26",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "手。开头还是哈气。准备，跟读。"
+    },
+    {
+      "id": "B27",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "hand."
+    },
+    {
+      "id": "B28",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "happy."
+    },
+    {
+      "id": "B29",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "开心。中间那个音也是哈气。准备，跟读。"
+    },
+    {
+      "id": "B30",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "happy."
+    },
+    {
+      "id": "B31",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "rice."
+    },
+    {
+      "id": "B32",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "米饭。开头是钩子精灵。准备，跟读。"
+    },
+    {
+      "id": "B33",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "rice."
+    },
+    {
+      "id": "B34",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "run."
+    },
+    {
+      "id": "B35",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "跑。还是钩子精灵。准备，跟读。"
+    },
+    {
+      "id": "B36",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "run."
+    },
+    {
+      "id": "B37",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "六个宝藏到手！帽子、手、开心属于哈气精灵；兔子、米饭、跑属于钩子精灵。"
+    },
+    {
+      "id": "X10",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "哈气精灵我满分，钩子精灵还要再练十遍！"
+    },
+    {
+      "id": "B38",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "进入口诀记忆屋。一只手贴住喉咙，一只手指着舌尖，跟着拍子念。"
+    },
+    {
+      "id": "B39",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.8,
+      "text": "冬天冷，哈——，气流冲出声带静；舌尖钩，悬半空，别念日也别念热；兔子跑，米饭香，钩子精灵记心上！"
+    },
+    {
+      "id": "X11",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 0.9,
+      "text": "冬天冷，哈——，气流冲出声带静；舌尖钩，悬半空，别念日也别念热；兔子跑，米饭香，钩子精灵记心上！"
+    },
+    {
+      "id": "B40",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "进入听辨大挑战！每题两个词，判断第二个是哈气，还是钩子。"
+    },
+    {
+      "id": "B41",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "第一题！"
+    },
+    {
+      "id": "B41en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.7,
+      "text": "hat. rabbit."
+    },
+    {
+      "id": "X12",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "第一个是帽子，哈气；第二个是兔子，钩子精灵，舌尖钩起来了！"
+    },
+    {
+      "id": "B42",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "完全正确！第一颗星。第二题，小心，第二个词跑得很快。"
+    },
+    {
+      "id": "B42en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.7,
+      "text": "happy. run."
+    },
+    {
+      "id": "X13",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "第一个是开心。第二个……还是哈气！开开心心地哈气！"
+    },
+    {
+      "id": "B43",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "揭晓——第二个是 run，跑！钩子精灵藏在开头，你的舌尖忘了钩起来。"
+    },
+    {
+      "id": "X14",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "啊——！它跑得太快，我的舌尖没追上！"
+    },
+    {
+      "id": "B44",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "错一题才记得牢。第三题，最后一组。"
+    },
+    {
+      "id": "B44en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.7,
+      "text": "hand. rice."
+    },
+    {
+      "id": "X15",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "第一个是手，哈气；第二个是米饭，钩子精灵，舌尖悬在半空！"
+    },
+    {
+      "id": "B45",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "满分！今天两颗半星，收好。回家对着玻璃哈口气，再照镜子看看舌尖钩起来没有。"
+    },
+    {
+      "id": "B46",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "下一站，我们回到教室，再坐到早餐桌前。"
+    },
+    {
+      "id": "B47",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "在那里，我们会遇到一列小火车——哧——吃——，还有一罐黏糊糊的果酱。"
+    },
+    {
+      "id": "X16",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "火车？果酱？它俩怎么会在一起？"
+    },
+    {
+      "id": "B48",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "因为它们都是两步合成的一个音：先爆破，再摩擦。"
+    },
+    {
+      "id": "B49",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.9,
+      "text": "声音探险队，下一站见！"
+    },
+    {
+      "id": "X17",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "声音探险队，下一站见！"
+    }
+  ]
+}

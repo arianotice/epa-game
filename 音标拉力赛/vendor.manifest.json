@@ -1,0 +1,136 @@
+{
+  "schema": "ipa-rally/vendor-manifest/v1",
+  "task": "#19 / CSEG-P0 · 路线 B（Vite + React + R3F）整站接管",
+  "created_at": "2026-11-09",
+  "VENDOR_TAG": "p0-20261109",
+  "cache_namespaces": {
+    "source_layer": {
+      "tag": "hud-20261108",
+      "count": 46,
+      "scope": "源码层（2D 遗产层）：index.html / js / css 内 ?v= 字面量，保留、不删除、不批量替换，继续唯一且恰好 46",
+      "gate": "S17 / F8a / H11 原口径继续锁源码层；不再对 dist/ 生效",
+      "note": "20 个图片 URL 零裸引用口径继续有效，源码层不得出现无 tag 的图片 URL"
+    },
+    "build_layer": {
+      "tag": "p0-20261109",
+      "scope": "产物层（构建层）：Vite content-hash 文件名 + 本清单；单独 VENDOR_TAG，与源码层各自唯一、互不混算",
+      "gate": "由 quality-lead 的路线 B 门控重定义规格（#20）分别锁源码层 46 与产物层 N",
+      "note": "N 由实际构建产物清单确定，不由 46 推导；源码层 ?v= 与产物层 content-hash 是两套命名空间，不合并计数"
+    }
+  },
+  "pinned": [
+    {
+      "name": "three",
+      "version": "0.186.1",
+      "license": "MIT",
+      "unpackedSize": 20443256,
+      "role": "runtime / 3D 内核",
+      "peer_constraints": "被 postprocessing 要求 >= 0.168.0 < 0.188.0；被 fiber 要求 >=0.156；被 drei 要求 >=0.159；被 r3f-postprocessing 要求 >=0.156.0",
+      "pin_reason": "用户 2026-11-09 拍板钉 0.186.1（与 Polyspoon pinned 一致），且落在 postprocessing <0.188.0 上界内"
+    },
+    {
+      "name": "react",
+      "version": "19.3.1",
+      "license": "MIT",
+      "role": "runtime / UI 框架",
+      "peer_constraints": "fiber 9.8.2 要求 >=19 <19.4；drei 要求 ^19；r3f-postprocessing 要求 ^19.0.0",
+      "pin_reason": "npm latest 19.3.1，恰好满足 fiber 的 <19.4 硬上界；19.4.0 尚未发布（npm E404），上界暂未被突破"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.3.1",
+      "license": "MIT",
+      "role": "runtime / DOM renderer",
+      "peer_constraints": "fiber 9.8.2 要求 >=19 <19.4；drei 要求 ^19",
+      "pin_reason": "与 react 同版本对齐，满足 fiber 上界"
+    },
+    {
+      "name": "@react-three/fiber",
+      "version": "9.8.2",
+      "license": "MIT",
+      "role": "runtime / R3F 渲染器",
+      "peer_constraints": "peer: react >=19 <19.4, react-dom >=19 <19.4, three >=0.156, expo >=43.0, expo-gl >=11.0, expo-asset >=8.4, react-native >=0.78, expo-file-system >=11.0",
+      "pin_reason": "npm latest；被 drei 要求 ^9.0.0、被 r3f-postprocessing 要求 >=9.7.0，9.8.2 同时满足"
+    },
+    {
+      "name": "@react-three/drei",
+      "version": "10.7.9",
+      "license": "MIT",
+      "role": "runtime / R3F helpers（P0 已钉未启用，探针不 import）",
+      "peer_constraints": "peer: @react-three/fiber ^9.0.0, react ^19, react-dom ^19, three >=0.159",
+      "pin_reason": "npm latest；peer 上界已核实与 fiber 9.8.2 / react 19.3.1 / three 0.186.1 全兼容"
+    },
+    {
+      "name": "@react-three/postprocessing",
+      "version": "3.2.2",
+      "license": "MIT",
+      "role": "runtime / 后处理包装器（P0 已钉未启用；默认关闭，方案甲禁全屏 bloom）",
+      "peer_constraints": "peer: @react-three/fiber >=9.7.0, react ^19.0.0, three >=0.156.0, postprocessing ^6.36.0",
+      "pin_reason": "npm latest；peer 下界 >=9.7.0 由 fiber 9.8.2 满足，postprocessing ^6.36.0 由 6.39.6 满足"
+    },
+    {
+      "name": "postprocessing",
+      "version": "6.39.6",
+      "license": "Zlib",
+      "role": "runtime / 独立后处理库（P0 已钉未启用）",
+      "peer_constraints": "peer: three >= 0.168.0 < 0.188.0",
+      "pin_reason": "npm latest；<0.188.0 是 three 的硬上界，0.186.1 满足；r3f-postprocessing 要求 ^6.36.0 也满足"
+    },
+    {
+      "name": "vite",
+      "version": "7.3.7",
+      "license": "MIT",
+      "role": "build / dev server",
+      "peer_constraints": "engines: node ^20.19.0 || >=22.12.0",
+      "pin_reason": "选 Vite 7 而非 latest 8.3.6：@vitejs/plugin-react 6.x 需 vite ^8.0.0 且引入 oxc-transform-react / @rolldown/plugin-babel 实验性 peer；P0 选稳定组合 Vite 7.3.7 + plugin-react 5.0.4（peer ^4.2||^5||^6||^7）"
+    },
+    {
+      "name": "@vitejs/plugin-react",
+      "version": "5.0.4",
+      "license": "MIT",
+      "role": "build / JSX 转换",
+      "peer_constraints": "peer: vite ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0；engines: node ^20.19.0 || >=22.12.0",
+      "pin_reason": "匹配 vite 7.3.7，无实验性 peer 依赖"
+    }
+  ],
+  "peer_upper_bounds_verified": [
+    {
+      "package": "@react-three/fiber@9.8.2",
+      "bound": "react >=19 <19.4 / react-dom >=19 <19.4 / three >=0.156",
+      "verdict": "react 19.3.1、react-dom 19.3.1、three 0.186.1 全部满足；react@19.4.0 在 registry 返回 E404，上界尚未被发布突破，但必须精确钉 19.3.1 防止自动升级越界"
+    },
+    {
+      "package": "@react-three/drei@10.7.9",
+      "bound": "@react-three/fiber ^9.0.0 / react ^19 / react-dom ^19 / three >=0.159",
+      "verdict": "fiber 9.8.2 / react 19.3.1 / react-dom 19.3.1 / three 0.186.1 全部满足"
+    },
+    {
+      "package": "@react-three/postprocessing@3.2.2",
+      "bound": "@react-three/fiber >=9.7.0 / react ^19.0.0 / three >=0.156.0 / postprocessing ^6.36.0",
+      "verdict": "fiber 9.8.2 / react 19.3.1 / three 0.186.1 / postprocessing 6.39.6 全部满足"
+    },
+    {
+      "package": "postprocessing@6.39.6",
+      "bound": "three >= 0.168.0 < 0.188.0",
+      "verdict": "three 0.186.1 满足；这是 three 不能升到 0.188 的直接原因"
+    },
+    {
+      "package": "vite@7.3.7 / @vitejs/plugin-react@5.0.4",
+      "bound": "node ^20.19.0 || >=22.12.0；plugin-react peer vite ^7",
+      "verdict": "本机 node v22.22.2 满足；plugin-react 5.0.4 与 vite 7.3.7 匹配"
+    }
+  ],
+  "intentionally_not_installed": [
+    "@dimforge/rapier3d-compat（Rapier：P0 不装；ADR-2 只允许视觉层，且默认关闭）",
+    "任何 GLB / Polyspoon 社区模型（P0 不接）",
+    "任何 CDN 运行时依赖（发布边界）"
+  ],
+  "verification": {
+    "method": "npm view <pkg>@<ver> version peerDependencies engines license --json 联网实测 + npm ping 连通性确认",
+    "registry": "https://registry.npmjs.org/",
+    "date": "2026-11-09",
+    "node_runtime": "v22.22.2",
+    "npm": "10.9.7",
+    "note": "所有版本号来自 npm registry 实时返回，非记忆臆造；peer 上界以本清单为准，Vite 8 的 oxc peer 已实测并主动规避"
+  }
+}

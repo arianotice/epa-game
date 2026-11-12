@@ -1,0 +1,589 @@
+{
+  "ep": "EP28",
+  "title": "连读与失去爆破",
+  "default_gap": 0.12,
+  "gaps": {
+    "B01": 0.35,
+    "B06en": 0.28,
+    "X03en": 0.28,
+    "B08": 0.28,
+    "B08en": 0.28,
+    "B11en": 0.35,
+    "B12en": 0.35,
+    "B14": 0.28,
+    "X06en": 0.28,
+    "X07en": 0.28,
+    "B17en": 0.35,
+    "B18en": 0.28,
+    "B22en": 0.35,
+    "B23en": 0.35,
+    "B25en": 0.35,
+    "B26en": 0.28,
+    "B27en": 0.35,
+    "B28en": 0.28,
+    "B29en": 0.35,
+    "B30en": 0.28,
+    "B31en": 0.35,
+    "B32en": 0.28,
+    "B33": 0.28,
+    "B35en": 0.45,
+    "B36en": 0.45,
+    "B37": 0.6,
+    "B38en": 0.45
+  },
+  "segments": [
+    {
+      "id": "B01",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.9,
+      "text": "哒哒哒——！声音探险队，出发！"
+    },
+    {
+      "id": "B02",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "小Q，看地图！重音那一格已经亮了。今天我们爬到进阶峰的第三站——连读坡。"
+    },
+    {
+      "id": "X01",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "连读坡？是不是要把好多词连成一条线？"
+    },
+    {
+      "id": "B03",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "差不多。上一集我们学会了在单词里踩重音，啪、咚。今天往外走一步：词和词之间，也要连起来。"
+    },
+    {
+      "id": "X02",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "词和词中间不是有空格吗？空格不就是让它们分开的吗？"
+    },
+    {
+      "id": "B04",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "写出来是分开的，说出来是连着的。native 说话时词和词之间根本没有缝，像一串珠子被线穿起来。今天教你两个秘诀：一叫连读，二叫失去爆破。学完你会发现，听不懂的句子其实全是你认识的词被粘住了。"
+    },
+    {
+      "id": "B05",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "先演个小剧场。下课铃响了，你前面的同学哗啦一下，书掉了一地。你蹲下去，一本一本地帮他捡起来。"
+    },
+    {
+      "id": "B06",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "他接过书，特别感动，跟你说——"
+    },
+    {
+      "id": "B06en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "Thank you!"
+    },
+    {
+      "id": "X03",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "不客气！我要一个词一个词、特别清楚地回他——"
+    },
+    {
+      "id": "X03en",
+      "role": "xq",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "Not. at. all."
+    },
+    {
+      "id": "B07",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "结果他愣在那儿了。not 他听懂了，at 他听懂了，all 他更听懂了，可三个词排成一排，他一下没反应过来。"
+    },
+    {
+      "id": "X04",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "啊？我明明每个词都念对了呀！"
+    },
+    {
+      "id": "B08",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "每个词都对，可三个词之间砌了三道墙。native 说话的时候，这三道墙早就被推倒了。听真正的样子——"
+    },
+    {
+      "id": "B08en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "Not at all."
+    },
+    {
+      "id": "B09",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "这就是秘诀一，连读。规则只有一句：前面那个词的尾巴是辅音，后面那个词的头是元音，就把它们粘成一块糖，中间不许停。"
+    },
+    {
+      "id": "B10",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "辅音和元音要在词和词之间握手了。not 的尾巴是舌尖敲一下的音，all 的头是张嘴的音，一撞上就粘成一块。"
+    },
+    {
+      "id": "B11",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "来做今天的第一个对比实验。同一句话，我先一个词一个词地念，像机器人。仔细听——"
+    },
+    {
+      "id": "B11en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "Not. at. all."
+    },
+    {
+      "id": "X05",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "咚、咚、咚！三块砖，中间三道墙！"
+    },
+    {
+      "id": "B12",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "现在我把墙推倒，连起来念——"
+    },
+    {
+      "id": "B12en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "Not at all."
+    },
+    {
+      "id": "X06",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "哇！三个词糊成一小坨，听着像「闹—塔—套」！"
+    },
+    {
+      "id": "B13",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "对！native 就念成三块：闹、塔、套，一块糖接一块糖，中间没有缝。"
+    },
+    {
+      "id": "B14",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "换你来。先机器人版，一个词一个词——"
+    },
+    {
+      "id": "X06en",
+      "role": "xq",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "Not. at. all."
+    },
+    {
+      "id": "B15",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "好听！现在把墙推倒，三个词一口气滑出去——"
+    },
+    {
+      "id": "X07en",
+      "role": "xq",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "Not at all."
+    },
+    {
+      "id": "B16",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "完美！差别听出来了吧：一个词一个词念，是三下鼓点；连起来念，是一条滑梯。"
+    },
+    {
+      "id": "B17",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "再试一组：一个苹果。同样先一个词一个词，再连起来。"
+    },
+    {
+      "id": "B17en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "An. apple."
+    },
+    {
+      "id": "B18en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "An apple."
+    },
+    {
+      "id": "X08",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "哎？前面那个 n 滑到后面去了！听着像一个 na！"
+    },
+    {
+      "id": "B20",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "现在说秘诀二，这个更有意思，叫失去爆破。"
+    },
+    {
+      "id": "X09",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "失去爆破？是炸弹丢了吗？"
+    },
+    {
+      "id": "B21",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "差不多。爆破音我们学过：双唇弹开的、舌尖敲牙床的、舌根顶软腭的，本来都要炸开。可后面紧跟着另一个辅音，炸弹就不炸了——嘴型摆好，气憋住，停半拍再往下走。外面听不见，可动作做完了。"
+    },
+    {
+      "id": "B22",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "最典型的例子：good boy。先听机器人版——"
+    },
+    {
+      "id": "B22en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "Good. boy."
+    },
+    {
+      "id": "X10",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "古德、波伊！两个词都炸开了！"
+    },
+    {
+      "id": "B23",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "再听正常版——"
+    },
+    {
+      "id": "B23en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "Good boy."
+    },
+    {
+      "id": "X11",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "咦？good 后面那个音怎么不见了？被吃掉了吗？"
+    },
+    {
+      "id": "B24",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "被憋住了。good 的尾巴是舌尖敲一下的音，后面紧跟着 boy 的开头，两个辅音撞在一起，前面那个只摆嘴型、不送气，听着像「古——波伊」，中间有个小空档。"
+    },
+    {
+      "id": "X12",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "只摆嘴型不送气……那不就是颗哑弹嘛！"
+    },
+    {
+      "id": "B25",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "这个比喻太准了，记住它：两个辅音撞车，前面那个当哑弹。再听一组，坐下。先听机器人版："
+    },
+    {
+      "id": "B25en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "Sit. down."
+    },
+    {
+      "id": "B26en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "Sit down."
+    },
+    {
+      "id": "X13",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "坐下！中间那个音没了，只停了一下下！"
+    },
+    {
+      "id": "B27",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "例句宝藏时间！三组短语，每组先听慢速、一个词一个词，再听常速、连起来。跟着常速那遍读。"
+    },
+    {
+      "id": "B27en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "Not. at. all."
+    },
+    {
+      "id": "B28",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "一点也不、没关系。连起来只剩三块：闹、塔、套。"
+    },
+    {
+      "id": "B28en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "Not at all."
+    },
+    {
+      "id": "B29en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "An. apple."
+    },
+    {
+      "id": "B30",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "一个苹果。前面的 n 要滑到后面的元音上，粘成一串。"
+    },
+    {
+      "id": "B30en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "An apple."
+    },
+    {
+      "id": "B31en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.6,
+      "text": "Good. boy."
+    },
+    {
+      "id": "B32",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "好孩子、好样的。good 的尾音要憋住不炸，当一颗哑弹。"
+    },
+    {
+      "id": "B32en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.85,
+      "text": "Good boy."
+    },
+    {
+      "id": "B33",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "宝藏收好，进入口诀记忆屋。跟着拍子念——"
+    },
+    {
+      "id": "B34",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.8,
+      "text": "词尾辅音别松口，滑到下个元音上，一块糖接一块糖，说得溜得像歌唱；两个辅音撞了车，前面那个当哑弹，只摆嘴型不送气！"
+    },
+    {
+      "id": "X14",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 0.9,
+      "text": "词尾辅音别松口，滑到下个元音上，一块糖接一块糖，说得溜得像歌唱；两个辅音撞了车，前面那个当哑弹，只摆嘴型不送气！"
+    },
+    {
+      "id": "B35",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "口诀背熟，听辨大挑战！第一题：我念一句连起来的话，你数数它到底由几个词组成。"
+    },
+    {
+      "id": "B35en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.75,
+      "text": "Not at all."
+    },
+    {
+      "id": "X15",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "三个！not、at、all！我一块一块数出来了！"
+    },
+    {
+      "id": "B36",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "完全正确，第一颗星。第二题，同样的问法——"
+    },
+    {
+      "id": "B36en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.75,
+      "text": "An apple."
+    },
+    {
+      "id": "X16",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "这个嘛……一个词！它叫 a-napple，是新品种的苹果！"
+    },
+    {
+      "id": "B37",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "揭晓——是两个词：an 和 apple，一个苹果。它们只是粘得太紧，把你骗过去了。"
+    },
+    {
+      "id": "X17",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "啊——！新品种的苹果没吃到，还少拿一颗星！"
+    },
+    {
+      "id": "B38",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "错一题才记得牢。第三题，最后一题：听这个短语，告诉我 good 的尾音是炸开了，还是憋住了。"
+    },
+    {
+      "id": "B38en",
+      "role": "bobo",
+      "lang": "en",
+      "speed": 0.75,
+      "text": "Good boy."
+    },
+    {
+      "id": "X18",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "没炸！憋住了，是颗哑弹！中间还空了半拍！"
+    },
+    {
+      "id": "B39",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "满分！今天两颗半星，收好。记住这两个秘诀，你说英语就会从一串积木，变成一条滑梯。"
+    },
+    {
+      "id": "B40",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "今天的探险就到这里。下一站，是进阶峰的最后一面旗——毕业大作战。"
+    },
+    {
+      "id": "X19",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "毕业？我们就要毕业了吗？"
+    },
+    {
+      "id": "B41",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.85,
+      "text": "对。六对最爱打架的音标精灵要上台打擂台：长音衣和短音衣、小口和大口、咬舌的和不咬舌的，都要一决胜负。还有整张地图全部点亮，以及毕业朗读挑战。"
+    },
+    {
+      "id": "X20",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "擂台！我要当裁判！"
+    },
+    {
+      "id": "B42",
+      "role": "bobo",
+      "lang": "zh",
+      "speed": 0.9,
+      "text": "声音探险队，下一站见！"
+    },
+    {
+      "id": "X21",
+      "role": "xq",
+      "lang": "zh",
+      "speed": 1.0,
+      "text": "声音探险队，下一站见！"
+    }
+  ]
+}

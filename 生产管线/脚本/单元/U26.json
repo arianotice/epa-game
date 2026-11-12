@@ -1,0 +1,48 @@
+{
+  "ep": "U26",
+  "title": "打嗝精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.6, "B14": 0.6, "B16": 0.5, "X10": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天我们还站在嘴巴最深处，因为这位是咳嗽精灵的双胞胎兄弟——打嗝精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "双胞胎？那他们俩长得一模一样吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "一模一样！舌头的位置、气流先堵住再放开，全部照抄。只换了一个开关——手指贴回喉咙上。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "贴好了！我知道，又是声带开关！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步照旧：舌根抬起来，顶住里面那块软软的天花板，把气堵在后面。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "顶住了！跟昨天一模一样！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步也照旧：舌根猛地一松，气冲出来。但这一次，要让喉咙里的小鼓振起来——咕！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，摸喉咙：手心是不是麻麻的？麻就对了。所以他是浊音，声带要振动。先听一遍——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "girl. egg. green."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "咕！喉咙真的在麻，和昨天的咔完全不一样！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这就是分辨双胞胎唯一的办法：位置一样，动作一样，只有手贴喉咙才分得出来。"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记牢：舌根抬起顶天花板；堵住气再放开；声带振动，手贴喉咙能感到麻。同样的位置，敲出了响声。"},
+
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一个宝贝：扎着小辫子，穿着花裙子，跟男孩相对的那个。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "girl."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "女孩。开头的咕要振起来，喉咙记得麻。听常速一遍——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "girl."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "girl."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：白白的，圆滚滚的，煮熟了剥掉壳才能吃的那个。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "egg."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "鸡蛋。这一回他躲在最后面，短促地咕一下，不许拖长。听常速一遍——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "egg."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "egg."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：一种颜色，青蛙是它，树叶是它，能往前走的那盏灯也是它。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "green."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "绿色。前面还跟着一位卷舌弹簧精灵，两个音要贴紧，不许断开。听常速一遍——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "green."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "green."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "咔的振动版，像打嗝咕，手贴喉咙能感到麻。"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 0.9, "text": "咔的振动版，像打嗝咕，手贴喉咙能感到麻。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！手贴喉咙，听两个词，告诉我哪一个会麻——"},
+    {"id": "B16en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "coat. goat."},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第二个！goat 喉咙在麻，coat 安安静静！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：他和咳嗽精灵，嘴巴里的动作一样吗？"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一模一样！都是舌根顶天花板，只是一个麻，一个不麻！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。舌根双胞胎集齐了：不麻的是咳嗽精灵，麻的是打嗝精灵。分不清就手贴喉咙！下一站搬到嘴唇上。下一站见！"}
+  ]
+}

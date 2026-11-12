@@ -1,0 +1,47 @@
+{
+  "ep": "U01",
+  "title": "微笑小姐的长衣音",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B09": 0.6, "B15": 0.6, "B17": 0.5, "B19": 0.6},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天要认识的这位精灵特别爱笑，一笑嘴角就往耳朵那边拉，怎么也收不回来。她叫——微笑小姐！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "微笑小姐？那她躲在哪个单词里呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "别急，想去单词里抓她，得先记住她长什么样。来，第一步，看嘴型——"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴角用力往两边拉，像拍照时喊茄子，露出一个大大的微笑。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "茄子——！我的嘴巴都拉到耳朵了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "拉到耳朵就对了！第二步，舌头：舌头前半截抬起来，靠近上颚，可千万别贴上去，中间留一条小缝。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气从那条小缝里慢慢挤出去，一点都不许用力，像轻轻吹走一根羽毛。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手摸着喉咙，声带要振动，嗡嗡地响，所以她是个浊音。听好——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "e"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哇，这个音好长好长，能一直拖下去！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "说到点子上了！长，是微笑小姐最大的本事。别的音短促，她能拖很久，拖到你笑不动为止。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四句话记牢：嘴角拉到耳边，舌头抬高留缝，声带嗡嗡振动，声音拖得长长。"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "好，单词宝藏开门！第一个宝贝：草地上咩咩叫、浑身卷毛的那个。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "sheep."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "sheep，就是绵羊。注意听中间那位微笑小姐，拖得长长的。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "sheep."},
+    {"id": "X04", "role": "xq", "lang": "en", "speed": 0.85, "text": "sheep."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：长在院子里，小鸟最爱在它头上做窝的那个。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "tree."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "tree，就是树。tree 里的微笑小姐一样要拖长，不许偷懒缩短。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "tree."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "tree."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：青蛙是它，树叶是它，交通灯里能往前走的那盏灯也是它。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "green."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "green，就是绿色。念完别急着收嘴，让嘴角多笑半秒钟。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "green."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "green."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个宝贝全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "嘴角微笑拉耳边，拖长音。绵羊 sheep，大树 tree，绿色 green 笑嘻嘻。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 0.9, "text": "嘴角微笑拉耳边，拖长音。绵羊 sheep，大树 tree，绿色 green 笑嘻嘻。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是小挑战。第一题：微笑小姐的音，是长的还是短的？"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 1.0, "text": "长的！能一直拖到笑不动！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：念这三个单词的时候，嘴角要往哪儿拉？"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "往两边拉，一直拉到耳朵边上！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。记住今天的口诀，下一站我们去找一位懒洋洋的精灵，她叫放松精灵。声音探险队，下一站见！"}
+  ]
+}

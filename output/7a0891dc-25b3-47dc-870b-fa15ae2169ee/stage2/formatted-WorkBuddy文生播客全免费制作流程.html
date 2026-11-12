@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="docx-page-size" content="A4">
+  <title>WorkBuddy 文生播客 · 全免费制作流程</title>
+  <style>
+  :root {
+    --fs-h1: 22pt;
+    --fs-h2: 16pt;
+    --fs-h3: 13pt;
+    --fs-body: 12pt;
+    --fs-small: 10pt;
+    --ff-heading: "黑体", SimHei, sans-serif;
+    --ff-body: "宋体", SimSun, serif;
+    --ff-mono: Consolas, "Courier New", monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fff;
+    max-width: 15.6cm;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5cm 0;
+  }
+  h1, h2, h3 { font-family: var(--ff-heading); font-weight: bold; }
+  h1 { font-size: var(--fs-h1); color: #0d47a1; margin: 0 0 0.6em; line-height: 1.25; }
+  h2 { font-size: var(--fs-h2); color: #0d47a1; margin: 1.6em 0 0.7em; border-left: 5px solid #1976d2; padding-left: 0.6em; }
+  h3 { font-size: var(--fs-h3); color: #333; margin: 1.1em 0 0.5em; }
+  p { margin-bottom: 0.7em; text-indent: 0; }
+  .lead { font-size: 11pt; color: #444; line-height: 1.7; }
+  .lead strong { color: #0d47a1; }
+  .step-goal { background: #f3f8ff; border: 1px solid #cfe3ff; border-left: 5px solid #1976d2; padding: 0.7em 1em; margin: 0.8em 0; border-radius: 0; }
+  .step-goal .lbl { font-weight: bold; color: #0d47a1; font-family: var(--ff-heading); }
+  .note { color: #666; font-size: 10.5pt; }
+  .prompt { background: #f5f6f8; border: 1px solid #d0d5dd; border-radius: 4px; padding: 0.9em 1.1em; margin: 0.7em 0 0.9em; font-family: var(--ff-mono); font-size: 9.5pt; line-height: 1.7; color: #333; white-space: pre-wrap; }
+  .prompt .ph { color: #1976d2; font-weight: bold; }
+  .prompt .hl { background: #fff3cd; padding: 0 0.2em; }
+  .flow { background: #fff; border: 1px dashed #b0bec5; padding: 0.8em 1em; margin: 0.7em 0; font-family: var(--ff-mono); font-size: 9.5pt; color: #00695c; line-height: 1.9; white-space: pre; text-align: center; }
+  .accept { background: #e8f5e9; border-left: 4px solid #43a047; padding: 0.5em 0.9em; margin: 0.6em 0; font-size: 10.5pt; }
+  .accept .lbl { font-weight: bold; color: #2e7d32; font-family: var(--ff-heading); }
+  ul, ol { padding-left: 1.6em; margin-bottom: 0.7em; }
+  li { margin-bottom: 0.35em; }
+  hr { border: none; border-top: 1px solid #e0e0e0; margin: 1.4em 0; }
+  .doc-footer { margin-top: 1.6em; padding-top: 0.8em; border-top: 1px solid #eee; color: #888; font-size: 9.5pt; line-height: 1.6; }
+  .doc-footer strong { color: #0d47a1; }
+  code { font-family: var(--ff-mono); font-size: 9.5pt; background: #f0f2f5; padding: 0.1em 0.35em; border-radius: 3px; color: #c72850; }
+  strong { color: #1a1a1a; }
+  .kbd { font-weight: bold; color: #0d47a1; }
+</style>
+</head>
+<body>
+<header>
+  <h1>WorkBuddy 文生播客 · 全免费制作流程</h1>
+  <p class="lead">这份文档教你：<strong>不写一行代码、不花一分积分，全程只靠"跟 AI 对话"，在 WorkBuddy 里做出自己专属的一整套播客</strong>。</p>
+  <p class="lead">文中所有"对话输入框里粘什么"都给了<code>可直接复制的提示词</code>。你照着一字一字粘进去，AI 就会帮你把活干完。</p>
+  <p class="lead">示例用词里出现的"英语音标启蒙播客"只是<code>例子</code>，换成你自己任何主题（历史故事、健康科普、孩子睡前故事、明星对话……）流程完全一样。</p>
+</header>
+
+<h2>一、先看懂：这套流程到底做了 3 件事</h2>
+<div class="flow">①定策划 → ②写分集脚本 → ③免费合成语音音频
+(对话)      (对话)         (对话,自动跑)</div>
+<ul>
+  <li><span class="kbd">全程 0 积分</span>：用到的语音、跑脚本，都是 WorkBuddy 里的<code>免费通道</code>（微软免费 TTS）。AI 会自己写好脚本帮你跑，你只负责"确认"。</li>
+  <li><span class="kbd">小白友好</span>：你做的事只有一种——<code>把下方某一步的提示词复制，粘贴到对话框，回车</code>。剩下的 AI 自己完成。</li>
+  <li><span class="kbd">可断点重做</span>：哪一步不满意，就说"重做这一步"，AI 只重跑那一步，不用从头来。</li>
+</ul>
+
+<h2>二、第一步：让 AI 出一份节目策划案（世界观 + 全节目单）</h2>
+<div class="step-goal"><span class="lbl">你要达成的结果：</span>拿到一份"策划案"文档，写清这档播客讲什么、分几幕几集、每集讲啥、用什么角色和口播风格。</div>
+<p class="note">把下面整段复制粘贴到对话框（把【】里的换成你自己的）：</p>
+<div class="prompt">请你帮我设计一档播客的完整策划案，输出结构清晰、可直接进入制作的文档。
+
+<span class="ph">【播客主题】</span>：（例：给咖啡爱好者的咖啡启蒙）
+<span class="ph">【目标听众】</span>：（例：全年龄段对咖啡感兴趣，但对基本的咖啡分类还不太清晰的人群）
+<span class="ph">【集数规模】</span>：（例：10 集正片 + 10 个 3-4 分钟的独立短片段）
+<span class="ph">【想要的调性】</span>：（例：有趣味、有知识）
+
+请输出以下部分：
+1. 一句话定位（说清这档播客解决什么问题、靠什么钩子吸引人）。
+2. 世界观/角色设定：拟 2 个固定角色（一个讲解者 + 一个爱提问的听众），给出各自的性格与口吻，说明中文和英文分别用什么"音色气质"。
+3. 总体架构：分几幕、每幕几集、每集覆盖哪些知识点，画一张表。
+4. 完整节目单：逐集列出「集号 / 标题 / 生活场景 / 要讲的知识点 / 记忆小窍门」，用表格。
+5. 单集脚本模板：固定几个环节（开场、情境、专业讲解、例子跟读、口诀、听辨挑战、收尾），并给每环节建议时长。
+6. 音频制作规格：口播风格、语速、留白、交付格式（MP3）。
+7. 配图体系清单：需要几张图、每张图对应哪集/哪个知识点。
+8. 制作排期：分阶段，每阶段产出什么。
+
+要求：先给"样章"思路（先做哪 2 集验证风格），再给批量方案。所有中文。</div>
+
+<h2>三、第二步：让 AI 批量写分集脚本（先样章，后全量）</h2>
+<div class="step-goal"><span class="lbl">你要达成的结果：</span>每集一份"分集脚本"，里面把每句要念的话、谁念的、念多快、中文还是英文都排好。AI 会自动存成文件，供第三步合成语音用。</div>
+<p class="note">先做 2 集样章验证风格——复制粘贴：</p>
+<div class="prompt">按策划案里的"单集脚本模板"，先给我写<span class="ph">【集号：EP00、EP01】</span>这 2 集的完整口播脚本。
+
+要求：
+- 严格用策划案里的两个角色（讲解者 / 提问者）交替对白，口语、有卡通萌感，拒绝播音腔。
+- 中文讲解 + 英文单词示范分开写（哪句是中文、哪句念英文标清楚）。
+- 每句标注：编号、念的人（角色）、语言（中/英）、语速（慢/常）、要念的文字。
+- 在单词示范之间留 2-3 秒跟读空白。
+- 把这份脚本整理成机器可读取的结构（JSON 或清晰的表格都可以），并保存成文件，方便下一步直接合成语音。
+
+先只写这 2 集，等我确认风格再写剩下的。</div>
+<p class="note">样章确认后，批量——复制粘贴：</p>
+<div class="prompt">风格和格式都用刚才 EP00/EP01 确认好的那套。现在请按策划案的节目单，把剩下的全部集数脚本一次写完（以及 10 个 3-4 分钟短片段），全部保存成和刚才相同结构、相同语速/语言/角色规则的文件。
+写完给我一份清单：每集文件名 + 预计时长。哪集缺了或写崩了，告诉我，只补那集。</div>
+<div class="accept"><span class="lbl">这一步验收：</span>AI 说"全部写完 + 给了清单"。随机挑 2 集让它念一遍给你听，念着对味就过。</div>
+
+<h2>四、第三步：让 AI 免费合成语音音频</h2>
+<div class="step-goal"><span class="lbl">你要达成的结果：</span>把上一步的脚本，变成<code>一整批真人听感的 MP3 音频</code>，自动命名、自动拼接、自动补失败段。</div>
+<p class="note">免费原理：用微软官方 <code>Edge TTS</code> 把文本念成语音。AI 会自己写个免费管线帮你跑。</p>
+<p class="note">复制粘贴：</p>
+<div class="prompt">现在把第二步写好的全部脚本，做成成品播客音频。
+
+要求：
+- 用<span class="hl">【免费】</span>的微软 Edge TTS（edge-tts）合成，不要任何要花钱/要积分的付费语音服务。
+- 中文讲解用<span class="ph">【高冷男低音】</span>气质音色；另一角色中文用<span class="ph">【清冷御姐音】</span>（可按策划案替换具体音色）。
+- 按脚本里每句的语速、语言、角色来念；中文句走中文音色、避免"中式口音念英文"。
+- 每集自动拼接成一整段，段落之间留 0.3 秒空拍，关键停顿留 0.5-0.7 秒。
+- 输出 MP3（32kHz / 128kbps 单声道），文件名按"集号-标题"命名，存到一个统一文件夹。
+- 必须支持断点续跑：某句合成失败就自动重试，重试完只补失败的那几句，不用整集重来。
+- 跑完给我成品清单：每集文件名 + 时长 + 文件大小。
+
+请把这套合成管线写成可复用的脚本并跑起来，全程不消耗任何积分。</div>
+<div class="accept"><span class="lbl">这一步验收：</span>AI 报"全部 N 集合成完成 + 清单"。抽 1 集听，音色/留白/跟读空白都对，就过。</div>
+<p class="note">遇到错误怎么办？直接这么回 AI 即可：</p>
+<ul>
+  <li>"某集有破音/念错" → 回"重新合成第 X 集，只重跑失败段"。</li>
+  <li>"想要更慢一点" → 回"全部集语速降到 0.85，重跑"。</li>
+</ul>
+
+<h2>五、把整套流程串起来的一句话指令</h2>
+<p>不想一步步来？在 WorkBuddy 里开一个对话，用下面这条"总控提示词"，让 AI 按顺序自己推进（每推进一大步会停下来给你看结果、等你点头）：</p>
+<div class="prompt">你是我的"零积分播客制作助理"。我要做出<span class="ph">【主题：______】</span>的一整套播客。
+请严格按这个顺序帮我做，每完成一大步先停下来给我看成果、等我确认再下一步：
+
+1. 出节目策划案（世界观 + 全节目单 + 单集脚本模板 + 配图清单）。
+2. 按策划案先写 2 集样章脚本，我确认后再批量写全。
+3. 用<span class="hl">【免费微软 Edge TTS】</span>把全部脚本合成成品 MP3，支持断点续跑，给成品清单。
+
+铁律：
+- 全程只用 WorkBuddy 免费通道（免费 TTS），0 积分、0 付费。
+- 我不写代码，你写好脚本自己跑，我只负责"看结果 + 说人话给反馈"。
+- 哪一步我说不满意，你只重做那一步，不用从头来。
+
+现在开始第 1 步。</div>
+
+<footer class="doc-footer">
+  <strong>使用建议</strong>：复制本文档进 WorkBuddy，第一句就发"第五节那条总控提示词"，然后把【主题】填上，让 AI 带着你一路走完。每到大步停下来的地方，你只管看着说"过 / 改哪里"，播客就一点点成型了。
+</footer>
+</body>
+</html>

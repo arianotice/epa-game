@@ -1,0 +1,51 @@
+{
+  "ep": "U40",
+  "title": "啄米精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.5, "B07": 0.4, "B10": 0.6, "B12": 0.5, "B14": 0.5, "B16": 0.6, "B18": 0.5, "B20": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这位不闭嘴，脑袋一点一点的像小鸡啄米。他叫——啄米精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啄米精灵？小鸡也会发这个音吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "先对比：哼歌精灵靠嘴唇关门，把嘴封住；啄米精灵的嘴要留一条缝。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "我知道了！一个关门，一个不关门！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步，嘴：上下牙微微张开，留条小缝。闭嘴就变回哼歌精灵。"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，舌尖往上抬，贴住上排牙齿后面那块鼓鼓的小肉埂，那就是上齿龈。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "贴上啦！像给嘴巴顶了根小木棍！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：舌尖把路口堵死，气只好掉头往上，从鼻子里钻出去。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "有风！跟上回一样，鼻子下面痒！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "老规矩，做实验：两根手指捏住鼻子，舌尖还顶着，再发一下。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嗯……哎呀！又是发不出来！一捏就卡住！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "证据在这儿！两个都把嘴堵死，气只能走鼻子——他俩都是鼻音。听——"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "nnn. nnn."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：摸着喉咙嗡嗡在振动，他也是浊音，闷闷暖暖的。"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嗡——喉咙里又有一只小蜜蜂！"},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "记牢：嘴张开别闭上，舌尖顶住上齿龈，气流转弯走鼻子，喉咙嗡嗡要振动。"},
+
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一件宝贝：长在脸正中间，能闻香味，感冒时会堵住的那个。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "nose."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "nose，就是鼻子。舌尖先顶住上齿龈，嗯一下再松开。听常速一遍——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "nose."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "nose."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝贝：细细长长的，写字要用它，还能擦掉的那种笔。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "pen."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "pen，就是钢笔。结尾要短促，舌尖顶住就收。听常速一遍——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "pen."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "pen."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝贝：太阳下山以后，全家坐在一起吃的那一顿饭。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "dinner."},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "dinner，就是晚餐。舌尖多停半拍再松开。听常速一遍——"},
+    {"id": "B15en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "dinner."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "dinner."},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "像小鸡啄米点头的那个「嗯」，舌尖顶住上齿龈，气流全从鼻子走。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "像小鸡啄米点头的那个「嗯」，舌尖顶住上齿龈，气流全从鼻子走。"},
+
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是小挑战。第一题：他和哼歌精灵都是鼻音吗？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "都是！捏住鼻子两个都发不出来！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：他俩到底哪儿不一样？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哼歌精灵嘴唇闭着，啄米精灵舌尖顶着！"},
+    {"id": "B20", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。下一站，鼻音家族第三位在喉咙最深处打鼾。下一站见！"}
+  ]
+}

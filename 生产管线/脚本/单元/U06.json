@@ -1,0 +1,47 @@
+{
+  "ep": "U06",
+  "title": "戳肚子精灵的戳肚子音",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B09": 0.6, "B15": 0.6, "B17": 0.5, "B19": 0.6},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天这位精灵最爱恶作剧，会冷不丁戳你一下肚子。他叫——戳肚子精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "戳肚子？那我岂不是要叫出声？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "就是要叫出声！来，第一步，先看嘴型——"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴巴张到中等大小，不大也不小，下巴完全放松，别使劲，就像被人戳了一下，自然地啊一声。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啊！我真的被吓了一跳！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，就是这种吓一跳的感觉。第二步，舌头：舌头平平地放在中间，不前不后，不高不低，最省事的位置。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气一下子冲出来，很短，很松，戳完就结束，一点也不许拖长。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手摸着喉咙，声带振动，他也是个浊音。听好，就这一下——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "uh"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啊？这么快就没啦？"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！快、短、松，是他最大的特点。医生精灵也念啊，可要拖得长长的；戳肚子精灵只肯啊一下，短得很。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四句话记牢：嘴巴中等全放松，舌头平平放中间，声带振动是浊音，声音又短又轻松。"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "好，单词宝藏开门！第一个宝贝：又长又大，路上有站牌，好多人一起坐的那个。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "bus."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "bus，就是公交车。中间那位戳肚子精灵，啊，短又松。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "bus."},
+    {"id": "X04", "role": "xq", "lang": "en", "speed": 0.85, "text": "bus."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：喝水用的，圆圆的、带把手，掉到地上会碎的那个。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "cup."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "cup，就是杯子。cup 里的戳肚子精灵也是短短一下，别拖成长音。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "cup."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "cup."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：会嘎嘎叫，脚上有蹼，最爱在水里游来游去的那个。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "duck."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "duck，就是鸭子。念 duck 的时候肚子一紧，啊，短促又放松。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "duck."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "duck."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个宝贝全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "戳一下肚子，啊，短又松。公交 bus，杯子 cup，鸭子 duck 嘎嘎嘎。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 0.9, "text": "戳一下肚子，啊，短又松。公交 bus，杯子 cup，鸭子 duck 嘎嘎嘎。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是小挑战。第一题：戳肚子精灵的音，是长的还是短的？"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 1.0, "text": "短的！啊一下就没了！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：他和医生精灵都念啊，谁更长？"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "医生精灵长！戳肚子精灵又短又松！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "完全正确，两颗星收好。记住今天的口诀，下一站我们去找一位爱吹泡泡的精灵。声音探险队，下一站见！"}
+  ]
+}

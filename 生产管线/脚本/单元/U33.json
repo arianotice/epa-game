@@ -1,0 +1,50 @@
+{
+  "ep": "U33",
+  "title": "图书馆精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07en": 0.4, "B08": 0.5, "B15": 0.6, "B17": 0.5, "B19": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "嘘——！声音探险队，单元时间到！今天这位精灵最爱说嘘，它的名字叫图书馆精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "图书馆精灵？它是不是就住在图书馆里呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "差不多。你一走进图书馆，管理员就把手指竖在嘴边，轻轻来一声：嘘，小声点。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "真的！图书馆里到处都是这个声音！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "想抓住它，先摆好嘴型。第一步，嘴唇：两片嘴唇往前撮，撮成一个小喇叭口，像小鱼的嘴那样嘟出去。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘟出去了！像在吐泡泡！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，舌头：舌头平平地放在嘴巴当中间，不许贴上颚，也不许抵下牙，就悬在半空。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气从舌头上面那条扁扁的小缝里挤出去，一路摩擦着往外走。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "扁扁的！一点都不圆！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，扁扁的。最后一步，手贴喉咙，你说说看，麻不麻？"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不麻！喉咙安安静静的！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "安静就对了，声带在休息，它是个清音。四个字记牢：撮圆、放平、摩擦、不振动。听我读三遍——"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "sh. sh. sh."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "再提醒一句：嘴唇要往前嘟，别往后缩；声音要扁，千万别念成圆圆的苏。宝藏时间到！"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "往前嘟，别念成苏，记住啦！"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：在大海上开来开去，能装下好多人和货物的大家伙。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ship."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "ship 就是船。开头的图书馆精灵，嘴唇要先撮圆。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "ship."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "ship."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：住在水里，身上有鳞片，摇着尾巴游来游去的小动物。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "fish."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "fish 就是鱼。图书馆精灵藏在最尾巴上，别把它漏掉。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "fish."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "fish."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：浑身卷卷的白毛，在草地上咩咩叫的那一个。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "sheep."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "sheep 就是绵羊。先嘘一声，再张开嘴念后面。听常速一遍——"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "sheep."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "sheep."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "像图书馆里的嘘——，嘴唇撮圆往前伸，声带不振动。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "像图书馆里的嘘——，嘴唇撮圆往前伸，声带不振动。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：图书馆精灵的嘴唇，要往哪儿撮？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "往前撮！撮成小喇叭，像小鱼的嘴！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！第二题：手贴喉咙，念它的时候麻不麻？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不麻！声带在休息，它是个清音！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。记住：嘴撮圆，气摩擦，喉咙不动。声音探险队，下个单元见！"}
+  ]
+}

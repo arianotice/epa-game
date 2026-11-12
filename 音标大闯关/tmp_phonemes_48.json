@@ -1,0 +1,1002 @@
+[
+ {
+  "unit": "U01",
+  "sym": "iː",
+  "name": "微笑小姐",
+  "rarity": "P",
+  "audio": "u01.opus",
+  "words": [
+   {
+    "w": "sheep",
+    "zh": "绵羊"
+   },
+   {
+    "w": "tree",
+    "zh": "大树"
+   },
+   {
+    "w": "green",
+    "zh": "绿色"
+   }
+  ]
+ },
+ {
+  "unit": "U02",
+  "sym": "ɪ",
+  "name": "放松精灵",
+  "rarity": "P",
+  "audio": "u02.opus",
+  "words": [
+   {
+    "w": "ship",
+    "zh": "小船"
+   },
+   {
+    "w": "fish",
+    "zh": "鱼"
+   },
+   {
+    "w": "big",
+    "zh": "大大的"
+   }
+  ]
+ },
+ {
+  "unit": "U03",
+  "sym": "e",
+  "name": "小口精灵",
+  "rarity": "P",
+  "audio": "u03.opus",
+  "words": [
+   {
+    "w": "egg",
+    "zh": "鸡蛋"
+   },
+   {
+    "w": "bed",
+    "zh": "床"
+   },
+   {
+    "w": "pen",
+    "zh": "钢笔"
+   }
+  ]
+ },
+ {
+  "unit": "U04",
+  "sym": "æ",
+  "name": "大口精灵",
+  "rarity": "P",
+  "audio": "u04.opus",
+  "words": [
+   {
+    "w": "apple",
+    "zh": "苹果"
+   },
+   {
+    "w": "hand",
+    "zh": "手"
+   },
+   {
+    "w": "cat",
+    "zh": "猫"
+   }
+  ]
+ },
+ {
+  "unit": "U05",
+  "sym": "ɑː",
+  "name": "医生精灵",
+  "rarity": "SR",
+  "audio": "u05.opus",
+  "words": [
+   {
+    "w": "car",
+    "zh": "小汽车"
+   },
+   {
+    "w": "park",
+    "zh": "公园"
+   },
+   {
+    "w": "star",
+    "zh": "星星"
+   }
+  ]
+ },
+ {
+  "unit": "U06",
+  "sym": "ʌ",
+  "name": "戳肚子精灵",
+  "rarity": "SR",
+  "audio": "u06.opus",
+  "words": [
+   {
+    "w": "bus",
+    "zh": "公共汽车"
+   },
+   {
+    "w": "cup",
+    "zh": "杯子"
+   },
+   {
+    "w": "duck",
+    "zh": "鸭子"
+   }
+  ]
+ },
+ {
+  "unit": "U07",
+  "sym": "ɒ",
+  "name": "吹泡泡精灵",
+  "rarity": "SR",
+  "audio": "u07.opus",
+  "words": [
+   {
+    "w": "hot",
+    "zh": "热狗"
+   },
+   {
+    "w": "dog",
+    "zh": "狗"
+   },
+   {
+    "w": "box",
+    "zh": "盒子"
+   }
+  ]
+ },
+ {
+  "unit": "U08",
+  "sym": "ɔː",
+  "name": "吸果冻精灵",
+  "rarity": "UR",
+  "audio": "u08.opus",
+  "words": [
+   {
+    "w": "ball",
+    "zh": "球"
+   },
+   {
+    "w": "horse",
+    "zh": "马"
+   },
+   {
+    "w": "door",
+    "zh": "门"
+   }
+  ]
+ },
+ {
+  "unit": "U09",
+  "sym": "ʊ",
+  "name": "轻轻推精灵",
+  "rarity": "SR",
+  "audio": "u09.opus",
+  "words": [
+   {
+    "w": "book",
+    "zh": "书"
+   },
+   {
+    "w": "foot",
+    "zh": "脚"
+   },
+   {
+    "w": "good",
+    "zh": "好的"
+   }
+  ]
+ },
+ {
+  "unit": "U10",
+  "sym": "uː",
+  "name": "吹蜡烛精灵",
+  "rarity": "SR",
+  "audio": "u10.opus",
+  "words": [
+   {
+    "w": "food",
+    "zh": "食物"
+   },
+   {
+    "w": "moon",
+    "zh": "月亮"
+   },
+   {
+    "w": "blue",
+    "zh": "蓝色"
+   }
+  ]
+ },
+ {
+  "unit": "U11",
+  "sym": "ɜː",
+  "name": "卷舌弹簧精灵",
+  "rarity": "SAR",
+  "audio": "u11.opus",
+  "words": [
+   {
+    "w": "bird",
+    "zh": "鸟"
+   },
+   {
+    "w": "girl",
+    "zh": "女孩"
+   },
+   {
+    "w": "nurse",
+    "zh": "护士"
+   }
+  ]
+ },
+ {
+  "unit": "U12",
+  "sym": "ə",
+  "name": "偷懒叹气精灵",
+  "rarity": "P",
+  "audio": "u12.opus",
+  "words": [
+   {
+    "w": "banana",
+    "zh": "香蕉"
+   },
+   {
+    "w": "panda",
+    "zh": "熊猫"
+   },
+   {
+    "w": "teacher",
+    "zh": "老师"
+   }
+  ]
+ },
+ {
+  "unit": "U13",
+  "sym": "eɪ",
+  "name": "滑梯精灵A",
+  "rarity": "SAR",
+  "audio": "u13.opus",
+  "words": [
+   {
+    "w": "cake",
+    "zh": "蛋糕"
+   },
+   {
+    "w": "name",
+    "zh": "名字"
+   },
+   {
+    "w": "rain",
+    "zh": "下雨"
+   }
+  ]
+ },
+ {
+  "unit": "U14",
+  "sym": "aɪ",
+  "name": "滑梯精灵I",
+  "rarity": "SAR",
+  "audio": "u14.opus",
+  "words": [
+   {
+    "w": "bike",
+    "zh": "自行车"
+   },
+   {
+    "w": "kite",
+    "zh": "风筝"
+   },
+   {
+    "w": "five",
+    "zh": "五"
+   }
+  ]
+ },
+ {
+  "unit": "U15",
+  "sym": "ɔɪ",
+  "name": "欢呼精灵",
+  "rarity": "SAR",
+  "audio": "u15.opus",
+  "words": [
+   {
+    "w": "toy",
+    "zh": "玩具"
+   },
+   {
+    "w": "boy",
+    "zh": "男孩"
+   },
+   {
+    "w": "noise",
+    "zh": "吵闹"
+   }
+  ]
+ },
+ {
+  "unit": "U16",
+  "sym": "əʊ",
+  "name": "含糖精灵",
+  "rarity": "SAR",
+  "audio": "u16.opus",
+  "words": [
+   {
+    "w": "nose",
+    "zh": "鼻子"
+   },
+   {
+    "w": "home",
+    "zh": "家"
+   },
+   {
+    "w": "boat",
+    "zh": "小船"
+   }
+  ]
+ },
+ {
+  "unit": "U17",
+  "sym": "aʊ",
+  "name": "惊叹精灵",
+  "rarity": "HR",
+  "audio": "u17.opus",
+  "words": [
+   {
+    "w": "house",
+    "zh": "房子"
+   },
+   {
+    "w": "mouth",
+    "zh": "嘴"
+   },
+   {
+    "w": "cow",
+    "zh": "奶牛"
+   }
+  ]
+ },
+ {
+  "unit": "U18",
+  "sym": "ɪə",
+  "name": "悄悄话精灵",
+  "rarity": "HR",
+  "audio": "u18.opus",
+  "words": [
+   {
+    "w": "ear",
+    "zh": "耳朵"
+   },
+   {
+    "w": "near",
+    "zh": "近的"
+   },
+   {
+    "w": "deer",
+    "zh": "鹿"
+   }
+  ]
+ },
+ {
+  "unit": "U19",
+  "sym": "eə",
+  "name": "风吹精灵",
+  "rarity": "HR",
+  "audio": "u19.opus",
+  "words": [
+   {
+    "w": "hair",
+    "zh": "头发"
+   },
+   {
+    "w": "chair",
+    "zh": "椅子"
+   },
+   {
+    "w": "bear",
+    "zh": "熊"
+   }
+  ]
+ },
+ {
+  "unit": "U20",
+  "sym": "ʊə",
+  "name": "旅行精灵",
+  "rarity": "HR",
+  "audio": "u20.opus",
+  "words": [
+   {
+    "w": "tour",
+    "zh": "旅行"
+   },
+   {
+    "w": "sure",
+    "zh": "确定"
+   }
+  ]
+ },
+ {
+  "unit": "U21",
+  "sym": "p",
+  "name": "纸飞机精灵",
+  "rarity": "SR",
+  "audio": "u21.opus",
+  "words": [
+   {
+    "w": "pig",
+    "zh": "猪"
+   },
+   {
+    "w": "paper",
+    "zh": "纸"
+   },
+   {
+    "w": "apple",
+    "zh": "苹果"
+   }
+  ]
+ },
+ {
+  "unit": "U22",
+  "sym": "b",
+  "name": "打鼓精灵",
+  "rarity": "SR",
+  "audio": "u22.opus",
+  "words": [
+   {
+    "w": "ball",
+    "zh": "球"
+   },
+   {
+    "w": "bus",
+    "zh": "公共汽车"
+   },
+   {
+    "w": "baby",
+    "zh": "婴儿"
+   }
+  ]
+ },
+ {
+  "unit": "U23",
+  "sym": "t",
+  "name": "小锤精灵",
+  "rarity": "SR",
+  "audio": "u23.opus",
+  "words": [
+   {
+    "w": "tiger",
+    "zh": "老虎"
+   },
+   {
+    "w": "table",
+    "zh": "桌子"
+   },
+   {
+    "w": "cat",
+    "zh": "猫"
+   }
+  ]
+ },
+ {
+  "unit": "U24",
+  "sym": "d",
+  "name": "响锤精灵",
+  "rarity": "SR",
+  "audio": "u24.opus",
+  "words": [
+   {
+    "w": "dog",
+    "zh": "狗"
+   },
+   {
+    "w": "hand",
+    "zh": "手"
+   },
+   {
+    "w": "red",
+    "zh": "红色"
+   }
+  ]
+ },
+ {
+  "unit": "U25",
+  "sym": "k",
+  "name": "咳嗽精灵",
+  "rarity": "SR",
+  "audio": "u25.opus",
+  "words": [
+   {
+    "w": "kite",
+    "zh": "风筝"
+   },
+   {
+    "w": "cat",
+    "zh": "猫"
+   },
+   {
+    "w": "key",
+    "zh": "钥匙"
+   }
+  ]
+ },
+ {
+  "unit": "U26",
+  "sym": "g",
+  "name": "打嗝精灵",
+  "rarity": "SR",
+  "audio": "u26.opus",
+  "words": [
+   {
+    "w": "girl",
+    "zh": "女孩"
+   },
+   {
+    "w": "egg",
+    "zh": "鸡蛋"
+   },
+   {
+    "w": "green",
+    "zh": "绿色"
+   }
+  ]
+ },
+ {
+  "unit": "U27",
+  "sym": "f",
+  "name": "咬唇清风精灵",
+  "rarity": "SR",
+  "audio": "u27.opus",
+  "words": [
+   {
+    "w": "fish",
+    "zh": "鱼"
+   },
+   {
+    "w": "flower",
+    "zh": "花"
+   },
+   {
+    "w": "phone",
+    "zh": "电话"
+   }
+  ]
+ },
+ {
+  "unit": "U28",
+  "sym": "v",
+  "name": "咬唇振动精灵",
+  "rarity": "SR",
+  "audio": "u28.opus",
+  "words": [
+   {
+    "w": "van",
+    "zh": "厢式车"
+   },
+   {
+    "w": "vegetable",
+    "zh": "蔬菜"
+   },
+   {
+    "w": "five",
+    "zh": "五"
+   }
+  ]
+ },
+ {
+  "unit": "U29",
+  "sym": "θ",
+  "name": "咬舌清音精灵",
+  "rarity": "UR",
+  "audio": "u29.opus",
+  "words": [
+   {
+    "w": "three",
+    "zh": "三"
+   },
+   {
+    "w": "thank",
+    "zh": "谢谢"
+   },
+   {
+    "w": "birthday",
+    "zh": "生日"
+   }
+  ]
+ },
+ {
+  "unit": "U30",
+  "sym": "ð",
+  "name": "咬舌浊音精灵",
+  "rarity": "UR",
+  "audio": "u30.opus",
+  "words": [
+   {
+    "w": "this",
+    "zh": "这个"
+   },
+   {
+    "w": "mother",
+    "zh": "妈妈"
+   },
+   {
+    "w": "brother",
+    "zh": "兄弟"
+   }
+  ]
+ },
+ {
+  "unit": "U31",
+  "sym": "s",
+  "name": "小蛇精灵",
+  "rarity": "SR",
+  "audio": "u31.opus",
+  "words": [
+   {
+    "w": "sun",
+    "zh": "太阳"
+   },
+   {
+    "w": "snake",
+    "zh": "蛇"
+   },
+   {
+    "w": "bus",
+    "zh": "公共汽车"
+   }
+  ]
+ },
+ {
+  "unit": "U32",
+  "sym": "z",
+  "name": "蜜蜂精灵",
+  "rarity": "SAR",
+  "audio": "u32.opus",
+  "words": [
+   {
+    "w": "zoo",
+    "zh": "动物园"
+   },
+   {
+    "w": "nose",
+    "zh": "鼻子"
+   },
+   {
+    "w": "lazy",
+    "zh": "懒的"
+   }
+  ]
+ },
+ {
+  "unit": "U33",
+  "sym": "ʃ",
+  "name": "图书馆精灵",
+  "rarity": "SSR",
+  "audio": "u33.opus",
+  "words": [
+   {
+    "w": "ship",
+    "zh": "小船"
+   },
+   {
+    "w": "fish",
+    "zh": "鱼"
+   },
+   {
+    "w": "sheep",
+    "zh": "绵羊"
+   }
+  ]
+ },
+ {
+  "unit": "U34",
+  "sym": "ʒ",
+  "name": "呼噜精灵",
+  "rarity": "SSR",
+  "audio": "u34.opus",
+  "words": [
+   {
+    "w": "television",
+    "zh": "电视"
+   },
+   {
+    "w": "usually",
+    "zh": "通常"
+   },
+   {
+    "w": "treasure",
+    "zh": "宝藏"
+   }
+  ]
+ },
+ {
+  "unit": "U35",
+  "sym": "h",
+  "name": "哈气精灵",
+  "rarity": "SAR",
+  "audio": "u35.opus",
+  "words": [
+   {
+    "w": "hat",
+    "zh": "帽子"
+   },
+   {
+    "w": "hand",
+    "zh": "手"
+   },
+   {
+    "w": "happy",
+    "zh": "开心"
+   }
+  ]
+ },
+ {
+  "unit": "U36",
+  "sym": "r",
+  "name": "小钩子精灵",
+  "rarity": "SAR",
+  "audio": "u36.opus",
+  "words": [
+   {
+    "w": "rabbit",
+    "zh": "兔子"
+   },
+   {
+    "w": "rice",
+    "zh": "米饭"
+   },
+   {
+    "w": "run",
+    "zh": "跑"
+   }
+  ]
+ },
+ {
+  "unit": "U37",
+  "sym": "tʃ",
+  "name": "火车精灵",
+  "rarity": "SSR",
+  "audio": "u37.opus",
+  "words": [
+   {
+    "w": "chair",
+    "zh": "椅子"
+   },
+   {
+    "w": "teacher",
+    "zh": "老师"
+   },
+   {
+    "w": "lunch",
+    "zh": "午餐"
+   }
+  ]
+ },
+ {
+  "unit": "U38",
+  "sym": "dʒ",
+  "name": "果酱精灵",
+  "rarity": "SSR",
+  "audio": "u38.opus",
+  "words": [
+   {
+    "w": "juice",
+    "zh": "果汁"
+   },
+   {
+    "w": "jam",
+    "zh": "果酱"
+   },
+   {
+    "w": "jump",
+    "zh": "跳"
+   }
+  ]
+ },
+ {
+  "unit": "U39",
+  "sym": "m",
+  "name": "哼歌精灵",
+  "rarity": "SR",
+  "audio": "u39.opus",
+  "words": [
+   {
+    "w": "moon",
+    "zh": "月亮"
+   },
+   {
+    "w": "mom",
+    "zh": "妈妈"
+   },
+   {
+    "w": "milk",
+    "zh": "牛奶"
+   }
+  ]
+ },
+ {
+  "unit": "U40",
+  "sym": "n",
+  "name": "啄米精灵",
+  "rarity": "SR",
+  "audio": "u40.opus",
+  "words": [
+   {
+    "w": "nose",
+    "zh": "鼻子"
+   },
+   {
+    "w": "pen",
+    "zh": "钢笔"
+   },
+   {
+    "w": "dinner",
+    "zh": "晚餐"
+   }
+  ]
+ },
+ {
+  "unit": "U41",
+  "sym": "ŋ",
+  "name": "打鼾国王精灵",
+  "rarity": "UR",
+  "audio": "u41.opus",
+  "words": [
+   {
+    "w": "king",
+    "zh": "国王"
+   },
+   {
+    "w": "song",
+    "zh": "歌"
+   },
+   {
+    "w": "morning",
+    "zh": "早晨"
+   },
+   {
+    "w": "strong",
+    "zh": "强壮的"
+   }
+  ]
+ },
+ {
+  "unit": "U42",
+  "sym": "l",
+  "name": "快乐钩子精灵",
+  "rarity": "SAR",
+  "audio": "u42.opus",
+  "words": [
+   {
+    "w": "light",
+    "zh": "灯"
+   },
+   {
+    "w": "lemon",
+    "zh": "柠檬"
+   },
+   {
+    "w": "lion",
+    "zh": "狮子"
+   },
+   {
+    "w": "apple",
+    "zh": "苹果"
+   },
+   {
+    "w": "blue",
+    "zh": "蓝色"
+   }
+  ]
+ },
+ {
+  "unit": "U43",
+  "sym": "w",
+  "name": "吻唇精灵",
+  "rarity": "SR",
+  "audio": "u43.opus",
+  "words": [
+   {
+    "w": "water",
+    "zh": "水"
+   },
+   {
+    "w": "window",
+    "zh": "窗户"
+   }
+  ]
+ },
+ {
+  "unit": "U44",
+  "sym": "j",
+  "name": "短耶精灵",
+  "rarity": "SAR",
+  "audio": "u44.opus",
+  "words": [
+   {
+    "w": "yes",
+    "zh": "是的"
+   },
+   {
+    "w": "yellow",
+    "zh": "黄色"
+   },
+   {
+    "w": "year",
+    "zh": "年"
+   },
+   {
+    "w": "yogurt",
+    "zh": "酸奶"
+   }
+  ]
+ },
+ {
+  "unit": "U45",
+  "sym": "tr",
+  "name": "戳精灵",
+  "rarity": "HR",
+  "audio": "u45.opus",
+  "words": [
+   {
+    "w": "tree",
+    "zh": "大树"
+   },
+   {
+    "w": "train",
+    "zh": "火车"
+   }
+  ]
+ },
+ {
+  "unit": "U46",
+  "sym": "dr",
+  "name": "啄精灵",
+  "rarity": "HR",
+  "audio": "u46.opus",
+  "words": [
+   {
+    "w": "dress",
+    "zh": "连衣裙"
+   },
+   {
+    "w": "drink",
+    "zh": "喝"
+   }
+  ]
+ },
+ {
+  "unit": "U47",
+  "sym": "ts",
+  "name": "呲精灵",
+  "rarity": "HR",
+  "audio": "u47.opus",
+  "words": [
+   {
+    "w": "cats",
+    "zh": "猫（复数）"
+   },
+   {
+    "w": "students",
+    "zh": "学生"
+   }
+  ]
+ },
+ {
+  "unit": "U48",
+  "sym": "dz",
+  "name": "兹精灵",
+  "rarity": "HR",
+  "audio": "u48.opus",
+  "words": [
+   {
+    "w": "beds",
+    "zh": "床（复数）"
+   },
+   {
+    "w": "friends",
+    "zh": "朋友"
+   }
+  ]
+ }
+]

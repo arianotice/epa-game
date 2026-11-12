@@ -1,0 +1,21 @@
+request_id: 7a0891dc-25b3-47dc-870b-fa15ae2169ee
+entry_type: beautify_only
+current_stage: 2
+output_docx_path: "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\output\\7a0891dc-25b3-47dc-870b-fa15ae2169ee\\stage3\\WorkBuddy文生播客全免费制作流程.docx"
+output_docx_user_specified: false
+source_doc_path: "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\WorkBuddy文生播客流程文档.md"
+intent_summary: "将用户编辑好的《WorkBuddy 文生播客·全免费制作流程》md 文档导出为专业排版的 Word 版本"
+stages:
+  stage_1:
+    status: skipped
+    note: "beautify_only，内容已存在，跳过创作"
+  stage_2:
+    status: in_progress
+    route: html
+    html_sub: template
+    genre: general
+    content_source: "用户已编辑的 .md（作为 content_doc_path 直接解析）"
+    output_path: "stage2/formatted-WorkBuddy文生播客全免费制作流程.html"
+  stage_3:
+    status: pending
+    executor: doc-converter

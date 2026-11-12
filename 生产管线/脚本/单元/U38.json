@@ -1,0 +1,49 @@
+{
+  "ep": "U38",
+  "title": "果酱精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B04en": 0.4, "B05en": 0.4, "B13": 0.6, "B15": 0.5, "B17": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "黏黏糊糊、甜甜蜜蜜！声音探险队，单元时间到！今天这位精灵最爱抹面包，它叫果酱精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "果酱精灵？它是黏糊糊的吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，黏黏的、滑滑的。先回忆一下：上个单元的火车精灵，是怎么发音的？"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "我知道！舌尖先堵住气，再松开摩擦出去！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分。果酱精灵的动作跟它一模一样，嘴唇也要撮圆，一步都不少，只差一件事。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "又是喉咙！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "猜对了。它的声带要一直嗡嗡地振动，从堵住那一下，到摩擦出去，全程都在响。先听清音版，手贴喉咙——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ch."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不麻，安安静静的。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "现在动作不许变，只在喉咙里加进嗡嗡的振动——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "j."},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嗡！手指头底下在抖！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "抖就对了，这就是果酱精灵。它黏黏的、滑滑的，声带一边振动一边滑过去，像吃果酱。"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "黏黏滑滑的，像果酱抹在面包上！"},
+
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：橙子、苹果榨出来的，甜甜的能喝的东西。"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "juice."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "juice 就是果汁。开头黏黏的，喉咙要嗡嗡响。听常速一遍——"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "juice."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "juice."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：抹在面包上，黏黏甜甜的那一罐。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "jam."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "jam 就是果酱。整个音都在振动，别念成轻轻的清音。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "jam."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "jam."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：体育课上的一个动作，两腿一弯，人就离地飞起来。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "jump."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "jump 就是跳。结尾的果酱精灵，要又黏又短。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "jump."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "jump."},
+
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "火车音的振动版，声带一边振动一边滑过去，像吃果酱。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "火车音的振动版，声带一边振动一边滑过去，像吃果酱。"},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：果酱精灵和火车精灵，动作一样吗？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一模一样！只差喉咙在不在振动。"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！第二题：手贴喉咙，念它的时候麻不麻？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "麻！声带全程都在响，它是个浊音！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。记住：动作一样，加振动就是果酱精灵。声音探险队，下个单元见！"}
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "ep": "U27",
+  "title": "咬唇清风精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B13": 0.6, "B15": 0.5, "X11": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这位不住在嘴巴深处了，他搬到了嘴唇上，一吹气就凉丝丝的。他叫——咬唇清风精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "咬唇清风精灵？那他是不是躲在风里面呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！第一步，把上牙轻轻放到下嘴唇上。注意两个字——轻咬，不是死死咬住。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "轻轻咬住了！上牙压着下嘴唇，有点痒！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，气流：让气从牙齿和嘴唇中间那条小缝里往外吹，又轻又凉，像轻轻吹凉一碗热汤。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "呼——我的手背都吹凉了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，摸喉咙：安安静静，一点都不麻。所以他是清音，声带不振动。先听一遍这三个词里的他——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "fish. flower. phone."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "夫——！像一阵小风从牙缝里漏出来！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！这个音能拖长：夫——，一直吹到没气为止。可千万记住，他后面不许偷偷加一个呃，也别用汉语的呼去代替他。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记牢：上牙轻咬下唇；气从小缝往外吹；喉咙不麻，声带不振动。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "记住啦！上牙咬住下嘴唇，往外吹气，夫——！"},
+
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一个宝贝：住在水里，会游泳，还会吐泡泡的那个。"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "fish."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "鱼。开头夫一下就走，牙齿记得碰嘴唇。听常速一遍——"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "fish."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "fish."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：长在院子里，香香的，摘下来可以送给妈妈的那个。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "flower."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "花。夫完马上接后面的音，中间不许断开。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "flower."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "flower."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：装在口袋里，能打电话，还能拍照的那个。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "phone."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "电话。开头夫一下，就滑到后面那个鼻音上去。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "phone."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "phone."},
+
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "上牙轻咬下唇往外吹气，夫，声带不振动。"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 0.9, "text": "上牙轻咬下唇往外吹气，夫，声带不振动。"},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：咬唇清风精灵是清音还是浊音？"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 1.0, "text": "清音！喉咙安安静静，一点都不麻！"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：上牙要放在哪儿？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "放在下嘴唇上！轻轻咬住，往外吹气！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。下一站我们还待在嘴唇上，但要把喉咙里的小鼓打开——他叫咬唇振动精灵，是个会让喉咙发麻的家伙。下一站见！"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "上牙咬住下嘴唇，夫——！下一站见！"}
+  ]
+}

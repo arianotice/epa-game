@@ -1,0 +1,54 @@
+{
+  "ep": "U48",
+  "title": "兹精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.5, "B10": 0.6, "B14": 0.6, "B16": 0.5, "B18": 0.6},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！上一位的弟弟来啦，长得一样，可喉咙会发麻——兹精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "兹精灵？跟呲精灵是兄弟吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "亲兄弟！他也是组合音：前面的得和后面的兹，粘成一下，听上去就是「兹」。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "一个呲，一个兹？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "动作完全一样：舌尖抬起来，顶在上门牙后面那道肉坎，把气堵住。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "跟哥哥一样的动作！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "口型也一样：嘴巴微张，不用撅嘴，牙齿合上留条细缝。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "气流也一样：堵着的气从缝里挤出来，又短又脆。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "那到底哪里不一样呀？"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "关键一步：气挤出来的同时，让喉咙里的小鼓振起来。手贴喉咙——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "beds."},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "麻！喉咙在发麻！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这就是兹精灵。位置和动作跟哥哥一样，唯一差别：声带要振动，他是浊音。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "以后分不清就手贴喉咙：安安静静的是呲精灵，发麻的是兹精灵。对比听——"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "cats. beds."},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "cats 不麻，beds 麻！"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "规律也一样：名词复数加个 s，前面是振动的音，尾巴就跟着振动起来。听——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "bed. beds."},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 1.0, "text": "bed 短，beds 后面多出一个「兹」！"},
+
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一件：晚上睡觉、早上要从上面爬起来的家具，还不止一张。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "beds."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "beds，就是床，好几张。尾巴上补一下「兹」，喉咙要麻。听——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "beds."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "beds."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件：一起玩、一起闹，难过时会陪着你的那些人。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "friends."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "friends，就是朋友们。加个 s 变一群，尾巴上是振动的「兹」。听——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "friends."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "friends."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两件宝贝到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "尾巴音兄弟里的浊音，读「兹」，声带要振动。名词复数尾巴上，同样藏着他。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "尾巴音兄弟里的浊音，读「兹」，声带要振动。名词复数尾巴上，同样藏着他。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：兹精灵是清音还是浊音？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "浊音！喉咙会发麻！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二题：手贴喉咙，听这两个词，哪个会麻——"},
+    {"id": "B17en", "role": "bobo", "lang": "en", "speed": 0.7, "text": "cats. beds."},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "第二个！beds 喉咙在麻！"},
+
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！到这里，咱们的 48 个音标精灵全部认识齐了！"},
+    {"id": "X13", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哇——四十八个！我全认识啦，我真厉害！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "从第一声鼓点到今天的尾巴音，你一路闯过来了。带着练熟的嘴巴去读单词吧——声音探险队，永远出发！"}
+  ]
+}

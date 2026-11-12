@@ -1,0 +1,434 @@
+[
+  {
+    "unit": "U01",
+    "sym": "iː",
+    "name": "微笑小姐",
+    "prompt": "ee",
+    "rate": "-5%",
+    "voice": "en-US-AriaNeural",
+    "note": "ee"
+  },
+  {
+    "unit": "U02",
+    "sym": "ɪ",
+    "name": "放松精灵",
+    "prompt": "ih",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "ih"
+  },
+  {
+    "unit": "U03",
+    "sym": "e",
+    "name": "小口精灵",
+    "prompt": "eh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "eh"
+  },
+  {
+    "unit": "U04",
+    "sym": "æ",
+    "name": "大口精灵",
+    "prompt": "a",
+    "rate": "-5%",
+    "voice": "en-US-AriaNeural",
+    "note": "a"
+  },
+  {
+    "unit": "U05",
+    "sym": "ɑː",
+    "name": "医生精灵",
+    "prompt": "aaah",
+    "rate": "-20%",
+    "voice": "en-US-AriaNeural",
+    "note": "aaah"
+  },
+  {
+    "unit": "U06",
+    "sym": "ʌ",
+    "name": "戳肚子精灵",
+    "prompt": "uh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "uh"
+  },
+  {
+    "unit": "U07",
+    "sym": "ɒ",
+    "name": "吹泡泡精灵",
+    "prompt": "o",
+    "rate": "-5%",
+    "voice": "en-US-AriaNeural",
+    "note": "o"
+  },
+  {
+    "unit": "U08",
+    "sym": "ɔː",
+    "name": "吸果冻精灵",
+    "prompt": "or",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "or"
+  },
+  {
+    "unit": "U09",
+    "sym": "ʊ",
+    "name": "轻轻推精灵",
+    "prompt": "oo",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "oo"
+  },
+  {
+    "unit": "U10",
+    "sym": "uː",
+    "name": "吹蜡烛精灵",
+    "prompt": "oooh",
+    "rate": "-20%",
+    "voice": "en-US-AriaNeural",
+    "note": "oooh"
+  },
+  {
+    "unit": "U11",
+    "sym": "ɜː",
+    "name": "卷舌弹簧精灵",
+    "prompt": "err",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "air"
+  },
+  {
+    "unit": "U12",
+    "sym": "ə",
+    "name": "偷懒叹气精灵",
+    "prompt": "er",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "uh"
+  },
+  {
+    "unit": "U13",
+    "sym": "eɪ",
+    "name": "滑梯精灵A",
+    "prompt": "ay",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "ay"
+  },
+  {
+    "unit": "U14",
+    "sym": "aɪ",
+    "name": "滑梯精灵I",
+    "prompt": "eye",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "eye"
+  },
+  {
+    "unit": "U15",
+    "sym": "ɔɪ",
+    "name": "欢呼精灵",
+    "prompt": "oy",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "oy"
+  },
+  {
+    "unit": "U16",
+    "sym": "əʊ",
+    "name": "含糖精灵",
+    "prompt": "oh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "oh"
+  },
+  {
+    "unit": "U17",
+    "sym": "aʊ",
+    "name": "惊叹精灵",
+    "prompt": "ow",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "ow"
+  },
+  {
+    "unit": "U18",
+    "sym": "ɪə",
+    "name": "悄悄话精灵",
+    "prompt": "ear",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "ear"
+  },
+  {
+    "unit": "U19",
+    "sym": "eə",
+    "name": "风吹精灵",
+    "prompt": "air",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "air"
+  },
+  {
+    "unit": "U20",
+    "sym": "ʊə",
+    "name": "旅行精灵",
+    "prompt": "oor",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "oor"
+  },
+  {
+    "unit": "U21",
+    "sym": "p",
+    "name": "纸飞机精灵",
+    "prompt": "puh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "pff"
+  },
+  {
+    "unit": "U22",
+    "sym": "b",
+    "name": "打鼓精灵",
+    "prompt": "buh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "b"
+  },
+  {
+    "unit": "U23",
+    "sym": "t",
+    "name": "小锤精灵",
+    "prompt": "tu",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "tss"
+  },
+  {
+    "unit": "U24",
+    "sym": "d",
+    "name": "响锤精灵",
+    "prompt": "du",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "duh"
+  },
+  {
+    "unit": "U25",
+    "sym": "k",
+    "name": "咳嗽精灵",
+    "prompt": "kuh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "k"
+  },
+  {
+    "unit": "U26",
+    "sym": "g",
+    "name": "打嗝精灵",
+    "prompt": "guh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "g"
+  },
+  {
+    "unit": "U27",
+    "sym": "f",
+    "name": "咬唇清风精灵",
+    "prompt": "fff",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "fff"
+  },
+  {
+    "unit": "U28",
+    "sym": "v",
+    "name": "咬唇振动精灵",
+    "prompt": "vvv",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "vvv"
+  },
+  {
+    "unit": "U29",
+    "sym": "θ",
+    "name": "咬舌清音精灵",
+    "prompt": "thuh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "thf"
+  },
+  {
+    "unit": "U30",
+    "sym": "ð",
+    "name": "咬舌浊音精灵",
+    "prompt": "this",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "this"
+  },
+  {
+    "unit": "U31",
+    "sym": "s",
+    "name": "小蛇精灵",
+    "prompt": "sss",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "sss"
+  },
+  {
+    "unit": "U32",
+    "sym": "z",
+    "name": "蜜蜂精灵",
+    "prompt": "zzz",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "zzz"
+  },
+  {
+    "unit": "U33",
+    "sym": "ʃ",
+    "name": "图书馆精灵",
+    "prompt": "shh",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "shh"
+  },
+  {
+    "unit": "U34",
+    "sym": "ʒ",
+    "name": "呼噜精灵",
+    "prompt": "zzh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "buzz"
+  },
+  {
+    "unit": "U35",
+    "sym": "h",
+    "name": "哈气精灵",
+    "prompt": "huh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "h"
+  },
+  {
+    "unit": "U36",
+    "sym": "r",
+    "name": "小钩子精灵",
+    "prompt": "rrr",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "rrr"
+  },
+  {
+    "unit": "U37",
+    "sym": "tʃ",
+    "name": "火车精灵",
+    "prompt": "chuh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "ch"
+  },
+  {
+    "unit": "U38",
+    "sym": "dʒ",
+    "name": "果酱精灵",
+    "prompt": "juh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "j"
+  },
+  {
+    "unit": "U39",
+    "sym": "m",
+    "name": "哼歌精灵",
+    "prompt": "mmm",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "mmm"
+  },
+  {
+    "unit": "U40",
+    "sym": "n",
+    "name": "啄米精灵",
+    "prompt": "nnn",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "nnn"
+  },
+  {
+    "unit": "U41",
+    "sym": "ŋ",
+    "name": "打鼾国王精灵",
+    "prompt": "nguh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "ng"
+  },
+  {
+    "unit": "U42",
+    "sym": "l",
+    "name": "快乐钩子精灵",
+    "prompt": "lll",
+    "rate": "-10%",
+    "voice": "en-US-AriaNeural",
+    "note": "ll"
+  },
+  {
+    "unit": "U43",
+    "sym": "w",
+    "name": "吻唇精灵",
+    "prompt": "wuh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "oooh"
+  },
+  {
+    "unit": "U44",
+    "sym": "j",
+    "name": "短耶精灵",
+    "prompt": "yuh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "yay"
+  },
+  {
+    "unit": "U45",
+    "sym": "tr",
+    "name": "戳精灵",
+    "prompt": "truh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "tr"
+  },
+  {
+    "unit": "U46",
+    "sym": "dr",
+    "name": "啄精灵",
+    "prompt": "druh",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "dr"
+  },
+  {
+    "unit": "U47",
+    "sym": "ts",
+    "name": "呲精灵",
+    "prompt": "ts",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "ts"
+  },
+  {
+    "unit": "U48",
+    "sym": "dz",
+    "name": "兹精灵",
+    "prompt": "dz",
+    "rate": "+0%",
+    "voice": "en-US-AriaNeural",
+    "note": "dz"
+  }
+]

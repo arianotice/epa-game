@@ -1,0 +1,47 @@
+{
+  "ep": "U11",
+  "title": "卷舌弹簧精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B04en": 0.4, "B08": 0.6, "B15": 0.6, "B16": 0.4, "B18": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，单元时间到！今天我们要认识的新朋友，名字叫——卷舌弹簧精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "卷舌弹簧精灵？舌头要变成弹簧吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "差不多！你先把嘴巴微微张开，不大也不小，就开在中间。然后把舌头放平，不前不后，不高不低，也停在中间。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不前不后，不高不低……舌头好难放啊！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "接着是关键动作：舌尖慢慢往上翘，再往后卷，卷成一个小小的弹簧。注意，舌尖不能碰到上面的牙床，要悬在半空中。"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "舌头稳住别动，嗓子用力，让声音从舌头两边挤出来，拉得长长的——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "her."},
+    {"id": "X03", "role": "xq", "lang": "en", "speed": 0.85, "text": "her."},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "听出来了吗？这个音是长长的，舌头一直停在嘴巴正中间，一动都不动。记住三个词：卷、中间、长。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嘴巴不动，舌头也不动，就停在中间！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "照镜子！嘴巴别张太大，微微张开才看得见。舌尖一翘起来，舌头中间会露出一条小沟，就像弹簧中间的那道缝。"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "我看到了！中间真的有一条小缝！"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "太棒了！单词宝藏时间到啦！三颗宝石，慢速一遍，常速一遍，你跟着念。"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一颗宝石——鸟。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "bird."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "bird 就是鸟，早上在树枝上叽叽喳喳叫的那一只。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "bird."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "bird."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二颗宝石——女孩。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "girl."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "girl 是女孩，跟你一起上课、一起跳皮筋的那个女同学。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "girl."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "girl."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三颗宝石——护士。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "nurse."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "nurse 是护士，在医院里给你量体温、照顾病人的那一位。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "nurse."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "nurse."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "口诀记忆屋！拍起手，跟我念一遍——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "舌头卷成小弹簧，呃——停在中间。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "舌头卷成小弹簧，呃——停在中间。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是今天的听辨小挑战！我说中文，你大声说出英文：鸟、女孩、护士。"},
+    {"id": "X11", "role": "xq", "lang": "en", "speed": 0.85, "text": "bird. girl. nurse."},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！三颗宝石收好，今天你又多了一个精灵朋友，它叫卷舌弹簧精灵。"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，下一个单元见！"}
+  ]
+}

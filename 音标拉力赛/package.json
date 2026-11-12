@@ -1,0 +1,32 @@
+{
+  "name": "ipa-rally-p0",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "P0 slice: Vite takes over the rally site; 2D stays as L0; R3F probe is opt-in and off by default. Deterministic judgement core (race.js / track.js / config.js) is consumed as-is, never ported.",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "headless": "node js/headless_laps.mjs",
+    "test:minimap": "node js/minimap_model.test.mjs",
+    "test:scene3d": "node js/scene3d-model.test.mjs",
+    "build:p1": "node js/build-p1.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.186.1",
+    "@react-three/fiber": "9.8.2",
+    "@react-three/drei": "10.7.9",
+    "@react-three/postprocessing": "3.2.2",
+    "postprocessing": "6.39.6"
+  },
+  "devDependencies": {
+    "vite": "7.3.7",
+    "@vitejs/plugin-react": "5.0.4"
+  }
+}

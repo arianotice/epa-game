@@ -1,0 +1,47 @@
+{
+  "ep": "U25",
+  "title": "咳嗽精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.6, "B14": 0.6, "B16": 0.5, "X10": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这位住在嘴巴最深的地方，一出场就像轻轻咳一声。他叫——咳嗽精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "咳嗽精灵？那我感冒的时候，是不是一直在召唤他呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "想抓住他，得先找到他住的地方。来，跟我一起把舌头使劲往后缩，用到最后面那一截——它叫舌根。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌根！就是舌头最后面鼓鼓的那一块！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一步：舌根抬起来，顶住嘴巴最里面那块软软的天花板，把气堵在后面。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "顶住了！气又出不去啦！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，最关键的：舌根猛地往下一松，让堵住的这口气冲出来——咔！又短又脆，千万不许拖长。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，摸喉咙：安安静静，一点都不麻。所以他是清音，声带不振动。先听一遍这三个词里的他——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "kite. cat. key."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "咔！真的像咳嗽，喉咙一点都没麻！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "秘密：他后面跟着元音时会喷出一小口气；要是躲在斯的后面，那口气就要收住，别喷出来。"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记牢：舌根抬起顶天花板；堵住气再放开；咔的一声又短又脆；声带不振动，喉咙不麻。"},
+
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一个宝贝：春天最爱放，一根线牵在手里，风一吹就飞上天。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "kite."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "风筝。开头咔一下就走，别拖。听常速一遍——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "kite."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "kite."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：喵喵叫，最爱晒太阳，还会抓小老鼠的那个。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "cat."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "猫。咔完马上接后面的音，中间不许加一个呃。听常速一遍——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "cat."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "cat."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：小小的，挂在钥匙串上，能开锁、能开门的那个。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "key."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "钥匙。咔完后面跟着一个长长的微笑小姐，要拖长。听常速一遍——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "key."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "key."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "舌根轻轻顶天花板，像咳嗽一样咔，声带不振动。"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 0.9, "text": "舌根轻轻顶天花板，像咳嗽一样咔，声带不振动。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：他是清音还是浊音？喉咙会不会麻？"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "清音！喉咙安安静静，一点都不麻！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：他住在嘴巴里什么位置？"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 1.0, "text": "最里面！用舌根顶住软软的天花板！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。下一站我们还站在这儿，去见他的双胞胎兄弟——打嗝精灵，动作一样，只换一个开关。下一站见！"}
+  ]
+}

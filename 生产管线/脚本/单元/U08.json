@@ -1,0 +1,47 @@
+{
+  "ep": "U08",
+  "title": "吸果冻精灵的吸果冻音",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B09": 0.6, "B15": 0.6, "B17": 0.5, "B19": 0.6},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！声音探险队，单元时间到！今天这位精灵最馋，最爱拿吸管吸果冻，吸得又慢又长。他叫——吸果冻精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "吸果冻？我也喜欢吃果冻！"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "那我们一边吸一边学。来，第一步，先看嘴型——"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴唇往前嘟成一个小圆圈，嘴巴里面张开，下巴往下掉，像含着吸管慢慢吸果冻。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哦——！我的嘴巴嘟成小喇叭了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，嘟起来！第二步，舌头：舌头往后缩，舌根抬得高高的，舌面压得低低的，后面留出大空间。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，气流：气从圆嘴巴里长长地出来，中间不断，像果冻顺着吸管一直往上滑。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四步，声带：手摸着喉咙，声带振动，他也是个浊音。听好，这个音要拖长——"},
+    {"id": "B06en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "aw"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哦——！好长好圆，怎么也吸不完！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！长又圆，是他最大的特点。吹泡泡精灵也是圆嘴巴，可是他短又快；吸果冻精灵又长又圆，吸个没完。"},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四句话记牢：嘴唇嘟圆下巴掉，舌头后缩抬得高，声带振动是浊音，声音又长又圆绕。"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "好，单词宝藏开门！第一个宝贝：圆圆的，能拍能踢，操场上最爱玩的那种。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ball."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "ball，就是球。中间那位吸果冻精灵，哦——，长又圆。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "ball."},
+    {"id": "X04", "role": "xq", "lang": "en", "speed": 0.85, "text": "ball."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：四条腿，会哒哒跑，人能骑在它背上的那个。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "horse."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "horse，就是马。horse 里的吸果冻精灵一样要拖长，别急着收嘴。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "horse."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "horse."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：墙上开的，能进能出，出门前一定要关好的那个。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "door."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "door，就是门。念 door 的时候嘴唇嘟圆，哦——，拖得长长的。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "door."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "door."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三个宝贝全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "吸果冻，哦——长又圆。皮球 ball，大马 horse，门儿 door 关关好。"},
+    {"id": "X07", "role": "xq", "lang": "zh", "speed": 0.9, "text": "吸果冻，哦——长又圆。皮球 ball，大马 horse，门儿 door 关关好。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是小挑战。第一题：吸果冻精灵的音，是长的还是短的？"},
+    {"id": "X08", "role": "xq", "lang": "zh", "speed": 1.0, "text": "长的！哦——，一直吸不完！"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：他和吹泡泡精灵都用圆嘴巴，谁更长？"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 1.0, "text": "吸果冻精灵！吹泡泡精灵短又快！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "完全正确，两颗星收好。到今天为止，八位元音精灵你全认识啦。把八句口诀连起来念一遍，你就是声音探险队的小专家。下一站见！"}
+  ]
+}

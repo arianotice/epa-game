@@ -1,0 +1,252 @@
+{
+  "mode": "PLR_REPLAY",
+  "exclude_dirs": [
+    ".git",
+    ".p0-build",
+    ".vite",
+    ".workbuddy",
+    "__pycache__",
+    "coverage",
+    "dist",
+    "node_modules",
+    "src"
+  ],
+  "scripts": {
+    "verify_cseg_gate.py": {
+      "ok": true,
+      "error": null,
+      "count": 38,
+      "results": [
+        {
+          "name": "S1 config: TUNING.laps === 2 且 commits 每圈 2 门",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S2 提速落地 follow=260 / listen=300",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S3 race.js 终点按 laps × L 判定（非单圈）",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S4 race.js 门判定改用绝对里程 g.line（弃用 hasPassed(commitT)）",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S5 race.js rival 判定按 upcoming.line（弃用 wrapped commitT）",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S6 race.js 跨圈复位 pickups[].taken",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S7 main.js 进度条分母含 laps",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S8 main.js 开局按地图建门并传车手",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S9 四区选择器与车手选择器已接 UI",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S10 教学面板追加本场杯赛重点动态区（C07 静态块保留）",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S11 quiz 三题型 UI 已接，word 题不泄答案",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S12 placeLaneSign 传绝对 odo 给 branchLateral",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S13 render 只收当前圈的门（两圈 commitT 相同不重绘）",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S14 结果页按答对门解锁，且 unlocked 取并集",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S15 跨站白名单含 maps / lastMap / lastChar",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S16 atlas 6 处图片 URL 全部带当前 tag（无裸 URL）",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "S17 全仓 tag 唯一且恰好 46 处",
+          "ok": true,
+          "detail": {
+            "hud-20261108": 46
+          }
+        },
+        {
+          "name": "S18 全仓图片 URL 零裸引用（含动态拼接型）",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "A0 headless_laps.mjs 退出码 0（全部断言通过）",
+          "ok": true,
+          "detail": "题库: 地图 4 词对 37 词 83 题型 3"
+        },
+        {
+          "name": "A1 headless 跑满 2 档 × 4 地图 + 3 最坏工况 = 11 场",
+          "ok": true,
+          "detail": 11
+        },
+        {
+          "name": "A2 全部工况 finishTime <= 180s",
+          "ok": true,
+          "detail": {
+            "min": 135.8,
+            "max": 174.57
+          }
+        },
+        {
+          "name": "A3 最坏工况（15 次碰撞 + 20 额外题全错）也 <= 180s",
+          "ok": true,
+          "detail": 174.57
+        },
+        {
+          "name": "A4 headless 断言含 4/4 门判定与跨圈 1 次",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "A5 result.time === finishTime（不受结果页停留污染）",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "A6 理论口径 2×L/speed <= 150s（两档）",
+          "ok": true,
+          "detail": {
+            "follow": 148.1,
+            "listen": 128.4
+          }
+        },
+        {
+          "name": "B0 Node 自检可运行",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "B1 四区地图各非空、词对 >= 24、音素 >= 16",
+          "ok": true,
+          "detail": {
+            "pairs": 37,
+            "units": 18,
+            "mapPairs": {
+              "camp": 8,
+              "castle": 10,
+              "kingdom": 8,
+              "peak": 11
+            }
+          }
+        },
+        {
+          "name": "B2 准确性：unit 绑定 / ipa 与权威表一致 / 最小对立互异 / 0 错配",
+          "ok": true,
+          "detail": []
+        },
+        {
+          "name": "B3 音频 100% 覆盖词表（allWords 零缺口）",
+          "ok": true,
+          "detail": {
+            "allWords": 83,
+            "missing": []
+          }
+        },
+        {
+          "name": "B4 题型 >= 3 种",
+          "ok": true,
+          "detail": [
+            "word",
+            "ipa",
+            "type"
+          ]
+        },
+        {
+          "name": "B5 固定题 0、任一词对出现率 <= 60%",
+          "ok": true,
+          "detail": 0.515
+        },
+        {
+          "name": "B6 单局 4 门词对互不重复（12000 局零重复）",
+          "ok": true,
+          "detail": 0
+        },
+        {
+          "name": "B7 单局题型 >= 2 种且三种题型都出现过",
+          "ok": true,
+          "detail": {
+            "minTypes": 3,
+            "coverage": {
+              "word": 12000,
+              "type": 12000,
+              "ipa": 12000
+            }
+          }
+        },
+        {
+          "name": "B8 额外题连续同对率 = 0%（去重窗口 3）",
+          "ok": true,
+          "detail": 0
+        },
+        {
+          "name": "B9 美式权威表 ipa-display.js 全文未动 / sym 稳定键保留",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "C1 音频文件数 == allWords 词数",
+          "ok": true,
+          "detail": {
+            "files": 83,
+            "words": 83
+          }
+        },
+        {
+          "name": "C2 全部 mp3 帧头有效且无 <500B 残file",
+          "ok": true,
+          "detail": {
+            "bad": [],
+            "tiny": []
+          }
+        },
+        {
+          "name": "C3 生成脚本以 config.allWords() 为单一词表来源",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "path": "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标拉力赛\\verify_cseg_gate.py",
+      "log": "C:\\Users\\86135\\AppData\\Local\\Temp\\p1-plr-mvb76axe\\verify_cseg_gate.py.log"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "ep": "U13",
+  "title": "滑梯精灵A",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B04en": 0.4, "B05en": 0.4, "B06": 0.6, "B16": 0.6, "B17": 0.4},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，单元时间到！今天我们要认识的新朋友，名字叫——滑梯精灵 A。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "滑梯精灵？为什么名字里有个滑梯呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "因为它呀，不是一个音，而是两个音手拉手：从一个音一路滑到另一个音，就像坐滑梯，嗖一下滑到底，中间不许停。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "嗖——！中间不许停！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "先找起点：嘴角往两边咧开，像微笑小姐那样，嘴巴张开一点点，发——诶。再找终点：舌面慢慢往上升，升到轻轻的——衣。"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "好多同学会把这两个音硬拼在一起，中间断开，那就错了。先听一遍错误版——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "eh. ee."},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "这个我听出来了，像两个字！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，那就是错的。真正的滑梯精灵，是一口气滑过去的，中间没有台阶、没有坎。听我慢慢滑一遍——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.5, "text": "A."},
+    {"id": "X04", "role": "xq", "lang": "en", "speed": 0.85, "text": "A."},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哇，真的滑过去了，中间一点坎都没有！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记住两个秘密：第一，前面重、后面轻，前面的诶要又长又响，后面的衣只要轻轻带一下；第二，一秒钟滑完，中间不许停。它呀，还是字母 A 自己的名字呢。单词宝藏时间，走！"},
+
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一颗宝石——蛋糕。"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "cake."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "cake 是蛋糕，生日那天插着蜡烛、切成一块一块的那个。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "cake."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "cake."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二颗宝石——名字。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "name."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "name 是名字。你写在作业本封面上的那几个字，就是你的 name。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "name."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "name."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三颗宝石——下雨。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "rain."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "rain 是下雨，天上哗啦啦落下来的那个 rain。出门可别忘了带伞。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "rain."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "rain."},
+
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "口诀记忆屋！拍起手，跟我念一遍——"},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "从诶滑到衣，这就是字母 A 的名字。"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 0.9, "text": "从诶滑到衣，这就是字母 A 的名字。"},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是今天的听辨小挑战！我说中文，你大声说出英文：蛋糕、名字、下雨。"},
+    {"id": "X10", "role": "xq", "lang": "en", "speed": 0.85, "text": "cake. name. rain."},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！三颗宝石收好，今天你又多了一个精灵朋友，它叫滑梯精灵 A。声音探险队，下一个单元见！"}
+  ]
+}

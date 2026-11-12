@@ -1,0 +1,50 @@
+{
+  "ep": "U35",
+  "title": "哈气精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07en": 0.4, "B08": 0.5, "B15": 0.6, "B17": 0.5, "B19": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哈——！声音探险队，单元时间到！冬天对着玻璃哈一口气，玻璃上白茫茫一片。那口气，就是今天的客人：哈气精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哈气精灵？我一哈气，玻璃就起雾了！"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "就是这个。先说它最特别的一点：别的精灵都有固定的嘴型，它一个都没有。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "没有嘴型？那嘴巴往哪儿放呀？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴巴跟着后面的元音走。它自己不摆姿势，先跑到后面那个元音的嘴型上等着。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "原来它是个小跟屁虫！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，气流：气从喉咙里一路冲出来，嘴巴里干干净净，什么也不碰，不堵，也不摩擦。"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这条最要紧：要是你的舌根去蹭上颚，蹭出沙沙的摩擦声，那就成了中国话的喝，念错了。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哦！所以不能蹭出沙沙声！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，手贴喉咙，你说说，振动吗？"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不麻！喉咙安安静静的！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，声带完全不振动，它是个清音。三个字记牢：嘴巴跟、气自由、喉咙不动。听我哈三下——"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ha. ha. ha."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "还有一条规矩：它只肯站在元音前面领路，从来不跑到单词的最尾巴上去。宝藏时间到！"},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "只站前面，不站尾巴，记住了！"},
+
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一件宝藏：戴在脑袋上，能挡太阳也能挡雨的东西。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "hat."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "hat 就是帽子。开头先哈一口气，再张开嘴。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "hat."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "hat."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件宝藏：长在胳膊最前面，能写字、能招手的那一个。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "hand."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "hand 就是手。哈完气，嘴巴马上跟着后面的音张大。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "hand."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "hand."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件宝藏：考了一百分、收到礼物时，心里那种甜甜的感觉。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "happy."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "happy 就是开心。开头的哈气别丢，气要轻轻松松冲出来。听常速一遍——"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "happy."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "happy."},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "冬天对着玻璃哈气，气流自由冲出来，声带完全不振动。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "冬天对着玻璃哈气，气流自由冲出来，声带完全不振动。"},
+
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：哈气精灵自己有固定嘴型吗？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "没有！它跟着后面的元音走。"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对！第二题：哈气的时候，舌根能不能去蹭上颚？"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "不能！一蹭就成了中国话的喝，那就错了！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。记住：气自由，嘴跟着走，喉咙不动。声音探险队，下个单元见！"}
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "ep": "U12",
+  "title": "偷懒叹气精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B03en": 0.4, "B07": 0.6, "B14": 0.6, "B15": 0.4, "B17": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，单元时间到！今天要认识的新朋友，是整个英语世界里最懒的一个——偷懒叹气精灵。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "最懒的？它到底有多懒呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "懒到什么程度呢？它从来不使劲，也从来不当主角。你把嘴巴微微张开一点点，舌头随便放在最舒服的地方，别动它。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "什么都不用做？那我最拿手了！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "对，什么都不用做。然后嗓子轻轻一哼，就像写完一大堆作业之后叹口气——呃。就这一下，说完马上就走。"},
+    {"id": "B03en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "about."},
+    {"id": "X03", "role": "xq", "lang": "en", "speed": 0.85, "text": "about."},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "听出来了吗？about 最前面那个轻轻的、短短的呃，就是它。记住三个词：最短、最松、最不重要。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "最短、最松、最不重要，像班里的小透明！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "说得很对！它永远躲在单词里不重要的位置，从来不会被读重、读长。你一用力，它就吓得跑掉了。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "我一使劲它就跑？那我得懒一点才行！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "就是这个道理。跟卷舌弹簧精灵比一比：那一个要把舌头卷起来、把声音拉长；这一个呢，舌头不动，一闪就没。一个卷，一个懒。"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏时间到啦！三颗宝石，慢速一遍，常速一遍。听的时候，找一找藏在里面的那个懒家伙。"},
+
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一颗宝石——香蕉。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "banana."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "banana 是香蕉，黄黄的、剥了皮就能吃。三个音节里，中间那个最懒，就是它。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "banana."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "banana."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二颗宝石——熊猫。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "panda."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "panda 是熊猫，黑白两色、抱着竹子啃的那一只。最后一个音节懒懒的，也是它。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "panda."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "panda."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三颗宝石——老师。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "teacher."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "teacher 是老师，每天站在讲台上给我们讲课的那一位。词尾那个轻轻的音节，还是它。"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "teacher."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "teacher."},
+
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "口诀记忆屋！拍起手，跟我念一遍——"},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "嘴巴懒洋洋叹口气，呃，最短最放松。"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 0.9, "text": "嘴巴懒洋洋叹口气，呃，最短最放松。"},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是今天的听辨小挑战！我说中文，你大声说出英文：香蕉、熊猫、老师。"},
+    {"id": "X10", "role": "xq", "lang": "en", "speed": 0.85, "text": "banana. panda. teacher."},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！三颗宝石收好，今天你又多了一个精灵朋友，它叫偷懒叹气精灵。"},
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，下一个单元见！"}
+  ]
+}

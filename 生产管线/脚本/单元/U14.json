@@ -1,0 +1,47 @@
+{
+  "ep": "U14",
+  "title": "滑梯精灵I",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B04en": 0.4, "B05en": 0.4, "B06": 0.6, "B13": 0.6, "B14": 0.4},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "声音探险队，单元时间到！今天要认识的新朋友，是滑梯精灵 A 的弟弟——滑梯精灵 I。"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "又是滑梯！那这一回，我从哪儿滑到哪儿呀？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这一次的滑梯更长更陡。起点在嘴巴最大的地方：下巴掉下来，嘴巴张到最大，发一个大大的——啊。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "啊——！我的下巴都掉下来了！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "然后一口气往上升：下巴慢慢抬回去，嘴巴越收越小，舌面往上升，一直滑到轻轻的——衣。从最大的啊，滑到最小的衣。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "从最大滑到最小？这滑梯也太陡了吧！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "是很陡，可是绝对不能分成两段。听一遍错误版：把啊和衣硬拼在一起，中间断开——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "ah. ee."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "这个我一下就听出来了，是两个字！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "错了。滑梯精灵要一口气从啊滑到衣，中间不许有台阶。听我慢慢滑一遍——"},
+    {"id": "B05en", "role": "bobo", "lang": "en", "speed": 0.5, "text": "I."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "I."},
+    {"id": "X06", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哇，真的从啊一路滑到衣了！"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记住：起点嘴巴张到最大，终点嘴巴收到最小；前面重、后面轻，一口气滑完不许停。它还是字母 I 自己的名字呢。单词宝藏时间，走！"},
+
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第一颗宝石——自行车。"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "bike."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "bike 是自行车，两个轮子、每天骑着它去上学的那辆车。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "bike."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "bike."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二颗宝石——风筝。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "kite."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "kite 是风筝，春天放得最高、差点挂到树上的那一只。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "kite."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "kite."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三颗宝石——五。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "five."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "five 是数字五。你张开一只手，五根手指头，正好就是 five。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "five."},
+    {"id": "X09", "role": "xq", "lang": "en", "speed": 0.85, "text": "five."},
+
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "口诀记忆屋！拍起手，跟我念一遍——"},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "看到风筝吓一跳，啊—衣，是字母 I。"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 0.9, "text": "看到风筝吓一跳，啊—衣，是字母 I。"},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "最后是今天的听辨小挑战！我说中文，你大声说出英文：自行车、风筝、五。"},
+    {"id": "X11", "role": "xq", "lang": "en", "speed": 0.85, "text": "bike. kite. five."},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！三颗宝石收好，今天你又多了一个精灵朋友，它叫滑梯精灵 I。声音探险队，下一个单元见！"}
+  ]
+}

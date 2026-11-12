@@ -1,0 +1,48 @@
+{
+  "ep": "U29",
+  "title": "咬舌清音精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B06": 0.6, "B13": 0.6, "B15": 0.5, "X11": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这位胆子有点小，他要把舌头尖伸出嘴巴外头。他叫——咬舌清音精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌头要伸出来？那多不好意思呀！"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "一点点就行！第一步：把舌尖轻轻探出去，放在上下牙齿中间那条缝里，别伸太长。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "探出去啦！舌尖就在牙齿缝中间！"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二步，气流：让气从舌尖和牙齿的缝里往外送，又轻又薄，听起来像轻轻的斯——"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "斯——像小声说话的那个斯！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三步，摸喉咙：安安静静，一点都不麻，所以他是清音，声带不振动。先听一遍——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "three. thank. birthday."},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "斯——！像一阵很轻很轻的风！"},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！提醒一句：这个音汉语里没有，别拿汉语的斯或者思去顶替他，舌尖一定要探出来才对。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记牢：舌尖探出齿缝；气从缝里往外送；喉咙不麻，声带不振动。"},
+    {"id": "X05", "role": "xq", "lang": "zh", "speed": 1.0, "text": "记住啦！舌尖探出牙缝，斯——！"},
+
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一个宝贝：一个数字，二加一正好等于它。"},
+    {"id": "B07en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "three."},
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三。开头舌尖先探出来，斯一下就走。听常速一遍——"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "three."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "three."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二个宝贝：别人帮了你的忙，你要微笑着说的那句话。"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "thank."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "谢谢。同样在开头，舌尖探出来再送气。听常速一遍——"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "thank."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "thank."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三个宝贝：一年只有一次，有蛋糕、有蜡烛、还有礼物的那一天。"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "birthday."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "生日。他藏在词的中间，斯完马上接下一个音。听常速一遍——"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "birthday."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "birthday."},
+
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "三件宝藏全部到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "舌尖轻轻探出齿缝往外送气，听起来像轻轻的斯，声带不振动。"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 0.9, "text": "舌尖轻轻探出齿缝往外送气，听起来像轻轻的斯，声带不振动。"},
+
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：他是清音还是浊音？"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 1.0, "text": "清音！喉咙安安静静，一点都不麻！"},
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "满分！第二题：舌尖要放在哪儿？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "放在上下牙齿中间的缝里，探出一点点！"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好。下一站还是这条牙缝，但要把喉咙打开——他叫咬舌浊音精灵，是个汉语里完全没有的家伙。下一站见！"},
+    {"id": "X12", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌尖探出牙缝，斯——！下一站见！"}
+  ]
+}

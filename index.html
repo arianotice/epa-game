@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>声音探险队 · 48 个音标精灵</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100svh; display: flex; align-items: center;
+    justify-content: center; padding: 32px 20px;
+    font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    color: #3a2c1b;
+    background: radial-gradient(1200px 700px at 15% 0%, #fff6df 0%, #f4e4c1 45%, #e8d2a6 100%);
+  }
+  main { width: min(860px, 100%); }
+  .eyebrow { font-size: 13px; letter-spacing: .24em; color: #8a6a3c; margin: 0 0 12px; }
+  h1 { font-size: clamp(30px, 6vw, 48px); line-height: 1.15; margin: 0 0 12px; letter-spacing: .02em; }
+  .lede { font-size: 16px; line-height: 1.8; color: #6b5433; margin: 0 0 34px; max-width: 620px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  a.card {
+    display: block; text-decoration: none; color: inherit;
+    background: rgba(255, 252, 243, .88); border: 1px solid rgba(138, 106, 60, .28);
+    border-radius: 18px; padding: 26px 24px 24px;
+    box-shadow: 0 10px 30px rgba(93, 68, 30, .10);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  a.card:hover, a.card:focus-visible {
+    transform: translateY(-4px); border-color: rgba(138, 106, 60, .65);
+    box-shadow: 0 16px 38px rgba(93, 68, 30, .18); outline: none;
+  }
+  .tag { font-size: 12px; letter-spacing: .12em; color: #9a7439; margin: 0 0 10px; }
+  .card h2 { font-size: 22px; margin: 0 0 10px; }
+  .card p { font-size: 14px; line-height: 1.75; color: #6b5433; margin: 0 0 18px; }
+  .go { font-size: 14px; font-weight: 600; color: #8a5a1d; }
+  footer { margin-top: 30px; font-size: 12px; line-height: 1.8; color: #8a7550; }
+  code { background: rgba(138, 106, 60, .12); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">IPA QUEST · 声音探险队</p>
+  <h1>48 个音标精灵，<br>两套玩法一起学</h1>
+  <p class="lede">为小学六年级设计的英语音标启蒙：先用滚动叙事认识发音世界，再开上卡丁车，用「听音选车道」把最小对立对听出来。进度存在浏览器本地，两站互通。</p>
+
+  <div class="cards">
+    <a class="card" href="音标拉力赛/index.html">
+      <p class="tag">PLAY · 3D 卡丁车</p>
+      <h2>音标拉力赛</h2>
+      <p>听音辨音、选对车道冲刺。四大杯赛、两圈计时、48 张音标精灵卡靠赛事地图解锁；支持手机竖屏与无 WebGL 自动降级。</p>
+      <span class="go">进入比赛 →</span>
+    </a>
+    <a class="card" href="音标大闯关/index.html">
+      <p class="tag">LEARN · 滚动叙事 + 闯关</p>
+      <h2>音标大闯关</h2>
+      <p>30 关探险地图、78 段播客讲解、48 音标图鉴与身份卡，含口腔剖面与元音 / 辅音图谱，按稀有度逐张收集。</p>
+      <span class="go">开始探险 →</span>
+    </a>
+  </div>
+
+  <footer>
+    两站须部署在<code>同一站点根目录下</code>且互为兄弟目录（<code>音标大闯关/</code> 与 <code>音标拉力赛/</code>），
+    才能共享 <code>ipa-quest-v1</code> 进度与跨目录资源。<br>
+    仓库与部署说明见 README.md。
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "ep": "U41",
+  "title": "打鼾国王精灵",
+  "default_gap": 0.3,
+  "gaps": {"B01": 0.5, "B07": 0.5, "B08": 0.6, "B16": 0.6, "B18": 0.5},
+  "segments": [
+    {"id": "B01", "role": "bobo", "lang": "zh", "speed": 0.9, "text": "哒哒哒——！单元时间到！今天这位住在喉咙最深处，一开口就打鼾——打鼾国王精灵！"},
+    {"id": "X01", "role": "xq", "lang": "zh", "speed": 1.0, "text": "打鼾国王？他爱睡觉吗？"},
+
+    {"id": "B02", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "不是爱睡觉，声音本来就闷在喉咙里。第一步：舌尖躺平贴住下牙后面，不许翘。"},
+    {"id": "X02", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌尖躺平啦！那谁干活？"},
+    {"id": "B03", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "这次干活的是舌根。舌根往上顶，堵住喉咙后面软软的小帘子，把路封死。"},
+    {"id": "X03", "role": "xq", "lang": "zh", "speed": 1.0, "text": "哇，真堵死了！"},
+    {"id": "B04", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "嘴巴封死，气流改道从鼻子走，捏住鼻子就哑了。声带要振动，是浊音。听——"},
+    {"id": "B04en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "sing."},
+    {"id": "B05", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "记牢：舌尖躺平不许翘，舌根抬起堵喉咙，气流改道走鼻子，声带嗡嗡要振动。"},
+    {"id": "B06", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "还要分清：以前那位鼻音精灵是舌尖干活，今天这位是舌根干活。"},
+    {"id": "X04", "role": "xq", "lang": "zh", "speed": 1.0, "text": "原来舌尖舌根换班！"},
+    {"id": "B07", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "重点！唱歌的 sing 读「腥」不读「星」，尾巴是舌根在打鼾。词尾的 ing 也别读成「因」。"},
+
+    {"id": "B08", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "单词宝藏开门！第一件：国家里最大的人，头上戴着王冠。"},
+    {"id": "B08en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "king."},
+    {"id": "B09", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "king，就是国王。尾巴那个音要闷在喉咙里。听常速——"},
+    {"id": "B09en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "king."},
+    {"id": "X05", "role": "xq", "lang": "en", "speed": 0.85, "text": "king."},
+    {"id": "B10", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二件：音乐课上老师教的，用嘴巴唱出来的东西。"},
+    {"id": "B10en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "song."},
+    {"id": "B11", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "song，就是歌曲。尾巴要闷住，不许读成「因」。听常速——"},
+    {"id": "B11en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "song."},
+    {"id": "X06", "role": "xq", "lang": "en", "speed": 0.85, "text": "song."},
+    {"id": "B12", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第三件：太阳刚爬上来那会儿，闹钟响的时候。"},
+    {"id": "B12en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "morning."},
+    {"id": "B13", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "morning，就是早晨。尾巴的 ing 读「腥」，别读成「因」。听常速——"},
+    {"id": "B13en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "morning."},
+    {"id": "X07", "role": "xq", "lang": "en", "speed": 0.85, "text": "morning."},
+    {"id": "B14", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第四件：形容肌肉鼓鼓的，能扛起一整袋米。"},
+    {"id": "B14en", "role": "bobo", "lang": "en", "speed": 0.6, "text": "strong."},
+    {"id": "B15", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "strong，就是强壮的。尾巴的国王音最长最闷。听常速——"},
+    {"id": "B15en", "role": "bobo", "lang": "en", "speed": 0.85, "text": "strong."},
+    {"id": "X08", "role": "xq", "lang": "en", "speed": 0.85, "text": "strong."},
+
+    {"id": "B16", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "四件宝贝到手！进口诀记忆屋，拍手跟我念——"},
+    {"id": "B17", "role": "bobo", "lang": "zh", "speed": 0.8, "text": "舌根堵住喉咙打鼾的嗯，是舌根在干活；舌尖鼻音是舌尖干活。"},
+    {"id": "X09", "role": "xq", "lang": "zh", "speed": 0.9, "text": "舌根堵住喉咙打鼾的嗯，是舌根在干活；舌尖鼻音是舌尖干活。"},
+
+    {"id": "B18", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "小挑战！第一题：今天这位是舌尖干活还是舌根干活？"},
+    {"id": "X10", "role": "xq", "lang": "zh", "speed": 1.0, "text": "舌根！舌尖要躺平！"},
+    {"id": "B19", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "第二题：唱歌的 sing 该读「腥」还是「星」？"},
+    {"id": "X11", "role": "xq", "lang": "zh", "speed": 1.0, "text": "读「腥」！不是星星的星！"},
+    {"id": "B20", "role": "bobo", "lang": "zh", "speed": 0.85, "text": "两颗星收好！国王的王冠戴在舌根上，下一站去认识一位快乐的精灵！"}
+  ]
+}
