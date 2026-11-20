@@ -45,7 +45,10 @@
    *   sound / paint / trim / lastEp   单字段 LWW，以本次操作为准
    * --------------------------------------------------------------------------- */
   const RALLY_FOREIGN = ["gems", "shields", "paint", "trim", "ownedPaints", "ownedTrims", "EP02", "howSeen",
-    "maps", "lastMap", "lastChar"];
+    "maps", "lastMap", "lastChar",
+    /* FWD：6 键 superset 白名单——拉力赛度量域 / 产品域全量透传，防 save() 全量写回抹掉。
+       ageBand / weekly 本轮不启用，多列键在 refreshFromRaw 的 if(k in src) 下是零成本空操作。 */
+    "fwd", "ear", "shadow", "rivals", "weekly", "ageBand"];
 
   /* 数组去重并集，保序，a 优先；keyOf 给定时按其结果去重（unlockLog 用 unit+at）。 */
   function unionArr(a, b, keyOf) {

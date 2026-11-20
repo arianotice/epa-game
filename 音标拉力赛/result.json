@@ -62,7 +62,7 @@
       "ok": true,
       "detail": {
         "rc": 0,
-        "tail": "(仅 assets+ipa-display.js)，跨站跳转断、localStorage 共享前提不成立 → 须完整大闯关站同级部署。已升级用户裁决，本轮不判 PASS、不悄悄放行。\nelapsed=30.6s\n=========================================================================="
+        "tail": "(仅 assets+ipa-display.js)，跨站跳转断、localStorage 共享前提不成立 → 须完整大闯关站同级部署。已升级用户裁决，本轮不判 PASS、不悄悄放行。\nelapsed=42.0s\n=========================================================================="
       }
     },
     {
@@ -86,14 +86,14 @@
       "ok": true,
       "detail": {
         "rc": 0,
-        "tail": "  T16 风格裁决：2 盏灯 / 纯色路面 / 中性闸门 / M7 M8 不入 P1\n  PASS  T17 mirrorZ 只翻渲染层：lateral 白名单原样、z 翻号、x 不变\n  PASS  T18 纯函数可重复 + 无 snap / 无 track 时安全返回 null\n\nSUMMARY: 18 PASS / 0 FAIL / 18 TOTAL"
+        "tail": "T17 mirrorZ 只翻渲染层：lateral 白名单原样、z 翻号、x 不变\n  PASS  T18 纯函数可重复 + 无 snap / 无 track 时安全返回 null\n  PASS  T19 FWD-VIS-2/4 视觉增强常量：石头醒目度 + 分叉外扩，零判定语义键名\n\nSUMMARY: 19 PASS / 0 FAIL / 19 TOTAL"
       }
     },
     {
       "name": "S1 scene3d-model 纯函数 18 项 SUMMARY FAIL=0",
       "ok": true,
       "detail": {
-        "PASS": 18,
+        "PASS": 19,
         "FAIL": 0
       }
     },
@@ -101,7 +101,7 @@
       "name": "S1 scene3d-model 纯函数 18 项 PASS >= 18",
       "ok": true,
       "detail": {
-        "PASS": 18,
+        "PASS": 19,
         "want": 18
       }
     },
@@ -134,20 +134,20 @@
       "ok": true,
       "detail": {
         "rc": 0,
-        "tail": "13,\"rock\":7}\nlisten   kingdom   worst   YES    150.75   4/4    0      1      150.75       额外题 15 {\"kart\":11,\"rock\":4}\n强制碰撞注入最大命中次数: 15\n\n=== 断言 ===\nALL PASS\n题库: 地图 4 词对 37 词 83 题型 3"
+        "tail": " {\"kart\":15}\nlisten   kingdom   worst   YES    149.13   4/4    0      1      149.13       额外题 13 {\"kart\":12,\"rock\":1}\n强制碰撞注入最大命中次数: 11\n\n=== 断言 ===\nALL PASS\n题库: 地图 4 词对 37 词 83 题型 3"
       }
     },
     {
       "name": "S4 11 场 ALL PASS",
       "ok": true,
-      "detail": "  kingdom   worst   YES    150.75   4/4    0      1      150.75       额外题 15 {\"kart\":11,\"rock\":4}\n强制碰撞注入最大命中次数: 15\n\n=== 断言 ===\nALL PASS\n题库: 地图 4 词对 37 词 83 题型 3"
+      "detail": "  kingdom   worst   YES    149.13   4/4    0      1      149.13       额外题 13 {\"kart\":12,\"rock\":1}\n强制碰撞注入最大命中次数: 11\n\n=== 断言 ===\nALL PASS\n题库: 地图 4 词对 37 词 83 题型 3"
     },
     {
       "name": "S4 最慢完赛 <= 180s",
       "ok": true,
       "detail": {
-        "samples": 20,
-        "max": 174.57
+        "samples": 22,
+        "max": 170.72
       }
     },
     {
@@ -185,7 +185,7 @@
       "name": "B1 源码层 tag 唯一且恰好 46（PB-1）",
       "ok": true,
       "detail": {
-        "hud-20261108": 46
+        "fwd-20261120": 46
       }
     },
     {
@@ -248,7 +248,7 @@
       "ok": true,
       "detail": {
         "源码层": [
-          "hud-20261108"
+          "fwd-20261120"
         ],
         "产物层": "p1-20261110"
       }
@@ -267,7 +267,7 @@
       "name": "B10 预构建 IIFE 产物存在且 >1MB",
       "ok": true,
       "detail": {
-        "bytes": 1164508
+        "bytes": 1171910
       }
     },
     {
@@ -562,8 +562,8 @@
         ],
         "detail": [
           {
-            "min": 135.8,
-            "max": 174.57
+            "min": 134.63,
+            "max": 170.72
           }
         ]
       }
@@ -577,7 +577,7 @@
           "A3 最坏工况（15 次碰撞 + 20 额外题全错）也 <= 180s"
         ],
         "detail": [
-          174.57
+          170.72
         ]
       }
     },
@@ -1487,7 +1487,10 @@
     "PVIS-1/2/4/6 材质层·HSV 占比·抖动·随距衰减（需视觉量测工具，本轮未取证）",
     "PM-7 320×568 人工过眼签收（已由 verify_p1_visual.py V3 自动验可玩，人工签收仍缺）",
     "PT-2 人工签收（G3 由 team-lead 代签；G9 按用户裁决为上线后 advisory，不阻断）",
-    "29 项重验域的 UI 类逐条替代编号，以及 HUD 12 项，见退役令 §4.2 / §4.3；本轮由 S0 / S5 的真实 Chromium 取证覆盖，未逐条独立命名 chk"
+    "29 项重验域的 UI 类逐条替代编号，以及 HUD 12 项，见退役令 §4.2 / §4.3；本轮由 S0 / S5 的真实 Chromium 取证覆盖，未逐条独立命名 chk",
+    "S7 人工观感：NPC「像真人驾车」体感（不龟速 / 不扎堆）— 人工签收，不冒充 PASS",
+    "S7 人工观感：分叉「真实可见」五阶段可读性 / 贴地起跳标线可预期性 — 人工签收",
+    "S7 人工观感：石头可见性（3D 屏占比 / 提前可见 / L2 与 L1 一眼可分）— 人工签收"
   ],
   "summary": {
     "PASS": 121,

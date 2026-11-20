@@ -38,9 +38,11 @@ FORBID = ("correct", "answer", "spoken", "left", "right", "pairkey", "qtype",
           "options", "hit", "correctlateral", "which", "answerkey", "correctkey",
           "correctlateral", "spokenword")
 
-EXPECTED_SNAPSHOT_KEYS = ["lap", "laps", "zone", "span", "time", "karts", "gates"]
-EXPECTED_KART_KEYS = ["id", "kind", "t", "lateral", "drift", "boost", "turbo", "air", "yaw"]
+EXPECTED_SNAPSHOT_KEYS = ["lap", "laps", "zone", "span", "time", "karts", "gates", "pickups"]
+EXPECTED_KART_KEYS = ["id", "kind", "t", "lateral", "drift", "boost", "turbo", "air", "airMax", "hop", "yaw"]
 EXPECTED_GATE_KEYS = ["id", "lap", "commitT"]
+# IMPL-1B B5：pickups 只读投影白名单（与 js/scene3d-model.mjs:91-93 PICKUP_KEYS 同序 7 键）。
+EXPECTED_PICKUP_KEYS = ["id", "kind", "t", "lateral", "taken", "armed", "cleared"]
 
 RESULTS = []
 EVIDENCE = {}
@@ -193,14 +195,15 @@ def run_case(browser, name, viewport, query="", no_webgl=False, want3d=True):
             {k: cam.get(k) for k in ("fov", "fovIsVertical", "heightM", "distanceM", "pitchDeg")})
         leak = page.evaluate(RECURSIVE_LEAK, state)
         chk("%s H5 零泄露：STATE 任意层级键名/字符串不命中答案域" % name, len(leak) == 0, leak[:5])
-        # 三条白名单逐字断言：三份 QA 诊断数组必须严格等于 Node 单测 T3/T4 的只读白名单，
-        # 防止往「白名单」里夹带答案域字段后靠上面的词表蒙混过关。
-        chk("%s 只读白名单逐字锁定（snapshot/kart/gate）" % name,
+        # 四条白名单逐字断言：四份 QA 诊断数组必须严格等于 Node 单测的只读白名单
+        # （含 IMPL-1B pickups 7 键），防止往「白名单」里夹带答案域字段后靠上面的词表蒙混过关。
+        chk("%s 只读白名单逐字锁定（snapshot/kart/gate/pickups）" % name,
             state["snapshotKeys"] == EXPECTED_SNAPSHOT_KEYS
             and state["kartKeys"] == EXPECTED_KART_KEYS
-            and state["gateKeys"] == EXPECTED_GATE_KEYS,
+            and state["gateKeys"] == EXPECTED_GATE_KEYS
+            and state["pickupKeys"] == EXPECTED_PICKUP_KEYS,
             {"snapshotKeys": state["snapshotKeys"], "kartKeys": state["kartKeys"],
-             "gateKeys": state["gateKeys"]})
+             "gateKeys": state["gateKeys"], "pickupKeys": state["pickupKeys"]})
         chk("%s 3D 层零 Storage 写入 / 零内部错误" % name,
             state["storageWrites"] == 0 and len(state["errors"]) == 0,
             {"storageWrites": state["storageWrites"], "errors": state["errors"][:3]})

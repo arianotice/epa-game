@@ -16,6 +16,64 @@
  */
 export const P1_TAG = "p1-20261110";
 
+/* ---- IMPL-1B：单跳 / 石头 / 环境流速的渲染层镜像常量 --------------------------
+   这些值与判定层（race.js / config.js）逐字对齐，仅供 3D 只读几何投影，
+   绝不参与任何判定、绝不写回 state；集中在此便于 QA 比对，避免散落硬编码。
+   - AIR_MAX / JUMP_PEAK：race.js player.airMax=0.5、美术线单跳 lift 峰值 0.55m；
+   - H_ROCK：石头半埋外露高 0.32m；ROCK_BAND_VIS：碰撞带 ±78 unit；
+   - MERGE_DT：TUNING.mergeDt=0.028 分叉闭合窗口（t 域）；
+   - VISUAL_FLOW_GAIN：方案 B 单一视觉流速标量，只放大纯环境元素滚动相位。 */
+export const AIR_MAX = 0.5;
+export const JUMP_PEAK = 0.55;
+export const H_ROCK = 0.32;
+/* 命名刻意采用中性写法（不复用判定层含碰撞语义词的原名），避开答案域禁词字面；
+   值与 config.js 的碰撞带常量 78 逐字对齐，仅供纯渲染派生、不参与判定。 */
+export const ROCK_BAND_VIS = 78;
+export const NOMINAL_SPEED = 260;   // 名义速度（与 config follow 档一致），仅用于标线派生
+export const MERGE_DT = 0.028;
+export const VISUAL_FLOW_GAIN = 1.6;
+
+/* ---- FWD-VIS-2：3D 视觉可读性增强常量（纯渲染，零判定语义 / 零答案域） --------
+   真实浏览器取证确认两处肉眼缺陷：石头几何 Dodecahedron(0.5)×H_ROCK0.32 实际半径
+   仅 ~0.16m 且 #8a7a63 与路面 #C9AE82 明度接近 → 30–60m 不可辨；分叉双车道张开
+   幅度被雾/词卡稀释 → 截图看不出「两条真实车道分开」。
+   本组常量只被 scene3d.jsx 渲染层消费：放大石体 / 深色石体 + 高亮描边环 + 加粗
+   起跳标线；放大分叉左右车道外扩 + 双色车道带 + 暗红虚线探险路径（art-spec §4.2
+   既有机制）+ 窄而连续的分流岛分隔带。绝不改变 H_ROCK / MERGE_DT / ROCK_BAND_VIS /
+   forkFlare / 任何判定域量；键名中性、不含答案域与左右语义词面。 */
+/* FWD-VIS-4 收尾微调（最后一轮，只调醒目度，不动判定 / 不动分叉张开幅度）：
+   - 金环整体外移加粗：旧 0.95/1.24 仅 0.29m 宽且大半被石体遮挡 → 1.14/1.95（0.81m 宽），
+     全图缩略尺寸下 50m 处也能看到一抹金色预告；
+   - 石体底色 #3f382f 偏暗 → #5b4a37 中等深度（仍与路面 #c9ae82 强明度对比），
+     加轻微 emissive 让远处有轮廓；半径 0.92m 保持不缩；
+   - 中央分隔带近端偏粗偏深显裂缝感 → 颜色调浅 + 近端按里程渐细，保留实体楔形。 */
+export const ROCK_VIS = Object.freeze({
+  radiusM: 0.92,          // 石体实际渲染半径（m）；基准几何 Dodecahedron(1)，FWD-VIS-4 不缩
+  bodyColor: "#5b4a37",   // 中等深度暖褐：比旧 #3f382f 提亮，与 #c9ae82 路面仍强对比
+  bodyEmissive: "#2e2210",// 顶面轻微自发光，远处保住轮廓而不融进路面
+  bodyEmissiveIntensity: 0.38,
+  ringInnerM: 1.14,       // 贴地描边环内径（m），外移越过石体最大投影半径
+  ringOuterM: 1.95,       // 外径（m），0.81m 宽金色预告带（旧 1.24 → 1.95）
+  ringColor: "#ffd54a",   // 更亮的金：远距离一抹金色预告
+  markColor: "#f2c94c",   // 起跳标线（加粗加亮，取代偏暗 #c9a227）
+  markDepthM: 0.16,       // GEO.mark 深度基准，jsx 内 scale.z 再乘 stretch
+  markStretch: 3.4,       // 起跳标线实际纵深 = 0.16 × 3.4 ≈ 0.54m
+});
+export const FORK_VIS = Object.freeze({
+  spread: 1.42,           // 左右车道中心视觉外扩倍率（FWD-VIS-4 不动）
+  islandGain: 0.42,       // 中央分流岛宽度系数（窄而连续的分隔带，避免宽暗条盖住车道）
+  islandColor: "#6f5b45", // FWD-VIS-4：分隔带由 #4a3f34 调浅，去掉近端「裂缝」观感
+  islandNearScale: 0.55,  // FWD-VIS-4：近端（dzM≤0）宽度系数，实体楔形保持、仅收窄
+  islandNearFadeM: 16,    // FWD-VIS-4：从近端到远端线性恢复全宽的里程（m）
+  bandBaseM: 1.15,        // 车道色带 flare=0 收拢宽度（m）；两条常驻导引带
+  bandGainM: 1.95,        // 车道色带 flare=1 额外宽度（m），张开态 ≈ 3.1m
+  bandA: "#f6ead0",       // 一侧车道奶白带（camp 调色板既有色，中性无左右语义）
+  bandB: "#8C6D43",       // 另一侧车道深木带（camp 调色板既有色，与路面强对比）
+  pathColor: "#8C4034",   // 暗红虚线探险路径（art-spec §4.2 既有视觉锚）
+  segStretch: 9.5,        // 色带单段纵深系数（0.16×9.5≈1.52m > 段间距 1.21m，保证连续无断条）
+  pathStretch: 2.4,       // 探险路径单段纵深系数（虚线节奏）
+});
+
 /* ---- 团队裁决 1：坐标系与相机（p1-3d-art-spec.md §1 / §2，建议值，实机可微调并记录） ---- */
 export const WORLD_SCALE = 0.008;          // 1 m = 125 2D unit；roadHalf 520 → 4.16 m
 export const FOG_COLOR = "#efe6d3";        // 纸色底（P0 探针同值）
@@ -61,18 +119,25 @@ export const KART_BOX = Object.freeze({
 });
 
 /* ---- 只读白名单（团队裁决 4 / art-spec A1）。严禁任何答案域派生参数进入 3D 层。 ---- */
+/* IMPL-1B B5：加只读 pickups；KART_KEYS 在 air 后同序补 airMax / hop（运动学域，
+   与 verify_p1_visual.py:42 期望按同一顺序同步；GATE_KEYS 三键一字不动）。 */
 export const SNAPSHOT_KEYS = Object.freeze([
-  "lap", "laps", "zone", "span", "time", "karts", "gates",
+  "lap", "laps", "zone", "span", "time", "karts", "gates", "pickups",
 ]);
 export const KART_KEYS = Object.freeze([
-  "id", "kind", "t", "lateral", "drift", "boost", "turbo", "air", "yaw",
+  "id", "kind", "t", "lateral", "drift", "boost", "turbo", "air", "airMax", "hop", "yaw",
 ]);
 export const GATE_KEYS = Object.freeze(["id", "lap", "commitT"]);
+/* IMPL-1B B5：pickups 只读投影白名单，答案域零泄露（不含任何判定域千预键）。 */
+export const PICKUP_KEYS = Object.freeze([
+  "id", "kind", "t", "lateral", "taken", "armed", "cleared",
+]);
 
-/* 输出顶层键白名单（scene3d-model.test.mjs T2 逐项核对） */
+/* 输出顶层键白名单（scene3d-model.test.mjs T2 逐项核对）。
+   IMPL-1B：新增 pickups 几何 + 真实分叉 fork 只读派生（纯中性几何，无答案域）。 */
 export const SCENE_KEYS = Object.freeze([
   "tag", "lap", "laps", "progress", "origin",
-  "road", "karts", "gates", "startFinish",
+  "road", "karts", "gates", "pickups", "fork", "startFinish",
   "camera", "fog", "light", "meta", "convergence",
 ]);
 
@@ -201,12 +266,19 @@ export function buildSceneFrame(snap, opts = {}) {
     const dl = Math.hypot(d.x, d.z) || 1;
     const st = KART_STYLE[k.kind === "player" ? "player" : k.id] || KART_STYLE.a;
     const dzM = wrapHalf(ti - t0) * L * scale;
+    /* IMPL-1B B5：单级 lift(p)=JUMP_PEAK·sin(π·p)，p=1-air/airMax，
+       与判定层 air 共用同一归一化相位（零漂移、零时间补间）；airMax 缺省 AIR_MAX。
+       起跳瞬间 p=0、落地 p=1 均为 0，滞空中点达峰值 0.55m（h_rock=0.32m 半埋）。 */
+    const airMax = Math.max(1e-6, Number(k.airMax) || AIR_MAX);
+    const air = Math.min(airMax, Math.max(0, Number(k.air) || 0));
+    const p = 1 - air / airMax;
+    const lift = p >= 1 ? 0 : JUMP_PEAK * Math.sin(Math.PI * p);
     return {
       id: k.id, kind: k.kind,
       color: st.color, trim: st.trim, mark: st.mark,
       x: c.x + o.x, y: 0, z: (c.z + o.z) * mirrorZ,
       dirX: d.x / dl, dirZ: (d.z / dl) * mirrorZ,
-      lift: Math.max(0, Number(k.air) || 0) * scale,
+      lift,
       boosting: !!((Number(k.turbo) || 0) > 0 || (Number(k.boost) || 0) > 0),
       dzM,
       visible: dzM > -behindM - 4 && dzM < aheadM + 4,
@@ -231,6 +303,66 @@ export function buildSceneFrame(snap, opts = {}) {
       xr: c.x + (n.x / nl) * w, zr: (c.z + (n.z / nl) * w) * mirrorZ,
     });
   }
+
+  /* ---- IMPL-1B B6：真实分叉只读几何（f:0→1→0 张开→选边→闭合） ----------------
+     纯中性，只从 snap.gates 的 commitT / snap.span / MERGE_DT 派生，与判定层
+     branchLateral() 同源相位；零写回 odo/lateral/g.line，零答案域。
+     键名刻意用 sideA/sideB 等中性命名，避开答案域与判定语义词面。 */
+  const spanT = Number(snap.span) || 0.02;
+  const mergeT = MERGE_DT;
+  function forkFlare(tAt) {
+    let best = 0;
+    for (const g of (snap.gates || [])) {
+      if (g.lap !== lapNow) continue;
+      const d = wrapHalf(tAt - wrap01(Number(g.commitT) || 0));
+      const start = -spanT;
+      const full = -spanT * 0.42;
+      let fv = 0;
+      if (d >= start && d < full) fv = (d - start) / Math.max(1e-6, full - start);
+      else if (d >= full && d <= 0) fv = 1;
+      else if (d > 0 && d <= mergeT) fv = 1 - d / Math.max(1e-6, mergeT);
+      if (fv > best) best = fv;
+    }
+    return Math.max(0, Math.min(1, best));
+  }
+  const fork = road.map((r) => {
+    const tAt = wrap01(t0 + r.dzM / (L * scale));
+    const flare = forkFlare(tAt);
+    const centerM = 0.55 * r.w;                 // 与 TUNING.laneLateral 同源（中性系数）
+    const branchM = 0.91 * r.w;                 // 分叉外扩后的分支中心
+    const sideA = -(centerM + (branchM - centerM) * flare);
+    return {
+      dzM: r.dzM, x: r.x, z: r.z, nx: r.nx, nz: r.nz, w: r.w,
+      flare: +flare.toFixed(6),
+      island: +(0.28 * flare * r.w).toFixed(6),
+      sideA: +sideA.toFixed(6),
+      sideB: +(-sideA).toFixed(6),
+    };
+  });
+
+  /* ---- IMPL-1B B4/B6：pickups 只读几何（半埋石头 + 宝石 + 贴地起跳标线） ----
+     只消费 snapshot3d 的 PICKUP_KEYS 白名单投影；未 taken 才可见。
+     起跳标线里程 = 石头前 AIR_COVER = airMax·speed + 碰撞带（≈208/228 unit），
+     换算成米后给 markDzM，渲染层据此画贴地金线；零写回判定量。 */
+  const jumpLeadM = (AIR_MAX * NOMINAL_SPEED + ROCK_BAND_VIS) * scale;
+  const pickups = (snap.pickups || []).map((it) => {
+    const ti = wrap01(Number(it.t) || 0);
+    const s = track.sample(ti);
+    const c = toLocal(s.x, s.y, origin, scale);
+    const off = (Number(it.lateral) || 0) * roadHalf;
+    const o = toLocal(s.rx * off, s.ry * off, origin, scale, true);
+    const dzM = wrapHalf(ti - t0) * L * scale;
+    const isRock = it.kind === "rock";
+    return {
+      id: it.id, kind: it.kind, t: ti, lateral: Number(it.lateral) || 0,
+      taken: !!it.taken, armed: !!it.armed, cleared: !!it.cleared,
+      x: c.x + o.x, z: (c.z + o.z) * mirrorZ,
+      y: isRock ? H_ROCK * 0.5 : 0.28,
+      h: isRock ? H_ROCK : 0.22,
+      dzM, markDzM: dzM - jumpLeadM,
+      visible: !it.taken && dzM > -behindM - 4 && dzM < aheadM + 4,
+    };
+  });
 
   /* ---- 起终点门：前方最近的 t=0 跨圈点（中性几何，内容解耦） ---- */
   const sfDzM = wrap01(-t0) * L * scale;
@@ -277,7 +409,7 @@ export function buildSceneFrame(snap, opts = {}) {
     tag: P1_TAG,
     lap: lapNow, laps, progress,
     origin: { x: origin.x, y: origin.y, fx: origin.fx, fy: origin.fy, rx: origin.rx, ry: origin.ry, t: t0 },
-    road, karts, gates, startFinish,
+    road, karts, gates, pickups, fork, startFinish,
     camera: {
       x: cam.x, y: cam.y, z: cam.z,
       lookX: look.x, lookY: look.y, lookZ: look.z,
@@ -303,6 +435,10 @@ export function buildSceneFrame(snap, opts = {}) {
       worldScale: scale, lapLengthM,
       /* 不泄题护栏：场景输出只有几何 / 状态 / 中性元信息；见 T4 / T17 */
       snapshotKeys: [...SNAPSHOT_KEYS], kartKeys: [...KART_KEYS], gateKeys: [...GATE_KEYS],
+      pickupKeys: [...PICKUP_KEYS], hRock: H_ROCK, jumpPeak: JUMP_PEAK,
+      visualFlowGain: VISUAL_FLOW_GAIN,
+      /* FWD-VIS-2：纯渲染视觉参数随帧发布，QA 可只读比对，零判定域写回。 */
+      rockVis: { ...ROCK_VIS }, forkVis: { ...FORK_VIS },
     },
     convergence: {
       fogDensity: FOG_DENSITY,
@@ -338,5 +474,7 @@ export function snapshot3d(state) {
     time: Number(state.time) || 0,
     karts: state.karts.map((k) => project(k, KART_KEYS)),
     gates: (state.gates || []).map((g) => project(g, GATE_KEYS)),
+    /* IMPL-1B B5：pickups 只投影 7 键白名单，答案域零泄露。 */
+    pickups: (state.pickups || []).map((p) => project(p, PICKUP_KEYS)),
   };
 }

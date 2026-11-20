@@ -68,6 +68,18 @@ button { cursor: pointer; }
 .sign .fc { font-size: 30px; line-height: 1; color: var(--gold-deep); }
 #progress { height: 6px; border-radius: 99px; background: rgba(74, 53, 32, .15); overflow: hidden; }
 #progress > span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--gold), #f0d78c); }
+/* FWD M3：影子是 HUD 刻度三角 + 一行 Δt，首局无 bestTime 时由 JS 隐藏。 */
+#progress { position: relative; }
+#ghost-mark {
+  position: absolute; top: -2px; width: 0; height: 0;
+  border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-bottom: 6px solid var(--gold-deep); transform: translateX(-50%);
+  pointer-events: none;
+}
+#ghost-label {
+  background: var(--card); border: 1.5px solid var(--line); border-radius: 999px;
+  padding: 4px 12px; font-size: 13px; color: var(--ink-soft);
+}
 .hud-row { display: flex; align-items: center; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
 .hud-row strong, #gates, #combo {
   background: var(--card); border: 1.5px solid var(--line); border-radius: 999px;
@@ -166,10 +178,14 @@ button { cursor: pointer; }
 }
 .sign.on-lane .ipa { font-size: clamp(16px, 2.6vmin, 26px); }
 .sign.on-lane .w { font-size: clamp(13px, 2vmin, 16px); }
-.sign.on-lane.open { animation: lane-in .55s ease both; }
-@keyframes lane-in {
-  from { transform: translate(-50%, -50%) rotate(var(--lane, 0rad)) scale(.25); opacity: 0; }
-  to { transform: translate(-50%, -50%) rotate(var(--lane, 0rad)) scale(1); opacity: 1; }
+/* IMPL-1B B3：卡片不再「自动落下」。旧 lane-in 用 scale(.25)→scale(1) 制造从天空
+   落下的观感，已删除。真实分叉车道分支由 render.js(2D) / scene3d.jsx(3D) 按判定层
+   f:0→1→0 张开→选边→闭合回正常赛道呈现；卡片只作车道分支末端的静态路牌，
+   沿用 .sign.on-lane 的 translate/rotate 定位，入场仅轻微淡入、无位移放大。 */
+.sign.on-lane.open { animation: lane-fade .18s ease both; }
+@keyframes lane-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes sign-open {
   from { transform: translate(-50%, -115%) scale(.2); opacity: 0; }
@@ -375,6 +391,18 @@ button { cursor: pointer; }
 .misses { list-style: none; padding: 0; margin: 8px 0; }
 .misses li { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
 .misses button { border-radius: 999px; border: 1.5px solid var(--line); background: #fff; padding: 4px 10px; font-weight: 800; }
+/* FWD M1/M3：结果页恒 1 条近失句 + 成绩卡 / 同学码（仅展示，零新判定）。 */
+.near-miss {
+  font-family: var(--display); font-size: 18px; color: var(--gold-deep);
+  margin: 8px 0 4px; line-height: 1.45;
+}
+.near-miss button { border-radius: 999px; border: 1.5px solid var(--line); background: #fff; padding: 2px 10px; font-weight: 800; }
+.fwd-card { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.fwd-card code { font-size: 15px; font-weight: 800; letter-spacing: 1px; color: var(--gold-deep); }
+.fwd-card input {
+  border: 1.5px solid var(--line); border-radius: 999px; padding: 6px 12px;
+  font: inherit; font-size: 14px; max-width: 190px;
+}
 
 [hidden] { display: none !important; }
 

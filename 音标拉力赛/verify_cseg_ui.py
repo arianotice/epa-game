@@ -23,7 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUEST = os.path.join(ROOT, "音标大闯关")
 RALLY = os.path.join(ROOT, "音标拉力赛")
 KEY = "ipa-quest-v1"
-TAG = "hud-20261108"
+TAG = "fwd-20261120"
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 
 RESULTS = []

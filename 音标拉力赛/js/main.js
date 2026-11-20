@@ -1,9 +1,9 @@
-import { DIFFICULTY, KART_TYPE, TUNING, VOWELS, PHONEMES, RACE_MAPS, CHARACTERS, QUIZ_TITLES, allWords, buildGates, poolOf, scoreRace } from "./config.js?v=hud-20261108";
-import { createTrack } from "./track.js?v=hud-20261108";
-import { createAudio } from "./audio.js?v=hud-20261108";
-import { createRace } from "./race.js?v=hud-20261108";
-import { CARDS } from "./cards.js?v=hud-20261108";
-import { project, render, minimapModel } from "./render.js?v=hud-20261108";
+import { DIFFICULTY, KART_TYPE, TUNING, VOWELS, PHONEMES, RACE_MAPS, CHARACTERS, QUIZ_TITLES, allWords, buildGates, poolOf, scoreRace, ROCK_HIT_BAND } from "./config.js?v=fwd-20261120";
+import { createTrack } from "./track.js?v=fwd-20261120";
+import { createAudio } from "./audio.js?v=fwd-20261120";
+import { createRace } from "./race.js?v=fwd-20261120";
+import { CARDS } from "./cards.js?v=fwd-20261120";
+import { project, render, minimapModel } from "./render.js?v=fwd-20261120";
 
 /* FIX-C03：面向用户的大字一律取美式 displayIpa（按稳定 unit id 查表），表缺项回退英式 sym。 */
 const IPA = (card) => (window.IPA_DISPLAY && window.IPA_DISPLAY[card.id] && window.IPA_DISPLAY[card.id].displayIpa) || card.sym;
@@ -24,6 +24,9 @@ const ui = {
   board: document.querySelector("#board"),
   kartType: document.querySelector("#kart-type"),
   progress: document.querySelector("#progress > span"),
+  /* FWD M3：HUD 影子三角 + Δt 文案（纯刻度，非第 4 辆车，不进 3D 白名单）。 */
+  ghost: document.querySelector("#ghost-mark"),
+  ghostLabel: document.querySelector("#ghost-label"),
   banner: document.querySelector("#banner"),
   fork: document.querySelector("#fork-card"),
   forkLeft: document.querySelector("#fork-left"),
@@ -81,6 +84,11 @@ const pointer = { left: false, right: false, rocket: false, jump: false };
 const keys = new Set();
 let replayEdge = false;
 let jumpEdge = false;
+/* IMPL-1B B2：半屏点选转向（触屏优先，与键盘 ArrowLeft/ArrowRight + A/D 并存）。
+   window 级 pointerdown 事件委托，不新增物理全屏层、不打乱 z 栈；HIT_EXCLUDE 覆盖
+   全部交互层，故点 #jump（位于 #touch 内）不会被半屏逻辑吞掉，jumpEdge 仍由既有
+   ui.jump 监听独立触发。本批只做单跳必过：零 260ms 状态机 / 零 jump2 / 零双击效果。 */
+let tapSteer = "";
 let mode = "title";
 let diff = DIFFICULTY.listen;
 let race = null;
@@ -91,7 +99,8 @@ let resultOpen = false;
 let boardOpen = false;
 let shopOpen = false;
 let confettiBits = [];
-let cheerShown = "";
+/* IMPL-1B B1：按 cheer.seq 去重（同词连续触发须重播），初值 -1 表示「未展示」。 */
+let cheerShown = -1;
 let count = 0;
 let lastBeep = 99;
 let signKey = "";
@@ -242,6 +251,167 @@ function commit(mutator) {
   return d;
 }
 
+/* ---------- FWD 度量域 rally.fwd + 机制辅助（全部在 frame() 之外）--------------
+ * 1 容器 + 9 叶子字段；ring 为定长 12 位纯数字元组 FIFO（无词面 / IPA / 答案）。
+ * X1 初始化 → X2 开局 → X3 再跑一场 → X4 完赛 → X5 离开；每局 ≤4 次 setItem。
+ * frame() 与 __rally.step(n) 内零写入；window.__rally.fwd 是零写盘只读投影。 */
+const M1_ON = new URLSearchParams(location.search).get("m1") === "on";
+let fwd = null;          // 内存镜像（X1 建立）
+let inRace = false;      // 在赛态：仅内存，不落盘
+let shadowBest = 0;      // 当前地图 bestTime 缓存（秒），X1 / X4 更新
+const fwdNum = (x) => (Number.isFinite(Number(x)) ? Number(x) : 0);
+const isTuple12 = (t) => Array.isArray(t) && t.length === 12 && t.every((n) => Number.isFinite(n));
+
+function fwdWrite(d, patch) {
+  /* 写前整对象由 commit() 保证；这里只并列写 fwd 域，绝不碰 EP02/unlocked/maps。 */
+  const prev = (d.rally.fwd && typeof d.rally.fwd === "object") ? d.rally.fwd : {};
+  const next = {
+    v: 1,
+    sess: fwd ? fwd.sess : fwdNum(prev.sess) + 1,
+    start: fwd ? fwd.start : Date.now(),
+    last: fwd ? fwd.last : fwdNum(prev.last),
+    starts: fwdNum(prev.starts),
+    again: fwdNum(prev.again),
+    quits: fwdNum(prev.quits),
+    games: fwdNum(prev.games),
+    ring: Array.isArray(prev.ring) ? prev.ring.filter(isTuple12).slice(-12) : [],
+  };
+  Object.assign(next, patch || {});
+  next.v = 1;
+  if (fwd) { next.sess = fwd.sess; next.start = fwd.start; }
+  next.ring = (Array.isArray(next.ring) ? next.ring : []).filter(isTuple12).slice(-12);
+  d.rally.fwd = next;
+  fwd = Object.assign({}, next);   // 同步内存镜像（ring 元素为浅引用，X3 会先复制）
+  return next;
+}
+function readMapBest() {
+  const r = readStore().rally;
+  const mp = r && r.maps && r.maps[mapId];
+  return mp && Number(mp.bestTime) > 0 ? Number(mp.bestTime) : 0;
+}
+function fwdInit() {
+  /* X1：模块初始化末尾调用；sess 本机自增，不是用户标识。 */
+  const saved = readStore().rally;
+  const prev = (saved && saved.fwd && typeof saved.fwd === "object") ? saved.fwd : {};
+  const ring = Array.isArray(prev.ring) ? prev.ring.filter(isTuple12).slice(-12) : [];
+  fwd = {
+    v: 1, sess: fwdNum(prev.sess) + 1, start: Date.now(), last: fwdNum(prev.last),
+    starts: fwdNum(prev.starts), again: fwdNum(prev.again), quits: fwdNum(prev.quits),
+    games: fwdNum(prev.games), ring,
+  };
+  inRace = false;
+  shadowBest = readMapBest();
+  commit((d) => { fwdWrite(d, {}); });
+}
+function fwdStart() {
+  /* X2：beginCountdown() 入口；starts+1 落盘，inRace 仅置内存。 */
+  inRace = true;
+  commit((d) => { fwdWrite(d, { starts: fwdNum((d.rally.fwd || {}).starts) + 1 }); });
+}
+function fwdAgain() {
+  /* X3：#btn-again.onclick；again+1，并把最近一局 ring 末位 againFlag 回填 1。 */
+  commit((d) => {
+    const prev = d.rally.fwd || {};
+    const ring = Array.isArray(prev.ring) ? prev.ring.map((t) => (Array.isArray(t) ? t.slice() : t)) : [];
+    if (ring.length && isTuple12(ring[ring.length - 1])) ring[ring.length - 1][11] = 1;
+    fwdWrite(d, { again: fwdNum(prev.again) + 1, ring });
+  });
+}
+function fwdTuple(raw) {
+  /* 12 位定长数字元组：sess / n / acc100 / place / 用时×10 / judged /
+     replays / quizTotal / quizCorrect / rockHits / cheerSeq / againFlag。 */
+  const gates = race ? race.state.gates : [];
+  return [
+    fwd ? fwd.sess : 0,
+    fwd ? fwdNum(fwd.games) + 1 : 1,
+    raw.total ? Math.round((fwdNum(raw.correct) / raw.total) * 100) : 0,
+    fwdNum(raw.place),
+    Math.round(fwdNum(raw.time) * 10),
+    gates.filter((g) => g.judged).length,
+    gates.filter((g) => g.replayed).length,
+    fwdNum(raw.quizTotal),
+    fwdNum(raw.quizCorrect),
+    race ? fwdNum(race.state.rockHits) : 0,
+    race ? fwdNum(race.state.cheerSeq) : 0,
+    0,
+  ];
+}
+function fwdQuit() {
+  /* X5：统一出口；inRace 守卫保证从标题开商店 / 结果页回标题不误计 quits。 */
+  const now = Date.now();
+  if (inRace) {
+    commit((d) => { fwdWrite(d, { quits: fwdNum((d.rally.fwd || {}).quits) + 1, last: now }); });
+    inRace = false;
+  } else {
+    commit((d) => { fwdWrite(d, { last: now }); });
+  }
+}
+
+/* M1：近失缺口——每局结果页恒 1 条；只读取已有存档 + result()，零新 schema。 */
+function nearMissFor(raw, saved) {
+  const mp = saved && saved.maps && saved.maps[mapId] ? saved.maps[mapId] : null;
+  const bestTime = mp && Number(mp.bestTime) > 0 ? Number(mp.bestTime) : 0;
+  const hits = (raw.hits || []).length;
+  const total = raw.total || 4;
+  const dQ = Math.ceil(0.8 * total) - hits;
+  const dPlace = fwdNum(raw.place) - 1;
+  const dt = bestTime ? fwdNum(raw.time) - bestTime : null;
+  let line = "", goal = "";
+  if (!bestTime) {
+    line = "第一局已建档，下一局开始追自己";
+    goal = "定个目标";
+  } else if (raw.place === 3) {
+    line = "第 3 名 · 先把车开回前二";           // 败局不假希望「差一题就三星」
+    goal = "追回一个名次";
+  } else if (dQ === 1) {
+    const w = raw.misses && raw.misses[0] && raw.misses[0].spoken && raw.misses[0].spoken.word;
+    line = w
+      ? `就差 <button type="button" data-word="${w}">▶ ${w}</button> 这一个词，三星就到手`
+      : "就差一道题，三星就到手";
+    goal = w ? `把 ${w} 开对` : "再答对一题";
+  } else if (dPlace === 1) {
+    line = "第 2 名，离第 1 名只差一个车身";
+    goal = "抢回第 1 名";
+  } else if (dQ === 2) {
+    line = "再答对两道题，这局的星星就多一颗";
+    goal = "多答对两题";
+  } else if (dt !== null && Math.abs(dt) <= 3.0) {
+    line = dt >= 0 ? `比自己最好慢 ${dt.toFixed(1)} 秒` : `比自己最好快 ${(-dt).toFixed(1)} 秒，稳住`;
+    goal = dt > 0 ? `追回 ${dt.toFixed(1)} 秒` : "守住这个节奏";
+  } else {
+    line = "这局稳住了节奏，下一局接着追自己最好成绩";
+    goal = "刷新自己的最好成绩";
+  }
+  return { line, goal, bestTime, dt };
+}
+
+/* M3：成绩卡 R-<base36>，12 位混合基数打包（≤12 字符）；纯本地、零后端。 */
+const CARD_BITS = [2, 2, 7, 11, 3, 4, 4, 2];
+const CARD_KEYS = ["mapIdx", "stars", "acc100", "time10", "firstListen", "chain", "rescue", "ver"];
+function encodeCard(o) {
+  let n = 0;
+  CARD_BITS.forEach((bits, i) => {
+    const cap = (2 ** bits) - 1;
+    n = n * (2 ** bits) + Math.max(0, Math.min(cap, Math.round(fwdNum(o[CARD_KEYS[i]]))));
+  });
+  return "R-" + n.toString(36).toUpperCase();
+}
+function decodeCard(code) {
+  const m = /^R-([0-9A-Z]{1,10})$/.exec(String(code || "").trim().toUpperCase());
+  if (!m) return null;
+  let n = parseInt(m[1], 36);
+  if (!Number.isFinite(n) || n < 0) return null;
+  const out = {};
+  for (let i = CARD_BITS.length - 1; i >= 0; i--) {
+    const mod = 2 ** CARD_BITS[i];
+    out[CARD_KEYS[i]] = n % mod;
+    n = Math.floor(n / mod);
+  }
+  if (n !== 0 || out.ver !== 1) return null;
+  out.acc100 = Math.min(100, out.acc100);
+  return out;
+}
+
 function refreshBest() {
   const saved = readStore().rally && readStore().rally.EP02;
   ui.best.hidden = !saved;
@@ -329,6 +499,25 @@ window.addEventListener("keydown", (e) => {
 window.addEventListener("keyup", (e) => keys.delete(e.code));
 window.addEventListener("blur", () => { if (mode === "racing") setMode("paused"); });
 
+/* IMPL-1B B2：分叉处「把车开进对应车道」= 点左右半屏 + 键盘 ArrowLeft/ArrowRight
+   （及 A/D）并存、触屏优先。window 级 pointerdown 事件委托，不新增物理全屏层，
+   因此不打乱 z 栈 / PM-6「零相交、canvas 不吞点击」判据。
+   HIT_EXCLUDE 覆盖全部关键交互层：#jump 位于 #touch 内，点击它时本委托直接 return，
+   既不设定 tapSteer、也不 preventDefault，故半屏命中绝不吞掉 #jump 的跳跃点击。
+   按住式：pointerdown 设方向、pointerup/pointercancel 清除，避免车无限偏向一侧。
+   单跳必过口径：不新增 260ms fireJump 状态机 / input.jump2 / jump2 字段 /
+   jumpEvents 的 edge:"jump2" 分支；双击与触屏点两下无任何额外效果。 */
+const HIT_EXCLUDE = "#hud, #touch, .panel, #confetti, #cheer, #signs, #tags, #minimap, #quiz, #board, #shop";
+function onHalfTap(e) {
+  if (mode !== "racing") return;
+  if (e.target && e.target.closest && e.target.closest(HIT_EXCLUDE)) return;
+  tapSteer = e.clientX < window.innerWidth / 2 ? "left" : "right";
+}
+function clearHalfTap() { tapSteer = ""; }
+window.addEventListener("pointerdown", onHalfTap, { passive: true });
+window.addEventListener("pointerup", clearHalfTap, { passive: true });
+window.addEventListener("pointercancel", clearHalfTap, { passive: true });
+
 /* FIX-C08：别的标签写了 KEY 时刷新在跑比赛的 HUD 余额，避免显示开赛快照。
    只读 e.newValue，不写回、不触发二次迁移、不写 bak。 */
 window.addEventListener("storage", (e) => {
@@ -350,8 +539,10 @@ function toggleMute() {
 
 function readInput() {
   const auto = window.__rally && window.__rally.autopilot && race && mode === "racing";
-  let left = keys.has("ArrowLeft") || keys.has("KeyA") || pointer.left;
-  let right = keys.has("ArrowRight") || keys.has("KeyD") || pointer.right;
+  /* IMPL-1B B2 / PM-2：键盘 ArrowLeft/KeyA、ArrowRight/KeyD、触屏 #steer、
+     半屏点选 tapSteer 四来源投影方向一致；autopilot 分支仍按既有逻辑覆盖。 */
+  let left = keys.has("ArrowLeft") || keys.has("KeyA") || pointer.left || tapSteer === "left";
+  let right = keys.has("ArrowRight") || keys.has("KeyD") || pointer.right || tapSteer === "right";
   if (auto) {
     const act = race.activeGate();
     const steer = window.__rally.forceMiss ? -1 : 1;
@@ -392,6 +583,7 @@ function openTeach(id) {
 function beginCountdown() {
   if (race) race.dispose();
   resultOpen = false;
+  fwdStart();                       // FWD X2：starts+1 落盘，inRace=true（内存）
   signKey = "";
   /* C 段：门按当前杯赛地图的词池生成，车手按选择传入；两者与 openQuiz 同源。 */
   race = createRace({
@@ -703,18 +895,28 @@ function syncFork() {
 }
 
 function burstConfetti() {
+  /* IMPL-1B B1：局部小彩带——围绕 #cheer-word 中心生成，不再全屏 90 片。
+     本函数只由 syncCheer() 在检测到新的 cheer.seq 时调用；撞墙 / 撞车 / 护身卡抵消
+     三分支都不调用 cheer()，因此三分支零弹出。成功跳石与判门命中各自产生独立 seq，
+     故每次「恰好一次欢呼 + 恰好一次彩带」，同词连续触发亦重播。 */
   const colors = ["#e0b44a", "#1f618d", "#b03a2e", "#1e7a4f", "#fffaf0", "#6c3483"];
   confettiBits = [];
-  for (let i = 0; i < 90; i++) {
+  const r = ui.cheerWord && ui.cheerWord.getBoundingClientRect
+    ? ui.cheerWord.getBoundingClientRect() : null;
+  const cx = r && r.width ? r.left + r.width / 2 : window.innerWidth / 2;
+  const cy = r && r.height ? r.top + r.height / 2 : window.innerHeight * 0.42;
+  const spread = Math.min(r && r.width ? r.width : 120, 160) / 2;
+  for (let i = 0; i < 16; i++) {
+    const a = (i / 16) * Math.PI * 2 + Math.random() * 0.35;
     confettiBits.push({
-      x: Math.random() * window.innerWidth,
-      y: -20 - Math.random() * 80,
-      vx: (Math.random() - 0.5) * 180,
-      vy: 80 + Math.random() * 220,
+      x: cx + (Math.random() - 0.5) * spread,
+      y: cy + (Math.random() - 0.5) * 12,
+      vx: Math.cos(a) * (70 + Math.random() * 90),
+      vy: Math.sin(a) * (70 + Math.random() * 90) - 40,
       color: colors[i % colors.length],
-      life: 3.2,
+      life: 0.9 + Math.random() * 0.5,
       age: 0,
-      w: 6 + Math.random() * 6,
+      w: 4 + Math.random() * 3,
     });
   }
 }
@@ -745,12 +947,16 @@ function syncCheer(dt) {
   const on = !!(c && race.state.time < c.until);
   if (!ui.cheer) return;
   ui.cheer.hidden = !on;
-  if (on && cheerShown !== c.word) {
-    cheerShown = c.word;
+  /* IMPL-1B B1：去重键 c.word → c.seq。cheer.seq 由 race.js 全局递增，
+     同词连续触发（如连续两次成功跳石或同词判门）seq 必然不同 → 重播欢呼 + 局部彩带；
+     判门命中与成功跳石两类触发源各自产生独立 seq，互不吞掉。 */
+  const seq = c ? Number(c.seq) || 0 : -1;
+  if (on && cheerShown !== seq) {
+    cheerShown = seq;
     ui.cheerWord.textContent = c.word;
     burstConfetti();
   }
-  if (!on) cheerShown = "";
+  if (!on) cheerShown = -1;
   drawConfetti(dt);
 }
 
@@ -770,6 +976,25 @@ function syncHud() {
   const frac = Math.max(0, Math.min(1,
     (p.odo - p.startOdo) / (track.length * (race.state.laps || TUNING.laps))));
   ui.progress.style.width = `${frac * 100}%`;
+  /* FWD M3：影子是 #progress 上的 HUD 三角刻度（s_ghost=time/bestTime），非第 4 辆车。
+     Δt<0.3s 显示并排；首局无 bestTime 隐藏。只读 shadowBest 缓存，frame() 内零写盘。 */
+  if (ui.ghost) {
+    if (shadowBest > 0) {
+      const sGhost = Math.max(0, Math.min(1, race.state.time / shadowBest));
+      const dtGhost = frac * shadowBest - race.state.time;
+      ui.ghost.hidden = false;
+      ui.ghost.style.left = `${Math.min(99, Math.max(0, sGhost * 100))}%`;
+      if (ui.ghostLabel) {
+        const label = Math.abs(dtGhost) < 0.3 ? "并排"
+          : dtGhost > 0 ? `领先影子 ${dtGhost.toFixed(1)}s` : `落后影子 ${(-dtGhost).toFixed(1)}s`;
+        ui.ghostLabel.hidden = false;
+        if (ui.ghostLabel.textContent !== label) ui.ghostLabel.textContent = label;
+      }
+    } else {
+      ui.ghost.hidden = true;
+      if (ui.ghostLabel) { ui.ghostLabel.hidden = true; if (ui.ghostLabel.textContent) ui.ghostLabel.textContent = ""; }
+    }
+  }
   const showBanner = race.state.banner && race.state.bannerT > 0;
   ui.banner.hidden = !showBanner;
   if (showBanner && ui.banner.textContent !== race.state.banner) {
@@ -799,6 +1024,12 @@ function openResults() {
   /* C 段：音标卡唯一解锁来源 = 赛事地图完赛且答对的门所属 unit。
      宝石不参与兑换。unlocked 是跨站权威域，必须取并集，禁止整体覆盖。 */
   const m = currentMap();
+  /* FWD：写前存档快照——bestTime / 上局 firstListen 必须在本次 commit 覆盖前读取。
+     只保留必要前置量，commit() 紧跟其后（C08 S1.4 写点收口断言要求 900 字符内）。 */
+  const savedRally = readStore().rally || {};
+  const prevEar = savedRally.ear && typeof savedRally.ear === "object" ? savedRally.ear : {};
+  const prevRecent = Array.isArray(prevEar.recent) ? prevEar.recent.filter((n) => Number.isFinite(n)) : [];
+  const near = nearMissFor(raw, savedRally);
   const earned = [...new Set(raw.hits.map((g) => g.spoken.unit).filter(Boolean))];
   let newlyUnlocked = [];
   commit((d) => {
@@ -829,7 +1060,42 @@ function openResults() {
       bestAcc: Math.max(mp.bestAcc || 0, scored.acc),
       bestTime: mp.bestTime ? Math.min(mp.bestTime, raw.time) : raw.time,
     };
+    /* FWD X4：与上方 EP02 / unlocked / unlockLog / maps 四处既有赋值并列追加，
+       四处赋值逐字未动。resultOpen 一次性门天然保证 games 不双计。 */
+    const fNow = Date.now();
+    fwdWrite(d, {
+      games: fwdNum((d.rally.fwd || {}).games) + 1,
+      ring: ((d.rally.fwd && Array.isArray(d.rally.fwd.ring))
+        ? d.rally.fwd.ring.filter(isTuple12) : []).concat([fwdTuple(raw)]).slice(-12),
+      last: fNow,
+    });
+    inRace = false;
+    const curEar = (d.rally.ear && typeof d.rally.ear === "object") ? d.rally.ear : prevEar;
+    const recent = Array.isArray(curEar.recent) ? curEar.recent.filter((n) => Number.isFinite(n)).slice(-9) : [];
+    recent.push(fwdNum(raw.firstListen));
+    d.rally.ear = {
+      firstListenSum: fwdNum(curEar.firstListenSum) + fwdNum(raw.firstListen),
+      cleanChainBest: Math.max(fwdNum(curEar.cleanChainBest), fwdNum(raw.cleanChain)),
+      recent,
+    };
+    d.rally.shadow = {
+      bestTime: d.rally.maps[m.id].bestTime,
+      lastDt: Math.round((near.dt === null ? 0 : near.dt) * 10) / 10,
+    };
+    shadowBest = Number(d.rally.maps[m.id].bestTime) || 0;
     return fresh;
+  });
+  /* FWD：以下纯展示量在 commit 之后计算（写前只需 savedRally / prevRecent / near）。 */
+  const firstListen = fwdNum(raw.firstListen);
+  const chain = fwdNum(raw.cleanChain);
+  const rescue = fwdNum(raw.rescue);
+  const dFirst = prevRecent.length ? firstListen - prevRecent[prevRecent.length - 1] : null;
+  const m2Line = `这局 ${firstListen}/${raw.total} 一次听准 · ${dFirst === null ? "首次记录" : `比上局 ${dFirst >= 0 ? "+" : ""}${dFirst}`}`;
+  const cardCode = encodeCard({
+    mapIdx: RACE_MAPS.findIndex((x) => x.id === mapId),
+    stars: scored.stars, acc100: Math.round(scored.acc * 100),
+    time10: Math.round(fwdNum(raw.time) * 10),
+    firstListen, chain, rescue, ver: 1,
   });
   audio.engineOff();
   const star = "★".repeat(scored.stars) + "☆".repeat(3 - scored.stars);
@@ -839,28 +1105,70 @@ function openResults() {
   const unlockLine = newlyUnlocked.length
     ? `<p class="fine">🏁 本场解锁 ${newlyUnlocked.length} 张音标卡：${newlyUnlocked.map((u) => (PHONEMES[u] ? `/${PHONEMES[u].ipa}/` : u)).join("、")}　（去图鉴「赛事卡」查看）</p>`
     : `<p class="fine">本场没有新卡。答对分岔门即可解锁对应音标精灵，换个杯赛地图还能遇到别的音。</p>`;
+  /* M1 默认中性；仅 ?m1=on 才换带目标文案（默认 off / 显式 on，无 ?m1=off）。 */
+  const againLabel = M1_ON ? `再跑一场 · ${near.goal}` : "再跑一场";
   ui.results.innerHTML = `
     <p class="eyebrow">${m.name} · ${m.zone} · ${diff.label} · ${TUNING.laps} 圈</p>
     <h2>第 ${raw.place} 名</h2>
     <p class="stars" aria-label="${scored.stars} 星">${star}</p>
+    <p class="near-miss">${near.line}</p>
+    <p class="fine">${m2Line}${dFirst === null ? "" : `（救援题 ${rescue} 道 · 最长连听 ${chain} 题）`}</p>
     <p>听对 ${raw.correct} / ${raw.total} · 用时 ${raw.time.toFixed(1)} 秒</p>
     ${unlockLine}
     ${raw.quizTotal ? `<p class="fine">额外听辨 ${raw.quizCorrect} / ${raw.quizTotal} · 惩罚题独立统计，不计入听对率、星星与名次</p>` : ""}
     ${raw.unheard.length ? `<p class="fine">有 ${raw.unheard.length} 个词没来得及听到，未计入答错。</p>` : ""}
     <p class="fine">${scored.stars === 3 ? "听对了至少 80%，而且跑进了前两名。" : "三星需要跑进前两名，并且听对至少 80%。听对会直接加速。"}</p>
     ${miss ? `<ul class="misses">${miss}</ul>` : "<p>这两圈的词都开进了正确车道。</p>"}
+    <p class="fine fwd-card">成绩卡 <code id="score-card">${cardCode}</code>
+      <button type="button" class="btn ghost" id="btn-copy-card">复制成绩卡</button></p>
+    <p class="fine fwd-card"><input id="rival-code" type="text" maxlength="12" placeholder="贴同学码比一比" aria-label="同学成绩码">
+      <button type="button" class="btn ghost" id="btn-rival">比一比</button>
+      <span id="rival-msg" hidden></span></p>
     <p class="fine">进度记在这台设备的探险队存档里，不改闯关星星。</p>
     <div class="row">
-      <button type="button" class="btn" id="btn-again">再跑一场</button>
+      <button type="button" class="btn" id="btn-again">${againLabel}</button>
       <button type="button" class="btn ghost" id="btn-title">回标题</button>
     </div>`;
   ui.results.hidden = false;
   setMode("results");
-  ui.results.querySelector("#btn-again").onclick = () => beginCountdown();
-  ui.results.querySelector("#btn-title").onclick = () => { refreshBest(); setMode("title"); };
+  ui.results.querySelector("#btn-again").onclick = () => {
+    fwdAgain();                       // FWD X3：again+1 + ring 末位回填（先于 X2）
+    beginCountdown();
+  };
+  ui.results.querySelector("#btn-title").onclick = () => { fwdQuit(); refreshBest(); setMode("title"); };
   ui.results.querySelectorAll("[data-word]").forEach((btn) => {
     btn.onclick = () => { audio.unlock(); audio.playWord(btn.dataset.word); };
   });
+  /* M3 成绩卡：复制走 navigator.clipboard，失败退化为可手抄文本；同学码本地对比 ≤5 条。 */
+  const copyBtn = ui.results.querySelector("#btn-copy-card");
+  const rivalInput = ui.results.querySelector("#rival-code");
+  const rivalMsg = ui.results.querySelector("#rival-msg");
+  if (copyBtn) copyBtn.onclick = async () => {
+    try {
+      if (!navigator.clipboard) throw new Error("clipboard unavailable");
+      await navigator.clipboard.writeText(cardCode);
+      rivalMsg.textContent = "已复制成绩卡";
+    } catch (e) {
+      rivalMsg.textContent = `复制失败，请手抄：${cardCode}`;
+    }
+    rivalMsg.hidden = false;
+  };
+  const rivalBtn = ui.results.querySelector("#btn-rival");
+  if (rivalBtn) rivalBtn.onclick = () => {
+    const code = rivalInput ? rivalInput.value.trim().toUpperCase() : "";
+    const dec = decodeCard(code);
+    const me = decodeCard(cardCode);
+    if (!dec || !me) { rivalMsg.textContent = "成绩码无效，请检查后重试"; rivalMsg.hidden = false; return; }
+    rivalMsg.textContent = `同学 ${dec.acc100}% / ${(dec.time10 / 10).toFixed(1)}s，你 ${me.acc100}% / ${(me.time10 / 10).toFixed(1)}s`;
+    rivalMsg.hidden = false;
+    commit((d) => {
+      const list = Array.isArray(d.rally.rivals) ? d.rally.rivals.slice() : [];
+      if (!list.some((r) => r && r.code === code)) {
+        list.push({ code, acc: dec.acc100, t: dec.time10, s: dec.stars, fl: dec.firstListen, ch: dec.chain });
+      }
+      d.rally.rivals = list.slice(-5);
+    });
+  };
 }
 
 function resize() {
@@ -875,7 +1183,7 @@ resize();
 
 document.querySelector("#btn-follow").onclick = () => openTeach("follow");
 document.querySelector("#btn-listen").onclick = () => openTeach("listen");
-document.querySelector("#btn-back-title").onclick = () => setMode("title");
+document.querySelector("#btn-back-title").onclick = () => { fwdQuit(); setMode("title"); };
 document.querySelector("#btn-grid").onclick = () => beginCountdown();
 document.querySelectorAll(".play[data-word]").forEach((btn) => {
   btn.onclick = () => { audio.unlock(); audio.playWord(btn.dataset.word); audio.click(); };
@@ -883,7 +1191,7 @@ document.querySelectorAll(".play[data-word]").forEach((btn) => {
 ui.mute.onclick = () => toggleMute();
 ui.pause.onclick = () => { if (mode === "racing") setMode("paused"); else if (mode === "paused") setMode("racing"); };
 document.querySelector("#btn-resume").onclick = () => setMode("racing");
-document.querySelector("#btn-quit").onclick = () => { audio.engineOff(); refreshBest(); setMode("title"); };
+document.querySelector("#btn-quit").onclick = () => { fwdQuit(); audio.engineOff(); refreshBest(); setMode("title"); };
 
 const soundOn = readStore().sound !== false;
 audio.setMuted(!soundOn);
@@ -963,7 +1271,7 @@ function paintShop() {
        旧 collected / stars 口径已彻底退役，无任何 fallback（30 关全通也不会全卡解锁）。 */
     const open = pack.unlocked.includes(card.id);
     return `<button type="button" class="card${open ? " have" : " locked"}" disabled title="图鉴 ${card.sym}">
-      <img src="../音标大闯关/assets/sprites/cards/${card.id}.webp?v=hud-20261108" alt="${card.sym}">
+      <img src="../音标大闯关/assets/sprites/cards/${card.id}.webp?v=fwd-20261120" alt="${card.sym}">
       <b class="ipa">/${IPA(card)}/</b>
       <small>${card.name}</small>
       <small>${card.rarity} · ${open ? "已解锁 · 四大杯赛" : "待解锁 · 四大杯赛"}</small>
@@ -1015,6 +1323,7 @@ document.querySelector("#how-shop").onclick = () => {
   ui.shop.hidden = false;
 };
 document.querySelector("#shop-close").onclick = () => {
+  fwdQuit();
   shopOpen = false;
   ui.shop.hidden = true;
   if (race) race.dispose();
@@ -1057,10 +1366,17 @@ ui.quizReplay.onclick = () => {
   if (q) { audio.unlock(); audio.playWord(q.spoken.word); }
 };
 
+/* FWD X5：页面卸载 / 切后台各挂一次监听；fwdQuit 的 inRace 守卫保证不重复计 quits。 */
+window.addEventListener("pagehide", () => { fwdQuit(); });
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") fwdQuit();
+});
+
 const s0 = track.sample(demo[0].t);
 camera.x = s0.x;
 camera.y = s0.y;
 camera.h = Math.atan2(s0.fy, s0.fx);
+fwdInit();                            // FWD X1：v=1 / sess+1 / start，建立内存镜像
 setMode("title");
 
 let last = performance.now();
@@ -1120,7 +1436,9 @@ function frame(now) {
     w, h, dpr, track,
     gates: visibleGates,
     span: race ? race.state.span : 0.02,
-    merge: 0.012,
+    /* IMPL-1B B1：与判定层同一常数源（race.state.merge = TUNING.mergeDt = 0.028），
+       消除 2D flareAt 收拢窗口与判定层分叉闭合相位漂移；title 态 race 为空时兜底 0.028。 */
+    merge: race && race.state ? race.state.merge : 0.028,
     karts,
     time: simTime,
     ribbonT: race && mode !== "title" && mode !== "teach" ? (race.state.ribbonT || 0) : 0,
@@ -1128,6 +1446,10 @@ function frame(now) {
     shake: race && mode === "racing" ? race.state.shake : 0,
     particles: race && mode !== "title" && mode !== "teach" ? race.state.particles : [],
     pickups: race && mode !== "title" && mode !== "teach" ? race.state.pickups : [],
+    /* IMPL-1B B4：贴地起跳标线提前量。AIR_COVER = airMax·speed + ROCK_HIT_BAND
+       （airMax=0.5s、speed 用名义 diff.speed 260/300、ROCK_HIT_BAND=78 unit）≈208/228 unit；
+       除以赛道长 L 归一化成 t 偏移交给 render.js，2D 层零判定常量、零硬编码。 */
+    jumpLeadT: (0.5 * diff.speed + ROCK_HIT_BAND) / track.length,
     laneLateral: TUNING.laneLateral,
     reduced,
     look: playerLook(),
@@ -1168,6 +1490,13 @@ window.__rally = {
   get simTime() { return simTime; },       // A2 验收只读（渲染/仿真时钟）
   get signKey() { return signKey; },       // CSEG-E1 / H10 只读：含 gate.id + phase
   get signPhase() { return signPhase; },   // CSEG-E1 只读：当前 S0–S3 相位
+  /* IMPL-1B B1：S7 交互断言取证用只读观测点（全部零副作用，仅取 race.state 现值）。 */
+  get rockHits() { return race ? race.state.rockHits : 0; },
+  get rockBudget() { return race ? race.state.rockBudget : 0; },
+  get cheerSeq() { return race ? race.state.cheerSeq : 0; },
+  /* FWD 只读投影：返回内存镜像副本，零写盘、零判定副作用。 */
+  get fwd() { return fwd ? Object.assign({}, fwd, { ring: fwd.ring.map((t) => t.slice()) }) : null; },
+  get pickups() { return race ? race.state.pickups : []; },
   minimapRect() { return currentMmRect(); },      // CSEG-E1 / H1 H3 H4 只读
   minimapModel() { return currentMmModel(); },    // CSEG-E1 / H6 H10 只读
   frame,

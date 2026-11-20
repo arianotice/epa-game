@@ -1,5 +1,5 @@
-import { BOOST, COLLIDE, QUIZ_TYPES, ROCKET, SLOW, TUNING, TURBO, forkSpan, hitsLane, pairKeyOf, pickQuizPair, poolOf } from "./config.js?v=hud-20261108";
-import { offsetPoint } from "./track.js?v=hud-20261108";
+import { BOOST, COLLIDE, QUIZ_TYPES, ROCKET, SLOW, TUNING, TURBO, forkSpan, hitsLane, pairKeyOf, pickQuizPair, poolOf, ROCK_QUOTA, ROCK_HITS_MAX, ROCK_HIT_BAND, ROCK_LAT_BAND, ROCK_MARGIN, NPC_MIN_SPEED_RATIO } from "./config.js?v=fwd-20261120";
+import { offsetPoint } from "./track.js?v=fwd-20261120";
 
 export function createRace({ track, diff, gates, audio, mapId = "camp", character = null }) {
   const L = track.length;
@@ -23,8 +23,6 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     bumpCd: 0,
     air: 0,
     hop: 0,
-    jumpCd: 0,
-    dashLeft: 0,
     wallCd: 0,
     startBoost: kind === "player" ? 0 : 1.8,
     answers: [],
@@ -36,10 +34,15 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
   });
 
   const player = mk("you", "You", "player", startT, 1, 0);
+  /* IMPL-1A A6：错峰起跑里程，两车各错开 ±Δ（> COLLIDE.along=130 碰撞带），
+     一前一后 + 横向 a 左 / b 右，杜绝三车同里程扎堆与开局贴身连环碰撞。 */
   const rivals = [
-    mk("a", "A", "rival", startT, 0.28, -0.55),
-    mk("b", "B", "rival", startT, 0.42, 0.55),
+    mk("a", "A", "rival", startT - 0.022, 0.28, -0.55),
+    mk("b", "B", "rival", startT + 0.020, 0.42, 0.55),
   ];
+  /* 软跟随目标里程差（相对 player.odo），只用速度倍率渐进收敛、不改 odo。 */
+  rivals[0].gapTarget = -0.022 * L;
+  rivals[1].gapTarget = 0.020 * L;
   const karts = [player, rivals[0], rivals[1]];
   const startYaw = Math.atan2(track.sample(startT).fy, track.sample(startT).fx);
   karts.forEach((k) => { k.yaw = startYaw; });
@@ -69,6 +72,19 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     gems: 0,
     cards: [],
     pickups: [],
+    /* IMPL-1A：撞石硬上限（整局累计、跨圈不复位）/ 欢呼全局递增序号。
+       rockHits 达 rockBudget 后静默越过，不再 openQuiz("rock")、不再计 quizReasons.rock。 */
+    rockHits: 0,
+    rockBudget: ROCK_HITS_MAX,
+    cheerSeq: 0,
+    /* FWD 纯统计（只读展示）：整局累计、跨圈不复位；不参与任何判定 / 计分 / 名次 / 速度。 */
+    firstListen: 0,
+    cleanChain: 0,
+    cleanChainBest: 0,
+    rockCleared: 0,
+    rockSeen: 0,
+    rockSinceGate: 0,
+    rescue: 0,
     /* C 段：mapId / lap / 额外题去重窗口 / 石头预警 */
     mapId,
     lap: 0,
@@ -111,28 +127,40 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
   function buildField() {
     const lanes = [-0.55, 0, 0.55];
     const items = [];
+    /* IMPL-1A A1：按 g.line 绝对里程排除真实分叉窗口
+       [g.line - span*L - margin, g.line + merge*L + margin]，不再用旧的相对 commitT ±0.04L。
+       门线 g.line = startOdo + (lap + commitT)*L（:83）；pickups 的 t 每圈复用
+       （跨圈仅复位 taken，:614），故把每个门窗口按 lap 折叠回第一圈基准再判定，
+       两圈的分叉「张开→选择→闭合」窗口都与石头互斥（hold 冻结不再吞跳 / 触屏手势不打架）。 */
     const blocked = (t) => {
       if (Math.min(Math.abs(t - startT), 1 - Math.abs(t - startT)) < 0.04) return true;
+      const odo = player.startOdo + t * L;
       return gates.some((g) => {
-        const d = Math.min(Math.abs(g.commitT - t), 1 - Math.abs(g.commitT - t));
-        return d < 0.04;
+        const line0 = g.line - (g.lap || 0) * L; // = startOdo + commitT*L，与 odo 同基准
+        return odo >= line0 - span * L - ROCK_MARGIN && odo <= line0 + merge * L + ROCK_MARGIN;
       });
     };
     const settle = (t) => {
       let mark = t;
-      for (let n = 0; n < 8 && blocked(mark); n++) mark += 0.012;
+      for (let n = 0; n < 12 && blocked(mark); n++) mark += 0.012;
       if (mark > 0.94) mark = 0.9;
       return mark;
     };
     const jitter = () => (Math.random() - 0.5) * 0.1;
-    for (let i = 0; i < 8; i++) {
-      const t = settle(0.12 + (0.74 * (i + 0.5) / 8) + (Math.random() - 0.5) * 0.012);
+    /* IMPL-1A A1：整局石头总数 = ROCK_QUOTA(2)，取代「每圈 8 颗 × 2 圈 = 16 颗」。
+       两颗基准里程落在单车道直道段，settle() 兜底避让分叉窗口。
+       armed / cleared 是滞空见证式（scanPickups）的单调累积字段，出窗/落地才定案。 */
+    const rockBases = [0.4, 0.82];
+    for (let i = 0; i < ROCK_QUOTA; i++) {
+      const t = settle(rockBases[i % rockBases.length] + (Math.random() - 0.5) * 0.012);
       items.push({
         id: `rock-${i}`,
         kind: "rock",
         t,
         lateral: Math.max(-0.66, Math.min(0.66, lanes[i % 3] + jitter())),
         taken: false,
+        armed: false,
+        cleared: false,
       });
     }
     for (let i = 0; i < 10; i++) {
@@ -176,7 +204,12 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
 
   function baseMul(kart) {
     if (kart.kind === "player") return 1;
-    return kart.id === "a" ? 1.02 : 1.008;
+    /* IMPL-1A A6：微速差 + 缓慢正弦起伏（非恒定倍率），两车相位错开，
+       避免长期同速贴固定相对位置。区间约 0.96–1.06；
+       判定层 DIFFICULTY.speed 260/300 逐字不动（方案 B）。 */
+    const phase = kart.id === "a" ? 0 : 1.7;
+    const wobble = 0.035 * Math.sin(state.time * 0.6 + phase);
+    return (kart.id === "a" ? 1.015 : 0.995) + wobble;
   }
 
   function speedNow(kart) {
@@ -205,7 +238,10 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
   function cheer(combo) {
     const words = ["Good", "Excellent", "Marvellous"];
     const word = words[Math.min(words.length - 1, Math.max(0, (combo || 1) - 1))];
-    state.cheer = { word, until: state.time + 3.4 };
+    /* IMPL-1A A5：全局递增 seq，判门命中与成功跳石共用同一计数器。
+       表现层（IMPL-1B）按 seq 去重而非按 word，保证同词连续触发仍重播。 */
+    state.cheerSeq += 1;
+    state.cheer = { word, seq: state.cheerSeq, until: state.time + 3.4 };
     state.banner = `${word} · 对了`;
     state.bannerT = 3.4;
   }
@@ -227,9 +263,14 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
       player.combo++;
       player.boost = Math.max(player.boost, 2.8);
       player.slow = 0;
+      /* IMPL-1A A6：删除「硬压到玩家后方固定负里程」（扎堆 / 贴固定相对位置根源）。
+         改为软跟随：只在领先超过上限时轻收，防止 odo 拉开近一整圈导致 wrap 误碰撞。 */
+      const leadCap = 0.12 * L;
       rivals.forEach((r, i) => {
-        r.odo = Math.min(r.odo, player.odo - 220 - i * 60);
-        r.t = ((r.odo % track.length) + track.length) % track.length / track.length;
+        if (r.odo > player.odo + leadCap + i * 60) {
+          r.odo = player.odo + leadCap + i * 60;
+          r.t = ((r.odo % track.length) + track.length) % track.length / track.length;
+        }
         r.boost = 0;
       });
       audio.hit();
@@ -259,6 +300,16 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
       state.banner = `错了 · 是 ${gate.spoken.word}  /${gate.spoken.ipa}/`;
       state.bannerT = 1.35;
     }
+    /* FWD 纯统计：一次听准 = 命中 ∧ 未重听；连听遇错 / 重听 / 本门间撞石即断。
+       放在判定分支之后，逐字不改上方任何判定数值与 cheer / openQuiz 触发链。 */
+    if (hit && !gate.replayed) {
+      state.firstListen += 1;
+      state.cleanChain = state.rockSinceGate === 0 ? state.cleanChain + 1 : 0;
+    } else {
+      state.cleanChain = 0;
+    }
+    state.rockSinceGate = 0;
+    state.cleanChainBest = Math.max(state.cleanChainBest, state.cleanChain);
   }
 
   function updateKart(kart, dt) {
@@ -268,33 +319,37 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     if (kart.kind !== "player" && kart.startBoost > 0) mul *= 1.45;
     if (kart.slow > 0) mul *= SLOW.mul;
     if (kart.kind !== "player") {
+      /* IMPL-1A A6：软跟随。删除了 pressRivals 的 odo 硬拉回，改用「速度倍率微调」
+         把 rival 锚定在 gapTarget（±约 400 unit，> COLLIDE.along=130 碰撞带）附近：
+         只调 mul、绝不改 odo，故 odo 单调推进、零瞬移、零冻结，也不会连环 kart 碰撞。 */
+      const err = (kart.odo - player.odo) - (kart.gapTarget || 0);
+      const corr = Math.max(-0.05, Math.min(0.05, -err / (0.04 * track.length)));
+      mul *= 1 + corr;
       const gap = (kart.odo - player.odo) / track.length;
       if (gap > 0.12) mul *= 0.94;
+      /* A6 速度下限 v_i >= 0.94 · v_player_now（team-lead 终裁）。
+         玩家本帧有效 mul = speedNow(player)/diff.speed，与玩家同源；放在所有降速之后，
+         保证 gap 降速 / 软跟随 / startBoost 衰减 / rival.slow 都不会把对手压成龟速。 */
+      const floor = NPC_MIN_SPEED_RATIO * (speedNow(player) / diff.speed);
+      if (mul < floor) mul = floor;
     }
     const base = diff.speed;
     kart.boost = Math.max(0, kart.boost - dt);
     kart.slow = Math.max(0, kart.slow - dt);
     kart.turbo = Math.max(0, kart.turbo - dt);
     kart.bumpCd = Math.max(0, kart.bumpCd - dt);
-    kart.jumpCd = Math.max(0, (kart.jumpCd || 0) - dt);
     kart.startBoost = Math.max(0, kart.startBoost - dt);
     kart.launchWait = Math.max(0, kart.launchWait - dt);
     if (kart.kind === "player") {
+      /* IMPL-1A：删 hopWindow 死字段（全项目零赋值零读取）与 jumpCd 冷却；
+         air 逐帧 -dt，落地（air 归零）才复位 hop。 */
       kart.air = Math.max(0, (kart.air || 0) - dt);
-      /* C 段：起跳后的宽容窗口，提前一点起跳也能算「成功规避石头」。 */
-      kart.hopWindow = Math.max(0, (kart.hopWindow || 0) - dt);
-      // A4：落地（air 归零）才复位段数，杜绝「air 归零后每帧无限重置刷程」。
       if (kart.air === 0) kart.hop = 0;
     }
     const waiting = kart.launchWait > 0;
+    /* IMPL-1A A3：删 dashLeft 二段跳冲刺的额外 odo 分摊；
+       odo 只按 base*mul*dt 单调推进，跳跃只改垂直 air、不动水平速度。 */
     if ((!state.finished || kart.kind !== "player") && !waiting) kart.odo += base * mul * dt;
-    // A4：二段跳冲刺改为「里程预算 + 冷却」，分摊到若干帧推进，
-    // 消除单帧 +=140 瞬移（V5）及其与 blockSplitter 回滚的幽灵拾取。
-    if (kart.dashLeft > 0) {
-      const d = Math.min(kart.dashLeft, 900 * dt);
-      kart.odo += d;
-      kart.dashLeft -= d;
-    }
     kart.t = (kart.odo / L) % 1;
     const rate = kart.kind === "player" ? diff.steer * charMul : 2.4;
     const step = rate * dt;
@@ -394,15 +449,32 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     return gates.some((g) => g.played && !g.judged);
   }
 
+  /* IMPL-1A A6：NPC 不完美走线。各自基准车道（a 偏左 / b 偏右）+ 缓慢正弦换道，
+     两车相位错开；临近未判门且已选边时朝自己选的一侧靠。
+     只产出 laneTarget，lateral 一律由 updateKart 逐帧按 rate*dt 收敛（零瞬切）。 */
+  function npcLaneTarget(rival, idx, upcoming) {
+    const base = idx === 0 ? -0.42 : 0.42;
+    const weave = 0.18 * Math.sin(state.time * 0.5 + idx * 2.1);
+    let target = base + weave;
+    if (upcoming && rival.choice[upcoming.id] != null) {
+      const eta = (upcoming.line - rival.odo) / Math.max(40, diff.speed);
+      if (eta <= diff.fork) target = rival.choice[upcoming.id];
+    }
+    return Math.max(-0.9, Math.min(0.9, target));
+  }
+
   function pressRivals() {
     if (!answering()) return;
+    /* IMPL-1A A6：删除「r.odo>behind → r.odo=behind」硬拉回到固定负里程
+       与「r.lateral=±0.1」瞬切同侧（扎堆 / 龟速 / 贴固定相对位置根源）。
+       改为：仅在领先接近 wrap 误判区时软收 + 各自 laneTarget（错峰换道）。 */
+    const leadCap = 0.12 * L;
     rivals.forEach((r, i) => {
-      const behind = player.odo - 260 - i * 80;
-      if (r.odo > behind) r.odo = behind;
-      r.t = ((r.odo % track.length) + track.length) % track.length / track.length;
-      const side = i === 0 ? -0.1 : 0.1;
-      r.lateral = side;
-      r.laneTarget = side;
+      if (r.odo > player.odo + leadCap + i * 60) {
+        r.odo = player.odo + leadCap + i * 60;
+        r.t = ((r.odo % track.length) + track.length) % track.length / track.length;
+      }
+      r.laneTarget = npcLaneTarget(r, i, gates.find((g) => !r.resolved[g.id]));
     });
   }
 
@@ -410,11 +482,10 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     const side = rival.lateral >= player.lateral ? 1 : -1;
     let lat = player.lateral + side * 0.82;
     if (Math.abs(lat) > 0.9) lat = player.lateral - side * 0.82;
+    /* IMPL-1A A6：保留碰撞横向推离，但删除 rival.odo=player.odo-240 的瞬时里程回拉
+       （瞬移 / 名次失真）；home 不再被瞬切覆盖，后续由走线逻辑自然回归。 */
     rival.lateral = Math.max(-0.88, Math.min(0.88, lat));
     rival.laneTarget = rival.lateral;
-    rival.home = rival.lateral;
-    rival.odo = player.odo - 240;
-    rival.t = ((rival.odo % track.length) + track.length) % track.length / track.length;
     rival.drift = 0;
   }
 
@@ -512,6 +583,14 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     state.bannerT = 1.45;
     // A1/A3：不再刷新 lastJudgeAt（那是分岔门时钟）；
     // 不再 shoveRival / 不再给 boost / 不再改 rival.odo：额外题不改变名次与速度。
+    /* FWD 纯统计：救援题答对续链 +1（断链时不复活），不碰 combo / 名次 / 速度。 */
+    if (hit) {
+      state.rescue += 1;
+      if (state.cleanChain > 0) {
+        state.cleanChain += 1;
+        state.cleanChainBest = Math.max(state.cleanChainBest, state.cleanChain);
+      }
+    }
     state.quiz = null;
     return { hit, spoken };
   }
@@ -563,33 +642,63 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     return rows;
   }
 
+  /* IMPL-1A A4/A5：石头定案。cleared → 恰好一次欢呼（词表不变、seq 全局递增）
+     + 1s 后轮彩带；撞击 → 计数并封顶，rockHits 达 rockBudget 后静默越过
+     （不 shake / 不 bump / 不 openQuiz，故不进 quizReasons.rock）。 */
+  function settleRock(item) {
+    /* FWD C-12：唯一计数落点，与「定案事件」1:1；cleared / 封顶 / 撞击三路径全覆盖。 */
+    state.rockSeen += 1;
+    if (item.cleared) state.rockCleared += 1;
+    if (item.cleared) {
+      state.ribbonT = 1.0;
+      cheer(1);
+      return;
+    }
+    if (state.rockHits >= state.rockBudget) return;
+    state.rockHits += 1;
+    state.rockSinceGate += 1;   // FWD 纯统计：本门与下一门之间撞过石 → 连听断开
+    if ((state.shields || 0) > 0) {
+      applyWalletDelta(0, -1);
+      state.banner = "护身卡抵消了这次撞击";
+      state.bannerT = 1.2;
+      audio.bump();
+    } else {
+      state.shake = 6;
+      audio.bump();
+      openQuiz("rock");
+    }
+  }
+
   function scanPickups() {
     const L = track.length;
     for (const item of state.pickups) {
       if (item.taken) continue;
+      /* :570-571 的 odo 换算逐字保留：把「前方 >90 unit」的石头折算到后方，
+         使 d 在 [-78,+78] 窗口内连续、无 wrap 跳变。定案不得用单向 d>78 判越过。 */
       let odo = Math.floor(player.odo / L) * L + item.t * L;
       if (odo > player.odo + 90) odo -= L;
-      if (Math.abs(player.odo - odo) > 78) continue;
-      if (Math.abs(player.lateral - item.lateral) > 0.2) continue;
-      item.taken = true;
+      const d = player.odo - odo;
+      const inBand = Math.abs(d) <= ROCK_HIT_BAND;
+      const sameLane = Math.abs(player.lateral - item.lateral) <= ROCK_LAT_BAND;
       if (item.kind === "gem") {
+        // gem 即时拾取语义逐字不变
+        if (!inBand || !sameLane) continue;
+        item.taken = true;
         applyWalletDelta(1, 0);
         audio.hit();
-      } else if ((player.air || 0) > 0.05) {
-        // A5：成功跳过石头 = 纯规避。只点亮 1s 后轮彩带计时器（纯视觉），
-        // 不给宝石 / 加速 / 连击 / 计分 / 名次 / 欢呼或纸屑。
-        state.ribbonT = 1.0;
-      } else if ((state.shields || 0) > 0) {
-        applyWalletDelta(0, -1);
-        state.banner = "护身卡抵消了这次撞击";
-        state.bannerT = 1.2;
-        audio.bump();
-      } else {
-        // A4：撞石头弹题；quiz 会冻结全车并把 slow 归零，故删掉
-        // player.slow=Math.max(...,1.15) 这行死代码。
-        state.shake = 6;
-        audio.bump();
-        openQuiz("rock");
+        continue;
+      }
+      /* IMPL-1A A2：滞空见证式。进过同车道窗口即 armed，窗内任一帧 air>0 即 cleared；
+         出窗 / 落地 / 已见证时定案一次。armed/cleared 单调累积、不因 blockSplitter
+         回滚清除，item.taken 一旦 true 幂等不再处理。air>0.05 → air>0 放宽。 */
+      if (inBand && sameLane) {
+        item.armed = true;
+        if ((player.air || 0) > 0) item.cleared = true;
+      }
+      const settle = item.armed && (item.cleared || (player.air || 0) === 0 || !inBand);
+      if (settle) {
+        item.taken = true;
+        settleRock(item);
       }
     }
   }
@@ -611,7 +720,9 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     const lapNow = Math.floor((player.odo - player.startOdo) / L);
     if (lapNow > state.lap && lapNow < state.laps) {
       state.lap = lapNow;
-      state.pickups.forEach((it) => { it.taken = false; });
+      /* IMPL-1A：滞空见证字段随 taken 一起复位，避免第 2 圈沿用上一圈的
+         armed/cleared 残留导致错误定案；rockHits 是整局累计，跨圈不复位。 */
+      state.pickups.forEach((it) => { it.taken = false; it.armed = false; it.cleared = false; });
       state.banner = `第 ${lapNow + 1} 圈 · 宝石和石头都刷新啦`;
       state.bannerT = 2.2;
     }
@@ -640,27 +751,14 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
       state.decide = null;
     }
     const holding = state.decide && state.decide.phase === "hold";
-    if (input && input.jump && !holding) {
-      const up = (player.air || 0) > 0.04;
-      if (!up) {
-        // A4：地面起跳只在完全落地（hop 已由 updateKart 清零）时允许，
-        // 不再每帧重置 air，杜绝「air 归零后无限重置刷程」。二段跳玩法保留。
-        if (!player.hop) {
-          player.hop = 1;
-          player.airMax = 0.5;
-          player.air = 0.5;
-        }
-      } else if (player.hop === 1) {
-        player.hop = 2;
-        player.airMax = 0.74;
-        player.air = 0.74;
-        // A4：二段跳冲刺改为「140 里程预算 + 冷却」，由 updateKart 分摊推进，
-        // 消除单帧 +=140 瞬移（V5）及与 blockSplitter 回滚的幽灵拾取。
-        if ((player.jumpCd || 0) <= 0) {
-          player.dashLeft = Math.max(player.dashLeft || 0, 140);
-          player.jumpCd = 0.9;
-        }
-      }
+    /* IMPL-1A：只做「单跳必过」，取消二段跳 —— 不做 260ms 状态机、不做 input.jump2、
+       不做双击加高、不做两级 lift、不做 hop===2 追加抬升。单次 jump 边沿起跳一次；
+       滞空期间（air>0，hop 尚未由 updateKart 落地复位）再次按被 !player.hop 挡住，
+       故双击无额外效果。airMax 保持 0.5s（E1 选项甲，不延 airMax）。 */
+    if (input && input.jump && !holding && (player.air || 0) <= 0 && !player.hop) {
+      player.hop = 1;
+      player.airMax = 0.5;
+      player.air = 0.5;
     }
     updateKart(player, dt);
     // A4：先回滚到最终 odo，再扫描拾取，消除「先领后回滚」的幽灵拾取 / 幽灵碰撞。
@@ -701,6 +799,7 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     }
 
     for (const rival of rivals) {
+      const idx = rival === rivals[0] ? 0 : 1;
       const upcoming = gates.find((g) => !rival.resolved[g.id]);
       if (upcoming) {
         /* C 段：rival 同样按绝对里程门线判定，弃用 wrapDelta / crossed 的相对圈坐标。 */
@@ -710,24 +809,19 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
           const smart = Math.random() < rival.skill;
           rival.choice[upcoming.id] = smart ? upcoming.correctLateral : -upcoming.correctLateral;
         }
-        if (answering()) rival.laneTarget = rival === rivals[0] ? -0.1 : 0.1;
-        else rival.laneTarget = rival.home;
-        const before = rival.odo;
-        updateKart(rival, dt);
-        if (!rival.resolved[upcoming.id] && before < upcoming.line && rival.odo >= upcoming.line) {
-          rival.resolved[upcoming.id] = true;
-          const ok = hitsLane(rival.lateral, upcoming.correctLateral, true);
-          rival.answers.push({ word: upcoming.spoken.word, ipa: upcoming.spoken.ipa, hit: ok });
-          if (ok) { rival.correct++; rival.boost = 0.75; }
-          else rival.slow = 0.45;
-          rival.laneTarget = rival.home;
-        }
-      } else if (!answering()) {
-        rival.laneTarget = rival.home;
-        updateKart(rival, dt);
-      } else {
-        rival.laneTarget = rival === rivals[0] ? -0.1 : 0.1;
-        updateKart(rival, dt);
+      }
+      /* IMPL-1A A6：不再 answering() 期强设同侧 ±0.1 / 非 answering 固定 home；
+         统一走 npcLaneTarget（各自基准 + 换道 + 临门选边），lateral 由 updateKart
+         逐帧按 rate*dt 收敛，零瞬切、不长期贴固定相对位置。 */
+      rival.laneTarget = npcLaneTarget(rival, idx, upcoming);
+      const before = rival.odo;
+      updateKart(rival, dt);
+      if (upcoming && !rival.resolved[upcoming.id] && before < upcoming.line && rival.odo >= upcoming.line) {
+        rival.resolved[upcoming.id] = true;
+        const ok = hitsLane(rival.lateral, upcoming.correctLateral, true);
+        rival.answers.push({ word: upcoming.spoken.word, ipa: upcoming.spoken.ipa, hit: ok });
+        if (ok) { rival.correct++; rival.boost = 0.75; }
+        else rival.slow = 0.45;
       }
     }
     checkWall(dt);
@@ -829,6 +923,12 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
       unheard,
       quizCorrect: state.quizCorrect,
       quizTotal: state.quizTotal,
+      /* FWD 纯统计：仅供展示 / 埋点交叉校验，不进 acc / stars / place / 速度 / combo。 */
+      firstListen: state.firstListen,
+      cleanChain: state.cleanChainBest,
+      rescue: state.rescue,
+      rockCleared: state.rockCleared,
+      rockSeen: state.rockSeen,
     };
   }
 

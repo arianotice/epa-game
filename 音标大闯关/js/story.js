@@ -304,7 +304,7 @@
     /* 配图区 */
     const art = h("div", { class: "ch-art" },
       h("figure", { class: "art-frame js-anim" },
-        h("img", { class: "art-img", src: "assets/img/" + c.art + "?v=hud-20261108", alt: esc(c.artCaption || ""), loading: "lazy" })),
+        h("img", { class: "art-img", src: "assets/img/" + c.art + "?v=fwd-20261120", alt: esc(c.artCaption || ""), loading: "lazy" })),
       h("figcaption", { class: "art-cap" }, esc(c.artCaption || ""))
     );
 
@@ -415,7 +415,7 @@
           h("div", { class: "gal-title js-anim" }, esc(String(c.title).replace(/\n/g, " "))),
           h("div", { class: "gal-sub js-anim" }, esc(c.lead))),
         h("div", { class: "journey-stage" },
-          h("img", { class: "journey-map", src: "assets/img/a1.webp?v=hud-20261108", alt: "英语音标大地图", loading: "lazy" }),
+          h("img", { class: "journey-map", src: "assets/img/a1.webp?v=fwd-20261120", alt: "英语音标大地图", loading: "lazy" }),
           svg, nodes, caps
         ),
         h("div", { class: "journey-actions" },

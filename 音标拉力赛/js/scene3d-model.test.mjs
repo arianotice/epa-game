@@ -17,7 +17,8 @@ import assert from "node:assert/strict";
 const M = await import("./scene3d-model.mjs");
 const {
   P1_TAG, WORLD_SCALE, CAMERA_PRESET, LIGHT_PRESET,
-  SNAPSHOT_KEYS, KART_KEYS, GATE_KEYS, SCENE_KEYS,
+  SNAPSHOT_KEYS, KART_KEYS, GATE_KEYS, SCENE_KEYS, PICKUP_KEYS,
+  H_ROCK, JUMP_PEAK, AIR_MAX, VISUAL_FLOW_GAIN, ROCK_VIS, FORK_VIS,
   cameraFovFor, snapshot3d, buildSceneFrame,
 } = M;
 
@@ -43,18 +44,20 @@ function mockTrack(L = L_REAL, roadHalf = 520) {
   };
 }
 
-/* 拼接构造禁键名，避免本测试文件字面量成为 3D 层静态扫描命中点。 */
+/* 拼接构造禁键名，避免本测试文件字面量成为 3D 层静态扫描命中点。
+   IMPL-1B：hop 已从答案域禁词移除——用户拍板「只做单跳必过」后，hop(0|1) 是
+   KART_KEYS 的合法运动学白名单键；改由 T4 正向断言证明它存在且为数值。 */
 const FORBID = [
   "spo" + "ken", "correct" + "Lateral", "q" + "Type", "h" + "it",
   "l" + "eft", "r" + "ight", "pair" + "Key", "opt" + "ions", "display" + "Ipa",
   "ans" + "wer", "corr" + "ect", "w" + "ord", "i" + "pa", "s" + "ym",
-  "h" + "op", "l" + "abel", "al" + "ias", "v" + "alue",
+  "l" + "abel", "al" + "ias", "v" + "alue",
 ].map((s) => s.toLowerCase());
 
 function kart(id, kind, t, lateral, over = {}) {
   return {
     id, kind, name: id, t, odo: t * L_REAL, startOdo: 0.02 * L_REAL, lateral,
-    drift: 0, boost: 0, turbo: 0, air: 0, yaw: 0, hop: 1,
+    drift: 0, boost: 0, turbo: 0, air: 0, airMax: 0.5, yaw: 0, hop: 1,
     ...over,
   };
 }
@@ -63,6 +66,9 @@ function gate(id, lap, commitT) {
   /* 故意塞入答案域 / 判定域字段：白名单必须把它们全部挡在 3D 层之外 */
   for (const k of FORBID) g[k] = { nested: k };
   return g;
+}
+function pickup(id, kind, t, lateral, over = {}) {
+  return { id, kind, t, lateral, taken: false, armed: false, cleared: false, ...over };
 }
 function mockState(over = {}) {
   return {
@@ -73,6 +79,12 @@ function mockState(over = {}) {
       kart("b", "rival", 0.02, 0.55),
     ],
     gates: [gate("g0", 0, 0.24), gate("g1", 1, 0.24)],
+    /* IMPL-1B B5：整局恰 2 条 rock + 若干 gem，验证 pickups 只读投影。 */
+    pickups: [
+      pickup("rock-0", "rock", 0.40, 0.55),
+      pickup("rock-1", "rock", 0.82, -0.55),
+      pickup("gem-0", "gem", 0.55, 0),
+    ],
     ...over,
   };
 }
@@ -114,6 +126,15 @@ t("T2 裁决常量：WORLD_SCALE / 相机 / 光照取值", () => {
   assert.ok(CAMERA_PRESET.fov320 >= 70 && CAMERA_PRESET.fov320 <= 76);
   assert.ok(LIGHT_PRESET.fill.intensity <= 0.35);
   assert.equal(LIGHT_PRESET.count, 2);
+  /* IMPL-1B B5：渲染层镜像常量取值 + 白名单形状。 */
+  assert.equal(H_ROCK, 0.32);
+  assert.equal(JUMP_PEAK, 0.55);
+  assert.equal(AIR_MAX, 0.5);
+  assert.equal(VISUAL_FLOW_GAIN, 1.6);
+  assert.deepEqual([...GATE_KEYS], ["id", "lap", "commitT"], "GATE_KEYS 三键一字不动");
+  assert.deepEqual([...PICKUP_KEYS], ["id", "kind", "t", "lateral", "taken", "armed", "cleared"]);
+  assert.equal(KART_KEYS.indexOf("airMax"), KART_KEYS.indexOf("air") + 1, "airMax 紧跟 air");
+  assert.equal(KART_KEYS.indexOf("hop"), KART_KEYS.indexOf("airMax") + 1, "hop 紧跟 airMax");
 });
 
 t("T3 snapshot3d 顶层键严格等于 SNAPSHOT_KEYS", () => {
@@ -129,6 +150,10 @@ t("T4 白名单：karts / gates 每项键严格等于白名单，答案域全部
   for (const g of snap.gates) assert.deepEqual(Object.keys(g).sort(), [...GATE_KEYS].sort());
   const keys = allKeys(snap);
   for (const k of FORBID) assert.ok(!keys.includes(k), "白名单泄漏答案域键: " + k);
+  /* IMPL-1B B5：pickups 每项严格等于 PICKUP_KEYS；运动学键为数值。 */
+  assert.equal(snap.pickups.length, 3);
+  for (const p of snap.pickups) assert.deepEqual(Object.keys(p).sort(), [...PICKUP_KEYS].sort());
+  assert.ok(snap.karts.every((k) => typeof k.hop === "number" && k.airMax > 0), "运动学键须为数值");
 });
 
 t("T5 snapshot3d 只读：输入 deepFreeze 后不抛、前后 deep-equal", () => {
@@ -150,6 +175,15 @@ t("T7 buildSceneFrame 顶层键严格等于 SCENE_KEYS", () => {
   const f = mkFrame();
   assert.ok(f);
   assert.deepEqual(Object.keys(f).sort(), [...SCENE_KEYS].sort());
+  /* IMPL-1B B6：pickups / fork 只读几何 + meta 镜像常量。 */
+  assert.ok(Array.isArray(f.pickups) && f.pickups.length === 3, "B6 pickups 只读几何");
+  assert.ok(Array.isArray(f.fork) && f.fork.length === f.road.length, "B6 fork 与 road 同段");
+  assert.ok(f.fork.every((q) => q.flare >= 0 && q.flare <= 1 && q.island >= 0));
+  assert.ok(f.pickups.every((p) => Number.isFinite(p.markDzM) && p.h > 0));
+  assert.deepEqual(f.meta.pickupKeys, [...PICKUP_KEYS]);
+  assert.equal(f.meta.hRock, H_ROCK);
+  assert.equal(f.meta.jumpPeak, JUMP_PEAK);
+  assert.equal(f.meta.visualFlowGain, VISUAL_FLOW_GAIN);
 });
 
 t("T8 三车显形：id/kind/color/mark 互异、玩家 Q 标、三车都在可见窗口内", () => {
@@ -163,6 +197,15 @@ t("T8 三车显形：id/kind/color/mark 互异、玩家 Q 标、三车都在可�
   assert.equal(you.kind, "player");
   assert.ok(f.karts.every((k) => k.visible === true), "起跑三车都应可见");
   assert.equal(new Set(f.karts.map((k) => +k.x.toFixed(3))).size, 3, "三车横向位置应可区分");
+  /* IMPL-1B B5：单级 lift(p)=JUMP_PEAK·sin(π·p)，p=1-air/airMax；起跳/落地归零。 */
+  const st = mockState();
+  st.karts[0].air = AIR_MAX / 2;
+  const liftMid = mkFrame(st).karts.find((k) => k.id === "you").lift;
+  assert.ok(Math.abs(liftMid - JUMP_PEAK) < 1e-6, "滞空中点 lift 应等于单跳峰值");
+  st.karts[0].air = 0;
+  assert.equal(mkFrame(st).karts.find((k) => k.id === "you").lift, 0, "落地 lift 归零");
+  st.karts[0].air = AIR_MAX;
+  assert.equal(mkFrame(st).karts.find((k) => k.id === "you").lift, 0, "起跳瞬间 lift 归零");
 });
 
 t("T9 局部跟车坐标与竖屏 FOV 锚", () => {
@@ -279,6 +322,40 @@ t("T18 纯函数可重复 + 无 snap / 无 track 时安全返回 null", () => {
   assert.equal(buildSceneFrame(null, { track: mockTrack() }), null);
   assert.equal(buildSceneFrame({ karts: [] }, { track: mockTrack() }), null);
   assert.equal(buildSceneFrame(mkSnap(), {}), null);
+});
+
+t("T19 FWD-VIS-2/4 视觉增强常量：石头醒目度 + 分叉外扩，零判定语义键名", () => {
+  /* 石头：实际渲染半径须显著大于旧值 0.16m（0.92m，约 5.75×），色值高对比。 */
+  assert.ok(ROCK_VIS.radiusM >= 0.8, "石体半径须 ≥0.8m 才在 30–60m 肉眼可辨");
+  assert.ok(ROCK_VIS.radiusM < 1.3, "石体半径不应大到脱离赛道尺度");
+  assert.equal(ROCK_VIS.radiusM, 0.92, "FWD-VIS-4：石体半径不缩");
+  assert.ok(ROCK_VIS.bodyColor.startsWith("#") && ROCK_VIS.bodyColor.length === 7);
+  assert.ok(ROCK_VIS.bodyEmissive.startsWith("#") && ROCK_VIS.bodyEmissiveIntensity > 0 && ROCK_VIS.bodyEmissiveIntensity <= 0.5,
+    "FWD-VIS-4：顶面轻微 emissive 保轮廓，不过亮");
+  assert.ok(ROCK_VIS.ringOuterM > ROCK_VIS.ringInnerM && ROCK_VIS.ringInnerM > ROCK_VIS.radiusM,
+    "金环内径须越过石体半径，避免被遮挡");
+  assert.ok(ROCK_VIS.ringOuterM - ROCK_VIS.ringInnerM >= 0.6, "FWD-VIS-4：金环须足够宽（≥0.6m）才有 50m 金色预告");
+  assert.ok(ROCK_VIS.markStretch > 1, "起跳标线须加粗");
+  /* 分叉：外扩倍率 >1、色带张开态明显宽于收拢态；近端收窄但保持实体。 */
+  assert.ok(FORK_VIS.spread > 1 && FORK_VIS.spread <= 1.6, "分叉外扩倍率应在有效区间");
+  assert.equal(FORK_VIS.spread, 1.42, "FWD-VIS-4：分叉张开幅度不动");
+  assert.ok(FORK_VIS.islandGain > 0 && FORK_VIS.islandGain <= 1, "中央分隔带应窄而连续，不得盖住车道");
+  assert.ok(FORK_VIS.islandColor.startsWith("#") && FORK_VIS.islandColor.length === 7);
+  assert.ok(FORK_VIS.islandNearScale > 0 && FORK_VIS.islandNearScale < 1, "FWD-VIS-4：近端收窄但仍为实体楔形");
+  assert.ok(FORK_VIS.islandNearFadeM > 0 && FORK_VIS.islandNearFadeM <= 48, "近端收窄过渡里程须在可见带内");
+  assert.ok(FORK_VIS.segStretch >= 8, "色带单段须长于赛道段间距，避免断成横条");
+  assert.ok(FORK_VIS.bandBaseM + FORK_VIS.bandGainM > 2.5, "张开态车道带须足够宽");
+  assert.ok(FORK_VIS.bandA !== FORK_VIS.bandB, "两车道色带须可区分");
+  /* 键名中性：不得含答案域/左右语义词面（与 T11 同一 FORBID 集合，大小写不敏感）。 */
+  const vkeys = [...Object.keys(ROCK_VIS), ...Object.keys(FORK_VIS)].map((k) => k.toLowerCase());
+  for (const k of FORBID) assert.ok(!vkeys.includes(k), "视觉常量键名泄漏语义: " + k);
+  /* meta 随帧发布，QA 可只读比对；旧镜像常量逐字不动。 */
+  const f = mkFrame();
+  assert.deepEqual({ ...f.meta.rockVis }, { ...ROCK_VIS });
+  assert.deepEqual({ ...f.meta.forkVis }, { ...FORK_VIS });
+  assert.equal(H_ROCK, 0.32);
+  assert.equal(M.MERGE_DT, 0.028, "分叉闭合窗口镜像常量逐字不动");
+  assert.equal(M.ROCK_BAND_VIS, 78, "碰撞带镜像常量逐字不动");
 });
 
 console.log("\nSUMMARY: " + pass + " PASS / " + fail + " FAIL / " + (pass + fail) + " TOTAL");

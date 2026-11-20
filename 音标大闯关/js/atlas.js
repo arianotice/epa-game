@@ -94,7 +94,7 @@
             }
           }, "▶"),
           h("div", { class: "ph-sprite" + (cardGot ? "" : " dim") },
-            h("img", { src: `assets/sprites/${p.unit}.webp?v=hud-20261108`, alt: p.name, loading: "lazy" })
+            h("img", { src: `assets/sprites/${p.unit}.webp?v=fwd-20261120`, alt: p.name, loading: "lazy" })
           ),
           h("div", { class: "sym", style: `color:${TYPE_COLOR[p.type]}`, title: `图鉴 ${p.sym}` }, esc(IPA(p))),
           h("div", { class: "nm" }, esc(p.name)),
@@ -135,9 +135,9 @@
     const body = h("div", { class: "modal" },
       h("button", { class: "close-x", onclick: () => Modal.close() }, "✕"),
       cardGot ? h("div", { class: "ph-card-art" },
-        h("img", { src: `assets/sprites/cards/${p.unit}.webp?v=hud-20261108`, alt: p.name })
+        h("img", { src: `assets/sprites/cards/${p.unit}.webp?v=fwd-20261120`, alt: p.name })
       ) : h("div", { class: "ph-card-art ph-card-art--locked" },
-        h("img", { src: `assets/sprites/cards/${p.unit}.webp?v=hud-20261108`, alt: p.name }),
+        h("img", { src: `assets/sprites/cards/${p.unit}.webp?v=fwd-20261120`, alt: p.name }),
         h("div", { class: "ph-card-art-veil" }, h("span", null, "🔒 参加四大杯赛解锁卡面"), h("small", null, "稀有度 " + (p.rarity || "—")))),
       h("h2", null, h("span", { class: "ipa", style: `color:${TYPE_COLOR[p.type]}`, title: `图鉴 ${p.sym}` }, esc(IPA(p))), " " + esc(p.name)),
       h("div", { style: "margin-bottom:8px" }, h("span", { class: "tag", style: `color:${TYPE_COLOR[p.type]}` }, TYPE_LABEL[p.type]),
@@ -171,7 +171,7 @@
     ));
     // 进阶总图
     view.append(h("div", { class: "card atlas-progress" },
-      h("img", { src: "assets/sprites/rarity_progress.webp?v=hud-20261108", alt: "稀有度进阶图鉴" })));
+      h("img", { src: "assets/sprites/rarity_progress.webp?v=fwd-20261120", alt: "稀有度进阶图鉴" })));
 
     // 六档分组
     const groups = RARITY_ORDER.map((r) => data.phonemes.filter((p) => p.rarity === r));
@@ -192,7 +192,7 @@
           onclick: () => openPhModal(p)
         },
           h("div", { class: "ph-sprite" + (isGot ? "" : " dim") },
-            h("img", { src: `assets/sprites/${p.unit}.webp?v=hud-20261108`, alt: p.name, loading: "lazy" })),
+            h("img", { src: `assets/sprites/${p.unit}.webp?v=fwd-20261120`, alt: p.name, loading: "lazy" })),
           h("div", { class: "sym", style: `color:${TYPE_COLOR[p.type]}`, title: `图鉴 ${p.sym}` }, esc(IPA(p))),
           h("div", { class: "nm" }, esc(p.name)),
           isGot ? null : h("span", { class: "lock-tag" }, "🔒"))
@@ -207,7 +207,7 @@
     const wrap = h("div", { class: "atlas-maps" });
     MAPS.forEach((m) => {
       wrap.append(h("div", { class: "card atlas-map-card" },
-        h("img", { src: `assets/img/${m.key}.webp?v=hud-20261108`, alt: m.title, loading: "lazy" }),
+        h("img", { src: `assets/img/${m.key}.webp?v=fwd-20261120`, alt: m.title, loading: "lazy" }),
         h("h3", null, m.title),
         h("p", null, m.desc)
       ));

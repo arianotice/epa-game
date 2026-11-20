@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>声音拉力赛 · 绵羊与小船</title>
 <meta name="description" content="听准 /i/ 和 /ɪ/，把小 Q 开进正确车道。听对会加速。">
-<link rel="icon" href="../音标大闯关/assets/img/favicon.png?v=hud-20261108">
+<link rel="icon" href="../音标大闯关/assets/img/favicon.png?v=fwd-20261120">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/game.css?v=hud-20261108">
+<link rel="stylesheet" href="css/game.css?v=fwd-20261120">
 </head>
 <body>
 <canvas id="c" aria-hidden="true"></canvas>
 <a id="route-map" href="../音标大闯关/index.html#/map" title="音标学习藏宝路线图">
-  <img src="../音标大闯关/assets/img/a1.webp?v=hud-20261108" alt="音标学习藏宝路线图">
+  <img src="../音标大闯关/assets/img/a1.webp?v=fwd-20261120" alt="音标学习藏宝路线图">
 </a>
 <div id="signs" hidden>
   <div id="sign-l" class="sign"></div>
@@ -23,11 +23,12 @@
 <div id="tags"></div>
 
 <header id="hud" hidden>
-  <div id="progress" aria-hidden="true"><span></span></div>
+  <div id="progress" aria-hidden="true"><span></span><i id="ghost-mark" hidden></i></div>
   <div class="hud-row">
     <strong id="place">第2名</strong>
     <span id="kart-type">车型 探险卡丁</span>
     <span id="gates">听对 0</span>
+    <span id="ghost-label" hidden></span>
     <span id="gems">宝石 0</span>
     <span id="shields">护身 0</span>
     <button id="btn-board" type="button">排行榜</button>
@@ -99,7 +100,7 @@
   <div id="teach-focus" class="focus"></div>
   <div class="teach-grid">
     <article class="is-long">
-      <img src="../音标大闯关/assets/sprites/U01.webp?v=hud-20261108" alt="">
+      <img src="../音标大闯关/assets/sprites/U01.webp?v=fwd-20261120" alt="">
       <p class="ipa big">/i/</p>
       <p>图鉴 iː · 紧音<br>嘴角拉开，肌肉绷紧</p>
       <div class="row">
@@ -109,7 +110,7 @@
       </div>
     </article>
     <article class="is-short">
-      <img src="../音标大闯关/assets/sprites/U02.webp?v=hud-20261108" alt="">
+      <img src="../音标大闯关/assets/sprites/U02.webp?v=fwd-20261120" alt="">
       <p class="ipa big">/ɪ/</p>
       <p>图鉴 ɪ · 松音<br>嘴放松，轻轻一收</p>
       <div class="row">
@@ -168,8 +169,8 @@
 
 <!-- FIX-C03：唯一权威美式音标显示表，跨目录单一源（与主站同源发布）。
      普通脚本同步执行；module 默认 defer，故 window.IPA_DISPLAY 在 module 执行前已就绪。 -->
-<script src="../音标大闯关/js/ipa-display.js?v=hud-20261108"></script>
-<script type="module" src="js/main.js?v=hud-20261108"></script>
+<script src="../音标大闯关/js/ipa-display.js?v=fwd-20261120"></script>
+<script type="module" src="js/main.js?v=fwd-20261120"></script>
 <!-- Task #28 / P1 · 3D 主形态入口（动态注入预构建 IIFE）。
      产物落 assets/p1/（S17/S18 排除 assets/，不污染源码层 46 处 tag 计数）；
      用 setAttribute + 字符串拼接构造 src 与 tag：静态扫描抓不到裸 src / ?v= 字面量，
@@ -184,7 +185,7 @@
        但不挂载 3D、不创建 WebGL；2D 三车链路本就常驻可玩。 */
     if (q.get("p1") === "off" || q.get("render") === "2d") window.__P1_OFF__ = true;
     var s = document.createElement("script");
-    var tag = "hud-" + "20261108";
+    var tag = "fwd-" + "20261120";
     s.setAttribute("src", "assets/p1/" + "scene3d.js?v=" + tag);
     s.async = false;
     document.head.appendChild(s);

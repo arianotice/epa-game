@@ -5,7 +5,7 @@
   "VENDOR_TAG": "p0-20261109",
   "cache_namespaces": {
     "source_layer": {
-      "tag": "hud-20261108",
+      "tag": "fwd-20261120",
       "count": 46,
       "scope": "源码层（2D 遗产层）：index.html / js / css 内 ?v= 字面量，保留、不删除、不批量替换，继续唯一且恰好 46",
       "gate": "S17 / F8a / H11 原口径继续锁源码层；不再对 dist/ 生效",

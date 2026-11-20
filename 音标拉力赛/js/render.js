@@ -1,4 +1,11 @@
-import { offsetPoint } from "./track.js?v=hud-20261108";
+import { offsetPoint } from "./track.js?v=fwd-20261120";
+
+/* IMPL-1B B7（方案 B）：单一视觉流速标量，只放大「纯环境元素」的滚动相位
+   （本文件：中央虚线 lineDashOffset；3D 层：路肩 / 远景 / 粒子 / 路牌后退）。
+   车体 / 门位 / 分叉 / 石头严格绑定判定 t，绝不乘本增益；
+   零写回 odo / lateral / g.line / diff.speed，零进 race.js / track.js /
+   config.js / headless_laps.mjs。3D 侧 scene3d-model.mjs 导出同名同值常量。 */
+const VISUAL_FLOW_GAIN = 1.6;
 
 const paperCache = { c: null, w: 0, h: 0 };
 
@@ -95,8 +102,10 @@ function drawKart(ctx, s, lateral, H, style, time, boosting, yaw, ribbon) {
   ctx.ellipse(6, 16, 46, 18, 0, 0, Math.PI * 2);
   ctx.fill();
   const max = style.airMax || 0.5;
-  const peak = (style.hop || 1) >= 2 ? 78 : 46;
-  const hop = style.air > 0 ? Math.sin(Math.min(1, style.air / max) * Math.PI) * peak : 0;
+  /* IMPL-1B B4：单跳必过，删二段跳两级 lift 遗留（hop>=2 → 78px）。
+     2D lift 与 3D lift(p)=0.55·sin(π·p) 共用 p=1-air/airMax 归一化相位
+     （sin(π·air/max) 与 sin(π·(1-air/max)) 同形同相位），单级峰值统一 46px。 */
+  const hop = style.air > 0 ? Math.sin(Math.min(1, style.air / max) * Math.PI) * 46 : 0;
   if (hop) ctx.translate(hop, 0);
   const spin = time * 16;
   for (const [wx, wy] of [[-24, 30], [-24, -30], [34, 28], [34, -28]]) {
@@ -291,10 +300,17 @@ export function render(ctx, view) {
     }
   }
 
+  /* IMPL-1B B7：中央虚线是纯环境元素，只放大它的滚动相位（lineDashOffset），
+     绝不触碰车体 / 门位 / 分叉 / 石头所绑定的判定 t。time 为 main.js 的 simTime，
+     冻结态不推进，故 quiz / paused 相位静止（A2 语义保持）。 */
   ctx.setLineDash([22, 18]);
+  ctx.lineDashOffset = -(time * 60 * VISUAL_FLOW_GAIN) % 40;
   ctx.beginPath();
   let pen = false;
   for (const s of samples) {
+    /* IMPL-1B B3：flareAt() 的 f:0→1→0 与判定层 branchLateral() 同源
+       （commitT-span 张开 → commitT 保持 → commitT+merge 闭合，merge 已统一 0.028）；
+       edges()/quad() 据此画出真实分叉左右车道与中央岛，选边后随 f→0 逐渐闭合回赛道。 */
     const f = gates.length ? flareAt(s.t, gates, span, merge).flare : 0;
     const p = offsetPoint(s, 0);
     if (f > 0.25) { pen = false; continue; }
@@ -305,6 +321,7 @@ export function render(ctx, view) {
   ctx.lineWidth = 4;
   ctx.stroke();
   ctx.setLineDash([]);
+  ctx.lineDashOffset = 0;
 
   for (const g of gates) {
     const s = track.sample(g.commitT);
@@ -345,8 +362,32 @@ export function render(ctx, view) {
     ctx.globalAlpha = 1;
   }
 
+  /* IMPL-1B B4：贴地起跳标线。提前量 jumpLeadT 由 main.js 按
+     AIR_COVER = airMax·speed + ROCK_HIT_BAND（airMax=0.5、ROCK_HIT_BAND=78；
+     air 覆盖约 130/150 unit，合计 ≈208/228 unit）除以赛道长 L 归一化后传入，
+     render 层不硬编码判定常量、不 import config（不新增 ?v= 字面量）。
+     标线画在石头前方 jumpLeadT 处，只对未 taken 的 rock 绘制，让石头被提前看见。 */
+  const jumpLeadT = Math.max(0, Number(view.jumpLeadT) || 0);
   for (const item of view.pickups || []) {
     if (item.taken) continue;
+    if (item.kind === "rock" && jumpLeadT > 0) {
+      const mt = ((item.t - jumpLeadT) % 1 + 1) % 1;
+      const ms = track.sample(mt);
+      const ml = offsetPoint(ms, -H * 0.9);
+      const mr = offsetPoint(ms, H * 0.9);
+      ctx.save();
+      ctx.setLineDash([26, 18]);
+      ctx.lineDashOffset = -(time * 60 * VISUAL_FLOW_GAIN) % 44;
+      ctx.strokeStyle = "rgba(201,162,39,.92)";
+      ctx.lineWidth = 7;
+      ctx.beginPath();
+      ctx.moveTo(ml.x, ml.y);
+      ctx.lineTo(mr.x, mr.y);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.lineDashOffset = 0;
+      ctx.restore();
+    }
     const s = track.sample(item.t);
     const p = offsetPoint(s, item.lateral * H);
     ctx.save();
@@ -363,7 +404,8 @@ export function render(ctx, view) {
       ctx.closePath();
       ctx.fill();
       ctx.stroke();
-    } else {
+    } else if (item.kind === "rock") {
+      /* B4：石头只在 kind==="rock" 且未 taken 时可见（半埋低矮石块 + 高光）。 */
       ctx.fillStyle = "#6e655b";
       ctx.strokeStyle = "#3a332c";
       ctx.lineWidth = 3;

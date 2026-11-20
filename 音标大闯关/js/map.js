@@ -44,7 +44,7 @@
 
     /* 地图舞台 */
     const stage = h("div", { class: "map-stage" },
-      h("img", { class: "bg", src: "assets/img/a1.webp?v=hud-20261108", alt: "英语音标大地图：出发营地到进阶峰的四幕探险全图", draggable: "false" })
+      h("img", { class: "bg", src: "assets/img/a1.webp?v=fwd-20261120", alt: "英语音标大地图：出发营地到进阶峰的四幕探险全图", draggable: "false" })
     );
     data.regions.forEach((r) => {
       stage.append(h("div", {
@@ -99,7 +99,7 @@
     /* 毕业横幅 */
     if (Store.allCleared()) {
       const banner = h("div", { class: "card diploma", style: "margin-top:16px;" },
-        h("img", { src: "assets/img/cover.webp?v=hud-20261108", alt: "声音探险队毕业封面" }),
+        h("img", { src: "assets/img/cover.webp?v=fwd-20261120", alt: "声音探险队毕业封面" }),
         h("h2", null, "🎓 声音探险队 · 毕业证书"),
         h("p", null, "48 个音标精灵全部收集，30 座关卡全部通关！"),
         h("p", null, "「看到任何一个单词，都能自信地把它读出来——这才是真正的毕业。」"),
@@ -117,7 +117,7 @@
   function renderDiploma(view) {
     const data = window.IPA_DATA;
     view.append(h("div", { class: "card diploma" },
-      h("img", { src: "assets/img/cover.webp?v=hud-20261108", alt: "声音探险队封面" }),
+      h("img", { src: "assets/img/cover.webp?v=fwd-20261120", alt: "声音探险队封面" }),
       h("h2", null, "🎓 毕 业 证 书"),
       h("p", null, "兹证明"),
       h("p", { style: "font-size:20px;font-weight:700;color:var(--ink)" }, "声音探险队队员"),

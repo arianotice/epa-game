@@ -695,7 +695,7 @@ CI = A + B + 2·C        （CI ∈ [0, 12]，全整数，无浮点）
 
 ## 7. Handoff
 
-- **交付**：`design/p1-gameplay-spec.md`（本文件，单文件；未改任何产品代码 / 资产 / 脚本）。
+- **交付**：`design/p1-gameplay-spec.md`（本文）+ `design/rarity-map.json`（#36 独立教研表，落在 `design/` 规格层、不进任何运行时路径）。两份均未改任何产品代码 / 资产 / 脚本；`sprite_gen/`、`manifest.json`、`gen_sprites.py`、`config.js` 零改动。
 - **给 quality-lead #31**：本文 §0.2 已明确职责边界（产品语义 vs 硬 `chk`）；请按 `D3-A01..A09` / `D4-A01..A12` / `D6-G01..G13` ID 交叉引用；D4 判据输入为 §2.1（六档语义）/ §2.2（维度与公式）/ §2.3（48 全表）/ §2.7（F1–F8 硬不变式）/ §2.8（可消费 JSON）/ §2.9（`sprite_gen` 契约）/ §2.10（D4 验收条目）；教研评审依据见 §0.4 与 §2.3 评分要点。
 - **给 engineering-lead**：§3.4 的 15 行冲突清单是 ADR-1C / ADR-4C 重写依据；§2.9 是 `rarity-map.json` / `gen_sprites.py` 消费契约；§1.6 是判定链冻结清单。
 - **给 art-director #30**：§2.1 六档语义 ↔ v2 M6/P8 材质 ①–⑥；§2.9 的 48 立绘 prompt 连带影响与 6/6 样板迁移。

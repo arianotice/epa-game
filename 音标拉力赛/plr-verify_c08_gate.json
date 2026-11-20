@@ -51,7 +51,7 @@
           "name": "S1.7 全仓 tag 唯一值（46 处字面量，C 段补齐全部图片 URL）",
           "ok": true,
           "detail": {
-            "hud-20261108": 46
+            "fwd-20261120": 46
           }
         },
         {
@@ -249,7 +249,7 @@
         }
       ],
       "path": "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标大闯关\\verify_c08_gate.py",
-      "log": "C:\\Users\\86135\\AppData\\Local\\Temp\\p1-plr-j46jbmkm\\verify_c08_gate.py.log"
+      "log": "C:\\Users\\86135\\AppData\\Local\\Temp\\p1-plr-z08smu7k\\verify_c08_gate.py.log"
     }
   }
 }

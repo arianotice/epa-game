@@ -21,7 +21,7 @@ ROOT = os.path.dirname(HERE)
 QUEST = os.path.join(ROOT, "音标大闯关")
 RALLY = HERE
 NODE = "node"
-TAG = "hud-20261108"
+TAG = "fwd-20261120"
 
 RESULTS = []
 
@@ -68,7 +68,7 @@ chk("S4 race.js 门判定改用绝对里程 g.line（弃用 hasPassed(commitT)�
 chk("S5 race.js rival 判定按 upcoming.line（弃用 wrapped commitT）",
     "before < upcoming.line && rival.odo >= upcoming.line" in race_js)
 chk("S6 race.js 跨圈复位 pickups[].taken",
-    "state.pickups.forEach((it) => { it.taken = false; })" in race_js)
+    "state.pickups.forEach((it) => { it.taken = false; it.armed = false; it.cleared = false; })" in race_js)
 chk("S7 main.js 进度条分母含 laps",
     "track.length * (race.state.laps || TUNING.laps)" in main_js)
 chk("S8 main.js 开局按地图建门并传车手",

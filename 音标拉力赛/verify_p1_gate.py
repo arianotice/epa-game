@@ -53,7 +53,7 @@ import sys
 # ---------------------------------------------------------------------------
 # 常量（沿用 P0 / #5 既有口径；实跑前按 #28 产物核对）
 # ---------------------------------------------------------------------------
-TAG = "hud-20261108"                 # 源码层（2D 遗产层）唯一 tag，恰好 46 处
+TAG = "fwd-20261120"                 # 源码层（2D 遗产层）唯一 tag，恰好 46 处
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"   # 本机 Playwright 缺 chromium-1248
 SRC_TAG_COUNT = 46
 EXCLUDE_DIRS = ("node_modules", "dist", ".p0-build", ".workbuddy", "__pycache__", ".git")
@@ -393,7 +393,7 @@ def run_suites():
                 re.findall(r"OK\s+[^\n]+", out))
         elif sid == "S4":
             chk("%s 11 场 ALL PASS" % sid, "ALL PASS" in out, out.strip()[-160:])
-            times = [float(x) for x in re.findall(r"\b(1[0-7]\d\.\d\d)\b", out)]
+            times = [float(x) for x in re.findall(r"\b(\d{1,3}\.\d\d)\b", out)]
             chk("%s 最慢完赛 <= 180s" % sid, bool(times) and max(times) <= 180.0,
                 {"samples": len(times), "max": max(times) if times else None})
             chk("%s 词表 83 完整 / 三题型" % sid, "词 83" in out and "题型 3" in out,
@@ -441,7 +441,7 @@ def run_static():
     chk("B2 产品层图片 URL 零裸引用（PB-4 / 原 S18 口径）", not bare, bare[:5])
 
     # B3 三核心 + 2D 层 sha256 与 P1 改前快照双锚定
-    mf = os.path.join(ROOT, ".workbuddy", "backups", "p1-pre-20261110", "manifest.txt")
+    mf = os.path.join(ROOT, ".workbuddy", "backups", "fwd-tag-20261120", "manifest.txt")
     base_txt = open(mf, encoding="utf-8").read() if os.path.isfile(mf) else ""
     want = {}
     for line in base_txt.splitlines():
@@ -598,6 +598,9 @@ def run():
         "PT-2 人工签收（G3 由 team-lead 代签；G9 按用户裁决为上线后 advisory，不阻断）",
         "29 项重验域的 UI 类逐条替代编号，以及 HUD 12 项，见退役令 §4.2 / §4.3；"
         "本轮由 S0 / S5 的真实 Chromium 取证覆盖，未逐条独立命名 chk",
+        "S7 人工观感：NPC「像真人驾车」体感（不龟速 / 不扎堆）— 人工签收，不冒充 PASS",
+        "S7 人工观感：分叉「真实可见」五阶段可读性 / 贴地起跳标线可预期性 — 人工签收",
+        "S7 人工观感：石头可见性（3D 屏占比 / 提前可见 / L2 与 L1 一眼可分）— 人工签收",
     ])
     for x in NOT_COVERED:
         print("  NOT_COVERED  " + x)

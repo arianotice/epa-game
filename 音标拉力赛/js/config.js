@@ -4,7 +4,7 @@
    C07 锁定的 length:"长"/"短" 与两条 hint 原文本表保留；length 在新簇里仅作
    A/B 两侧的视觉分组键（is-long / is-short），不再承载长短音语义。 */
 
-export const CACHE_TAG = "hud-20261108";
+export const CACHE_TAG = "fwd-20261120";
 
 export const TUNING = {
   straight: 6800,
@@ -16,6 +16,15 @@ export const TUNING = {
   commits: [0.24, 0.68],
   mergeDt: 0.028,
 };
+
+/* IMPL-1A 判定层常量（纯判定域命名；禁止任何视觉层常量混入本文件）。
+   TUNING.laps / commits / mergeDt 与 DIFFICULTY.speed 260 / 300 逐字不动。 */
+export const ROCK_QUOTA = 2;              // 每局石头总数上限（≤2 颗）
+export const ROCK_HITS_MAX = 2;           // 每局撞石次数整数硬上限
+export const ROCK_HIT_BAND = 78;          // 石头碰撞带 ±unit（判定里程）
+export const ROCK_LAT_BAND = 0.2;         // 同车道横向阈值
+export const ROCK_MARGIN = 60;            // 分叉窗口排除余量 unit
+export const NPC_MIN_SPEED_RATIO = 0.94;  // rival 速度下限 = 0.94 × 玩家当前速度
 
 export const KART_TYPE = "探险卡丁";
 
