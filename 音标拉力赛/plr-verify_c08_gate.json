@@ -51,7 +51,7 @@
           "name": "S1.7 全仓 tag 唯一值（46 处字面量，C 段补齐全部图片 URL）",
           "ok": true,
           "detail": {
-            "fwd-20261120": 46
+            "fwd-20261121": 46
           }
         },
         {
@@ -186,7 +186,7 @@
         {
           "name": "D7.2 拉力赛请求带新 tag 资源",
           "ok": true,
-          "detail": 14
+          "detail": 13
         },
         {
           "name": "D7.3 拉力赛 __rally 钩子可用且逻辑键完好",
@@ -225,10 +225,12 @@
             {
               "pageerror": 0,
               "console_error": 0,
-              "requestfailed": 0,
+              "requestfailed": 6,
               "bad_status": 0
             },
-            {},
+            {
+              "net::ERR_ABORTED": 6
+            },
             []
           ]
         },
@@ -249,7 +251,7 @@
         }
       ],
       "path": "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标大闯关\\verify_c08_gate.py",
-      "log": "C:\\Users\\86135\\AppData\\Local\\Temp\\p1-plr-z08smu7k\\verify_c08_gate.py.log"
+      "log": "C:\\Users\\86135\\AppData\\Local\\Temp\\p1-plr-98pyh_v4\\verify_c08_gate.py.log"
     }
   }
 }

@@ -29,7 +29,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUEST = os.path.join(ROOT, "音标大闯关")
 RALLY = os.path.join(ROOT, "音标拉力赛")
 KEY = "ipa-quest-v1"
-TAG = "fwd-20261120"
+TAG = "fwd-20261121"
 # Playwright 1.64 自带浏览器版本与本机已装的 1228 不一致，沿用项目既有做法显式指定系统 Chrome。
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 # 2026-11-09 基线迁移：原 C07-B 前基线在系统 Temp（c07b-backup-20261106），随 Temp 清理

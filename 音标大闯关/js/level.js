@@ -46,7 +46,7 @@
 
     /* 左：期配图 */
     const imgCard = h("div", { class: "card" },
-      h("img", { class: "level-img", src: "assets/img/" + lv.img + "?v=fwd-20261120", alt: lv.title + " 配图", loading: "lazy" }),
+      h("img", { class: "level-img", src: "assets/img/" + lv.img + "?v=fwd-20261121", alt: lv.title + " 配图", loading: "lazy" }),
       h("div", { class: "img-cap" }, `《${esc(lv.title)}》探险配图`)
     );
     grid.append(imgCard);

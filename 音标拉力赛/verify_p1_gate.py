@@ -53,7 +53,7 @@ import sys
 # ---------------------------------------------------------------------------
 # 常量（沿用 P0 / #5 既有口径；实跑前按 #28 产物核对）
 # ---------------------------------------------------------------------------
-TAG = "fwd-20261120"                 # 源码层（2D 遗产层）唯一 tag，恰好 46 处
+TAG = "fwd-20261121"                 # 源码层（2D 遗产层）唯一 tag，恰好 46 处
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"   # 本机 Playwright 缺 chromium-1248
 SRC_TAG_COUNT = 46
 EXCLUDE_DIRS = ("node_modules", "dist", ".p0-build", ".workbuddy", "__pycache__", ".git")
@@ -441,7 +441,7 @@ def run_static():
     chk("B2 产品层图片 URL 零裸引用（PB-4 / 原 S18 口径）", not bare, bare[:5])
 
     # B3 三核心 + 2D 层 sha256 与 P1 改前快照双锚定
-    mf = os.path.join(ROOT, ".workbuddy", "backups", "fwd-tag-20261120", "manifest.txt")
+    mf = os.path.join(ROOT, ".workbuddy", "backups", "fwd-tag-20261121", "manifest.txt")
     base_txt = open(mf, encoding="utf-8").read() if os.path.isfile(mf) else ""
     want = {}
     for line in base_txt.splitlines():

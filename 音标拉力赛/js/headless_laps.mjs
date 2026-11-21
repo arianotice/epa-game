@@ -16,7 +16,7 @@ mem.set("ipa-quest-v1", JSON.stringify({ rally: { gems: 0, shields: 3 } }));
 /* audio 是纯副作用对象，全部空实现即可。 */
 const audio = new Proxy({}, { get: (_t, k) => (k === "then" ? undefined : () => {}) });
 
-const TAG = "fwd-20261120";
+const TAG = "fwd-20261121";
 const { TUNING, DIFFICULTY, buildGates, RACE_MAPS, PAIRS_BY_MAP, allWords, QUIZ_TYPES } =
   await import(`./config.js?v=${TAG}`);
 const { createTrack } = await import(`./track.js?v=${TAG}`);

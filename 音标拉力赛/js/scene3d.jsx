@@ -139,13 +139,16 @@ const MAT = {
      赛道本体、车、门、分叉仍照常雾化，整体纸感不变。 */
   rock:   new THREE.MeshStandardMaterial({ color: ROCK_VIS.bodyColor, roughness: 0.94, metalness: 0.04, flatShading: true, emissive: ROCK_VIS.bodyEmissive, emissiveIntensity: ROCK_VIS.bodyEmissiveIntensity, fog: false }),
   rockRing: new THREE.MeshStandardMaterial({ color: ROCK_VIS.ringColor, roughness: 0.5, metalness: 0.2, emissive: "#8a6200", emissiveIntensity: 0.7, side: THREE.DoubleSide, fog: false }),
-  gem:    new THREE.MeshStandardMaterial({ color: "#e0b44a", roughness: 0.35, metalness: 0.55, emissive: "#4a3405", emissiveIntensity: 0.35 }),
+  /* 任务4：钻石更亮、更高金属度、更强自发光 + 棱面 flatShading —— 像「值得收集的小钻石」。 */
+  gem:    new THREE.MeshStandardMaterial({ color: "#ffe07a", roughness: 0.14, metalness: 0.85, emissive: "#b8780c", emissiveIntensity: 0.85, flatShading: true, fog: false }),
   mark:   new THREE.MeshStandardMaterial({ color: ROCK_VIS.markColor, roughness: 0.5, metalness: 0.3, emissive: "#6a4a05", emissiveIntensity: 0.5, side: THREE.DoubleSide, fog: false }),
-  island: new THREE.MeshStandardMaterial({ color: FORK_VIS.islandColor, roughness: 0.95, metalness: 0, side: THREE.DoubleSide }),
-  branch: new THREE.MeshStandardMaterial({ color: "#f6ead0", roughness: 0.85, metalness: 0, emissive: "#4a4028", emissiveIntensity: 0.25, side: THREE.DoubleSide }),
-  laneA:  new THREE.MeshStandardMaterial({ color: FORK_VIS.bandA, roughness: 0.92, metalness: 0, side: THREE.DoubleSide }),
-  laneB:  new THREE.MeshStandardMaterial({ color: FORK_VIS.bandB, roughness: 0.92, metalness: 0, side: THREE.DoubleSide }),
-  lanePath: new THREE.MeshStandardMaterial({ color: FORK_VIS.pathColor, roughness: 0.9, metalness: 0, side: THREE.DoubleSide }),
+  /* 任务2：分叉元素全部 fog:false —— 纸雾在 ~45m 收敛，若随雾淡出则色带对比度塌成马赛克；
+     分叉是「两条真实车道分开」的关键引导，不参与雾化（只改材质，零判定写回）。 */
+  island: new THREE.MeshStandardMaterial({ color: FORK_VIS.islandColor, roughness: 0.95, metalness: 0, side: THREE.DoubleSide, fog: false }),
+  branch: new THREE.MeshStandardMaterial({ color: "#f6ead0", roughness: 0.85, metalness: 0, emissive: "#4a4028", emissiveIntensity: 0.25, side: THREE.DoubleSide, fog: false }),
+  laneA:  new THREE.MeshStandardMaterial({ color: FORK_VIS.bandA, roughness: 0.92, metalness: 0, side: THREE.DoubleSide, fog: false }),
+  laneB:  new THREE.MeshStandardMaterial({ color: FORK_VIS.bandB, roughness: 0.92, metalness: 0, side: THREE.DoubleSide, fog: false }),
+  lanePath: new THREE.MeshStandardMaterial({ color: FORK_VIS.pathColor, roughness: 0.9, metalness: 0, side: THREE.DoubleSide, fog: false }),
 };
 
 /* art-spec §3.1 的 16 部件表；表以「车头 +Z」书写，本局部系前向为 -z，
@@ -292,6 +295,8 @@ function createWorld(scene) {
     scene.add(m);
   }
   const flowRef = { phase: 0 };   // 纯环境滚动相位（帧率无关累积），绝不作用于车体/门/分叉/石头
+  /* 任务5：纯视觉抖动时钟，只驱动 rival group 的横向偏移 + 侧倾；绝不写回 k / kart.lateral / odo / state。 */
+  const wobbleRef = { t: 0 };
 
   const karts = {};
   let kartMeshCount = 0;
@@ -315,6 +320,7 @@ function createWorld(scene) {
       /* B7：VISUAL_FLOW_GAIN 只放大「纯环境滚动相位」（中央虚线），帧率无关累积；
          车体 / 门位 / 分叉 / 石头严格绑判定 t，绝不掺入此相位，零写回任何判定量。 */
       flowRef.phase = (flowRef.phase + dt * 60 * gain) % 100000;
+      wobbleRef.t += dt;
       STATE.flowPhase = +flowRef.phase.toFixed(3);
 
       const pos = roadGeo.attributes.position;
@@ -346,21 +352,34 @@ function createWorld(scene) {
       dashes.instanceMatrix.needsUpdate = true;
 
       /* B7 车体：目标位置严格取判定 t 派生的 k.x/k.z（零写回），仅做帧率无关视觉阻尼；
-         首帧直连避免从原点飘入；y 直接用 k.lift，保单级跳峰值精确。 */
+         首帧直连避免从原点飘入；y 直接用 k.lift，保单级跳峰值精确。
+         任务5：rival 车叠加视觉时钟派生的轻微横向偏移 + 侧倾，看起来不精确贴轨；
+         玩家车保持精确贴轨。全程只写 three group，绝不写回 k / kart.lateral / odo / state。 */
       const damp = 1 - Math.exp(-dt * 18);
       for (const k of f.karts) {
         const obj = karts[k.id];
         if (!obj) continue;
         obj.group.visible = k.visible;
+        const rival = k.id !== "you" && k.id !== "player";
+        let tx = k.x, tz = k.z, roll = 0;
+        if (rival) {
+          const ph = k.id === "a" ? 0.35 : 2.17;                 // 两车相位错开，避免同步摆动
+          const tt = wobbleRef.t;
+          const lat = Math.sin(tt * 2.3 + ph) * 0.05 + Math.sin(tt * 5.1 + ph * 1.7) * 0.02;
+          tx += lat * -k.dirZ;                                    // 沿车体右向（dir 的垂线）微偏移
+          tz += lat * k.dirX;
+          roll = Math.sin(tt * 1.8 + ph) * 0.045 + Math.sin(tt * 4.2 + ph * 0.8) * 0.015; // 轻微侧倾
+        }
         if (!obj.primed) {
-          obj.group.position.set(k.x, k.lift || 0, k.z);
+          obj.group.position.set(tx, k.lift || 0, tz);
           obj.primed = true;
         } else {
-          obj.group.position.x += (k.x - obj.group.position.x) * damp;
-          obj.group.position.z += (k.z - obj.group.position.z) * damp;
+          obj.group.position.x += (tx - obj.group.position.x) * damp;
+          obj.group.position.z += (tz - obj.group.position.z) * damp;
           obj.group.position.y = k.lift || 0;
         }
         obj.group.rotation.y = Math.atan2(k.dirX, -k.dirZ);
+        obj.group.rotation.z = roll;
       }
       gates.forEach((slot, i) => {
         const g = f.gates[i];
@@ -387,8 +406,9 @@ function createWorld(scene) {
         const q = f.fork[i];
         if (q.flare > flareMax) flareMax = q.flare;
         const yaw = Math.atan2(-q.nz, -q.nx);
-        /* GEO.mark 的 z 基准就是 markDepthM(0.16)，scale.z 直接取段数系数：
-           0.16 × 9.5 = 1.52m > 段间距 1.21m → 相邻段重叠、色带连续不断条。 */
+        /* GEO.mark 的 z 基准就是 markDepthM(0.16)，scale.z 取段数系数：
+           0.16 × 7.6 ≈ 1.22m ≈ 赛道段间距 1.21m → 相邻段首尾相接、恰好连续不重叠，
+           消除旧 9.5（1.52m）重叠拼接在斜向细带上产生的摩尔纹/马赛克。 */
         const segLen = segStretch;
         /* 中央分流岛：仅在张开窗口出现，保持实体楔形，是「一条路劈成两条」的分隔锚。
            FWD-VIS-4：近端（dzM≤0）收窄到 islandNearScale，随里程线性恢复到全宽，
@@ -478,8 +498,9 @@ function createWorld(scene) {
           }
         } else if (p.kind === "gem" && ng < PICKUP_CAP) {
           dummy.position.set(p.x, p.y, p.z);
-          dummy.rotation.set(0, p.dzM * 1.3, 0.35);   // 自转也绑判定 t，环境相位零泄漏到 pickup
-          dummy.scale.setScalar(p.h);
+          /* 任务4：增强自转（含轻微翻滚）——仍只绑判定 t 派生里程，环境相位零泄漏到 pickup。 */
+          dummy.rotation.set(Math.sin(p.dzM * 0.9) * 0.22, p.dzM * 2.8, 0.4);
+          dummy.scale.setScalar(p.h * 1.15);          // 略放大渲染尺度，更易被看见（判定 h 不变）
           dummy.updateMatrix();
           gems.setMatrixAt(ng++, dummy.matrix);
         }
@@ -635,8 +656,8 @@ function P1Canvas() {
   return (
     <Boundary>
       <Canvas
-        dpr={[1, 1.75]}
-        gl={{ antialias: false, alpha: false, powerPreference: "low-power" }}
+        dpr={[1.5, 2]}
+        gl={{ antialias: true, alpha: false, powerPreference: "low-power" }}
         camera={{
           fov: CAMERA_PRESET.fov375, near: NEAR_CLIP, far: FAR_CLIP,
           position: [0, CAMERA_PRESET.heightM, CAMERA_PRESET.distanceM],

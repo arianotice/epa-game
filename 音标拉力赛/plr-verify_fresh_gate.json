@@ -81,7 +81,7 @@
           "name": "F8a 全仓 ?v= tag 唯一（46 处字面量，C 段补齐全部图片 URL）",
           "ok": true,
           "detail": {
-            "fwd-20261120": 46
+            "fwd-20261121": 46
           }
         },
         {
@@ -105,8 +105,8 @@
           "name": "F8b 大闯关实际请求资源全部带新 tag",
           "ok": true,
           "detail": {
-            "资源总数": 19,
-            "带 tag": 18
+            "资源总数": 20,
+            "带 tag": 19
           }
         },
         {
@@ -144,8 +144,8 @@
           "name": "F11c 拉力赛实际请求全带新 tag + 跨目录显示表按字节送达",
           "ok": true,
           "detail": {
-            "资源数": 14,
-            "带 tag": 13
+            "资源数": 15,
+            "带 tag": 14
           }
         },
         {
@@ -172,18 +172,16 @@
             {
               "pageerror": 0,
               "console_error": 0,
-              "requestfailed": 1,
+              "requestfailed": 0,
               "bad_status": 0
             },
-            {
-              "net::ERR_ABORTED": 1
-            },
+            {},
             []
           ]
         }
       ],
       "path": "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标大闯关\\verify_fresh_gate.py",
-      "log": "C:\\Users\\86135\\AppData\\Local\\Temp\\p1-plr-l4c7d1rp\\verify_fresh_gate.py.log"
+      "log": "C:\\Users\\86135\\AppData\\Local\\Temp\\p1-plr-rj66sg5d\\verify_fresh_gate.py.log"
     }
   }
 }

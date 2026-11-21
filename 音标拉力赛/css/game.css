@@ -138,8 +138,9 @@ button { cursor: pointer; }
   box-shadow: var(--shadow); padding: 14px 16px 12px; text-align: center;
 }
 .fork-card .horn { pointer-events: auto; }
-.fork-card.show { animation: card-in .48s ease; }
-@keyframes card-in { from { transform: translateX(-50%) scale(.92); opacity: 0; } to { transform: translateX(-50%) scale(1); opacity: 1; } }
+/* 任务3：卡片「出现」而非「掉下来」——去掉 scale 弹出与 translateY 位移，纯 opacity 淡入。 */
+.fork-card.show { animation: card-in .28s ease both; }
+@keyframes card-in { from { opacity: 0; } to { opacity: 1; } }
 .fork-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
 .fork-pair div { border: 3px solid var(--line); border-radius: 14px; padding: 8px; background: #fffaf0; }
 .fork-pair .ipa { font-size: 32px; }
@@ -160,6 +161,28 @@ button { cursor: pointer; }
   z-index: 6; margin: 0; max-width: min(640px, calc(100% - 24px));
   background: var(--card); border: 2px solid var(--gold); border-radius: 16px;
   padding: 8px 16px; box-shadow: var(--shadow); text-align: center; font-weight: 700;
+}
+
+/* 任务2：选道即判的全屏即时结果。绿勾 RIGHT / 红叉 WRONG，符号直接写字符。 */
+#verdict {
+  position: fixed; left: 50%; top: 34%; z-index: 13;
+  transform: translate(-50%, -50%); pointer-events: none;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  white-space: nowrap;
+  font-family: var(--display); font-weight: 900; letter-spacing: 3px;
+  font-size: clamp(72px, 15vw, 150px); line-height: 1;
+  text-shadow: 0 6px 0 #fffaf0, 0 12px 28px rgba(90, 62, 30, .32);
+}
+#verdict .vmark { font-family: var(--body); font-size: .82em; margin-right: 10px; }
+#verdict.ok { color: #1e7a4f; }
+#verdict.bad { color: var(--red); }
+#verdict.show { animation: verdict-pop 1.15s ease both; }
+@keyframes verdict-pop {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(.55); }
+  12% { opacity: 1; transform: translate(-50%, -50%) scale(1.12); }
+  24% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  78% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
 }
 
 #signs { position: fixed; inset: 0; z-index: 4; pointer-events: none; }

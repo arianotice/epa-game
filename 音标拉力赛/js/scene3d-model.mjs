@@ -41,53 +41,53 @@ export const VISUAL_FLOW_GAIN = 1.6;
    起跳标线；放大分叉左右车道外扩 + 双色车道带 + 暗红虚线探险路径（art-spec §4.2
    既有机制）+ 窄而连续的分流岛分隔带。绝不改变 H_ROCK / MERGE_DT / ROCK_BAND_VIS /
    forkFlare / 任何判定域量；键名中性、不含答案域与左右语义词面。 */
-/* FWD-VIS-4 收尾微调（最后一轮，只调醒目度，不动判定 / 不动分叉张开幅度）：
-   - 金环整体外移加粗：旧 0.95/1.24 仅 0.29m 宽且大半被石体遮挡 → 1.14/1.95（0.81m 宽），
-     全图缩略尺寸下 50m 处也能看到一抹金色预告；
-   - 石体底色 #3f382f 偏暗 → #5b4a37 中等深度（仍与路面 #c9ae82 强明度对比），
-     加轻微 emissive 让远处有轮廓；半径 0.92m 保持不缩；
-   - 中央分隔带近端偏粗偏深显裂缝感 → 颜色调浅 + 近端按里程渐细，保留实体楔形。 */
+/* 视觉修复轮（用户反馈驱动，纯渲染、零判定写回）：
+   - 任务1 巨石→真小石头：半径 0.92m（旧 FWD-VIS-4 放大值）回落到 0.25m（仍 > 初始 0.16m），
+     金环 1.14/1.95 收窄到 0.38/0.75（内环仍越过石体 0.25m 投影半径），石体提亮到 #8a7a63；
+     「提前可见」三件提示原样保留：贴地金环 rockRing + 起跳金线 marks（markStretch 不缩）+ fog:false。
+   - 任务2 分岔清晰：色带加深提亮拉开明度、segStretch 收到贴合段间距、spanScale 缩短视觉走廊。 */
 export const ROCK_VIS = Object.freeze({
-  radiusM: 0.92,          // 石体实际渲染半径（m）；基准几何 Dodecahedron(1)，FWD-VIS-4 不缩
-  bodyColor: "#5b4a37",   // 中等深度暖褐：比旧 #3f382f 提亮，与 #c9ae82 路面仍强对比
+  radiusM: 0.25,          // 真·小石头渲染半径（m）；基准几何 Dodecahedron(1)，0.92→0.25
+  bodyColor: "#8a7a63",   // 浅一点暖褐（旧 #5b4a37），与 #c9ae82 路面留适度明度差，靠金环/金线预告
   bodyEmissive: "#2e2210",// 顶面轻微自发光，远处保住轮廓而不融进路面
   bodyEmissiveIntensity: 0.38,
-  ringInnerM: 1.14,       // 贴地描边环内径（m），外移越过石体最大投影半径
-  ringOuterM: 1.95,       // 外径（m），0.81m 宽金色预告带（旧 1.24 → 1.95）
+  ringInnerM: 0.38,       // 贴地描边环内径（m），越过石体 0.25m 投影半径
+  ringOuterM: 0.75,       // 外径（m），0.37m 宽金色预告带（旧 1.95 随石体缩小同步收窄）
   ringColor: "#ffd54a",   // 更亮的金：远距离一抹金色预告
   markColor: "#f2c94c",   // 起跳标线（加粗加亮，取代偏暗 #c9a227）
   markDepthM: 0.16,       // GEO.mark 深度基准，jsx 内 scale.z 再乘 stretch
-  markStretch: 3.4,       // 起跳标线实际纵深 = 0.16 × 3.4 ≈ 0.54m
+  markStretch: 3.4,       // 起跳标线不缩：实际纵深 = 0.16 × 3.4 ≈ 0.54m（提前可见的玩法关键信息）
 });
 export const FORK_VIS = Object.freeze({
-  spread: 1.42,           // 左右车道中心视觉外扩倍率（FWD-VIS-4 不动）
+  spread: 1.42,           // 左右车道中心视觉外扩倍率（判定域无关，保持）
   islandGain: 0.42,       // 中央分流岛宽度系数（窄而连续的分隔带，避免宽暗条盖住车道）
-  islandColor: "#6f5b45", // FWD-VIS-4：分隔带由 #4a3f34 调浅，去掉近端「裂缝」观感
-  islandNearScale: 0.55,  // FWD-VIS-4：近端（dzM≤0）宽度系数，实体楔形保持、仅收窄
-  islandNearFadeM: 16,    // FWD-VIS-4：从近端到远端线性恢复全宽的里程（m）
+  islandColor: "#3E2E20", // 任务2：分隔带加深（旧 #6f5b45 明度太接近路面 #C9AE82），拉开对比
+  islandNearScale: 0.55,  // 近端（dzM≤0）宽度系数，实体楔形保持、仅收窄
+  islandNearFadeM: 16,    // 从近端到远端线性恢复全宽的里程（m）
   bandBaseM: 1.15,        // 车道色带 flare=0 收拢宽度（m）；两条常驻导引带
   bandGainM: 1.95,        // 车道色带 flare=1 额外宽度（m），张开态 ≈ 3.1m
-  bandA: "#f6ead0",       // 一侧车道奶白带（camp 调色板既有色，中性无左右语义）
-  bandB: "#8C6D43",       // 另一侧车道深木带（camp 调色板既有色，与路面强对比）
+  bandA: "#FFF4DC",       // 任务2：奶白带提亮（旧 #f6ead0），与路面 #C9AE82 明度拉开
+  bandB: "#5A3B22",       // 任务2：深木带加深（旧 #8C6D43 与路面太接近），压低明度强对比
   pathColor: "#8C4034",   // 暗红虚线探险路径（art-spec §4.2 既有视觉锚）
-  segStretch: 9.5,        // 色带单段纵深系数（0.16×9.5≈1.52m > 段间距 1.21m，保证连续无断条）
+  segStretch: 7.6,        // 任务2：0.16×7.6≈1.22m≈段间距 1.21m，恰好连续不重叠（旧 9.5=1.52m 重叠生摩纹）
   pathStretch: 2.4,       // 探险路径单段纵深系数（虚线节奏）
+  spanScale: 0.6,         // 任务2：分岔视觉长度缩短，forkFlare 的 spanT ×0.6（不动判定域 span / MERGE_DT）
 });
 
 /* ---- 团队裁决 1：坐标系与相机（p1-3d-art-spec.md §1 / §2，建议值，实机可微调并记录） ---- */
 export const WORLD_SCALE = 0.008;          // 1 m = 125 2D unit；roadHalf 520 → 4.16 m
 export const FOG_COLOR = "#efe6d3";        // 纸色底（P0 探针同值）
-export const FOG_DENSITY = 0.045;          // 纸雾收敛远端
+export const FOG_DENSITY = 0.06;           // 任务3：0.045→0.06，远处更快淡出=速度感
 export const NEAR_CLIP = 0.1;
 export const FAR_CLIP = 120;
 export const CAMERA_PRESET = Object.freeze({
-  distanceM: 8,          // 车尾后方 8 m（≈4–5 车身）
-  heightM: 3.6,          // 高机位 3.6 m
-  pitchDeg: 18,          // 俯角 18°
-  lookAheadM: 9,         // 注视点沿前向 9 m
-  fov375: 78,            // 375×780 竖屏：垂直 FOV 为锚
-  fov320: 74,            // 320×568：垂直 FOV 为锚
-  fovWide: 60,           // 横屏 / PC
+  distanceM: 7,          // 任务3：8→7 m，更贴车尾=更快体感
+  heightM: 3.0,          // 任务3：3.6→3.0 m，机位压低
+  pitchDeg: 18,          // 俯角 18°（不动）
+  lookAheadM: 11,        // 任务3：9→11 m，看得更远=速度感
+  fov375: 88,            // 任务3：78→88，竖屏垂直 FOV 拉大（边缘拉伸感）
+  fov320: 84,            // 任务3：74→84
+  fovWide: 60,           // 横屏 / PC（不动）
 });
 /* 裁决 2：单一暖主光 + 1 盏低强度柔补光（≤0.35）+ 接触 AO（几何软影，不引 postprocessing）。
    probe.jsx 的 lightCount=1 断言不受影响（独立入口、逐字不动）。 */
@@ -308,7 +308,9 @@ export function buildSceneFrame(snap, opts = {}) {
      纯中性，只从 snap.gates 的 commitT / snap.span / MERGE_DT 派生，与判定层
      branchLateral() 同源相位；零写回 odo/lateral/g.line，零答案域。
      键名刻意用 sideA/sideB 等中性命名，避开答案域与判定语义词面。 */
-  const spanT = Number(snap.span) || 0.02;
+  /* 任务2：forkFlare 的视觉张开窗口缩短到现值 ×spanScale(0.6)，分岔变成短引导区而非长走廊。
+     仅缩放纯渲染的 flare 里程；判定域 snap.span / merge / MERGE_DT 逐字不动，零写回。 */
+  const spanT = (Number(snap.span) || 0.02) * (Number(FORK_VIS.spanScale) || 0.6);
   const mergeT = MERGE_DT;
   function forkFlare(tAt) {
     let best = 0;

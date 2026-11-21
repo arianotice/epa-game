@@ -63,7 +63,7 @@ def strip_comments(js):
 # Node 真实重放取证（内联；顶层 await 由 --input-type=module 提供）
 # ---------------------------------------------------------------------------
 NODE_PROBE = r'''
-const TAG = "fwd-20261120";
+const TAG = "fwd-20261121";
 const cfg = await import('./js/config.js?v=' + TAG);
 const { createTrack } = await import('./js/track.js?v=' + TAG);
 const { createRace } = await import('./js/race.js?v=' + TAG);
@@ -442,9 +442,9 @@ def main():
     # PN-GUARD-01/02：PLR-CSEG-S2/A6 的 speed 260/300 期望值维持原值 + 双锚定重锚就位
     guard = ('"speed: 260"' in CSEG and '"speed: 300"' in CSEG
              and "speed: 260" in CONFIG and "speed: 300" in CONFIG)
-    snap_ok = (os.path.isfile(os.path.join(ROOT, ".workbuddy", "backups", "fwd-tag-20261120", "file-hashes.json"))
-               and os.path.isfile(os.path.join(ROOT, ".workbuddy", "backups", "fwd-tag-20261120", "manifest.txt")))
-    chk("PN-GUARD-01/02 PLR-CSEG-S2/A6 speed 260/300 维持原值 + fwd-tag-20261120 双快照重锚就位",
+    snap_ok = (os.path.isfile(os.path.join(ROOT, ".workbuddy", "backups", "fwd-tag-20261121", "file-hashes.json"))
+               and os.path.isfile(os.path.join(ROOT, ".workbuddy", "backups", "fwd-tag-20261121", "manifest.txt")))
+    chk("PN-GUARD-01/02 PLR-CSEG-S2/A6 speed 260/300 维持原值 + fwd-tag-20261121 双快照重锚就位",
         guard and snap_ok,
         {"S2/A6期望值不变": guard, "新快照双文件": snap_ok})
 

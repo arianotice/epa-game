@@ -101,7 +101,7 @@
           "name": "S17 全仓 tag 唯一且恰好 46 处",
           "ok": true,
           "detail": {
-            "fwd-20261120": 46
+            "fwd-20261121": 46
           }
         },
         {
@@ -123,14 +123,14 @@
           "name": "A2 全部工况 finishTime <= 180s",
           "ok": true,
           "detail": {
-            "min": 134.63,
-            "max": 170.72
+            "min": 109.75,
+            "max": 144.2
           }
         },
         {
           "name": "A3 最坏工况（15 次碰撞 + 20 额外题全错）也 <= 180s",
           "ok": true,
-          "detail": 170.72
+          "detail": 144.2
         },
         {
           "name": "A4 headless 断言含 4/4 门判定与跨圈 1 次",
@@ -246,7 +246,7 @@
         }
       ],
       "path": "C:\\Users\\86135\\WorkBuddy\\英语音标播客\\音标拉力赛\\verify_cseg_gate.py",
-      "log": "C:\\Users\\86135\\AppData\\Local\\Temp\\p1-plr-as0p84ek\\verify_cseg_gate.py.log"
+      "log": "C:\\Users\\86135\\AppData\\Local\\Temp\\p1-plr-ja84hjwy\\verify_cseg_gate.py.log"
     }
   }
 }

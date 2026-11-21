@@ -119,11 +119,11 @@ t("T1 P1_TAG 稳定且不与源码层 / P0 产物层 tag 命名空间冲突", ()
 
 t("T2 裁决常量：WORLD_SCALE / 相机 / 光照取值", () => {
   assert.equal(WORLD_SCALE, 0.008);
-  assert.equal(CAMERA_PRESET.distanceM, 8);
-  assert.equal(CAMERA_PRESET.heightM, 3.6);
+  assert.equal(CAMERA_PRESET.distanceM, 7);
+  assert.equal(CAMERA_PRESET.heightM, 3.0);
   assert.equal(CAMERA_PRESET.pitchDeg, 18);
-  assert.ok(CAMERA_PRESET.fov375 >= 74 && CAMERA_PRESET.fov375 <= 80);
-  assert.ok(CAMERA_PRESET.fov320 >= 70 && CAMERA_PRESET.fov320 <= 76);
+  assert.ok(CAMERA_PRESET.fov375 >= 84 && CAMERA_PRESET.fov375 <= 92);
+  assert.ok(CAMERA_PRESET.fov320 >= 80 && CAMERA_PRESET.fov320 <= 88);
   assert.ok(LIGHT_PRESET.fill.intensity <= 0.35);
   assert.equal(LIGHT_PRESET.count, 2);
   /* IMPL-1B B5：渲染层镜像常量取值 + 白名单形状。 */
@@ -324,28 +324,32 @@ t("T18 纯函数可重复 + 无 snap / 无 track 时安全返回 null", () => {
   assert.equal(buildSceneFrame(mkSnap(), {}), null);
 });
 
-t("T19 FWD-VIS-2/4 视觉增强常量：石头醒目度 + 分叉外扩，零判定语义键名", () => {
-  /* 石头：实际渲染半径须显著大于旧值 0.16m（0.92m，约 5.75×），色值高对比。 */
-  assert.ok(ROCK_VIS.radiusM >= 0.8, "石体半径须 ≥0.8m 才在 30–60m 肉眼可辨");
-  assert.ok(ROCK_VIS.radiusM < 1.3, "石体半径不应大到脱离赛道尺度");
-  assert.equal(ROCK_VIS.radiusM, 0.92, "FWD-VIS-4：石体半径不缩");
+t("T19 视觉修复轮常量：真小石头 + 分岔清晰 + 视觉缩短，零判定语义键名", () => {
+  /* 任务1：巨石 0.92m → 真小石头 0.22~0.28m；金环/金线提前提示保留。 */
+  assert.ok(ROCK_VIS.radiusM >= 0.22 && ROCK_VIS.radiusM <= 0.28, "真·小石头半径须落在 0.22~0.28m");
+  assert.equal(ROCK_VIS.radiusM, 0.25, "小石头半径取 0.25m");
+  assert.ok(ROCK_VIS.radiusM > 0.16, "仍略大于初始 0.16m，避免退化到完全不可见");
   assert.ok(ROCK_VIS.bodyColor.startsWith("#") && ROCK_VIS.bodyColor.length === 7);
   assert.ok(ROCK_VIS.bodyEmissive.startsWith("#") && ROCK_VIS.bodyEmissiveIntensity > 0 && ROCK_VIS.bodyEmissiveIntensity <= 0.5,
-    "FWD-VIS-4：顶面轻微 emissive 保轮廓，不过亮");
+    "顶面轻微 emissive 保轮廓，不过亮");
   assert.ok(ROCK_VIS.ringOuterM > ROCK_VIS.ringInnerM && ROCK_VIS.ringInnerM > ROCK_VIS.radiusM,
     "金环内径须越过石体半径，避免被遮挡");
-  assert.ok(ROCK_VIS.ringOuterM - ROCK_VIS.ringInnerM >= 0.6, "FWD-VIS-4：金环须足够宽（≥0.6m）才有 50m 金色预告");
-  assert.ok(ROCK_VIS.markStretch > 1, "起跳标线须加粗");
+  assert.ok(ROCK_VIS.ringOuterM - ROCK_VIS.ringInnerM >= 0.3, "金环随石体收窄后仍须 ≥0.3m 宽");
+  assert.ok(ROCK_VIS.markStretch > 1, "起跳金线不缩：提前可见的玩法关键信息");
   /* 分叉：外扩倍率 >1、色带张开态明显宽于收拢态；近端收窄但保持实体。 */
   assert.ok(FORK_VIS.spread > 1 && FORK_VIS.spread <= 1.6, "分叉外扩倍率应在有效区间");
   assert.equal(FORK_VIS.spread, 1.42, "FWD-VIS-4：分叉张开幅度不动");
   assert.ok(FORK_VIS.islandGain > 0 && FORK_VIS.islandGain <= 1, "中央分隔带应窄而连续，不得盖住车道");
   assert.ok(FORK_VIS.islandColor.startsWith("#") && FORK_VIS.islandColor.length === 7);
-  assert.ok(FORK_VIS.islandNearScale > 0 && FORK_VIS.islandNearScale < 1, "FWD-VIS-4：近端收窄但仍为实体楔形");
+  assert.ok(FORK_VIS.islandNearScale > 0 && FORK_VIS.islandNearScale < 1, "近端收窄但仍为实体楔形");
   assert.ok(FORK_VIS.islandNearFadeM > 0 && FORK_VIS.islandNearFadeM <= 48, "近端收窄过渡里程须在可见带内");
-  assert.ok(FORK_VIS.segStretch >= 8, "色带单段须长于赛道段间距，避免断成横条");
+  /* 任务2：色带单段贴合段间距 1.21m（0.16×7.6≈1.22m），恰好连续不重叠。 */
+  assert.ok(FORK_VIS.segStretch >= 7 && FORK_VIS.segStretch <= 8, "色带段系数须使单段≈赛道段间距，避免重叠摩纹");
+  assert.ok(Math.abs(ROCK_VIS.markDepthM * FORK_VIS.segStretch - 1.21) < 0.12, "色带单段纵深须贴合 1.21m 段间距");
+  assert.ok(FORK_VIS.spanScale > 0 && FORK_VIS.spanScale < 1, "分岔视觉长度须缩短为短引导区");
   assert.ok(FORK_VIS.bandBaseM + FORK_VIS.bandGainM > 2.5, "张开态车道带须足够宽");
   assert.ok(FORK_VIS.bandA !== FORK_VIS.bandB, "两车道色带须可区分");
+  assert.notEqual(FORK_VIS.bandB, "#8C6D43", "深木带须加深，与路面 #C9AE82 拉开明度对比");
   /* 键名中性：不得含答案域/左右语义词面（与 T11 同一 FORBID 集合，大小写不敏感）。 */
   const vkeys = [...Object.keys(ROCK_VIS), ...Object.keys(FORK_VIS)].map((k) => k.toLowerCase());
   for (const k of FORBID) assert.ok(!vkeys.includes(k), "视觉常量键名泄漏语义: " + k);

@@ -26,7 +26,7 @@ QUEST = os.path.join(ROOT, "音标大闯关")
 RALLY = os.path.join(ROOT, "音标拉力赛")
 KEY = "ipa-quest-v1"
 BAK = KEY + ".v1.bak"
-TAG = "fwd-20261120"
+TAG = "fwd-20261121"
 # Playwright 1.64 自带浏览器版本与本机已装的 1228 不一致，沿用项目既有做法显式指定系统 Chrome。
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 

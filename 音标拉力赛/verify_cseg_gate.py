@@ -21,7 +21,7 @@ ROOT = os.path.dirname(HERE)
 QUEST = os.path.join(ROOT, "音标大闯关")
 RALLY = HERE
 NODE = "node"
-TAG = "fwd-20261120"
+TAG = "fwd-20261121"
 
 RESULTS = []
 

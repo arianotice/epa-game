@@ -1,5 +1,5 @@
-import { BOOST, COLLIDE, QUIZ_TYPES, ROCKET, SLOW, TUNING, TURBO, forkSpan, hitsLane, pairKeyOf, pickQuizPair, poolOf, ROCK_QUOTA, ROCK_HITS_MAX, ROCK_HIT_BAND, ROCK_LAT_BAND, ROCK_MARGIN, NPC_MIN_SPEED_RATIO } from "./config.js?v=fwd-20261120";
-import { offsetPoint } from "./track.js?v=fwd-20261120";
+import { BOOST, COLLIDE, QUIZ_TYPES, ROCKET, SLOW, TUNING, TURBO, forkSpan, hitsLane, pairKeyOf, pickQuizPair, poolOf, ROCK_QUOTA, ROCK_HITS_MAX, ROCK_HIT_BAND, ROCK_LAT_BAND, ROCK_MARGIN, NPC_MIN_SPEED_RATIO, PACE_MUL } from "./config.js?v=fwd-20261121";
+import { offsetPoint } from "./track.js?v=fwd-20261121";
 
 export function createRace({ track, diff, gates, audio, mapId = "camp", character = null }) {
   const L = track.length;
@@ -43,6 +43,12 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
   /* 软跟随目标里程差（相对 player.odo），只用速度倍率渐进收敛、不改 odo。 */
   rivals[0].gapTarget = -0.022 * L;
   rivals[1].gapTarget = 0.020 * L;
+  /* 任务4：NPC 拟人——每局给两车固定的反应延迟系数与个体相位，使"听见词→决定选边"
+     的时机像真人快慢不同（0.62~1.12×diff.fork），且走线相位两车错开、不可预测。 */
+  rivals.forEach((r, i) => {
+    r.reactK = 0.62 + Math.random() * 0.5;   // 选边反应快慢
+    r.weavePhase = i === 0 ? 0 : 2.3;         // 走线个体相位差
+  });
   const karts = [player, rivals[0], rivals[1]];
   const startYaw = Math.atan2(track.sample(startT).fy, track.sample(startT).fx);
   karts.forEach((k) => { k.yaw = startYaw; });
@@ -77,6 +83,9 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     rockHits: 0,
     rockBudget: ROCK_HITS_MAX,
     cheerSeq: 0,
+    /* 选道即判：每次判门（含过门线兜底）递增，供表现层按 seq 去重重播 RIGHT/WRONG。 */
+    verdictSeq: 0,
+    verdict: null,
     /* FWD 纯统计（只读展示）：整局累计、跨圈不复位；不参与任何判定 / 计分 / 名次 / 速度。 */
     firstListen: 0,
     cleanChain: 0,
@@ -217,6 +226,10 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     if (kart.turbo > 0) mul *= TURBO.mul;
     else if (kart.boost > 0) mul *= kart.kind === "player" ? BOOST.mul : 1.12;
     if (kart.slow > 0) mul *= SLOW.mul;
+    /* speedNow 保持"相对速度查询"语义：不乘 PACE_MUL。
+       提速只在实际推进 base（updateKart 的 diff.speed * PACE_MUL）生效；
+       floor = 0.94·speedNow(player)/diff.speed 依赖此式=0.94·mul_player，
+       探针同源复算与之逐字一致，不得把节奏乘数混进来破坏 NPC 下限判据。 */
     return diff.speed * mul;
   }
 
@@ -246,9 +259,11 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     state.bannerT = 3.4;
   }
 
-  function judge(gate) {
+  /* 选道即判：sideOverride 为玩家所选方向（±1），命中只取选择符号，不再等车身开过门线。
+     过门线兜底（玩家全程未选）不传参，仍按 player.lateral 判，口径逐字保留。 */
+  function judge(gate, sideOverride) {
     gate.judged = true;
-    const hit = hitsLane(player.lateral, gate.correctLateral);
+    const hit = hitsLane(sideOverride != null ? sideOverride : player.lateral, gate.correctLateral);
     gate.hit = hit;
     player.answers.push({ word: gate.spoken.word, ipa: gate.spoken.ipa, hit });
     state.lastJudgeAt = state.time;
@@ -310,6 +325,14 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     }
     state.rockSinceGate = 0;
     state.cleanChainBest = Math.max(state.cleanChainBest, state.cleanChain);
+    /* 任务2：即时结果供表现层按 seq 去重重播（绿勾RIGHT / 红叉WRONG），与 banner 文字并存。
+       until 用 race 时钟；hold 冻结期 race.state.time 仍推进，故展示窗口会自然到期。 */
+    state.verdictSeq += 1;
+    state.verdict = {
+      hit, seq: state.verdictSeq,
+      word: gate.spoken.word, ipa: gate.spoken.ipa,
+      until: state.time + 1.15,
+    };
   }
 
   function updateKart(kart, dt) {
@@ -327,13 +350,18 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
       mul *= 1 + corr;
       const gap = (kart.odo - player.odo) / track.length;
       if (gap > 0.12) mul *= 0.94;
+      /* 任务4：偶尔犹豫——低频噪声短时微调速度倍率（±2.5%、两车相位不同）。
+         放在 floor 兜底之前，确保 NPC_MIN_SPEED_RATIO 下限不被破坏；软跟随 / collide 全保留。 */
+      const hesitate = 0.025 * Math.sin(state.time * 0.37 + (kart.weavePhase || 0) + 0.6);
+      mul *= 1 + hesitate;
       /* A6 速度下限 v_i >= 0.94 · v_player_now（team-lead 终裁）。
          玩家本帧有效 mul = speedNow(player)/diff.speed，与玩家同源；放在所有降速之后，
          保证 gap 降速 / 软跟随 / startBoost 衰减 / rival.slow 都不会把对手压成龟速。 */
       const floor = NPC_MIN_SPEED_RATIO * (speedNow(player) / diff.speed);
       if (mul < floor) mul = floor;
     }
-    const base = diff.speed;
+    /* 任务5：base 与 speedNow 同源乘 PACE_MUL，玩家/rival 推进速度一致放大。 */
+    const base = diff.speed * PACE_MUL;
     kart.boost = Math.max(0, kart.boost - dt);
     kart.slow = Math.max(0, kart.slow - dt);
     kart.turbo = Math.max(0, kart.turbo - dt);
@@ -449,16 +477,21 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     return gates.some((g) => g.played && !g.judged);
   }
 
-  /* IMPL-1A A6：NPC 不完美走线。各自基准车道（a 偏左 / b 偏右）+ 缓慢正弦换道，
-     两车相位错开；临近未判门且已选边时朝自己选的一侧靠。
+  /* 任务4：NPC 拟人走线。三频叠加——低频大漂移(0.12) + 中频修正(0.08) + 个体微摆(0.05)，
+     幅度合计 ≤0.25、两车相位错开，轨迹非周期、不可预测但仍平滑；base 基准车道不变。
+     临近门且已选边时朝所选侧靠，选边阈值带个体 reactK 抖动（真人反应快慢不同）。
      只产出 laneTarget，lateral 一律由 updateKart 逐帧按 rate*dt 收敛（零瞬切）。 */
   function npcLaneTarget(rival, idx, upcoming) {
     const base = idx === 0 ? -0.42 : 0.42;
-    const weave = 0.18 * Math.sin(state.time * 0.5 + idx * 2.1);
+    const p = rival.weavePhase != null ? rival.weavePhase : idx * 2.3;
+    const phase = state.time;
+    const weave = 0.12 * Math.sin(phase * 0.23 + p)
+      + 0.08 * Math.sin(phase * 0.61 + p * 1.6 + 1.1)
+      + 0.05 * Math.sin(phase * 1.17 + p * 2.4);
     let target = base + weave;
     if (upcoming && rival.choice[upcoming.id] != null) {
       const eta = (upcoming.line - rival.odo) / Math.max(40, diff.speed);
-      if (eta <= diff.fork) target = rival.choice[upcoming.id];
+      if (eta <= diff.fork * (rival.reactK || 1)) target = rival.choice[upcoming.id];
     }
     return Math.max(-0.9, Math.min(0.9, target));
   }
@@ -493,8 +526,10 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
     if (state.decide || state.quiz || !act) return;
     if (act.gate.judged || act.gate.unheard || act.gate.holdDone) return;
     const dist = act.gate.line - player.odo;
-    const mouth = span * L * 0.55;
-    const lead = mouth + 360 + speedNow(player) * 0.62;
+    /* 任务C：lead 放宽到与卡片 S1 预告窗口（main.js previewDistance）严格同式——
+       span·L + 0.5·preview·speed，用 diff.speed 不含 PACE_MUL，两窗口对齐。
+       这样卡片一出现即建立 decide、播音、可选、可判，选道即判链立即生效。 */
+    const lead = span * L + 0.5 * diff.preview * diff.speed;
     if (dist > lead) return;
     // A3：lastJudgeAt 只由 judge() 更新（分岔门播音节流），额外惩罚题不再刷新它
     // （见 finishQuiz），高频惩罚题因此不会把门挤成「静默漏播」。
@@ -506,7 +541,8 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
       act.gate.played = true;
       audio.playWord(act.gate.spoken.word);
     }
-    state.decide = { gate: act.gate, phase: "reveal", arm: 0.55, left: 3 };
+    /* 任务1：hold 展示窗口 3s→1.2s；选道即判后还会 min(left,0.9) 进一步缩短。 */
+    state.decide = { gate: act.gate, phase: "reveal", arm: 0.55, left: 1.2, picked: null };
   }
 
   function commitMark(commitT) {
@@ -736,6 +772,20 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
       if (left) player.laneTarget = picking ? -lane : -1;
       else if (right) player.laneTarget = picking ? lane : 1;
       else player.laneTarget = player.lateral;
+      /* 任务1 选道即判：decide 可选阶段第一次按左/右即按「选择方向」判，不等车开过门线。
+         picked 记录所选方向，天然只判一次；judge 内 gate.judged=true，过门线循环的
+         `if (g.judged) continue` 不会再判。玩家全程不按则维持原 reveal→hold→过门线兜底。 */
+      if (state.decide && state.decide.picked == null && (left || right)) {
+        const pickedGate = state.decide.gate;
+        if (!pickedGate.judged && !pickedGate.unheard) {
+          const side = left ? -1 : 1;
+          state.decide.picked = side;
+          judge(pickedGate, side);
+          /* 判定后只保留很短的展示窗口（≤0.9s），随后放行，不再冻结到 3 秒。 */
+          state.decide.phase = "hold";
+          state.decide.left = Math.min(state.decide.left, 0.9);
+        }
+      }
     }
     const act = activeGate();
     beginDecide(act);
@@ -768,7 +818,7 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
       state.decide.arm -= dt;
       if (state.decide.arm <= 0) {
         state.decide.phase = "hold";
-        state.decide.left = 3;
+        state.decide.left = 1.2;   // 任务1：3s→1.2s，未选兜底也不再长时间冻结
         player.boost = 0;
         player.turbo = 0;
       }
@@ -805,7 +855,9 @@ export function createRace({ track, diff, gates, audio, mapId = "camp", characte
         /* C 段：rival 同样按绝对里程门线判定，弃用 wrapDelta / crossed 的相对圈坐标。 */
         const dist = upcoming.line - rival.odo;
         const eta = dist / Math.max(40, diff.speed);
-        if (rival.choice[upcoming.id] == null && eta <= diff.fork) {
+        /* 任务4：选边时机带个体 reactK 抖动——不同 rival 在 eta<=fork*reactK 时才决定，
+           像真人反应快慢不同（0.62~1.12×）。不改 smart 概率与判定口径。 */
+        if (rival.choice[upcoming.id] == null && eta <= diff.fork * (rival.reactK || 1)) {
           const smart = Math.random() < rival.skill;
           rival.choice[upcoming.id] = smart ? upcoming.correctLateral : -upcoming.correctLateral;
         }

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """最终回归准备 · 双锚定重锚工具（fresh-eyes QA · 只读产品代码）。
 
-仅写 .workbuddy/backups/fwd-20261120/ 下的两份独立快照：
+仅写 .workbuddy/backups/fwd-20261121/ 下的两份独立快照：
   - file-hashes.json：沿用 p0-pre-20261109 的 files[] 全 374 条路径，
     按【当前磁盘实际字节】逐条重录 bytes / sha256。
   - manifest.txt：沿用 p1-pre-20261110 的 25 条记录与头部结构，
@@ -26,7 +26,7 @@ OLD_P0_DIR = os.path.join(BK, "p0-pre-20261109")
 OLD_P0 = os.path.join(OLD_P0_DIR, "file-hashes.json")
 OLD_P1_DIR = os.path.join(BK, "p1-pre-20261110")
 OLD_P1 = os.path.join(OLD_P1_DIR, "manifest.txt")
-NEW_DIR = os.path.join(BK, "fwd-20261120")
+NEW_DIR = os.path.join(BK, "fwd-tag-20261121")
 os.makedirs(NEW_DIR, exist_ok=True)
 
 
@@ -68,7 +68,7 @@ for e in files0:
 
 new0 = dict(old0)
 new0["created_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
-new0["task"] = "fwd-20261120 / 最终回归双锚定重锚（当前字节全量重录）"
+new0["task"] = "fwd-20261121 / 最终回归双锚定重锚（当前字节全量重录）"
 new0["total_files"] = len(files0)
 new0["total_bytes"] = sum(int(e.get("bytes", 0)) for e in files0)
 new0["all_src_equal"] = True

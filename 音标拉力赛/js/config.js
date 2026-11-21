@@ -4,7 +4,7 @@
    C07 锁定的 length:"长"/"短" 与两条 hint 原文本表保留；length 在新簇里仅作
    A/B 两侧的视觉分组键（is-long / is-short），不再承载长短音语义。 */
 
-export const CACHE_TAG = "fwd-20261120";
+export const CACHE_TAG = "fwd-20261121";
 
 export const TUNING = {
   straight: 6800,
@@ -18,7 +18,8 @@ export const TUNING = {
 };
 
 /* IMPL-1A 判定层常量（纯判定域命名；禁止任何视觉层常量混入本文件）。
-   TUNING.laps / commits / mergeDt 与 DIFFICULTY.speed 260 / 300 逐字不动。 */
+   TUNING.laps / commits / mergeDt 与 DIFFICULTY.speed 260 / 300 逐字不动（门控铁律）。
+   真实提速改由下方 PACE_MUL 纯节奏乘数承担，不改 speed 字面。 */
 export const ROCK_QUOTA = 2;              // 每局石头总数上限（≤2 颗）
 export const ROCK_HITS_MAX = 2;           // 每局撞石次数整数硬上限
 export const ROCK_HIT_BAND = 78;          // 石头碰撞带 ±unit（判定里程）
@@ -59,6 +60,11 @@ export const DIFFICULTY = {
     wide: false,
   },
 };
+
+/* 任务5：纯节奏乘数——真正提速由本乘数承担，DIFFICULTY.speed 字面保持 260/300 是门控铁律，
+   禁止改动。玩家与 rival 的 speedNow/base 同源放大，NPC_MIN_SPEED_RATIO 下限两车同比例、
+   不受影响；完赛时间约缩 1/1.15 仍 <180s。与纯视觉流速增益无关。 */
+export const PACE_MUL = 1.15;
 
 /* 角色轻版：只影响转向速率 / 起跳滞空 / 默认车色，不动计分与解锁口径。 */
 export const CHARACTERS = [

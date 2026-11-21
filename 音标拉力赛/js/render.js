@@ -1,4 +1,4 @@
-import { offsetPoint } from "./track.js?v=fwd-20261120";
+import { offsetPoint } from "./track.js?v=fwd-20261121";
 
 /* IMPL-1B B7（方案 B）：单一视觉流速标量，只放大「纯环境元素」的滚动相位
    （本文件：中央虚线 lineDashOffset；3D 层：路肩 / 远景 / 粒子 / 路牌后退）。

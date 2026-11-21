@@ -62,7 +62,7 @@
       "ok": true,
       "detail": {
         "rc": 0,
-        "tail": "(仅 assets+ipa-display.js)，跨站跳转断、localStorage 共享前提不成立 → 须完整大闯关站同级部署。已升级用户裁决，本轮不判 PASS、不悄悄放行。\nelapsed=42.0s\n=========================================================================="
+        "tail": "(仅 assets+ipa-display.js)，跨站跳转断、localStorage 共享前提不成立 → 须完整大闯关站同级部署。已升级用户裁决，本轮不判 PASS、不悄悄放行。\nelapsed=28.6s\n=========================================================================="
       }
     },
     {
@@ -86,7 +86,7 @@
       "ok": true,
       "detail": {
         "rc": 0,
-        "tail": "T17 mirrorZ 只翻渲染层：lateral 白名单原样、z 翻号、x 不变\n  PASS  T18 纯函数可重复 + 无 snap / 无 track 时安全返回 null\n  PASS  T19 FWD-VIS-2/4 视觉增强常量：石头醒目度 + 分叉外扩，零判定语义键名\n\nSUMMARY: 19 PASS / 0 FAIL / 19 TOTAL"
+        "tail": "ASS  T17 mirrorZ 只翻渲染层：lateral 白名单原样、z 翻号、x 不变\n  PASS  T18 纯函数可重复 + 无 snap / 无 track 时安全返回 null\n  PASS  T19 视觉修复轮常量：真小石头 + 分岔清晰 + 视觉缩短，零判定语义键名\n\nSUMMARY: 19 PASS / 0 FAIL / 19 TOTAL"
       }
     },
     {
@@ -134,20 +134,20 @@
       "ok": true,
       "detail": {
         "rc": 0,
-        "tail": " {\"kart\":15}\nlisten   kingdom   worst   YES    149.13   4/4    0      1      149.13       额外题 13 {\"kart\":12,\"rock\":1}\n强制碰撞注入最大命中次数: 11\n\n=== 断言 ===\nALL PASS\n题库: 地图 4 词对 37 词 83 题型 3"
+        "tail": "14,\"rock\":2}\nlisten   kingdom   worst   YES    126.35   4/4    0      1      126.35       额外题 15 {\"kart\":13,\"rock\":2}\n强制碰撞注入最大命中次数: 12\n\n=== 断言 ===\nALL PASS\n题库: 地图 4 词对 37 词 83 题型 3"
       }
     },
     {
       "name": "S4 11 场 ALL PASS",
       "ok": true,
-      "detail": "  kingdom   worst   YES    149.13   4/4    0      1      149.13       额外题 13 {\"kart\":12,\"rock\":1}\n强制碰撞注入最大命中次数: 11\n\n=== 断言 ===\nALL PASS\n题库: 地图 4 词对 37 词 83 题型 3"
+      "detail": "  kingdom   worst   YES    126.35   4/4    0      1      126.35       额外题 15 {\"kart\":13,\"rock\":2}\n强制碰撞注入最大命中次数: 12\n\n=== 断言 ===\nALL PASS\n题库: 地图 4 词对 37 词 83 题型 3"
     },
     {
       "name": "S4 最慢完赛 <= 180s",
       "ok": true,
       "detail": {
-        "samples": 22,
-        "max": 170.72
+        "samples": 14,
+        "max": 126.93
       }
     },
     {
@@ -185,7 +185,7 @@
       "name": "B1 源码层 tag 唯一且恰好 46（PB-1）",
       "ok": true,
       "detail": {
-        "fwd-20261120": 46
+        "fwd-20261121": 46
       }
     },
     {
@@ -248,7 +248,7 @@
       "ok": true,
       "detail": {
         "源码层": [
-          "fwd-20261120"
+          "fwd-20261121"
         ],
         "产物层": "p1-20261110"
       }
@@ -267,7 +267,7 @@
       "name": "B10 预构建 IIFE 产物存在且 >1MB",
       "ok": true,
       "detail": {
-        "bytes": 1171910
+        "bytes": 1172312
       }
     },
     {
@@ -562,8 +562,8 @@
         ],
         "detail": [
           {
-            "min": 134.63,
-            "max": 170.72
+            "min": 109.75,
+            "max": 144.2
           }
         ]
       }
@@ -577,7 +577,7 @@
           "A3 最坏工况（15 次碰撞 + 20 额外题全错）也 <= 180s"
         ],
         "detail": [
-          170.72
+          144.2
         ]
       }
     },

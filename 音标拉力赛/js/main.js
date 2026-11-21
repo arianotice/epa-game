@@ -1,9 +1,9 @@
-import { DIFFICULTY, KART_TYPE, TUNING, VOWELS, PHONEMES, RACE_MAPS, CHARACTERS, QUIZ_TITLES, allWords, buildGates, poolOf, scoreRace, ROCK_HIT_BAND } from "./config.js?v=fwd-20261120";
-import { createTrack } from "./track.js?v=fwd-20261120";
-import { createAudio } from "./audio.js?v=fwd-20261120";
-import { createRace } from "./race.js?v=fwd-20261120";
-import { CARDS } from "./cards.js?v=fwd-20261120";
-import { project, render, minimapModel } from "./render.js?v=fwd-20261120";
+import { DIFFICULTY, KART_TYPE, TUNING, VOWELS, PHONEMES, RACE_MAPS, CHARACTERS, QUIZ_TITLES, allWords, buildGates, poolOf, scoreRace, ROCK_HIT_BAND } from "./config.js?v=fwd-20261121";
+import { createTrack } from "./track.js?v=fwd-20261121";
+import { createAudio } from "./audio.js?v=fwd-20261121";
+import { createRace } from "./race.js?v=fwd-20261121";
+import { CARDS } from "./cards.js?v=fwd-20261121";
+import { project, render, minimapModel } from "./render.js?v=fwd-20261121";
 
 /* FIX-C03：面向用户的大字一律取美式 displayIpa（按稳定 unit id 查表），表缺项回退英式 sym。 */
 const IPA = (card) => (window.IPA_DISPLAY && window.IPA_DISPLAY[card.id] && window.IPA_DISPLAY[card.id].displayIpa) || card.sym;
@@ -28,6 +28,7 @@ const ui = {
   ghost: document.querySelector("#ghost-mark"),
   ghostLabel: document.querySelector("#ghost-label"),
   banner: document.querySelector("#banner"),
+  verdict: document.querySelector("#verdict"),
   fork: document.querySelector("#fork-card"),
   forkLeft: document.querySelector("#fork-left"),
   forkRight: document.querySelector("#fork-right"),
@@ -101,6 +102,8 @@ let shopOpen = false;
 let confettiBits = [];
 /* IMPL-1B B1：按 cheer.seq 去重（同词连续触发须重播），初值 -1 表示「未展示」。 */
 let cheerShown = -1;
+/* 任务2：verdict 按 seq 去重重播（同词连续判定也要弹），初值 -1 表示「未展示」。 */
+let verdictShown = -1;
 let count = 0;
 let lastBeep = 99;
 let signKey = "";
@@ -583,6 +586,7 @@ function openTeach(id) {
 function beginCountdown() {
   if (race) race.dispose();
   resultOpen = false;
+  verdictShown = -1;                // 任务2：新一局复位 verdict 去重键
   fwdStart();                       // FWD X2：starts+1 落盘，inRace=true（内存）
   signKey = "";
   /* C 段：门按当前杯赛地图的词池生成，车手按选择传入；两者与 openQuiz 同源。 */
@@ -784,23 +788,21 @@ function syncSigns(matrix, signState) {
   const key = `${gate.id}:${phase}:${gate.left.word}:${gate.right.word}`;
   if (key !== signKey) {
     signKey = key;
-    if (phase === "S1") {
-      paintForecast(ui.signL);
-      paintForecast(ui.signR);
-      plainSteers();                 // S1 零信息：触屏转向键保持普通态，绝不提前给 IPA 选项
-    } else {
-      paintLane(ui.signL, gate.left);
-      paintLane(ui.signR, gate.right);
-      paintPick(ui.left, gate.left, "A · ←");
-      paintPick(ui.right, gate.right, "D · →");
-    }
+    /* 任务3：S1 预告阶段就显示真实选项卡片（paintLane 内容），不再用中性◇预告。
+       卡片提前静态出现，玩家一眼看清左右两个 IPA + 单词；判定仍只在 state.decide
+       可选阶段响应（见 race.js 选道即判），保证先听到词再选。 */
+    paintLane(ui.signL, gate.left);
+    paintLane(ui.signR, gate.right);
+    paintPick(ui.left, gate.left, "A · ←");
+    paintPick(ui.right, gate.right, "D · →");
     ui.signL.classList.remove("open");
     ui.signR.classList.remove("open");
     ui.signL.dataset.opened = "";
     ui.signR.dataset.opened = "";
   }
-  /* S2 入场动画：deciding 边沿触发，open 类必须同时加到两块牌（同帧同动画时长）。 */
-  if (phase === "S2" && deciding && ui.signL.dataset.opened !== key) {
+  /* 入场淡入：S1 提前出现 / S2 进入选道各淡入一次，open 类同时加到两块牌（同帧同动画）。
+     lane-fade 是纯 opacity 淡入，无 translateY、无掉落位移。 */
+  if (ui.signL.dataset.opened !== key) {
     ui.signL.dataset.opened = key;
     ui.signR.dataset.opened = key;
     void ui.signL.offsetWidth;
@@ -958,6 +960,32 @@ function syncCheer(dt) {
   }
   if (!on) cheerShown = -1;
   drawConfetti(dt);
+}
+
+/* 任务2：即时结果提示。race.js 每次判门（选道即判 / 过门线兜底）产出 state.verdict，
+   含递增 seq；表现层按 seq 去重重播，避免同词连续判定被吞。hit=true 绿勾RIGHT，
+   hit=false 红叉WRONG。显示窗口约 1.15s（CSS verdict-pop），与 banner 文字并存。 */
+function syncVerdict() {
+  if (!ui.verdict) return;
+  const v = race && race.state.verdict;
+  if (!v || !race || race.state.time >= v.until || mode === "title" || mode === "teach") {
+    ui.verdict.hidden = true;
+    return;
+  }
+  ui.verdict.hidden = false;
+  const seq = Number(v.seq) || 0;
+  if (verdictShown !== seq) {
+    verdictShown = seq;
+    ui.verdict.classList.toggle("ok", !!v.hit);
+    ui.verdict.classList.toggle("bad", !v.hit);
+    const mark = ui.verdict.querySelector(".vmark");
+    const word = ui.verdict.querySelector(".vword");
+    if (mark) mark.textContent = v.hit ? "✓" : "✗";
+    if (word) word.textContent = v.hit ? "RIGHT" : "WRONG";
+    ui.verdict.classList.remove("show");
+    void ui.verdict.offsetWidth;   // 强制回流以重播入场动画
+    ui.verdict.classList.add("show");
+  }
 }
 
 function syncHud() {
@@ -1271,7 +1299,7 @@ function paintShop() {
        旧 collected / stars 口径已彻底退役，无任何 fallback（30 关全通也不会全卡解锁）。 */
     const open = pack.unlocked.includes(card.id);
     return `<button type="button" class="card${open ? " have" : " locked"}" disabled title="图鉴 ${card.sym}">
-      <img src="../音标大闯关/assets/sprites/cards/${card.id}.webp?v=fwd-20261120" alt="${card.sym}">
+      <img src="../音标大闯关/assets/sprites/cards/${card.id}.webp?v=fwd-20261121" alt="${card.sym}">
       <b class="ipa">/${IPA(card)}/</b>
       <small>${card.name}</small>
       <small>${card.rarity} · ${open ? "已解锁 · 四大杯赛" : "待解锁 · 四大杯赛"}</small>
@@ -1461,6 +1489,7 @@ function frame(now) {
   if (race && mode !== "title" && mode !== "teach") { syncSigns(matrix, signState); syncTags(matrix); syncFork(); syncQuizTilt(matrix); }
   else { ui.signs.hidden = true; ui.tags.innerHTML = ""; if (ui.fork) ui.fork.hidden = true; }
   syncCheer(dt);
+  syncVerdict();
   syncHud();
   if (!window.__rally._stepping) requestAnimationFrame(frame);
 }

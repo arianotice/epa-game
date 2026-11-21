@@ -37,7 +37,7 @@ const src = readFileSync(OUT, "utf8");
 const bytes = statSync(OUT).size;
 /* 产物层静态护栏：源码层 tag / 产物层 tag / 图片 URL / 禁用判据关键字一律零命中。 */
 const AUDIT = {
-  "源码层 tag": (src.match(/fwd-20261120/g) || []).length,
+  "源码层 tag": (src.match(/fwd-20261121/g) || []).length,
   "P0 产物层 tag": (src.match(/p0-20261109/g) || []).length,
   "未替换的 process.env": (src.match(/process\.env/g) || []).length,
   "fogType 字符串": (src.match(/fogType/g) || []).length,
