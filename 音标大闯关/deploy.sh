@@ -16,6 +16,14 @@ scp -r "$SRC/css" "$HOST:$DEST/"
 scp -r "$SRC/assets/sprites" "$HOST:$DEST/assets/"
 scp -r "$SRC/assets/audio/ph" "$HOST:$DEST/assets/audio/"
 
+# 拉力赛用 ../音标大闯关/... 跨目录引用 ipa-display.js 与卡图。腾讯云 Caddy 的
+# try_files {path} /index.html 会把缺失路径静默兜底成 200 的 HTML，排查时假阳性极高。
+# 必须在同源同级保留一份镜像，与 GitHub Pages 的仓库子目录结构对齐。
+echo "==> [1.5/3] 镜像大闯关到 /音标大闯关/（供拉力赛跨目录引用）"
+ssh "$HOST" "mkdir -p $DEST/音标大闯关"
+scp -r "$SRC/index.html" "$HOST:$DEST/音标大闯关/"
+scp -r "$SRC/js" "$SRC/css" "$SRC/assets" "$HOST:$DEST/音标大闯关/"
+
 # Task #28 / P1 · 同源同级部署：拉力赛 index.html 用 ../音标大闯关/... 引用跨目录资源，
 # 两站必须挂在同一 origin 的同级目录。静态源码形态直接 scp（不跑 Vite / 不装依赖）。
 # assets/p1/scene3d.js 是 js/build-p1.mjs 预构建的自包含 IIFE，随源码一起上线。
